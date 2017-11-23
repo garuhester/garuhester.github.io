@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hester的博客</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-11-06T09:03:47.265Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Hester</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>connect-mongo基本用法</title>
+    <link href="http://yoursite.com/2017/11/06/connect-mongo%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/"/>
+    <id>http://yoursite.com/2017/11/06/connect-mongo基本用法/</id>
+    <published>2017-11-06T08:58:08.122Z</published>
+    <updated>2017-11-06T09:03:47.265Z</updated>
+    
+    <content type="html"><![CDATA[<p>代码实现：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">var express = require(&apos;express&apos;);</div><div class="line">var cookieParser = require(&apos;cookie-parser&apos;);</div><div class="line">var session = require(&apos;express-session&apos;);</div><div class="line">var MongoStore = require(&apos;connect-mongo&apos;)(session);</div><div class="line">var app = express();</div><div class="line"></div><div class="line">app.use(cookieParser(&apos;sessiontest&apos;));</div><div class="line">app.use(session(&#123;</div><div class="line">    secret: &apos;sessiontest&apos;,</div><div class="line">    resave: true,</div><div class="line">    saveUninitalized: true,</div><div class="line">    store: new MongoStore(&#123;</div><div class="line">        url: &apos;mongodb://localhost:27017/sessionmongo&apos;</div><div class="line">    &#125;)</div><div class="line">&#125;));</div><div class="line">app.get(&apos;/login&apos;, function(req, res) &#123;</div><div class="line">    var user = &#123;</div><div class="line">        name: &quot;hester&quot;,</div><div class="line">        age: &quot;21&quot;</div><div class="line">    &#125;;</div><div class="line">    req.session.user = user;</div><div class="line">    res.redirect(&apos;/user&apos;);</div><div class="line">&#125;);</div><div class="line">app.listen(8080, function() &#123;</div><div class="line">    console.log(&quot;http://localhost:8080&quot;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p><hr><p>引用模块：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var session = require(&apos;express-session&apos;);</div><div class="line">var MongoStore = require(&apos;connect-mongo&apos;)(session);</div></pre></td></tr></table></figure></p><p>基本使用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">app.use(session(&#123;</div><div class="line">    store: new MongoStore(&#123;</div><div class="line">        url: &apos;mongodb://localhost:27017/sessionmongo&apos;</div><div class="line">    &#125;)</div><div class="line">&#125;));</div></pre></td></tr></table></figure></p><p>在页面创建session：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var user = &#123;</div><div class="line">  name: &quot;hester&quot;,</div><div class="line">  age: &quot;21&quot;</div><div class="line">&#125;;</div><div class="line">req.session.user = user;</div></pre></td></tr></table></figure></p><blockquote><p>更多详细使用：<a href="https://github.com/jdesboeufs/connect-mongo" target="_blank" rel="external">https://github.com/jdesboeufs/connect-mongo</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;代码实现：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=
+      
+    
+    </summary>
+    
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+    
+    
+      <category term="mongodb session" scheme="http://yoursite.com/tags/mongodb-session/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2017/10/26/hello-world/"/>
+    <id>http://yoursite.com/2017/10/26/hello-world/</id>
+    <published>2017-10-26T15:10:54.202Z</published>
+    <updated>2017-11-06T08:54:57.192Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>

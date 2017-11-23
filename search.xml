@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[connect-mongo基本用法]]></title>
+    <url>%2F2017%2F11%2F06%2Fconnect-mongo%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[代码实现：1234567891011121314151617181920212223242526var express = require(&apos;express&apos;);var cookieParser = require(&apos;cookie-parser&apos;);var session = require(&apos;express-session&apos;);var MongoStore = require(&apos;connect-mongo&apos;)(session);var app = express();app.use(cookieParser(&apos;sessiontest&apos;));app.use(session(&#123; secret: &apos;sessiontest&apos;, resave: true, saveUninitalized: true, store: new MongoStore(&#123; url: &apos;mongodb://localhost:27017/sessionmongo&apos; &#125;)&#125;));app.get(&apos;/login&apos;, function(req, res) &#123; var user = &#123; name: &quot;hester&quot;, age: &quot;21&quot; &#125;; req.session.user = user; res.redirect(&apos;/user&apos;);&#125;);app.listen(8080, function() &#123; console.log(&quot;http://localhost:8080&quot;);&#125;); 引用模块：12var session = require(&apos;express-session&apos;);var MongoStore = require(&apos;connect-mongo&apos;)(session); 基本使用：12345app.use(session(&#123; store: new MongoStore(&#123; url: &apos;mongodb://localhost:27017/sessionmongo&apos; &#125;)&#125;)); 在页面创建session：12345var user = &#123; name: &quot;hester&quot;, age: &quot;21&quot;&#125;;req.session.user = user; 更多详细使用：https://github.com/jdesboeufs/connect-mongo]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>mongodb session</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2017%2F10%2F26%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
