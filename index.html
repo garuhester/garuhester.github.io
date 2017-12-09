@@ -296,6 +296,732 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/10/Android-DrawerLayout+Toolbar实现/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hester">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hester的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/10/Android-DrawerLayout+Toolbar实现/" itemprop="url">Android-DrawerLayout+Toolbar实现</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-10T00:28:46+08:00">
+                2017-12-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  512
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#DrawerLayout+Toolbar实现<br>导入material design 组件</p>
+<blockquote>
+<p>‘com.android.support:design:25.0.1’</p>
+</blockquote>
+<ul>
+<li>主布局：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line">&lt;android.support.v4.widget.DrawerLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</div><div class="line">    xmlns:tools=&quot;http://schemas.android.com/tools&quot;</div><div class="line">    android:id=&quot;@+id/drawerlayout&quot;</div><div class="line">    android:layout_width=&quot;match_parent&quot;</div><div class="line">    android:layout_height=&quot;match_parent&quot;</div><div class="line">    android:fitsSystemWindows=&quot;true&quot;</div><div class="line">    tools:context=&quot;com.example.hester.aaaaaa.MainActivity&quot;</div><div class="line">    tools:openDrawer=&quot;start&quot;&gt;</div><div class="line"></div><div class="line">    &lt;!--主界面--&gt;</div><div class="line">    &lt;LinearLayout</div><div class="line">        android:layout_width=&quot;match_parent&quot;</div><div class="line">        android:layout_height=&quot;match_parent&quot;</div><div class="line">        android:fitsSystemWindows=&quot;true&quot;</div><div class="line">        android:orientation=&quot;vertical&quot;&gt;</div><div class="line"></div><div class="line">        &lt;android.support.design.widget.AppBarLayout</div><div class="line">            android:layout_width=&quot;match_parent&quot;</div><div class="line">            android:layout_height=&quot;wrap_content&quot;&gt;</div><div class="line"></div><div class="line">            &lt;android.support.v7.widget.Toolbar</div><div class="line">                android:id=&quot;@+id/toolbar&quot;</div><div class="line">                android:layout_width=&quot;match_parent&quot;</div><div class="line">                android:layout_height=&quot;wrap_content&quot;&gt;&lt;/android.support.v7.widget.Toolbar&gt;</div><div class="line">        &lt;/android.support.design.widget.AppBarLayout&gt;</div><div class="line"></div><div class="line">        &lt;TextView</div><div class="line">            android:layout_width=&quot;match_parent&quot;</div><div class="line">            android:layout_height=&quot;wrap_content&quot;</div><div class="line">            android:text=&quot;hello world&quot;</div><div class="line">            android:textSize=&quot;30dp&quot; /&gt;</div><div class="line">    &lt;/LinearLayout&gt;</div><div class="line"></div><div class="line">    &lt;!--侧滑界面--&gt;</div><div class="line">    &lt;LinearLayout</div><div class="line">        android:layout_width=&quot;match_parent&quot;</div><div class="line">        android:layout_height=&quot;match_parent&quot;</div><div class="line">        android:layout_gravity=&quot;start&quot;</div><div class="line">        android:background=&quot;#ffffff&quot;</div><div class="line">        android:fitsSystemWindows=&quot;true&quot;&gt;</div><div class="line"></div><div class="line">        &lt;TextView</div><div class="line">            android:layout_width=&quot;match_parent&quot;</div><div class="line">            android:layout_height=&quot;wrap_content&quot;</div><div class="line">            android:text=&quot;新闻头条&quot;</div><div class="line">            android:textSize=&quot;30dp&quot; /&gt;</div><div class="line">    &lt;/LinearLayout&gt;</div><div class="line"></div><div class="line">&lt;/android.support.v4.widget.DrawerLayout&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>主界面初始化ToolBar</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">public class MainActivity extends AppCompatActivity &#123;</div><div class="line"></div><div class="line">    Toolbar toolbar;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</div><div class="line">        super.onCreate(savedInstanceState);</div><div class="line">        setContentView(R.layout.activity_main);</div><div class="line">        toolbar = (Toolbar) findViewById(R.id.toolbar);</div><div class="line">        setSupportActionBar(toolbar);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>添加NoActionBar主题（values/styles.xml）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;style name=&quot;AppTheme.NoActionBar&quot;&gt;</div><div class="line">        &lt;item name=&quot;windowActionBar&quot;&gt;false&lt;/item&gt;</div><div class="line">        &lt;item name=&quot;windowNoTitle&quot;&gt;true&lt;/item&gt;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>设置主布局的主题为NoActionBar<br><img src="http://upload-images.jianshu.io/upload_images/2381669-33deb4f3a953778a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="snipaste20170314_221750.png"></p>
+</li>
+<li><p>AndroidManifest.xml中将主题改为AppTheme.NoActionBar</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;application</div><div class="line">        android:allowBackup=&quot;true&quot;</div><div class="line">        android:icon=&quot;@mipmap/ic_launcher&quot;</div><div class="line">        android:label=&quot;@string/app_name&quot;</div><div class="line">        android:supportsRtl=&quot;true&quot;</div><div class="line">        android:theme=&quot;@style/AppTheme.NoActionBar&quot;&gt;</div><div class="line">        &lt;activity android:name=&quot;.MainActivity&quot;&gt;</div><div class="line">            &lt;intent-filter&gt;</div><div class="line">                &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;</div><div class="line"></div><div class="line">                &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;</div><div class="line">            &lt;/intent-filter&gt;</div><div class="line">        &lt;/activity&gt;</div><div class="line">    &lt;/application&gt;</div></pre></td></tr></table></figure>
+<p>注意事项：</p>
+<ol>
+<li>侧滑布局位置属性：android:layout_gravity=”start”</li>
+<li>DrawerLayout添加适应系统窗口：android:fitsSystemWindows=”true”  </li>
+</ol>
+<hr>
+<p>#侧滑布局改为NavigationView<br>侧滑布局</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;!--侧滑布局--&gt;</div><div class="line">&lt;android.support.design.widget.NavigationView</div><div class="line">    android:id=&quot;@+id/nav_view&quot;</div><div class="line">    android:layout_width=&quot;wrap_content&quot;</div><div class="line">    android:layout_height=&quot;match_parent&quot;</div><div class="line">    android:layout_gravity=&quot;start&quot;</div><div class="line">    android:fitsSystemWindows=&quot;true&quot;</div><div class="line">    app:headerLayout=&quot;@layout/nav_header&quot;</div><div class="line">    app:menu=&quot;@menu/nav_menu&quot; /&gt;</div><div class="line"></div><div class="line">提示：</div><div class="line">* app:headerLayout=&quot;@layout/header&quot;（添加布局头部）</div><div class="line">* app:menu=&quot;@menu/nav_menu&quot;（添加布局菜单）</div></pre></td></tr></table></figure>
+<p>@menu/nav_menu：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">&lt;menu xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;</div><div class="line">    &lt;group android:checkableBehavior=&quot;single&quot;&gt;</div><div class="line">        &lt;item</div><div class="line">            android:id=&quot;@+id/news&quot;</div><div class="line">            android:title=&quot;@string/zh_news&quot; /&gt;</div><div class="line">        &lt;item</div><div class="line">            android:id=&quot;@+id/wechat&quot;</div><div class="line">            android:title=&quot;@string/zh_wechat&quot; /&gt;</div><div class="line">    &lt;/group&gt;</div><div class="line">    &lt;item android:title=&quot;Communicate&quot;&gt;</div><div class="line">        &lt;menu&gt;</div><div class="line">            &lt;item</div><div class="line">                android:id=&quot;@+id/nav_share&quot;</div><div class="line">                android:icon=&quot;@drawable/ic_menu_share&quot;</div><div class="line">                android:title=&quot;Share&quot; /&gt;</div><div class="line">            &lt;item</div><div class="line">                android:id=&quot;@+id/nav_send&quot;</div><div class="line">                android:icon=&quot;@drawable/ic_menu_send&quot;</div><div class="line">                android:title=&quot;Send&quot; /&gt;</div><div class="line">        &lt;/menu&gt;</div><div class="line">    &lt;/item&gt;</div><div class="line">&lt;/menu&gt;</div></pre></td></tr></table></figure>
+<p>初始化NavigationView：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">//navigationView  icon显示原始颜色</div><div class="line">navigationView.setItemIconTintList(null);</div><div class="line">//navigationView添加item选择监听事件</div><div class="line">navigationView.setNavigationItemSelectedListener(this);</div><div class="line"></div><div class="line">@Override</div><div class="line">    public boolean onNavigationItemSelected(MenuItem item) &#123;</div><div class="line">        getSupportActionBar().setTitle(item.getTitle());</div><div class="line">        switch (item.getItemId()) &#123;</div><div class="line">            case R.id.news:</div><div class="line">                break;</div><div class="line">        &#125;</div><div class="line">        drawerLayout.closeDrawer(GravityCompat.START);</div><div class="line">        return true;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/10/Android-Fragment的切换/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hester">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hester的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/10/Android-Fragment的切换/" itemprop="url">Android-Fragment的切换</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-10T00:28:46+08:00">
+                2017-12-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  268
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>在主布局中有FrameLayout，如何在代码中对FrameLayout进行切换不同的Fragment呢？</p>
+<p><strong>布局文件中的FrameLayout：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;LinearLayout</div><div class="line">        android:layout_width=&quot;match_parent&quot;</div><div class="line">        android:layout_height=&quot;match_parent&quot;</div><div class="line">        android:fitsSystemWindows=&quot;true&quot;</div><div class="line">        android:orientation=&quot;vertical&quot;&gt;</div><div class="line">        &lt;FrameLayout</div><div class="line">            android:id=&quot;@+id/content_layout&quot;</div><div class="line">            android:layout_width=&quot;match_parent&quot;</div><div class="line">            android:layout_height=&quot;match_parent&quot; /&gt;</div><div class="line">&lt;/LinearLayout&gt;</div></pre></td></tr></table></figure></p>
+<p><strong>主界面：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line">//记录当前Fragment</div><div class="line">private Fragment nowFragment;</div><div class="line">//其他的Fragment</div><div class="line">private NewsFragment newsFragment;</div><div class="line"></div><div class="line">protected void onCreate(Bundle savedInstanceState) &#123;</div><div class="line">    super.onCreate(savedInstanceState);</div><div class="line">    setContentView(R.layout.activity_main);</div><div class="line">    //初始化Fragment</div><div class="line">    initFragment(savedInstanceState);</div><div class="line">    if (newsFragment == null) &#123;</div><div class="line">        newsFragment = new NewsFragment();</div><div class="line">    &#125;</div><div class="line">    switchContent(nowFragment, newsFragment);</div><div class="line">&#125;</div><div class="line"></div><div class="line">/**</div><div class="line"> * 初始化Fragment</div><div class="line"> *</div><div class="line"> * @param savedInstanceState</div><div class="line"> */</div><div class="line">private void initFragment(Bundle savedInstanceState) &#123;</div><div class="line">    //避免横竖屏时出现页面叠加，判断activity是否重新加载</div><div class="line">    if (savedInstanceState == null) &#123;</div><div class="line">        FragmentManager fm = getSupportFragmentManager();</div><div class="line">        FragmentTransaction ft = fm.beginTransaction();</div><div class="line">        if (newsFragment == null) &#123;</div><div class="line">            newsFragment = new NewsFragment();</div><div class="line">        &#125;</div><div class="line">        nowFragment = newsFragment;</div><div class="line">        ft.replace(R.id.content_layout, nowFragment).commitAllowingStateLoss();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">/**</div><div class="line"> * 防止Fragement数据重复加载，采用显示和隐藏的方式</div><div class="line"> *</div><div class="line"> * @param from</div><div class="line"> * @param to</div><div class="line"> */</div><div class="line">public void switchContent(Fragment from, Fragment to) &#123;</div><div class="line">    if (nowFragment != to) &#123;</div><div class="line">        nowFragment = to;</div><div class="line">        FragmentManager fm = getSupportFragmentManager();</div><div class="line">        FragmentTransaction ft = fm.beginTransaction();</div><div class="line">        //检测去往的Fragment是否被添加</div><div class="line">        if (!to.isAdded()) &#123;</div><div class="line">            //如果没有添加，就隐藏当前Fragment，添加下一个Fragment</div><div class="line">            ft.hide(from).add(R.id.content_layout, to).commitAllowingStateLoss();</div><div class="line">        &#125; else &#123;</div><div class="line">            //如果已经被添加，就隐藏当前Fragment，直接显示下一个Fragement</div><div class="line">            ft.hide(from).show(to).commitAllowingStateLoss();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/10/Android-实现语言切换/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hester">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hester的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/10/Android-实现语言切换/" itemprop="url">Android-实现语言切换</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-10T00:28:46+08:00">
+                2017-12-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  215
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Android APP如果要实现语言（中英文为例）的切换该怎么做呢？</p>
+<p>#1. 在res文件下建立文件夹values-en，并且新建strings.xml文件<br><img src="http://upload-images.jianshu.io/upload_images/2381669-cb6c9699d500ed64.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="strings.xml"></p>
+<p>###文件内容对应如下：</p>
+<ul>
+<li>values/strings.xml：<br><img src="http://upload-images.jianshu.io/upload_images/2381669-e510ff30bbad0cd2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="values/strings.xml"></li>
+<li>values-en/strings.xml：<br><img src="http://upload-images.jianshu.io/upload_images/2381669-54fa935c8c4c6845.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="values-en/strings.xml"></li>
+</ul>
+<p>#2. 实现语言切换的方法：<br><code>Configuration config = getResources().getConfiguration();
+Resources resources = getResources();
+if (config.locale.equals(Locale.ENGLISH)){//如果已经为英文
+      config.locale = Locale.CHINESE;//切换中文
+}else if (config.locale.equals(Locale.CHINESE)){//如果已经为中文
+      config.locale = Locale.ENGLISH;//切换英文
+}                    
+DisplayMetrics dm = resources.getDisplayMetrics();
+resources.updateConfiguration(config, dm);</code></p>
+<p>#3. 在AndroidManifest.xml文件中对需要改变语言的Activity添加属性<code>android:configChanges=&quot;locale&quot;</code><br><img src="http://upload-images.jianshu.io/upload_images/2381669-332362bb4b5de95a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="AndroidManifest.xml"></p>
+<blockquote>
+<p>小提示：如果需要保存用户修改的语言以便下一次打开APP时改变语言，可以将用户选择的信息保存至SharedPreferences储存类或者数据库中，在打开时读取判断即可，这里不详细叙述</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/10/Java实现MySql数据库与Excel文件转换/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hester">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hester的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/10/Java实现MySql数据库与Excel文件转换/" itemprop="url">Java实现MySql数据库与Excel文件转换</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-10T00:28:46+08:00">
+                2017-12-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  854
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="导入Jar包：poi-和-mysql-connector-java"><a href="#导入Jar包：poi-和-mysql-connector-java" class="headerlink" title="导入Jar包：poi 和 mysql-connector-java"></a>导入Jar包：<strong>poi</strong> 和 <strong>mysql-connector-java</strong></h3><p><img src="http://upload-images.jianshu.io/upload_images/2381669-f79f95916b74afd5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="poi"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2381669-ae3dc74431615ec6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="mysql-connector-java"></p>
+<blockquote>
+<p>poi下载地址：<br><a href="http://mirrors.hust.edu.cn/apache/poi/dev/bin/poi-bin-3.16-beta2-20170202.zip" target="_blank" rel="external"><strong>http://mirrors.hust.edu.cn/apache/poi/dev/bin/poi-bin-3.16-beta2-20170202.zip</strong></a><br>mysql-connector-java下载地址：<br><a href="https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.41.zip" target="_blank" rel="external">https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.41.zip</a></p>
+</blockquote>
+<hr>
+<p>###转换均采用以下两图的内容<br><strong>数据库表：</strong><br><img src="http://upload-images.jianshu.io/upload_images/2381669-cac7d098e9eb6a2f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="数据库表"></p>
+<p><strong>Excel（workbook.xls）：</strong><br><img src="http://upload-images.jianshu.io/upload_images/2381669-7b7d18f3473eaa38.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="workbook.xls"></p>
+<hr>
+<p>###数据库转Excel：</p>
+<ul>
+<li><p>核心代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">//初始化excel文件</div><div class="line">HSSFWorkbook wb = new HSSFWorkbook();//excel文件对象</div><div class="line">HSSFSheet sheet = wb.createSheet(&quot;sheet&quot;);//表</div><div class="line">sheet.setDefaultColumnWidth(20);//设置默认列宽为20</div><div class="line">HSSFRow row0 = sheet.createRow(0);//创建第一行</div><div class="line">row0.createCell(0).setCellValue(&quot;id&quot;);//第一行第一列</div><div class="line">FileOutputStream outputStream = new  FileOutputStream(&quot;workbook.xls&quot;);</div><div class="line">wb.write(outputStream);</div><div class="line">outputStream.flush();</div></pre></td></tr></table></figure>
+</li>
+<li><p>全部代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line">import org.apache.poi.hssf.usermodel.HSSFRow;</div><div class="line">import org.apache.poi.hssf.usermodel.HSSFSheet;</div><div class="line">import org.apache.poi.hssf.usermodel.HSSFWorkbook;</div><div class="line">public static void main(String[] args) throws IOException, SQLException, ClassNotFoundException &#123;</div><div class="line">        //数据库变量</div><div class="line">        String driver = &quot;com.mysql.jdbc.Driver&quot;;</div><div class="line">        String dvUrl = &quot;jdbc:mysql://localhost:3306/&quot;;</div><div class="line">        String user = &quot;root&quot;;</div><div class="line">        String password = &quot;root&quot;;</div><div class="line">        String database = &quot;test&quot;;</div><div class="line">        Connection conn;</div><div class="line">        PreparedStatement pre;</div><div class="line">        String sql;</div><div class="line"></div><div class="line">        //初始化数据库</div><div class="line">        Class.forName(driver);</div><div class="line">        conn = DriverManager.getConnection(dvUrl + database, user, password);</div><div class="line"></div><div class="line">        //初始化excel文件</div><div class="line">        HSSFWorkbook wb = new HSSFWorkbook();//excel文件对象</div><div class="line">        HSSFSheet sheet = wb.createSheet(&quot;sheet&quot;);//表</div><div class="line">        sheet.setDefaultColumnWidth(20);//设置默认列宽为20</div><div class="line"></div><div class="line">        HSSFRow row0 = sheet.createRow(0);//创建第一行</div><div class="line">        row0.createCell(0).setCellValue(&quot;id&quot;);//第一行第一列</div><div class="line">        row0.createCell(1).setCellValue(&quot;title&quot;);第一行第二列</div><div class="line">        row0.createCell(2).setCellValue(&quot;href&quot;);第一行第三列</div><div class="line">        row0.createCell(3).setCellValue(&quot;author&quot;);第一行第四列</div><div class="line">        row0.createCell(4).setCellValue(&quot;time&quot;);第一行第五列</div><div class="line"></div><div class="line">        sql = &quot;select * from blog&quot;;//查询blog表</div><div class="line">        pre = conn.prepareStatement(sql);</div><div class="line">        ResultSet rs = pre.executeQuery();//</div><div class="line">        int row_count = 1;</div><div class="line">        while (rs.next()) &#123;//遍历表内容</div><div class="line">            String id = rs.getString(&quot;id&quot;);</div><div class="line">            String title = rs.getString(&quot;title&quot;);</div><div class="line">            String href = rs.getString(&quot;href&quot;);</div><div class="line">            String author = rs.getString(&quot;author&quot;);</div><div class="line">            String time = rs.getString(&quot;time&quot;);</div><div class="line">            HSSFRow row = sheet.createRow(row_count);</div><div class="line">            row.createCell(0).setCellValue(id);</div><div class="line">            row.createCell(1).setCellValue(title);</div><div class="line">            row.createCell(2).setCellValue(href);</div><div class="line">            row.createCell(3).setCellValue(author);</div><div class="line">            row.createCell(4).setCellValue(time);</div><div class="line">            row_count++;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        FileOutputStream outputStream = new FileOutputStream(&quot;workbook.xls&quot;);</div><div class="line">        wb.write(outputStream);</div><div class="line">        outputStream.flush();</div><div class="line">      &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<p>###Excel转数据库：</p>
+<ul>
+<li><p>核心代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">File file = new File(&quot;workbook.xls&quot;);</div><div class="line">FileInputStream fileInputStream = new FileInputStream(file);</div><div class="line">//根据指定的文件输入流导入Excel从而产生Workbook对象</div><div class="line">Workbook wb = new HSSFWorkbook(fileInputStream);</div><div class="line">//获取Excel文档中的第一个表单</div><div class="line">Sheet sheet = wb.getSheetAt(0);</div><div class="line">//对Sheet中的每一行进行遍历</div><div class="line">for (Row row : sheet) &#123;</div><div class="line">         //跳过第一行标题</div><div class="line">         if (row.getRowNum() == 0) &#123;</div><div class="line">             continue;</div><div class="line">         &#125;</div><div class="line">         ExcelBean excelBean = new ExcelBean();</div><div class="line">         excelBean.setId(row.getCell(0).getStringCellValue());//第一行第一列的值</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>全部代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div></pre></td><td class="code"><pre><div class="line">import org.apache.poi.hssf.usermodel.HSSFWorkbook;</div><div class="line">import org.apache.poi.ss.usermodel.Row;</div><div class="line">import org.apache.poi.ss.usermodel.Sheet;</div><div class="line">import org.apache.poi.ss.usermodel.Workbook;</div><div class="line"> public static void main(String[] args) throws ClassNotFoundException, SQLException, IOException &#123;</div><div class="line">  //数据库变量</div><div class="line">  String driver = &quot;com.mysql.jdbc.Driver&quot;;</div><div class="line">  String dvUrl = &quot;jdbc:mysql://localhost:3306/&quot;;</div><div class="line">  String user = &quot;root&quot;;</div><div class="line">  String password = &quot;root&quot;;</div><div class="line">  String database = &quot;test&quot;;</div><div class="line">  Connection conn;</div><div class="line">  PreparedStatement pre;</div><div class="line">  String sql;</div><div class="line"></div><div class="line">  ArrayList&lt;ExcelBean&gt; excelBeans = new ArrayList&lt;&gt;();</div><div class="line"></div><div class="line">  //初始化数据库</div><div class="line">  Class.forName(driver);</div><div class="line">  conn = DriverManager.getConnection(dvUrl + database, user, password);</div><div class="line">  pre = conn.prepareStatement(&quot;SHOW TABLES LIKE &apos;excel&apos;&quot;);</div><div class="line">  ResultSet rs = pre.executeQuery();</div><div class="line">  if (rs.next()) &#123;</div><div class="line">      //表存在</div><div class="line">      sql = &quot;truncate table excel&quot;;</div><div class="line">  &#125; else &#123;</div><div class="line">      //表不存在</div><div class="line">      sql = &quot;CREATE TABLE excel(&quot; +</div><div class="line">              &quot;id varchar(255),&quot; +</div><div class="line">              &quot;title varchar(255),&quot; +</div><div class="line">              &quot;href varchar(255),&quot; +</div><div class="line">              &quot;author varchar(255),&quot; +</div><div class="line">              &quot;time varchar(255)&quot; +</div><div class="line">              &quot;) ENGINE=MyISAM DEFAULT CHARSET=utf8&quot;;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  pre = conn.prepareStatement(sql);</div><div class="line">  pre.execute();</div><div class="line"></div><div class="line">  File file = new File(&quot;workbook.xls&quot;);</div><div class="line">  FileInputStream fileInputStream = new FileInputStream(file);</div><div class="line">  //根据指定的文件输入流导入Excel从而产生Workbook对象</div><div class="line">  Workbook wb = new HSSFWorkbook(fileInputStream);</div><div class="line">  //获取Excel文档中的第一个表单</div><div class="line">  Sheet sheet = wb.getSheetAt(0);</div><div class="line">  //对Sheet中的每一行进行遍历</div><div class="line">  for (Row row : sheet) &#123;</div><div class="line">      //跳过第一行标题</div><div class="line">      if (row.getRowNum() == 0) &#123;</div><div class="line">          continue;</div><div class="line">      &#125;</div><div class="line">      ExcelBean excelBean = new ExcelBean();</div><div class="line">      excelBean.setId(row.getCell(0).getStringCellValue());</div><div class="line">      excelBean.setTitle(row.getCell(1).getStringCellValue());</div><div class="line">      excelBean.setHref(row.getCell(2).getStringCellValue());</div><div class="line">      excelBean.setAuthor(row.getCell(3).getStringCellValue());</div><div class="line">      excelBean.setTime(row.getCell(4).getStringCellValue());</div><div class="line">      excelBeans.add(excelBean);</div><div class="line">  &#125;</div><div class="line">  //遍历集合将数据插入到数据库</div><div class="line">  for (ExcelBean eb : excelBeans) &#123;</div><div class="line">      sql = &quot;INSERT INTO excel(id,title,href,author,time) &quot; +</div><div class="line">              &quot;VALUES (&apos;&quot; +</div><div class="line">              eb.getId() + &quot;&apos;,&apos;&quot; +</div><div class="line">              eb.getTitle() + &quot;&apos;,&apos;&quot; +</div><div class="line">              eb.getHref() + &quot;&apos;,&apos;&quot; +</div><div class="line">              eb.getAuthor() + &quot;&apos;,&apos;&quot; +</div><div class="line">              eb.getTime() + &quot;&apos;)&quot;;</div><div class="line">      pre = conn.prepareStatement(sql);</div><div class="line">      pre.execute();</div><div class="line">  &#125;</div><div class="line">  pre.close();</div><div class="line">  conn.close();</div><div class="line">&#125;</div><div class="line"></div><div class="line">public class ExcelBean &#123;</div><div class="line">    private String id;</div><div class="line">    private String title;</div><div class="line">    private String href;</div><div class="line">    private String author;</div><div class="line">    private String time;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/06/connect-mongo基本用法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -648,7 +1374,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -659,7 +1385,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -670,7 +1396,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
