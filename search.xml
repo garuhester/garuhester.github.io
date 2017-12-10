@@ -720,14 +720,15 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[推荐一个YouTube油管主]]></title>
-    <url>%2F2017%2F12%2F10%2F%E6%8E%A8%E8%8D%90%E4%B8%80%E4%B8%AAYouTube%E6%B2%B9%E7%AE%A1%E4%B8%BB%2F</url>
-    <content type="text"><![CDATA[最近两天在YouTube上找到的油管主 - The Net Ninja，录制了很多关于编程方面的系列教程，都是免费的，而且教学质量还高，教程种类很多（主要以前端为主），个人感觉简单易懂，很适合编程初学者观看，而且讲的全是干货，所以推荐给有这方面需要的小伙伴们，说的英语也不难，很容易就能听懂，听力不好的同学可以打开字幕观看 欢迎关注微信公众号：小胡资源里面有各种软件和资源哦，每天还会发布各种干货文章，欢迎关注哦~~小胡的在线工具服务网站Loveconvert网址：http://www.loveconvert.com]]></content>
+    <title><![CDATA[时隔一年的Sublime-Text-3终于更新啦]]></title>
+    <url>%2F2017%2F12%2F10%2F%E6%97%B6%E9%9A%94%E4%B8%80%E5%B9%B4%E7%9A%84Sublime-Text-3%E7%BB%88%E4%BA%8E%E6%9B%B4%E6%96%B0%E5%95%A6%2F</url>
+    <content type="text"><![CDATA[作为自己最爱的一款编辑器，自从2016年9月23日开始，Sublime Text 3 的版本就一直是3126版本（很多bug） 虽然官方不停的在刷预览版，但是正式的版本一直没有更新，还以为它放弃维护了呢但是在昨天（2017年9月13日）Sublime Text 3时隔了一年终于迎来了正式版的更新 在Sublime Text 3 Build 3143版本中更新的东西还是挺多的首先就是Sublime Text 3 的Logo 发生了改变，下图是新的Logo 然后呢，编辑器内部的一些UI风格也发生了改变 还有就是编辑器的主题有了一点变化 还有很多的变更等着你去发现总之Sublime Text 3是一款十分强大且好看好用的编辑器之前还有介绍过Sublime Text 3的一些强大的功能而且这次更新修复了很多的bug小伙伴们可以用用，不会让你失望滴Sublime Text 3 官网：https://www.sublimetext.com/ （手动华丽的分割线，以下是更新日志，可跳过= =） Changelog3.0 (BUILD 3143)13 September 2017See also the Announcement PostRefreshed UI theme, including full high DPI supportNew iconAdded alternate theme, Adaptive, that inherits colors from the color schemeAdded new color schemes Breakers, Mariana and Sixteen, derived from the excellent work of Chris Kempson and Dmitri VoronianskiAdded color scheme and theme switchers with live preview via the command paletteWindows: Added touch inputLinux: Added repositories for apt, yum and pacmanMac: Added Touch Bar supportMac: Support for custom color window title bars on OS X 10.10+Many additions and bug fixes to the theme engine, plus full documentationSignificant improvements to Markdown syntax highlighting, with thanks to keith-hallSignificant improvements to C# syntax highlighting, with thanks to gwenzekSignificant improvements to Java syntax highlighting, with thanks to djspiewakSignificant improvements to Python syntax highlighting, with thanks to FichteFollSignificant improvements for R syntax highlighting, with thanks to randy3kMarkdown: Improved symbol handlingC#: Improved symbol handlingMany other syntax highlighting improvementsVarious bugs with the syntax highlighting engine have been resolvedFixed several crash issuesImproved responsiveness when the system is under high CPU loadHigh DPI textures are used on Windows and Linux when the DPI scale is greater than 1.0Improved font selection on all platforms, allowing selection of different weights by nameAdded setting theme_font_options to control font rendering of UI elementsImproved auto indent rules for HTML and PHPFont geometry issues that prevent bold or italics are now printed in the consoleFixed flash-of-white that could occur when the auto complete window is closedDisable scroll animation when animation_enabled is false in settingsFiles can now be renamed when only the case has changedNew windows start with an empty find historyFind in Files panel now responds to find_all and replace_all commandsVarious regex handling improvements in the Find panelFixed text widgets cutting off the bottom pixel of their selection borderFixed an issue with close_windows_when_empty in empty sessionFixed empty panes on startup when hot_exit was set to falseFix Open Containing Folder on Windows with a folder containing a commaFix multi-cursor pasting when clipboard contains one or more full linesPrevent UNC paths from being mangled by edit_settingsPrevent a crash when a malformed regex is used in indentation settingsImproved rendering performance with a large number of gutter iconsGutter icons are now sized properly on Windows and Linux high DPI screensImproved sidebar performance when folders contain many thousands of filesImproved inline error message styleFixed an issue where multiple indexing status windows could be shownWindows: Font rendering defaults to DirectWrite unless using Consolas or Courier NewWindows: Added support for no_antialias font option when using DirectWriteWindows: Improved touch pad scrollingWindows: Improved file change detection robustnessWindows: Improved font selection logicWindows: Fix ctrl+` shortcut for UK (ISO) keyboardsWindows: Improved fallback font handling in UI elementsWindows: The subl executable on OS X and plugin_host.exe on Windows are now signedWindows: sublime_text.exe now has CompanyName set in VERSIONINFOMac: Handle layout changes due to macOS Sierra tabsMac: Improved default web browser detectionMac: OS X 10.11 and macOS 10.12+ default to using San Francisco for the UI fontMac: Fixed file change notifications from freezing UI on macOS SierraMac: the user’s default shell is executed and environmental variables are set in the plugin Python environmentLinux: Update X11 selection on clipboard every time selection changesLinux: Improved MOD3 modifier key handlingminihtml: Added support for bordersminihtml: Respects font_options from the settingsminihtml: Fixed layout of html popups on Windows and Linux under High DPIminihtml: Fixed crash when doctype is presentminihtml: Fixed a crash from non-existent CSS varsminihtml: Fixed a crash triggered by bad image pathsAPI: Add View.text_to_window() and View.layout_to_window()API: All API functions now accept and return device-independent-pixelsAPI: Fixed input panel not running on_cancel when re-showing the input panelAPI: Fixed selector scoring with the &amp; operatorAPI: Fixed a bug causing incorrect phantom contentsAPI: Fixed crash in Window.set_view_index()API: Updated OpenSSL to 1.0.2k, SQLite to 3.16.02 在线工具服务网站Loveconvert网址：http://www.loveconvert.com欢迎关注微信：小胡资源]]></content>
       <categories>
         <category>小胡资源</category>
       </categories>
       <tags>
-        <tag>YouTube</tag>
+        <tag>sublime</tag>
+        <tag>更新</tag>
       </tags>
   </entry>
   <entry>
@@ -742,15 +743,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[时隔一年的Sublime-Text-3终于更新啦]]></title>
-    <url>%2F2017%2F12%2F10%2F%E6%97%B6%E9%9A%94%E4%B8%80%E5%B9%B4%E7%9A%84Sublime-Text-3%E7%BB%88%E4%BA%8E%E6%9B%B4%E6%96%B0%E5%95%A6%2F</url>
-    <content type="text"><![CDATA[作为自己最爱的一款编辑器，自从2016年9月23日开始，Sublime Text 3 的版本就一直是3126版本（很多bug） 虽然官方不停的在刷预览版，但是正式的版本一直没有更新，还以为它放弃维护了呢但是在昨天（2017年9月13日）Sublime Text 3时隔了一年终于迎来了正式版的更新 在Sublime Text 3 Build 3143版本中更新的东西还是挺多的首先就是Sublime Text 3 的Logo 发生了改变，下图是新的Logo 然后呢，编辑器内部的一些UI风格也发生了改变 还有就是编辑器的主题有了一点变化 还有很多的变更等着你去发现总之Sublime Text 3是一款十分强大且好看好用的编辑器之前还有介绍过Sublime Text 3的一些强大的功能而且这次更新修复了很多的bug小伙伴们可以用用，不会让你失望滴Sublime Text 3 官网：https://www.sublimetext.com/ （手动华丽的分割线，以下是更新日志，可跳过= =） Changelog3.0 (BUILD 3143)13 September 2017See also the Announcement PostRefreshed UI theme, including full high DPI supportNew iconAdded alternate theme, Adaptive, that inherits colors from the color schemeAdded new color schemes Breakers, Mariana and Sixteen, derived from the excellent work of Chris Kempson and Dmitri VoronianskiAdded color scheme and theme switchers with live preview via the command paletteWindows: Added touch inputLinux: Added repositories for apt, yum and pacmanMac: Added Touch Bar supportMac: Support for custom color window title bars on OS X 10.10+Many additions and bug fixes to the theme engine, plus full documentationSignificant improvements to Markdown syntax highlighting, with thanks to keith-hallSignificant improvements to C# syntax highlighting, with thanks to gwenzekSignificant improvements to Java syntax highlighting, with thanks to djspiewakSignificant improvements to Python syntax highlighting, with thanks to FichteFollSignificant improvements for R syntax highlighting, with thanks to randy3kMarkdown: Improved symbol handlingC#: Improved symbol handlingMany other syntax highlighting improvementsVarious bugs with the syntax highlighting engine have been resolvedFixed several crash issuesImproved responsiveness when the system is under high CPU loadHigh DPI textures are used on Windows and Linux when the DPI scale is greater than 1.0Improved font selection on all platforms, allowing selection of different weights by nameAdded setting theme_font_options to control font rendering of UI elementsImproved auto indent rules for HTML and PHPFont geometry issues that prevent bold or italics are now printed in the consoleFixed flash-of-white that could occur when the auto complete window is closedDisable scroll animation when animation_enabled is false in settingsFiles can now be renamed when only the case has changedNew windows start with an empty find historyFind in Files panel now responds to find_all and replace_all commandsVarious regex handling improvements in the Find panelFixed text widgets cutting off the bottom pixel of their selection borderFixed an issue with close_windows_when_empty in empty sessionFixed empty panes on startup when hot_exit was set to falseFix Open Containing Folder on Windows with a folder containing a commaFix multi-cursor pasting when clipboard contains one or more full linesPrevent UNC paths from being mangled by edit_settingsPrevent a crash when a malformed regex is used in indentation settingsImproved rendering performance with a large number of gutter iconsGutter icons are now sized properly on Windows and Linux high DPI screensImproved sidebar performance when folders contain many thousands of filesImproved inline error message styleFixed an issue where multiple indexing status windows could be shownWindows: Font rendering defaults to DirectWrite unless using Consolas or Courier NewWindows: Added support for no_antialias font option when using DirectWriteWindows: Improved touch pad scrollingWindows: Improved file change detection robustnessWindows: Improved font selection logicWindows: Fix ctrl+` shortcut for UK (ISO) keyboardsWindows: Improved fallback font handling in UI elementsWindows: The subl executable on OS X and plugin_host.exe on Windows are now signedWindows: sublime_text.exe now has CompanyName set in VERSIONINFOMac: Handle layout changes due to macOS Sierra tabsMac: Improved default web browser detectionMac: OS X 10.11 and macOS 10.12+ default to using San Francisco for the UI fontMac: Fixed file change notifications from freezing UI on macOS SierraMac: the user’s default shell is executed and environmental variables are set in the plugin Python environmentLinux: Update X11 selection on clipboard every time selection changesLinux: Improved MOD3 modifier key handlingminihtml: Added support for bordersminihtml: Respects font_options from the settingsminihtml: Fixed layout of html popups on Windows and Linux under High DPIminihtml: Fixed crash when doctype is presentminihtml: Fixed a crash from non-existent CSS varsminihtml: Fixed a crash triggered by bad image pathsAPI: Add View.text_to_window() and View.layout_to_window()API: All API functions now accept and return device-independent-pixelsAPI: Fixed input panel not running on_cancel when re-showing the input panelAPI: Fixed selector scoring with the &amp; operatorAPI: Fixed a bug causing incorrect phantom contentsAPI: Fixed crash in Window.set_view_index()API: Updated OpenSSL to 1.0.2k, SQLite to 3.16.02 在线工具服务网站Loveconvert网址：http://www.loveconvert.com欢迎关注微信：小胡资源]]></content>
+    <title><![CDATA[推荐一个YouTube油管主]]></title>
+    <url>%2F2017%2F12%2F10%2F%E6%8E%A8%E8%8D%90%E4%B8%80%E4%B8%AAYouTube%E6%B2%B9%E7%AE%A1%E4%B8%BB%2F</url>
+    <content type="text"><![CDATA[最近两天在YouTube上找到的油管主 - The Net Ninja，录制了很多关于编程方面的系列教程，都是免费的，而且教学质量还高，教程种类很多（主要以前端为主），个人感觉简单易懂，很适合编程初学者观看，而且讲的全是干货，所以推荐给有这方面需要的小伙伴们，说的英语也不难，很容易就能听懂，听力不好的同学可以打开字幕观看 欢迎关注微信公众号：小胡资源里面有各种软件和资源哦，每天还会发布各种干货文章，欢迎关注哦~~小胡的在线工具服务网站Loveconvert网址：http://www.loveconvert.com]]></content>
       <categories>
         <category>小胡资源</category>
       </categories>
       <tags>
-        <tag>sublime</tag>
-        <tag>更新</tag>
+        <tag>YouTube</tag>
       </tags>
   </entry>
   <entry>
@@ -823,6 +823,29 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[Loveconvert服务站点新增微博视频解析]]></title>
+    <url>%2F2017%2F12%2F10%2FLoveconvert%E6%9C%8D%E5%8A%A1%E7%AB%99%E7%82%B9%E6%96%B0%E5%A2%9E%E5%BE%AE%E5%8D%9A%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90%2F</url>
+    <content type="text"><![CDATA[#Loveconvert服务站点新增微博视频解析下载功能 小伙伴们可以在此网页输入微博视频的短地址或者长地址，点击解析后根据提示下载视频 Loveconvert微博视频解析工具]]></content>
+      <categories>
+        <category>小胡资源</category>
+      </categories>
+      <tags>
+        <tag>Loveconvert</tag>
+        <tag>微博视频解析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[cmd中有趣的命令二之隐藏文件（不定期更新）]]></title>
+    <url>%2F2017%2F12%2F10%2Fcmd%E4%B8%AD%E6%9C%89%E8%B6%A3%E7%9A%84%E5%91%BD%E4%BB%A4%E4%BA%8C%E4%B9%8B%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6%EF%BC%88%E4%B8%8D%E5%AE%9A%E6%9C%9F%E6%9B%B4%E6%96%B0%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[今天给大家介绍的是命令二之隐藏文件 (￣y▽￣)~*捂嘴偷笑 #隐藏文件说到隐藏文件，你可能会说“可以把文件的属性改成隐藏”，像这样：这样当然可以达到文件隐藏的目的，如果想要查看的话，只需要把文件管理器里面的显示隐藏的文件和文件夹选项勾上就可以看到了，并且隐藏后图片变成了半透明的状态 #但是，咱们今天要说的当然不是这种隐藏方式我们可以用一条cmd命令来达到隐藏文件的目的，想要查看这种方式隐藏的文件的话我们也要用命令才能显示 首先准备一张图片 然后在当前目录下建立一个文本文件，将后缀名改成.bat 然后右键编辑输入 Attrib +h +s +r a.png，保存退出（a.png是你文件的名称，要加上后缀名） 双击bat文件即可将图片隐藏，并且你打开显示隐藏文件的选项也不会看到 想要重新显示图片的话，将bat文件的命令改为 Attrib -h -s -r a.png ，再次执行即可显示图片 当然也可以直接在该文件目录下打开cmd，直接执行上面两条命令也是可以的，也可以建立两个bat文件，像这样，里面分别写入显示和隐藏命令即可 赶紧自己试试吧(￣y▽￣)~*]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>cmd</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Ubuntu系统中安装与卸载sublime-text编辑器]]></title>
     <url>%2F2017%2F12%2F10%2FUbuntu%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%AE%89%E8%A3%85%E4%B8%8E%E5%8D%B8%E8%BD%BDsublime-text%E7%BC%96%E8%BE%91%E5%99%A8%2F</url>
     <content type="text"><![CDATA[今天给大家介绍如何在ubuntu系统安装与卸载sublime text编辑器 #sublime text 3安装及配置步骤： 安装方式一：通过软件库安装 首先打开终端执行命令 sudo add-apt-repository ppa:webupd8team/sublime-text-3添加sublime text 3的仓库 中间如要需要等待的时候直接按enter就好（建立信任数据库） 执行命令 sudo apt-get update更新软件库 执行命令 sudo apt-get install sublime-text-installer安装sublime text 3 到此通过方式一已经将sublime text 3安装完成 安装方式二：通过安装Debian包裹文件（手动下载的文件，后缀名为.deb） sublime-text_build-3126_amd64.deb下载地址：http://pan.baidu.com/s/1dFOd23B 下载好文件过后，打开终端并进入该文件所在目录（比如~/Downloads） 执行命令 sudo dpkg -i sublime-text_build-3126_amd64.deb 到此通过方式二已经将sublime text 3安装完成 #卸载sublime text 3 首先查看一下sublime text 3在系统中存在的程序名执行命令 dpkg -l | grep sublime 查看到程序名后执行命令 sudo dpkg -r sublime-text卸载sublime text 最后的名字取决查看的程序名方式一安装程序名为：sublime-text-installer方式二安装程序名为：sublime-text 执行命令 sudo rm -rf /home/username/.config/sublime-text-3/删除配置文件，其中的username为系统的用户名 执行命令 sudo find / -name sublime*查看系统中与sublime text 3相关的文件，然后再根据路径依次删除即可完全卸载掉sublime text 3 sublime text 2安装命令稍微不同（对应安装方式一的三条命令）： sudo add-apt-repository ppa:webupd8team/sublime-text-2 sudo apt-get update sudo apt-get install sublime-text-dev 好啦，今天的教程就到这里，拜拜咯~~~]]></content>
@@ -833,17 +856,6 @@
         <tag>linux</tag>
         <tag>ubuntu</tag>
         <tag>sublime</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[cmd中有趣的命令一之合并文件（不定期更新）]]></title>
-    <url>%2F2017%2F12%2F10%2Fcmd%E4%B8%AD%E6%9C%89%E8%B6%A3%E7%9A%84%E5%91%BD%E4%BB%A4%E4%B8%80%E4%B9%8B%E5%90%88%E5%B9%B6%E6%96%87%E4%BB%B6%EF%BC%88%E4%B8%8D%E5%AE%9A%E6%9C%9F%E6%9B%B4%E6%96%B0%EF%BC%89%2F</url>
-    <content type="text"><![CDATA[今天给大家介绍的是命令一之合并文件(ฅ&gt;ω&lt;*ฅ)，后面我会不定期的进行更新 #合并文件（老司机必备）图片下的秘密如果你想要把一个文件藏在一张图片里改怎么做呢（手动滑稽）首先这里有两张图片（1.jpg和2.jpg）：那么现在我们要把2.jpg藏在1.jpg里，步骤如下： 将2.jpg添加到压缩文件（这里以rar格式为例） 在当前目录下新建一个文本文件，命名为”合并”（名字可以随意），并将后缀名改为.bat，如图： 然后右键合并.bat，点击编辑，在文本中输入copy /b 1.jpg+2.rar 3.jpg意思是将1.jpg与2.rar合并成3.jpg 然后保存退出，再双击合并.bat文件即可生成3.jpg这个时候打开3.jpg会发现只是一张普通的图片 但是！！！！！！！！！如果你把3.jpg的后缀名改成.rar后再双击它，你会发现打开的是一个压缩文件，而且文件里面有一张叫2.jpg的图片，嘿嘿嘿~~~~ 原理：是把两个的文件的二进制代码进行合并，并且你会发现，合并过后图片的大小刚好的两个文件的大小总和 当然你也可以尝试各种文件格式的组合，比如把图片放进一首歌里，或者是两个文本的组合等等，反正你能想到好玩的都可以自己试一试，方法就是copy /b 文件1+文件2 文件3记得（/b和文件1）（文件2和文件3）之间都有空格 好啦今天的教程就到这里，自己试试吧（￣︶￣）]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>cmd</tag>
       </tags>
   </entry>
   <entry>
@@ -872,26 +884,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[cmd中有趣的命令二之隐藏文件（不定期更新）]]></title>
-    <url>%2F2017%2F12%2F10%2Fcmd%E4%B8%AD%E6%9C%89%E8%B6%A3%E7%9A%84%E5%91%BD%E4%BB%A4%E4%BA%8C%E4%B9%8B%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6%EF%BC%88%E4%B8%8D%E5%AE%9A%E6%9C%9F%E6%9B%B4%E6%96%B0%EF%BC%89%2F</url>
-    <content type="text"><![CDATA[今天给大家介绍的是命令二之隐藏文件 (￣y▽￣)~*捂嘴偷笑 #隐藏文件说到隐藏文件，你可能会说“可以把文件的属性改成隐藏”，像这样：这样当然可以达到文件隐藏的目的，如果想要查看的话，只需要把文件管理器里面的显示隐藏的文件和文件夹选项勾上就可以看到了，并且隐藏后图片变成了半透明的状态 #但是，咱们今天要说的当然不是这种隐藏方式我们可以用一条cmd命令来达到隐藏文件的目的，想要查看这种方式隐藏的文件的话我们也要用命令才能显示 首先准备一张图片 然后在当前目录下建立一个文本文件，将后缀名改成.bat 然后右键编辑输入 Attrib +h +s +r a.png，保存退出（a.png是你文件的名称，要加上后缀名） 双击bat文件即可将图片隐藏，并且你打开显示隐藏文件的选项也不会看到 想要重新显示图片的话，将bat文件的命令改为 Attrib -h -s -r a.png ，再次执行即可显示图片 当然也可以直接在该文件目录下打开cmd，直接执行上面两条命令也是可以的，也可以建立两个bat文件，像这样，里面分别写入显示和隐藏命令即可 赶紧自己试试吧(￣y▽￣)~*]]></content>
+    <title><![CDATA[cmd中有趣的命令一之合并文件（不定期更新）]]></title>
+    <url>%2F2017%2F12%2F10%2Fcmd%E4%B8%AD%E6%9C%89%E8%B6%A3%E7%9A%84%E5%91%BD%E4%BB%A4%E4%B8%80%E4%B9%8B%E5%90%88%E5%B9%B6%E6%96%87%E4%BB%B6%EF%BC%88%E4%B8%8D%E5%AE%9A%E6%9C%9F%E6%9B%B4%E6%96%B0%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[今天给大家介绍的是命令一之合并文件(ฅ&gt;ω&lt;*ฅ)，后面我会不定期的进行更新 #合并文件（老司机必备）图片下的秘密如果你想要把一个文件藏在一张图片里改怎么做呢（手动滑稽）首先这里有两张图片（1.jpg和2.jpg）：那么现在我们要把2.jpg藏在1.jpg里，步骤如下： 将2.jpg添加到压缩文件（这里以rar格式为例） 在当前目录下新建一个文本文件，命名为”合并”（名字可以随意），并将后缀名改为.bat，如图： 然后右键合并.bat，点击编辑，在文本中输入copy /b 1.jpg+2.rar 3.jpg意思是将1.jpg与2.rar合并成3.jpg 然后保存退出，再双击合并.bat文件即可生成3.jpg这个时候打开3.jpg会发现只是一张普通的图片 但是！！！！！！！！！如果你把3.jpg的后缀名改成.rar后再双击它，你会发现打开的是一个压缩文件，而且文件里面有一张叫2.jpg的图片，嘿嘿嘿~~~~ 原理：是把两个的文件的二进制代码进行合并，并且你会发现，合并过后图片的大小刚好的两个文件的大小总和 当然你也可以尝试各种文件格式的组合，比如把图片放进一首歌里，或者是两个文本的组合等等，反正你能想到好玩的都可以自己试一试，方法就是copy /b 文件1+文件2 文件3记得（/b和文件1）（文件2和文件3）之间都有空格 好啦今天的教程就到这里，自己试试吧（￣︶￣）]]></content>
       <categories>
         <category>技术</category>
       </categories>
       <tags>
         <tag>cmd</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Loveconvert服务站点新增微博视频解析]]></title>
-    <url>%2F2017%2F12%2F10%2FLoveconvert%E6%9C%8D%E5%8A%A1%E7%AB%99%E7%82%B9%E6%96%B0%E5%A2%9E%E5%BE%AE%E5%8D%9A%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90%2F</url>
-    <content type="text"><![CDATA[#Loveconvert服务站点新增微博视频解析下载功能 小伙伴们可以在此网页输入微博视频的短地址或者长地址，点击解析后根据提示下载视频 Loveconvert微博视频解析工具]]></content>
-      <categories>
-        <category>小胡资源</category>
-      </categories>
-      <tags>
-        <tag>Loveconvert</tag>
-        <tag>微博视频解析</tag>
       </tags>
   </entry>
   <entry>
@@ -905,20 +905,6 @@
         <tag>java</tag>
         <tag>mysql</tag>
         <tag>excel</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Android-DrawerLayout+Toolbar实现]]></title>
-    <url>%2F2017%2F12%2F10%2FAndroid-DrawerLayout%2BToolbar%E5%AE%9E%E7%8E%B0%2F</url>
-    <content type="text"><![CDATA[#DrawerLayout+Toolbar实现导入material design 组件 ‘com.android.support:design:25.0.1’ 主布局： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849&lt;android.support.v4.widget.DrawerLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; xmlns:tools=&quot;http://schemas.android.com/tools&quot; android:id=&quot;@+id/drawerlayout&quot; android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;match_parent&quot; android:fitsSystemWindows=&quot;true&quot; tools:context=&quot;com.example.hester.aaaaaa.MainActivity&quot; tools:openDrawer=&quot;start&quot;&gt; &lt;!--主界面--&gt; &lt;LinearLayout android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;match_parent&quot; android:fitsSystemWindows=&quot;true&quot; android:orientation=&quot;vertical&quot;&gt; &lt;android.support.design.widget.AppBarLayout android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;wrap_content&quot;&gt; &lt;android.support.v7.widget.Toolbar android:id=&quot;@+id/toolbar&quot; android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;wrap_content&quot;&gt;&lt;/android.support.v7.widget.Toolbar&gt; &lt;/android.support.design.widget.AppBarLayout&gt; &lt;TextView android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;wrap_content&quot; android:text=&quot;hello world&quot; android:textSize=&quot;30dp&quot; /&gt; &lt;/LinearLayout&gt; &lt;!--侧滑界面--&gt; &lt;LinearLayout android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;match_parent&quot; android:layout_gravity=&quot;start&quot; android:background=&quot;#ffffff&quot; android:fitsSystemWindows=&quot;true&quot;&gt; &lt;TextView android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;wrap_content&quot; android:text=&quot;新闻头条&quot; android:textSize=&quot;30dp&quot; /&gt; &lt;/LinearLayout&gt;&lt;/android.support.v4.widget.DrawerLayout&gt; 主界面初始化ToolBar 123456789101112public class MainActivity extends AppCompatActivity &#123; Toolbar toolbar; @Override protected void onCreate(Bundle savedInstanceState) &#123; super.onCreate(savedInstanceState); setContentView(R.layout.activity_main); toolbar = (Toolbar) findViewById(R.id.toolbar); setSupportActionBar(toolbar); &#125;&#125; 添加NoActionBar主题（values/styles.xml） 1234&lt;style name=&quot;AppTheme.NoActionBar&quot;&gt; &lt;item name=&quot;windowActionBar&quot;&gt;false&lt;/item&gt; &lt;item name=&quot;windowNoTitle&quot;&gt;true&lt;/item&gt;&lt;/style&gt; 设置主布局的主题为NoActionBar AndroidManifest.xml中将主题改为AppTheme.NoActionBar 1234567891011121314&lt;application android:allowBackup=&quot;true&quot; android:icon=&quot;@mipmap/ic_launcher&quot; android:label=&quot;@string/app_name&quot; android:supportsRtl=&quot;true&quot; android:theme=&quot;@style/AppTheme.NoActionBar&quot;&gt; &lt;activity android:name=&quot;.MainActivity&quot;&gt; &lt;intent-filter&gt; &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt; &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt; &lt;/intent-filter&gt; &lt;/activity&gt; &lt;/application&gt; 注意事项： 侧滑布局位置属性：android:layout_gravity=”start” DrawerLayout添加适应系统窗口：android:fitsSystemWindows=”true” #侧滑布局改为NavigationView侧滑布局 12345678910111213&lt;!--侧滑布局--&gt;&lt;android.support.design.widget.NavigationView android:id=&quot;@+id/nav_view&quot; android:layout_width=&quot;wrap_content&quot; android:layout_height=&quot;match_parent&quot; android:layout_gravity=&quot;start&quot; android:fitsSystemWindows=&quot;true&quot; app:headerLayout=&quot;@layout/nav_header&quot; app:menu=&quot;@menu/nav_menu&quot; /&gt;提示：* app:headerLayout=&quot;@layout/header&quot;（添加布局头部）* app:menu=&quot;@menu/nav_menu&quot;（添加布局菜单） @menu/nav_menu： 12345678910111213141516171819202122&lt;menu xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt; &lt;group android:checkableBehavior=&quot;single&quot;&gt; &lt;item android:id=&quot;@+id/news&quot; android:title=&quot;@string/zh_news&quot; /&gt; &lt;item android:id=&quot;@+id/wechat&quot; android:title=&quot;@string/zh_wechat&quot; /&gt; &lt;/group&gt; &lt;item android:title=&quot;Communicate&quot;&gt; &lt;menu&gt; &lt;item android:id=&quot;@+id/nav_share&quot; android:icon=&quot;@drawable/ic_menu_share&quot; android:title=&quot;Share&quot; /&gt; &lt;item android:id=&quot;@+id/nav_send&quot; android:icon=&quot;@drawable/ic_menu_send&quot; android:title=&quot;Send&quot; /&gt; &lt;/menu&gt; &lt;/item&gt;&lt;/menu&gt; 初始化NavigationView： 123456789101112131415//navigationView icon显示原始颜色navigationView.setItemIconTintList(null);//navigationView添加item选择监听事件navigationView.setNavigationItemSelectedListener(this);@Override public boolean onNavigationItemSelected(MenuItem item) &#123; getSupportActionBar().setTitle(item.getTitle()); switch (item.getItemId()) &#123; case R.id.news: break; &#125; drawerLayout.closeDrawer(GravityCompat.START); return true; &#125;]]></content>
-      <categories>
-        <category>Android</category>
-      </categories>
-      <tags>
-        <tag>android</tag>
-        <tag>layout</tag>
-        <tag>toolbar</tag>
-        <tag>java</tag>
       </tags>
   </entry>
   <entry>
@@ -945,6 +931,20 @@
         <tag>android</tag>
         <tag>java</tag>
         <tag>fragment</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Android-DrawerLayout+Toolbar实现]]></title>
+    <url>%2F2017%2F12%2F10%2FAndroid-DrawerLayout%2BToolbar%E5%AE%9E%E7%8E%B0%2F</url>
+    <content type="text"><![CDATA[#DrawerLayout+Toolbar实现导入material design 组件 ‘com.android.support:design:25.0.1’ 主布局： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849&lt;android.support.v4.widget.DrawerLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; xmlns:tools=&quot;http://schemas.android.com/tools&quot; android:id=&quot;@+id/drawerlayout&quot; android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;match_parent&quot; android:fitsSystemWindows=&quot;true&quot; tools:context=&quot;com.example.hester.aaaaaa.MainActivity&quot; tools:openDrawer=&quot;start&quot;&gt; &lt;!--主界面--&gt; &lt;LinearLayout android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;match_parent&quot; android:fitsSystemWindows=&quot;true&quot; android:orientation=&quot;vertical&quot;&gt; &lt;android.support.design.widget.AppBarLayout android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;wrap_content&quot;&gt; &lt;android.support.v7.widget.Toolbar android:id=&quot;@+id/toolbar&quot; android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;wrap_content&quot;&gt;&lt;/android.support.v7.widget.Toolbar&gt; &lt;/android.support.design.widget.AppBarLayout&gt; &lt;TextView android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;wrap_content&quot; android:text=&quot;hello world&quot; android:textSize=&quot;30dp&quot; /&gt; &lt;/LinearLayout&gt; &lt;!--侧滑界面--&gt; &lt;LinearLayout android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;match_parent&quot; android:layout_gravity=&quot;start&quot; android:background=&quot;#ffffff&quot; android:fitsSystemWindows=&quot;true&quot;&gt; &lt;TextView android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;wrap_content&quot; android:text=&quot;新闻头条&quot; android:textSize=&quot;30dp&quot; /&gt; &lt;/LinearLayout&gt;&lt;/android.support.v4.widget.DrawerLayout&gt; 主界面初始化ToolBar 123456789101112public class MainActivity extends AppCompatActivity &#123; Toolbar toolbar; @Override protected void onCreate(Bundle savedInstanceState) &#123; super.onCreate(savedInstanceState); setContentView(R.layout.activity_main); toolbar = (Toolbar) findViewById(R.id.toolbar); setSupportActionBar(toolbar); &#125;&#125; 添加NoActionBar主题（values/styles.xml） 1234&lt;style name=&quot;AppTheme.NoActionBar&quot;&gt; &lt;item name=&quot;windowActionBar&quot;&gt;false&lt;/item&gt; &lt;item name=&quot;windowNoTitle&quot;&gt;true&lt;/item&gt;&lt;/style&gt; 设置主布局的主题为NoActionBar AndroidManifest.xml中将主题改为AppTheme.NoActionBar 1234567891011121314&lt;application android:allowBackup=&quot;true&quot; android:icon=&quot;@mipmap/ic_launcher&quot; android:label=&quot;@string/app_name&quot; android:supportsRtl=&quot;true&quot; android:theme=&quot;@style/AppTheme.NoActionBar&quot;&gt; &lt;activity android:name=&quot;.MainActivity&quot;&gt; &lt;intent-filter&gt; &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt; &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt; &lt;/intent-filter&gt; &lt;/activity&gt; &lt;/application&gt; 注意事项： 侧滑布局位置属性：android:layout_gravity=”start” DrawerLayout添加适应系统窗口：android:fitsSystemWindows=”true” #侧滑布局改为NavigationView侧滑布局 12345678910111213&lt;!--侧滑布局--&gt;&lt;android.support.design.widget.NavigationView android:id=&quot;@+id/nav_view&quot; android:layout_width=&quot;wrap_content&quot; android:layout_height=&quot;match_parent&quot; android:layout_gravity=&quot;start&quot; android:fitsSystemWindows=&quot;true&quot; app:headerLayout=&quot;@layout/nav_header&quot; app:menu=&quot;@menu/nav_menu&quot; /&gt;提示：* app:headerLayout=&quot;@layout/header&quot;（添加布局头部）* app:menu=&quot;@menu/nav_menu&quot;（添加布局菜单） @menu/nav_menu： 12345678910111213141516171819202122&lt;menu xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt; &lt;group android:checkableBehavior=&quot;single&quot;&gt; &lt;item android:id=&quot;@+id/news&quot; android:title=&quot;@string/zh_news&quot; /&gt; &lt;item android:id=&quot;@+id/wechat&quot; android:title=&quot;@string/zh_wechat&quot; /&gt; &lt;/group&gt; &lt;item android:title=&quot;Communicate&quot;&gt; &lt;menu&gt; &lt;item android:id=&quot;@+id/nav_share&quot; android:icon=&quot;@drawable/ic_menu_share&quot; android:title=&quot;Share&quot; /&gt; &lt;item android:id=&quot;@+id/nav_send&quot; android:icon=&quot;@drawable/ic_menu_send&quot; android:title=&quot;Send&quot; /&gt; &lt;/menu&gt; &lt;/item&gt;&lt;/menu&gt; 初始化NavigationView： 123456789101112131415//navigationView icon显示原始颜色navigationView.setItemIconTintList(null);//navigationView添加item选择监听事件navigationView.setNavigationItemSelectedListener(this);@Override public boolean onNavigationItemSelected(MenuItem item) &#123; getSupportActionBar().setTitle(item.getTitle()); switch (item.getItemId()) &#123; case R.id.news: break; &#125; drawerLayout.closeDrawer(GravityCompat.START); return true; &#125;]]></content>
+      <categories>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+        <tag>layout</tag>
+        <tag>toolbar</tag>
+        <tag>java</tag>
       </tags>
   </entry>
   <entry>
