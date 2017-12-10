@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-12-10T05:09:03.982Z</updated>
+  <updated>2017-12-10T09:52:56.305Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,531 +17,593 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>是时候用它代替你PPT了——FocuSky</title>
-    <link href="http://yoursite.com/2017/12/10/%E6%98%AF%E6%97%B6%E5%80%99%E7%94%A8%E5%AE%83%E4%BB%A3%E6%9B%BF%E4%BD%A0PPT%E4%BA%86%E2%80%94%E2%80%94FocuSky/"/>
-    <id>http://yoursite.com/2017/12/10/是时候用它代替你PPT了——FocuSky/</id>
-    <published>2017-12-10T05:07:35.335Z</published>
-    <updated>2017-12-10T05:09:03.982Z</updated>
+    <title>javascript-判断鼠标滚轮</title>
+    <link href="http://yoursite.com/2017/12/10/js-%E5%88%A4%E6%96%AD%E9%BC%A0%E6%A0%87%E6%BB%9A%E8%BD%AE/"/>
+    <id>http://yoursite.com/2017/12/10/js-判断鼠标滚轮/</id>
+    <published>2017-12-10T09:58:46.744Z</published>
+    <updated>2017-12-10T09:52:56.305Z</updated>
     
-    <content type="html"><![CDATA[<p>之前国外有一款制作动态演示文档的软件——<strong>Prezi</strong>，不知道大家有没有听说过，但是这款国外软件对中文的支持并不是很好，限制也比较多。<br><img src="http://upload-images.jianshu.io/upload_images/2381669-1c868b41c8349ab8?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>这次给大家推荐一个国内的制作动态演示文档的软件——<strong>FocuSky**</strong>，**首先软件的使用是免费的，而且还完美支持中文<br><img src="http://upload-images.jianshu.io/upload_images/2381669-b495e71409a9c8f4?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>它的操作简单，很容易上手，可以插入各种文件格式，还有很多功能，包括制作动画，交互等</p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-42c88f5ed3bacb89.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-d4bdd7e448543884?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>通过组件的拖拉可以像制作PPT那样很快的做出一个动态的演示文档，是不是比静态枯燥的PPT有趣多了呢，大家做报告的时候放一个这样的动态演示文档是不是感觉高大上呢</p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-3188e92ae4491063.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>还有一个大家担心的问题，就是做好了过后，如果要去其他电脑上看，是不是得装一个这个软件才能播放？答案当然不是，这也是我觉得比较实用的地方，它可以直接导出为windows应用程序、视频、flash、h5网页、mac app，PDF等文件格式，这样就可以直接拷到其他电脑上进行演示啦，是不是很方便呢</p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-1219a6060e5b620c?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>FocuSky软件官网：<a href="http://www.focusky.com.cn/" target="_blank" rel="external">http://www.focusky.com.cn/</a></p><blockquote><p>在线工具服务网站Loveconvert网址：<br><a href="http://www.loveconvert.com" target="_blank" rel="external">http://www.loveconvert.com</a><br>欢迎关注微信：小胡资源<br><img src="http://upload-images.jianshu.io/upload_images/2381669-a2a7973bd5660097.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="小胡资源"></p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">window.onmousewheel = document.onmousewheel = function(e) &#123;</div><div class="line">    e = e || window.event;</div><div class="line">    if (e.wheelDelta) &#123; //判断浏览器IE，谷歌滑轮事件               </div><div class="line">        if (e.wheelDelta &gt; 0) &#123; //当滑轮向上滚动时  </div><div class="line">            console.log(&quot;滑轮向上滚动&quot;);</div><div class="line">        &#125;</div><div class="line">        if (e.wheelDelta &lt; 0) &#123; //当滑轮向下滚动时  </div><div class="line">            console.log(&quot;滑轮向下滚动&quot;);</div><div class="line">        &#125;</div><div class="line">    &#125; else if (e.detail) &#123; //Firefox滑轮事件  </div><div class="line">        if (e.detail &gt; 0) &#123; //当滑轮向上滚动时  </div><div class="line">            console.log(&quot;滑轮向上滚动&quot;);</div><div class="line">        &#125;</div><div class="line">        if (e.detail &lt; 0) &#123; //当滑轮向下滚动时  </div><div class="line">            console.log(&quot;滑轮向下滚动&quot;);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;之前国外有一款制作动态演示文档的软件——&lt;strong&gt;Prezi&lt;/strong&gt;，不知道大家有没有听说过，但是这款国外软件对中文的支持并不是很好，限制也比较多。&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_im
+        &lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div c
       
     
     </summary>
     
-      <category term="小胡资源" scheme="http://yoursite.com/categories/%E5%B0%8F%E8%83%A1%E8%B5%84%E6%BA%90/"/>
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="FocuSky" scheme="http://yoursite.com/tags/FocuSky/"/>
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="鼠标" scheme="http://yoursite.com/tags/%E9%BC%A0%E6%A0%87/"/>
+    
+      <category term="滚轮" scheme="http://yoursite.com/tags/%E6%BB%9A%E8%BD%AE/"/>
     
   </entry>
   
   <entry>
-    <title>时隔一年的Sublime-Text-3终于更新啦</title>
-    <link href="http://yoursite.com/2017/12/10/%E6%97%B6%E9%9A%94%E4%B8%80%E5%B9%B4%E7%9A%84Sublime-Text-3%E7%BB%88%E4%BA%8E%E6%9B%B4%E6%96%B0%E5%95%A6/"/>
-    <id>http://yoursite.com/2017/12/10/时隔一年的Sublime-Text-3终于更新啦/</id>
-    <published>2017-12-10T05:07:35.335Z</published>
-    <updated>2017-12-10T05:08:52.263Z</updated>
+    <title>Javascript中的编码解码函数</title>
+    <link href="http://yoursite.com/2017/12/10/Javascript%E4%B8%AD%E7%9A%84%E7%BC%96%E7%A0%81%E8%A7%A3%E7%A0%81%E5%87%BD%E6%95%B0/"/>
+    <id>http://yoursite.com/2017/12/10/Javascript中的编码解码函数/</id>
+    <published>2017-12-10T09:58:46.743Z</published>
+    <updated>2017-12-10T09:52:41.534Z</updated>
     
-    <content type="html"><![CDATA[<p>作为自己最爱的一款编辑器，自从2016年9月23日开始，Sublime Text 3 的版本就一直是3126版本（很多bug）</p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-d09c8436cc43979a?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>虽然官方不停的在刷预览版，但是正式的版本一直没有更新，还以为它放弃维护了呢<br>但是在昨天（2017年9月13日）<br>Sublime Text 3时隔了一年终于迎来了正式版的更新</p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-442cb7b177a069bb?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>在Sublime Text 3 Build 3143版本中<br>更新的东西还是挺多的<br>首先就是Sublime Text 3 的Logo 发生了改变，下图是新的Logo</p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-0c2580a506994fd7?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-0bf0948c17b6a148.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>然后呢，编辑器内部的一些UI风格也发生了改变</p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-f0ce67969a34f9e7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-5d960cbabd84628a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>还有就是编辑器的主题有了一点变化</p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-6cc104bb82867b5d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-eda9b336507a6666.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>还有很多的变更等着你去发现<br>总之Sublime Text 3是一款十分强大且好看好用的编辑器<br>之前还有介绍过Sublime Text 3的一些强大的功能<br>而且这次更新修复了很多的bug<br>小伙伴们可以用用，不会让你失望滴<br>Sublime Text 3 官网：<a href="https://www.sublimetext.com/" target="_blank" rel="external">https://www.sublimetext.com/</a></p><p><strong>（手动华丽的分割线，以下是更新日志，可跳过= =）</strong></p><hr><blockquote><p>Changelog<br>3.0 (BUILD 3143)<br>13 September 2017<br>See also the <a href="https://www.sublimetext.com/blog/articles/sublime-text-3-point-0" target="_blank" rel="external">Announcement Post</a><br>Refreshed UI theme, including full high DPI support<br>New icon<br>Added alternate theme, Adaptive, that inherits colors from the color scheme<br>Added new color schemes <em>Breakers</em>, <em>Mariana</em> and <em>Sixteen</em>, derived from the excellent work of Chris Kempson and Dmitri Voronianski<br>Added color scheme and theme switchers with live preview via the command palette<br>Windows: Added touch input<br>Linux: Added <a href="https://www.sublimetext.com/docs/3/linux_repositories.html" target="_blank" rel="external">repositories</a> for apt, yum and pacman<br>Mac: Added Touch Bar support<br>Mac: Support for custom color window title bars on OS X 10.10+<br>Many additions and bug fixes to the theme engine, plus <a href="https://www.sublimetext.com/docs/3/themes.html" target="_blank" rel="external">full documentation</a><br>Significant improvements to Markdown syntax highlighting, with thanks to <a href="https://github.com/keith-hall" target="_blank" rel="external">keith-hall</a><br>Significant improvements to C# syntax highlighting, with thanks to <a href="https://github.com/gwenzek" target="_blank" rel="external">gwenzek</a><br>Significant improvements to Java syntax highlighting, with thanks to <a href="https://github.com/djspiewak" target="_blank" rel="external">djspiewak</a><br>Significant improvements to Python syntax highlighting, with thanks to <a href="https://github.com/FichteFoll" target="_blank" rel="external">FichteFoll</a><br>Significant improvements for R syntax highlighting, with thanks to <a href="https://github.com/randy3k" target="_blank" rel="external">randy3k</a><br>Markdown: Improved symbol handling<br>C#: Improved symbol handling<br>Many other syntax highlighting improvements<br>Various bugs with the syntax highlighting engine have been resolved<br>Fixed several crash issues<br>Improved responsiveness when the system is under high CPU load<br>High DPI textures are used on Windows and Linux when the DPI scale is greater than 1.0<br>Improved font selection on all platforms, allowing selection of different weights by name<br>Added setting theme_font_options<br> to control font rendering of UI elements<br>Improved auto indent rules for HTML and PHP<br>Font geometry issues that prevent bold or italics are now printed in the console<br>Fixed flash-of-white that could occur when the auto complete window is closed<br>Disable scroll animation when animation_enabled<br> is false in settings<br>Files can now be renamed when only the case has changed<br>New windows start with an empty find history<br>Find in Files panel now responds to find_all<br> and replace_all<br> commands<br>Various regex handling improvements in the Find panel<br>Fixed text widgets cutting off the bottom pixel of their selection border<br>Fixed an issue with close_windows_when_empty<br> in empty session<br>Fixed empty panes on startup when hot_exit<br> was set to false<br>Fix Open Containing Folder on Windows with a folder containing a comma<br>Fix multi-cursor pasting when clipboard contains one or more full lines<br>Prevent UNC paths from being mangled by edit_settings<br>Prevent a crash when a malformed regex is used in indentation settings<br>Improved rendering performance with a large number of gutter icons<br>Gutter icons are now sized properly on Windows and Linux high DPI screens<br>Improved sidebar performance when folders contain many thousands of files<br>Improved inline error message style<br>Fixed an issue where multiple indexing status windows could be shown<br>Windows: Font rendering defaults to DirectWrite unless using Consolas or Courier New<br>Windows: Added support for no_antialias<br> font option when using DirectWrite<br>Windows: Improved touch pad scrolling<br>Windows: Improved file change detection robustness<br>Windows: Improved font selection logic<br>Windows: Fix ctrl+` shortcut for UK (ISO) keyboards<br>Windows: Improved fallback font handling in UI elements<br>Windows: The subl executable on OS X and plugin_host.exe on Windows are now signed<br>Windows: sublime_text.exe now has CompanyName set in VERSIONINFO<br>Mac: Handle layout changes due to macOS Sierra tabs<br>Mac: Improved default web browser detection<br>Mac: OS X 10.11 and macOS 10.12+ default to using San Francisco for the UI font<br>Mac: Fixed file change notifications from freezing UI on macOS Sierra<br>Mac: the user’s default shell is executed and environmental variables are set in the plugin Python environment<br>Linux: Update X11 selection on clipboard every time selection changes<br>Linux: Improved MOD3<br> modifier key handling<br>minihtml: Added support for borders<br>minihtml: Respects font_options<br> from the settings<br>minihtml: Fixed layout of html popups on Windows and Linux under High DPI<br>minihtml: Fixed crash when doctype is present<br>minihtml: Fixed a crash from non-existent CSS vars<br>minihtml: Fixed a crash triggered by bad image paths<br>API: Add View.text_to_window()<br> and View.layout_to_window()<br>API: All API functions now accept and return device-independent-pixels<br>API: Fixed input panel not running on_cancel<br> when re-showing the input panel<br>API: Fixed selector scoring with the &amp; operator<br>API: Fixed a bug causing incorrect phantom contents<br>API: Fixed crash in Window.set_view_index()<br>API: Updated OpenSSL to 1.0.2k, SQLite to 3.16.02</p></blockquote><p>在线工具服务网站Loveconvert网址：<a href="http://www.loveconvert.com/" target="_blank" rel="external">http://www.loveconvert.com</a><br>欢迎关注微信：小胡资源<br><img src="http://upload-images.jianshu.io/upload_images/2381669-333693eebfd1d314.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="小胡资源"></p>]]></content>
+    <content type="html"><![CDATA[<ul><li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">![](http://upload-images.jianshu.io/upload_images/2381669-ad5a4b65d1847869.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</div><div class="line"></div><div class="line">![](http://upload-images.jianshu.io/upload_images/2381669-b1f60a0ec906c540.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</div><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line">- ```decodeURI()```： 解码一个由 encodeURI 编码过的 URI。</div><div class="line">![](http://upload-images.jianshu.io/upload_images/2381669-5bae1e56d9d01d19.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</div><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line">- ```encodeURIComponent()</div></pre></td></tr></table></figure></li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-aa016db5030cacc1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-de3d56c8e656eef5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><hr><ul><li><code>decodeURIComponent()</code>：解码一个由 encodeURIComponent 编码过的字符串。<br><img src="http://upload-images.jianshu.io/upload_images/2381669-a858e460a87b88a8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li></ul><hr><ul><li><code>window.btoa()</code>：将一个只有 ASCII 字符的字符串或二进制数据转换成一个 base64 编码过的字符串。</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-b6975a2c7dd53c1f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><blockquote><p>如果想对一个 Unicode 字符串进行编码，可以使用 encodeURIComponent 先对其进行编码，然后再进行 base64 编码。</p></blockquote><p><img src="http://upload-images.jianshu.io/upload_images/2381669-b181a5eb5e60ba97.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><hr><ul><li><code>window.atob()</code>： 用来解码被 base64 编码过的数据，直接对 ASCII 字符串进行 base64 解码会出现乱码。<br><img src="http://upload-images.jianshu.io/upload_images/2381669-1edc12cfc9ba739b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;作为自己最爱的一款编辑器，自从2016年9月23日开始，Sublime Text 3 的版本就一直是3126版本（很多bug）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2381669-d0
+        &lt;ul&gt;
+&lt;li&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;li
       
     
     </summary>
     
-      <category term="小胡资源" scheme="http://yoursite.com/categories/%E5%B0%8F%E8%83%A1%E8%B5%84%E6%BA%90/"/>
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="sublime 更新" scheme="http://yoursite.com/tags/sublime-%E6%9B%B4%E6%96%B0/"/>
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="编码" scheme="http://yoursite.com/tags/%E7%BC%96%E7%A0%81/"/>
+    
+      <category term="解码" scheme="http://yoursite.com/tags/%E8%A7%A3%E7%A0%81/"/>
     
   </entry>
   
   <entry>
-    <title>推荐一个YouTube油管主</title>
-    <link href="http://yoursite.com/2017/12/10/%E6%8E%A8%E8%8D%90%E4%B8%80%E4%B8%AAYouTube%E6%B2%B9%E7%AE%A1%E4%B8%BB/"/>
-    <id>http://yoursite.com/2017/12/10/推荐一个YouTube油管主/</id>
-    <published>2017-12-10T05:07:35.335Z</published>
-    <updated>2017-12-10T05:09:18.472Z</updated>
+    <title>javascript-在div前、中、后插入另一个div</title>
+    <link href="http://yoursite.com/2017/12/10/javascript-%E5%9C%A8div%E5%89%8D%E3%80%81%E4%B8%AD%E3%80%81%E5%90%8E%E6%8F%92%E5%85%A5%E5%8F%A6%E4%B8%80%E4%B8%AAdiv/"/>
+    <id>http://yoursite.com/2017/12/10/javascript-在div前、中、后插入另一个div/</id>
+    <published>2017-12-10T09:58:46.741Z</published>
+    <updated>2017-12-10T09:52:34.154Z</updated>
     
-    <content type="html"><![CDATA[<p>最近两天在YouTube上找到的油管主 - <strong>The Net Ninja</strong>，录制了很多关于编程方面的系列教程，都是免费的，而且教学质量还高，教程种类很多（主要以前端为主），个人感觉简单易懂，很适合编程初学者观看，而且讲的全是干货，所以推荐给有这方面需要的小伙伴们，说的英语也不难，很容易就能听懂，听力不好的同学可以打开字幕观看</p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-ce1e3ebddc504826.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="The Net Ninja"></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-62965bdd6ae839ec?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><blockquote><p>欢迎关注微信公众号：小胡资源<br>里面有各种软件和资源哦，每天还会发布各种干货文章，欢迎关注哦~~<br><img src="http://upload-images.jianshu.io/upload_images/2381669-c4013f1e867a07ed?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>小胡的在线工具服务网站Loveconvert网址：<br><a href="http://www.loveconvert.com" target="_blank" rel="external">http://www.loveconvert.com</a></p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">&lt;title&gt;Document&lt;/title&gt;</div><div class="line">&lt;style&gt;</div><div class="line">div&#123;</div><div class="line">height: 30px;</div><div class="line">&#125;</div><div class="line">#d1&#123;</div><div class="line">background: blue;</div><div class="line">&#125;</div><div class="line">#d2&#123;</div><div class="line">background: red;</div><div class="line">&#125;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;div id=&quot;d1&quot;&gt;1&lt;/div&gt;</div><div class="line">&lt;div id=&quot;d2&quot;&gt;2&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">var d1 = document.getElementById(&apos;d1&apos;);</div><div class="line">var d2 = document.getElementById(&apos;d2&apos;);</div><div class="line"></div><div class="line">//移动d1到d2后面</div><div class="line">function move_d1_to_d2_after()&#123;</div><div class="line">d1.parentNode.insertBefore(d1,d2.nextSibling);</div><div class="line">&#125;</div><div class="line">//移动d1到d2里面</div><div class="line">function move_d1_into_d2()&#123;</div><div class="line">d2.appendChild(d1);</div><div class="line">&#125;</div><div class="line">//移动d2到d1前面</div><div class="line">function move_d2_to_d1_before()&#123;</div><div class="line">d2.parentNode.insertBefore(d2,d1);</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure><ul><li>初始</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-0f5191a6e6a4b170.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-24a076f3c7e1fb84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><ul><li>执行<code>move_d1_to_d2_after</code>，即移动d1到d2后面</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-0cc1f9726367b86c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-e019ad318e880294.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><ul><li>执行<code>move_d1_into_d2</code>，移动d1到d2里面</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-0b10e5a91c7879e1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-092af5fa475b22fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><ul><li>执行<code>move_d2_to_d1_before</code>，即移动d2到d1前面</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-0cc1f9726367b86c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-e019ad318e880294.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;最近两天在YouTube上找到的油管主 - &lt;strong&gt;The Net Ninja&lt;/strong&gt;，录制了很多关于编程方面的系列教程，都是免费的，而且教学质量还高，教程种类很多（主要以前端为主），个人感觉简单易懂，很适合编程初学者观看，而且讲的全是干货，所以推荐给有这
+        &lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div c
       
     
     </summary>
     
-      <category term="小胡资源" scheme="http://yoursite.com/categories/%E5%B0%8F%E8%83%A1%E8%B5%84%E6%BA%90/"/>
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="YouTube" scheme="http://yoursite.com/tags/YouTube/"/>
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="div" scheme="http://yoursite.com/tags/div/"/>
     
   </entry>
   
   <entry>
-    <title>生活和设计的灵感库！</title>
-    <link href="http://yoursite.com/2017/12/10/%E7%94%9F%E6%B4%BB%E5%92%8C%E8%AE%BE%E8%AE%A1%E7%9A%84%E7%81%B5%E6%84%9F%E5%BA%93%EF%BC%81/"/>
-    <id>http://yoursite.com/2017/12/10/生活和设计的灵感库！/</id>
-    <published>2017-12-10T05:07:35.303Z</published>
-    <updated>2017-12-10T05:08:32.506Z</updated>
+    <title>javascript-选择器的区别</title>
+    <link href="http://yoursite.com/2017/12/10/javascript-%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://yoursite.com/2017/12/10/javascript-选择器的区别/</id>
+    <published>2017-12-10T09:58:46.739Z</published>
+    <updated>2017-12-10T09:52:29.014Z</updated>
     
-    <content type="html"><![CDATA[<p>学习一下优秀设计师们的作品吧<br>希望能给你带来生活和设计的灵感哟</p><ol><li>Dribbble（<a href="https://dribbble.com）" target="_blank" rel="external">https://dribbble.com）</a></li></ol><p><img src="http://upload-images.jianshu.io/upload_images/2381669-50b3761fa19c8148?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>网站的设计图分享都是按照色彩来进行分类的，不仅可以找到灵感，还可以找到对应的配色</p><hr><ol><li>reeoo（<a href="http://reeoo.com）" target="_blank" rel="external">http://reeoo.com）</a></li></ol><p><img src="http://upload-images.jianshu.io/upload_images/2381669-4969aa43d97be14b?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>该网站的设计作品有点偏向于网站的设计风格，不过也可以从其中学到不少优秀设计师们的设计技巧哦</p><hr><ol><li>theinspirationgrid（<a href="http://theinspirationgrid.com）" target="_blank" rel="external">http://theinspirationgrid.com）</a></li></ol><p><img src="http://upload-images.jianshu.io/upload_images/2381669-6b4c3c1a70ff5961.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>作品的种类很多哦，也是偏向于简约时尚大气的，有平面也有动态的</p><hr><ol><li>thefwa（<a href="https://thefwa.com）" target="_blank" rel="external">https://thefwa.com）</a></li></ol><p><img src="http://upload-images.jianshu.io/upload_images/2381669-034bbf3e8e0081eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>做设计的朋友们应该听说过这个网站吧，里面的作品都曾经用来作过壁纸，其创作的作品绝对是我们灵感参考的好地方</p><hr><ol><li>Behance（<a href="https://www.behance.net）部分视频需翻墙观看" target="_blank" rel="external">https://www.behance.net）部分视频需翻墙观看</a></li></ol><p><img src="http://upload-images.jianshu.io/upload_images/2381669-243bf58279f9f3c5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>设计当中的B站，是Adobe旗下的创意分享平台，Adobe不用说了吧，大名鼎鼎的PS就是它的。里面品类繁多，包括平面设计、插画、运动图形、UI设计、工业设计等等</p><hr><ol><li>学UI（<a href="http://app.xueui.cn）" target="_blank" rel="external">http://app.xueui.cn）</a></li></ol><p><img src="http://upload-images.jianshu.io/upload_images/2381669-e6f665616c834820.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>囊括了APP页面设计的各个板块，要做APP的朋友们可以去这个网站参考一下页面的设计风格和找寻适合自己APP的灵感哟</p><hr><blockquote><p>我的在线工具服务网站Loveconvert网址，欢迎大家来访：<br><a href="http://www.loveconvert.com" target="_blank" rel="external">http://www.loveconvert.com</a></p></blockquote><p>欢迎大家关注微信：小胡资源，有各种资源福利哟（软件、网站）</p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-f8e1324ef4498514?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<hr><h4 id="选择器作用："><a href="#选择器作用：" class="headerlink" title="选择器作用："></a>选择器作用：</h4><ul><li><code>document.getElementById(&#39;&#39;)</code>：通过<strong>ID</strong>选取元素</li><li><code>document.getElementsByName(&#39;&#39;)</code>：通过<strong>名称name</strong>选取元素</li><li><code>document.getElementsByClassName(&#39;&#39;)</code>：通过<strong>class类</strong>选取元素</li><li><code>document.getElementsByTagName(&#39;&#39;)</code>：通过<strong>标签名</strong>选取元素</li><li><code>document.all</code>：选取<strong>全部</strong>元素</li></ul><ul><li><code>document.querySelector(&#39;&#39;)</code>：根据<strong>css选择器</strong>选取id或class元素</li><li><code>document.querySelectorAll(&#39;&#39;)</code>：根据<strong>css选择器</strong>选取相应<strong>全部的</strong>元素</li></ul><hr><h4 id="选择器的返回类型："><a href="#选择器的返回类型：" class="headerlink" title="选择器的返回类型："></a>选择器的返回类型：</h4><ul><li><code>document.getElementById(&#39;&#39;)</code>：返回<strong>含标签名</strong>的元素</li><li><code>document.getElementsByName(&#39;&#39;)</code>：返回一个<strong>nodeList</strong>集合</li><li><code>document.getElementsByName(&#39;&#39;)[index]</code>：返回<strong>第index个含名称name</strong>，<strong>含标签名</strong>的元素</li><li><code>document.getElementsByClassName(&#39;&#39;)</code>：返回一个<strong>nodeList</strong>集合</li><li><code>document.getElementsByClassName(&#39;&#39;)[index]</code>：返回<strong>第index个含类名class</strong>，<strong>含标签名</strong>的元素</li><li><code>document.getElementsByTagName(&#39;&#39;)</code>：返回一个<strong>nodeList</strong>集合</li><li><code>document.getElementsByTagName(&#39;&#39;)[index]</code>：返回一个<strong>第index个含标签名</strong>，<strong>含标签名</strong>的元素</li><li><code>document.all</code>：返回一个<strong>nodeList</strong>集合</li></ul><ul><li><code>document.querySelector(&#39;&#39;)</code>：返回<strong>含标签名</strong>的元素</li><li><code>document.querySelector(&#39;&#39;)[index]</code>：返回<strong>第index个</strong>，<strong>含标签名</strong>的元素</li><li><code>document.querySelectorAll(&#39;&#39;)</code>：返回一个<strong>nodeList</strong>集合</li></ul><hr>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;学习一下优秀设计师们的作品吧&lt;br&gt;希望能给你带来生活和设计的灵感哟&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Dribbble（&lt;a href=&quot;https://dribbble.com）&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://dribbble.
+        &lt;hr&gt;
+&lt;h4 id=&quot;选择器作用：&quot;&gt;&lt;a href=&quot;#选择器作用：&quot; class=&quot;headerlink&quot; title=&quot;选择器作用：&quot;&gt;&lt;/a&gt;选择器作用：&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;document.getElementById(&amp;#39;&amp;#39;)&lt;/
       
     
     </summary>
     
-      <category term="小胡资源" scheme="http://yoursite.com/categories/%E5%B0%8F%E8%83%A1%E8%B5%84%E6%BA%90/"/>
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="灵感库" scheme="http://yoursite.com/tags/%E7%81%B5%E6%84%9F%E5%BA%93/"/>
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="选择器" scheme="http://yoursite.com/tags/%E9%80%89%E6%8B%A9%E5%99%A8/"/>
     
   </entry>
   
   <entry>
-    <title>8个PPT模板资源网站！！</title>
-    <link href="http://yoursite.com/2017/12/10/8%E4%B8%AAPPT%E6%A8%A1%E6%9D%BF%E8%B5%84%E6%BA%90%E7%BD%91%E7%AB%99%EF%BC%81%EF%BC%81/"/>
-    <id>http://yoursite.com/2017/12/10/8个PPT模板资源网站！！/</id>
-    <published>2017-12-10T05:07:35.288Z</published>
-    <updated>2017-12-10T05:08:16.969Z</updated>
+    <title>javascript-图像二值化处理</title>
+    <link href="http://yoursite.com/2017/12/10/javascript-%E5%9B%BE%E5%83%8F%E4%BA%8C%E5%80%BC%E5%8C%96%E5%A4%84%E7%90%86/"/>
+    <id>http://yoursite.com/2017/12/10/javascript-图像二值化处理/</id>
+    <published>2017-12-10T09:58:46.708Z</published>
+    <updated>2017-12-10T09:52:22.256Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="欢迎关注微信：小胡资源"><a href="#欢迎关注微信：小胡资源" class="headerlink" title="欢迎关注微信：小胡资源"></a>欢迎关注微信：小胡资源</h1><p>每天都会给大家发一篇文章，内容广泛，包括各种软件的介绍和使用教程，或者分享一些好的文章和技术干货。<br>公众号里有大量的软件资源和网站资源供您使用，来看看吧</p><hr><p><strong>1. 51PPT模板（<a href="http://www.51pptmoban.com）" target="_blank" rel="external">http://www.51pptmoban.com）</a></strong><br><img src="http://upload-images.jianshu.io/upload_images/2381669-a6e350954cd210b7?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="51PPT"></p><p>有好多的PPTer将他们的免费PPT放在该网站，某些一流设计师的免费模板也在其中，可以淘到一些很好的PPT模板</p><hr><p><strong>2. 微软Office官方在线模板网站（<a href="http://www.officeplus.cn）" target="_blank" rel="external">http://www.officeplus.cn）</a></strong><br><img src="http://upload-images.jianshu.io/upload_images/2381669-d8d8b456a1700f75.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="微软Office"></p><p>OfficePLUS，微软Office官方在线模板网站！word PPT excel 模板都有，PPT资源非常丰富！最重要的是这里可以免费下载PPT模板，免费使用！</p><hr><p><strong>3. 优品PPT（<a href="http://www.ypppt.com）" target="_blank" rel="external">http://www.ypppt.com）</a></strong><br><img src="http://upload-images.jianshu.io/upload_images/2381669-5346f651499e814d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="优品PPT"></p><p>专注于分享高质量的免费PPT模板下载网站。包括PPT图表、PPT背景图片、PPT素材、PPT教程等各类PPT资源。</p><hr><p><strong>4. 找个PPT（<a href="http://www.zhaogeppt.com）" target="_blank" rel="external">http://www.zhaogeppt.com）</a></strong><br><img src="http://upload-images.jianshu.io/upload_images/2381669-217668b4746571f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="找个PPT"></p><p>PPT分享社区 有大量的免费PPT</p><hr><p><strong>5. 逼格PPT（<a href="http://www.tretars.com）" target="_blank" rel="external">http://www.tretars.com）</a></strong><br><img src="http://upload-images.jianshu.io/upload_images/2381669-de88a1fc9b21cbd2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="逼格PPT"></p><p>ppter李益达的个人博客</p><hr><p><strong>6. ALLPPT（<a href="http://www.free-powerpoint-templates-design.com）" target="_blank" rel="external">http://www.free-powerpoint-templates-design.com）</a></strong><br><img src="http://upload-images.jianshu.io/upload_images/2381669-47ecf6fbd678b0f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ALLPPT"></p><p>ALLPPT是一个外国的PPT模板网站，它每天都会更新一些免费的PPT模板、图表等。其中也包含了很多商业PPT、医疗PPT、餐饮PPT等。PPT资源也比较丰富哟!</p><hr><p><strong>— 以下为收费PPT优质资源网站—</strong></p><hr><p><strong>7. PPTstore（<a href="http://www.pptstore.net）" target="_blank" rel="external">http://www.pptstore.net）</a></strong><br><img src="http://upload-images.jianshu.io/upload_images/2381669-303166214532852c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="PPTstore"></p><p>国内第一家以原创PPT设计为主的C2C内容分享平台，汇聚了国内众多的PPT达人和他们的作品。不断创造出新内容出来，让众多的PPT高手有一个交流合作共享的平台，不断促进PPT模板的创新制作，向网友展示一流的PPT模板。</p><hr><p><strong>8. 演界网（<a href="http://www.yanj.cn）" target="_blank" rel="external">http://www.yanj.cn）</a></strong><br><img src="http://upload-images.jianshu.io/upload_images/2381669-579f0b3d131af7f4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="演界网"></p><p>所提供的服务包括：PPT模板、PPT图表、PPT动画、PPT作品、keynote模板、演示图片、prezi、演示定制。</p><hr><blockquote><p>在线工具服务网站Loveconvert网址：<br><a href="http://www.loveconvert.com" target="_blank" rel="external">http://www.loveconvert.com</a></p><h1 id="欢迎关注微信：小胡资源-1"><a href="#欢迎关注微信：小胡资源-1" class="headerlink" title="欢迎关注微信：小胡资源"></a>欢迎关注微信：小胡资源</h1><p>每天都会给大家发一篇文章，内容广泛，包括各种软件的介绍和使用教程，或者分享一些好的文章和技术干货。<br>公众号里有大量的软件资源和网站资源供您使用，来看看吧</p></blockquote><p><img src="http://upload-images.jianshu.io/upload_images/2381669-5db3877b1ecc4a82.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="小胡资源"></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line"></div><div class="line">&lt;head&gt;</div><div class="line">    &lt;title&gt;&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">&lt;body&gt;</div><div class="line">    &lt;canvas id=&quot;canvas&quot; onclick=&quot;showInfo()&quot;&gt;&lt;/canvas&gt;</div><div class="line">    &lt;img id=&quot;img&quot; src=&quot;1.jpg&quot; width=&quot;300&quot; height=&quot;200&quot; hidden&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">    window.onload = function() &#123;</div><div class="line">        var canvas = document.getElementById(&apos;canvas&apos;);</div><div class="line">        var img = document.getElementById(&apos;img&apos;);</div><div class="line">        var c = canvas.getContext(&apos;2d&apos;);</div><div class="line">        canvas.width = img.width;</div><div class="line">        canvas.height = img.height;</div><div class="line"></div><div class="line">        c.drawImage(img, 0, 0, canvas.width, canvas.height);</div><div class="line"></div><div class="line">        this.showInfo = function() &#123;</div><div class="line">            var imgData = c.getImageData(0, 0, canvas.width, canvas.height);</div><div class="line">            var index = 255/2;//阈值</div><div class="line">            for (var i = 0; i &lt; imgData.data.length; i += 4) &#123;</div><div class="line">                var R = imgData.data[i]; //R(0-255)</div><div class="line">                var G = imgData.data[i + 1]; //G(0-255)</div><div class="line">                var B = imgData.data[i + 2]; //B(0-255)</div><div class="line">                var Alpha = imgData.data[i + 3]; //Alpha(0-255)</div><div class="line">                var sum = (R + G + B) / 3;</div><div class="line">                if (sum &gt; index) &#123;</div><div class="line">                    imgData.data[i] = 255;</div><div class="line">                    imgData.data[i + 1] = 255;</div><div class="line">                    imgData.data[i + 2] = 255;</div><div class="line">                    imgData.data[i + 3] = Alpha;</div><div class="line">                &#125; else &#123;</div><div class="line">                    imgData.data[i] = 0;</div><div class="line">                    imgData.data[i + 1] = 0;</div><div class="line">                    imgData.data[i + 2] = 0;</div><div class="line">                    imgData.data[i + 3] = Alpha;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            c.putImageData(imgData, 0, 0);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line"></div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure><h2 id="处理前"><a href="#处理前" class="headerlink" title="处理前"></a>处理前</h2><p><img src="http://upload-images.jianshu.io/upload_images/2381669-73266139bd021beb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="处理前"></p><h2 id="处理后"><a href="#处理后" class="headerlink" title="处理后"></a>处理后</h2><p><img src="http://upload-images.jianshu.io/upload_images/2381669-739f37e508e0e9ee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="处理后"></p><blockquote><p>记得在服务器端中运行，不然会有跨域问题，推荐使用Node的http-server，使用比较方便</p></blockquote>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;欢迎关注微信：小胡资源&quot;&gt;&lt;a href=&quot;#欢迎关注微信：小胡资源&quot; class=&quot;headerlink&quot; title=&quot;欢迎关注微信：小胡资源&quot;&gt;&lt;/a&gt;欢迎关注微信：小胡资源&lt;/h1&gt;&lt;p&gt;每天都会给大家发一篇文章，内容广泛，包括各种软件的介绍和使用教程，或
+        &lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div c
       
     
     </summary>
     
-      <category term="小胡资源" scheme="http://yoursite.com/categories/%E5%B0%8F%E8%83%A1%E8%B5%84%E6%BA%90/"/>
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="PPT模板" scheme="http://yoursite.com/tags/PPT%E6%A8%A1%E6%9D%BF/"/>
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="image" scheme="http://yoursite.com/tags/image/"/>
+    
+      <category term="二值化" scheme="http://yoursite.com/tags/%E4%BA%8C%E5%80%BC%E5%8C%96/"/>
     
   </entry>
   
   <entry>
-    <title>5款良心下载神器！！看了不后悔！！</title>
-    <link href="http://yoursite.com/2017/12/10/5%E6%AC%BE%E8%89%AF%E5%BF%83%E4%B8%8B%E8%BD%BD%E7%A5%9E%E5%99%A8%EF%BC%81%EF%BC%81%E7%9C%8B%E4%BA%86%E4%B8%8D%E5%90%8E%E6%82%94%EF%BC%81%EF%BC%81/"/>
-    <id>http://yoursite.com/2017/12/10/5款良心下载神器！！看了不后悔！！/</id>
-    <published>2017-12-10T05:07:34.991Z</published>
-    <updated>2017-12-10T05:08:04.500Z</updated>
+    <title>javascript-如何修改css伪元素的内容</title>
+    <link href="http://yoursite.com/2017/12/10/javascript-%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9css%E4%BC%AA%E5%85%83%E7%B4%A0%E7%9A%84%E5%86%85%E5%AE%B9/"/>
+    <id>http://yoursite.com/2017/12/10/javascript-如何修改css伪元素的内容/</id>
+    <published>2017-12-10T09:58:46.706Z</published>
+    <updated>2017-12-10T09:51:54.938Z</updated>
     
-    <content type="html"><![CDATA[<p>这一次给大家带来5款良心的下载神器！！！一定不要错过哟！！一定要看完哟！！！<br>自己使用后感觉真是美滋滋(づ￣ 3￣)づ</p><hr><p>来来来，先看看要给大家介绍的神器长什么样子!</p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-40e776babd082584?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><hr><p><strong>1. IDM（Internet Download Manager）：</strong></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-ae74e8ea87b9e82b?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-8b9cb0b7d11f0f80?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>这个下载神器就不用多说了，号称可以提高5倍的下载速度哟，6得一P，还可以嗅探网页上的音频和视频，直接可以进行下载哟<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">***</div><div class="line">**2. EagleGet（猎鹰）：**</div><div class="line">![](http://upload-images.jianshu.io/upload_images/2381669-b4cdf64bd9320752?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</div><div class="line"></div><div class="line">![](http://upload-images.jianshu.io/upload_images/2381669-001834216112bb1e?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</div><div class="line"></div><div class="line">EagleGet的界面简洁无广告（不像现在的迅雷，广告越来越多，越来越臃肿了），支持多线程下载，同样可以进行网页视频嗅探和抓取，为主力下载器的首选哟~~啊哈哈哈哈哈哈，嗝</div><div class="line">***</div><div class="line">**3. Pan Download：**</div><div class="line"></div><div class="line">![](http://upload-images.jianshu.io/upload_images/2381669-c3cb92bac93a3efd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</div><div class="line"></div><div class="line">![](http://upload-images.jianshu.io/upload_images/2381669-647f4a29893125d9?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</div><div class="line"></div><div class="line">大家是不是用过百度云盘呀，是不是感觉没有VIP速度就慢得可怜呀，用了什么破解版的百度云盘有时候也不太稳定，这次给大家推荐的Pan Download一定不会让大家失望的，看看上面的截图，是我下载office时候的速度，平均速度在4M多每秒的样子，如果你家的带宽够大，速度就……你懂的!，这算是一个突破百度网盘限速的下载小工具吧，可以直接登录并且下载你网盘里的内容哟</div></pre></td></tr></table></figure></p><hr><p><strong>4. 迅雷极速版：</strong><br><img src="http://upload-images.jianshu.io/upload_images/2381669-9f501c72112986ed?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-80114b98e6c416b6?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>迅雷极速版是官方的无广告、净化、精简版哟，原版已经广告连篇，臃肿得不行了，用得我实在是受不了了!，极速版只有纯粹的下载功能，体验很不错。只是现在已经被干掉了。在官方页面也已经找不到了，大家可以去我的公众号里的（好东西 - 软件资源）里面下载哟<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">***</div><div class="line">**5. Free Download Manager（FDM）：**</div><div class="line">![](http://upload-images.jianshu.io/upload_images/2381669-b82ba027c7c32c0e?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</div><div class="line"></div><div class="line">![](http://upload-images.jianshu.io/upload_images/2381669-23bb30475b1847e2?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</div><div class="line"></div><div class="line">同样也是一款无广告的良心下载器哟</div></pre></td></tr></table></figure></p><hr><p><strong>以上软件均可在公众号：小胡资源（好东西 - 软件资源）内进行下载哟~~~</strong><br><img src="http://upload-images.jianshu.io/upload_images/2381669-ea6e35b186fc7b9a?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><hr>]]></content>
+    <content type="html"><![CDATA[<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>直接在html中添加样式覆盖掉之前样式规则</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">&lt;!doctype html&gt;</div><div class="line">&lt;html&gt;</div><div class="line"></div><div class="line">&lt;head&gt;</div><div class="line">  &lt;style&gt;</div><div class="line">    .main&#123;</div><div class="line">      width:100px;</div><div class="line">      height:100px;</div><div class="line">      background:#000;</div><div class="line">    &#125;</div><div class="line">    .main:after&#123;</div><div class="line">      content:&quot;hello world&quot;;</div><div class="line">      background:red;</div><div class="line">    &#125;</div><div class="line">  &lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">&lt;body&gt;</div><div class="line">  &lt;div class=&quot;main&quot; onclick=&quot;change()&quot;&gt;&lt;/div&gt;</div><div class="line">  &lt;script&gt;</div><div class="line">    var s = document.createElement(&apos;style&apos;);</div><div class="line">    document.body.appendChild(s);</div><div class="line">    function change()&#123;</div><div class="line">      s.innerText = &quot;.main:after&#123;background:blue&#125;&quot;;</div><div class="line">    &#125;</div><div class="line">  &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line"></div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure><p>关键代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var s = document.createElement(&apos;style&apos;);</div><div class="line">document.body.appendChild(s);</div></pre></td></tr></table></figure></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">s.innerText = &quot;.main:after&#123;background:blue&#125;&quot;;</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;这一次给大家带来5款良心的下载神器！！！一定不要错过哟！！一定要看完哟！！！&lt;br&gt;自己使用后感觉真是美滋滋(づ￣ 3￣)づ&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;来来来，先看看要给大家介绍的神器长什么样子!&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://upload-images.j
+        &lt;h2 id=&quot;思路：&quot;&gt;&lt;a href=&quot;#思路：&quot; class=&quot;headerlink&quot; title=&quot;思路：&quot;&gt;&lt;/a&gt;思路：&lt;/h2&gt;&lt;p&gt;直接在html中添加样式覆盖掉之前样式规则&lt;/p&gt;
+&lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerl
       
     
     </summary>
     
-      <category term="小胡资源" scheme="http://yoursite.com/categories/%E5%B0%8F%E8%83%A1%E8%B5%84%E6%BA%90/"/>
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="下载神器" scheme="http://yoursite.com/tags/%E4%B8%8B%E8%BD%BD%E7%A5%9E%E5%99%A8/"/>
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="伪元素" scheme="http://yoursite.com/tags/%E4%BC%AA%E5%85%83%E7%B4%A0/"/>
     
   </entry>
   
   <entry>
-    <title>如何在搬瓦工ubuntu系统下配置shadowsocks以翻墙</title>
-    <link href="http://yoursite.com/2017/12/10/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%90%AC%E7%93%A6%E5%B7%A5ubuntu%E7%B3%BB%E7%BB%9F%E4%B8%8B%E9%85%8D%E7%BD%AEshadowsocks%E4%BB%A5%E7%BF%BB%E5%A2%99/"/>
-    <id>http://yoursite.com/2017/12/10/如何在搬瓦工ubuntu系统下配置shadowsocks以翻墙/</id>
-    <published>2017-12-10T04:51:44.693Z</published>
-    <updated>2017-12-10T04:56:53.788Z</updated>
+    <title>javascript-利用数组制作分页效果</title>
+    <link href="http://yoursite.com/2017/12/10/javascript-%E5%88%A9%E7%94%A8%E6%95%B0%E7%BB%84%E5%88%B6%E4%BD%9C%E5%88%86%E9%A1%B5%E6%95%88%E6%9E%9C/"/>
+    <id>http://yoursite.com/2017/12/10/javascript-利用数组制作分页效果/</id>
+    <published>2017-12-10T09:58:46.704Z</published>
+    <updated>2017-12-10T09:51:44.441Z</updated>
     
-    <content type="html"><![CDATA[<p>首先进入到搬瓦工VPS的管理界面可以看到一键安装shadowsocks服务只支持Centos，但是如果我们想要安装ubuntu系统，那该怎么安装shadowsocks服务呢？</p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-cfa6f2aad71a4914.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Shadowsocks服务"><br><img src="http://upload-images.jianshu.io/upload_images/2381669-d5bceefd730a8599.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="一键安装只支持Centos"></p><hr><p>#shadowsocks服务端配置:</p><ol><li>首先利用SSH客户端(比如Xshell等)登陆到ubuntu服务端</li><li>执行命令 <code>sudo apt-get update</code><br>更新命令</li><li>执行命令 <code>sudo apt-get install git</code><br>安装git</li><li>执行命令 <code>sudo apt-get install nano</code><br>安装nano（可选择安装，用于编辑json文件）</li><li>执行命令 <code>git clone -b manyuser https://github.com/breakwa11/shadowsocks.git</code><br>从github上获取shadowsocks安装脚本</li><li>执行命令 <code>ll</code> 查看目录，会发现目录里多了一个叫shadowsocks的文件</li><li>执行命令 <code>cd ~/shadowsocks/</code><br>进入到此目录中</li><li>执行命令 <code>bash initcfg.sh</code><br>初始化配置</li><li>执行命令 <code>mv user-config.json ./shadowsocks/</code><br>把该目录下(~/shadowsocks)的user-config.json<br>移动到下一个shadowsocks目录中(~/shadowsocks/shadowsocks)</li><li>执行命令 <code>cd shadowsocks/</code><br>进入目录中(~/shadowsocks/shadowsocks)</li><li>执行命令 <code>chmod +x server.py</code><br>给目录下的server.py文件添加权限</li><li>执行命令 <code>nano user-config.json</code><br>用nano编辑器打开json文件(你也可以用其他编辑器打开)</li><li>打开过后进行编辑:<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;server&quot;: &quot;0.0.0.0&quot;,</div><div class="line">    &quot;server_ipv6&quot;: &quot;::&quot;,</div><div class="line">    &quot;server_port&quot;: 8388,</div><div class="line">    &quot;local_address&quot;: &quot;127.0.0.1&quot;,</div><div class="line">    &quot;local_port&quot;: 1080,</div><div class="line">    &quot;password&quot;: &quot;123456&quot;,</div><div class="line">    &quot;timeout&quot;: 120,</div><div class="line">    &quot;udp_timeout&quot;: 60,</div><div class="line">    &quot;method&quot;: &quot;aes-256-cfb&quot;,</div><div class="line">    &quot;protocol&quot;: &quot;auth_sha1_v2_compatible&quot;,</div><div class="line">    &quot;protocol_param&quot;: &quot;&quot;,</div><div class="line">    &quot;dns_ipv6&quot;: false,</div><div class="line">    &quot;connect_verbose_info&quot;: 0,</div><div class="line">    &quot;redirect&quot;: &quot;&quot;,</div><div class="line">    &quot;fast_open&quot;: false</div><div class="line">&#125;</div></pre></td></tr></table></figure></li></ol><blockquote><p>nano编辑器的使用方法请自行查找资料，这里不详细讲解<br>去掉某一行:Ctrl+k<br>保存退出步骤:<br>1.Ctrl+x<br>2.按y<br>3.回车</p></blockquote><ol><li>编辑好后保存退出<br>然后执行命令<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python ~/shadowsocks/shadowsocks/server.py -c ~/shadowsocks/shadowsocks/user-config.json -d start</div></pre></td></tr></table></figure></li></ol><p>最后的字符串可以是start/restart/stop(开启/重启/停止)</p><p><strong>到此ubuntu系统中的shadowsocks服务端配置完成，并且已经启动服务</strong></p><blockquote><p>如果重启服务器，请再次执行第14步的操作重新开启shadowsocks服务<br>(可设置开机自启动，这里不做介绍)</p></blockquote><hr><p>#shadowsocksR客户端配置:</p><blockquote><p>shadowsocksR下载地址:<br><a href="http://pan.baidu.com/share/link?shareid=4081447275&amp;uk=2134016402" target="_blank" rel="external">http://pan.baidu.com/share/link?shareid=4081447275&amp;uk=2134016402</a></p></blockquote><ul><li>解压过后打开 ShadowsocksR-dotnet4.0.exe</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-56964c6ca7ba9446.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ShadowsocksR"></p><ul><li>配置如下：</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-3ca4dd76b4aeec69.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="配置"></p><p>服务器IP为ubuntu服务器IP<br>服务器端口为<code>user-config.json</code>中的<code>server_port</code><br>密码为<code>user-config.json</code>中的<code>password</code><br>加密为<code>user-config.json</code>中的<code>method</code><br>协议为<code>user-config.json</code>中的<code>protocol</code><br>混淆选择<code>plain</code></p><ul><li>右键任务栏的shadowsockR图标</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-d5a85007423b377b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="rwl.png"></p><ul><li>配置参数：<ol><li>系统代理模式——PAC模式</li><li>PAC——更新PAC为绕过大陆常见域名列表</li><li>代理规则——绕过局域网和大陆</li></ol></li></ul><blockquote><p>如果遇到有些网页打不开，请将第二项的PAC选择为更新为PAC为GFWList</p></blockquote><hr><p><strong>开始愉快的翻墙吧(ฅ&gt;ω&lt;*ฅ)</strong></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>参数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">```currentPage```：当前的页数</div><div class="line">```skipNum```：跳过的数量</div><div class="line">```arr```：数组</div><div class="line"></div><div class="line">返回值：</div><div class="line">```newArr```分页后的数组</div></pre></td></tr></table></figure></p><p>var pagination = function(pageSize, currentPage, arr) {<br>    var skipNum = (currentPage - 1) * pageSize;<br>    var newArr = (skipNum + pageSize &gt;= arr.length) ? arr.slice(skipNum, arr.length) : arr.slice(skipNum, skipNum + pageSize);<br>    return newArr;<br>}<br>```</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;首先进入到搬瓦工VPS的管理界面可以看到一键安装shadowsocks服务只支持Centos，但是如果我们想要安装ubuntu系统，那该怎么安装shadowsocks服务呢？&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/
+        &lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;p&gt;参数：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;
       
     
     </summary>
     
-      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="搬瓦工 ubuntu shadowsocks" scheme="http://yoursite.com/tags/%E6%90%AC%E7%93%A6%E5%B7%A5-ubuntu-shadowsocks/"/>
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="数组" scheme="http://yoursite.com/tags/%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="分页" scheme="http://yoursite.com/tags/%E5%88%86%E9%A1%B5/"/>
     
   </entry>
   
   <entry>
-    <title>搬瓦工中的Snapshots（快照）功能</title>
-    <link href="http://yoursite.com/2017/12/10/%E6%90%AC%E7%93%A6%E5%B7%A5%E4%B8%AD%E7%9A%84Snapshots%EF%BC%88%E5%BF%AB%E7%85%A7%EF%BC%89%E5%8A%9F%E8%83%BD/"/>
-    <id>http://yoursite.com/2017/12/10/搬瓦工中的Snapshots（快照）功能/</id>
-    <published>2017-12-10T04:51:44.693Z</published>
-    <updated>2017-12-10T04:56:14.449Z</updated>
+    <title>javascript-根据数组中对象的属性排序</title>
+    <link href="http://yoursite.com/2017/12/10/javascript-%E6%A0%B9%E6%8D%AE%E6%95%B0%E7%BB%84%E4%B8%AD%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E6%8E%92%E5%BA%8F/"/>
+    <id>http://yoursite.com/2017/12/10/javascript-根据数组中对象的属性排序/</id>
+    <published>2017-12-10T09:58:46.702Z</published>
+    <updated>2017-12-10T09:51:32.980Z</updated>
     
-    <content type="html"><![CDATA[<p>搬瓦工VPS自带Snapshots快照备份，每个VPS可以备份2次且有效期是30天</p><hr><p>#如何创建Snapshots快照</p><ul><li>进入搬瓦工VPS管理界面(<strong>KiwiVM Extras — Snapshots</strong>)<br>从图中可以看到，我们可以创建快照也可以导入快照<br><img src="http://upload-images.jianshu.io/upload_images/2381669-344138cb64d43dcc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="KiwiVM Extras — Snapshots"><ul><li>点击<code>Create new snapshot</code>创建快照，设置一个名称，开始备份<br>备份过程中服务器会暂停，备份完成后服务器会重启</li><li>点击<code>Import a snapshot</code>导入快照，这里需要输入<code>VEID:</code>和<code>TOKEN:</code><br>参数在后面会说到</li></ul></li></ul><hr><p>#Snapshots快照管理</p><ul><li><p>快照创建成功后，会有以下界面<br><img src="http://upload-images.jianshu.io/upload_images/2381669-b5c703d1d7fab9b3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="管理界面"></p><ul><li><strong>download:</strong>  将快照下载到本地</li><li><strong>restore:</strong>  恢复到此快照，并且会重写当前服务器的所有数据（如果当前服务器出现问题可以点此进行恢复）<br><img src="http://upload-images.jianshu.io/upload_images/2381669-204f1c6b28fb3e8a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="恢复"></li><li><strong>delete:</strong>  删除快照</li><li><strong>set sticky:</strong>  设置永久保存（最多允许<strong>2个快照</strong>设置为永久保存）<br><img src="http://upload-images.jianshu.io/upload_images/2381669-05a8c096ba0d51ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="永久保存"></li><li><strong>export:</strong>  导出参数，参数为<code>VEID:</code>和<code>TOKEN:</code>，可用于<code>Import a snapshot</code>导入快照<br><img src="http://upload-images.jianshu.io/upload_images/2381669-58102dacc4ae2e80.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="VEID和TOKEN"></li></ul></li></ul><hr><p><strong>就先到这里啦，喜欢折腾的孩子还是建个快照吧（笑），不然到时候哭都哭不出来，哈哈哈</strong></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="有如下数组："><a href="#有如下数组：" class="headerlink" title="有如下数组："></a>有如下数组：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">var arr = [ </div><div class="line">  &#123; </div><div class="line">    id: 1,</div><div class="line">    name: &quot;a&quot;,</div><div class="line">    time: &quot;2017-11-22T06:28:13.615Z&quot;</div><div class="line">  &#125;,</div><div class="line">  &#123; </div><div class="line">    id: 2,</div><div class="line">    name: &quot;b&quot;,</div><div class="line">    time: &quot;2017-11-22T06:30:13.615Z&quot;</div><div class="line">  &#125;,</div><div class="line">  &#123; </div><div class="line">    id: 3,</div><div class="line">    name: &quot;c&quot;,</div><div class="line">    time: &quot;2017-11-22T06:32:13.615Z&quot;</div><div class="line">  &#125;</div><div class="line">]</div></pre></td></tr></table></figure><h3 id="根据数组中每个对象的id进行排序"><a href="#根据数组中每个对象的id进行排序" class="headerlink" title="根据数组中每个对象的id进行排序"></a>根据数组中每个对象的id进行排序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arr.sort((a, b) =&gt; b.id - a.id);</div></pre></td></tr></table></figure><p>等价于:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">arr.sort(function(a,b)&#123;</div><div class="line">  return b.id - a.id;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p><h3 id="根据数组中每个对象的time进行排序"><a href="#根据数组中每个对象的time进行排序" class="headerlink" title="根据数组中每个对象的time进行排序"></a>根据数组中每个对象的time进行排序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arr.sort((a, b) =&gt; new Date(b.time) - new Date(a.time));</div></pre></td></tr></table></figure><p>等价于:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">arr.sort(function(a,b)&#123;</div><div class="line">  return new Date(b.time) - new Date(a.time);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;搬瓦工VPS自带Snapshots快照备份，每个VPS可以备份2次且有效期是30天&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;#如何创建Snapshots快照&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;进入搬瓦工VPS管理界面(&lt;strong&gt;KiwiVM Extras — Snapshots&lt;/stron
+        &lt;h3 id=&quot;有如下数组：&quot;&gt;&lt;a href=&quot;#有如下数组：&quot; class=&quot;headerlink&quot; title=&quot;有如下数组：&quot;&gt;&lt;/a&gt;有如下数组：&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gut
       
     
     </summary>
     
-      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="搬瓦工 bandwagon" scheme="http://yoursite.com/tags/%E6%90%AC%E7%93%A6%E5%B7%A5-bandwagon/"/>
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="数组" scheme="http://yoursite.com/tags/%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="排序" scheme="http://yoursite.com/tags/%E6%8E%92%E5%BA%8F/"/>
     
   </entry>
   
   <entry>
-    <title>个人服务网站(loveconvert-com)上线啦！！</title>
-    <link href="http://yoursite.com/2017/12/10/%E4%B8%AA%E4%BA%BA%E6%9C%8D%E5%8A%A1%E7%BD%91%E7%AB%99(loveconvert-com)%E4%B8%8A%E7%BA%BF%E5%95%A6%EF%BC%81%EF%BC%81/"/>
-    <id>http://yoursite.com/2017/12/10/个人服务网站(loveconvert-com)上线啦！！/</id>
-    <published>2017-12-10T04:51:44.693Z</published>
-    <updated>2017-12-10T04:59:25.983Z</updated>
+    <title>javascript-svg转canvas和image</title>
+    <link href="http://yoursite.com/2017/12/10/javascript-svg%E8%BD%ACcanvas%E5%92%8Cimage/"/>
+    <id>http://yoursite.com/2017/12/10/javascript-svg转canvas和image/</id>
+    <published>2017-12-10T09:58:46.700Z</published>
+    <updated>2017-12-10T09:51:20.235Z</updated>
     
-    <content type="html"><![CDATA[<p>个人在线服务网站Loveconvert上线啦!<br>服务器在洛杉矶，国内访问速度一般，欢迎大家访问：<br><a href="http://www.loveconvert.com/" target="_blank" rel="external">http://www.loveconvert.com</a> 或者<a href="http://loveconvert.com/" target="_blank" rel="external">http://loveconvert.com</a><br><strong>PC端</strong>和<strong>移动端</strong>都可以使用哦~~</p><hr><p>#目前主要功能：</p><ol><li>Word ( Word转PDF、Word转XPS、Word转JPG、Word转TXT、doc转docx、docx转doc )</li><li>Excel ( xls转xlsx、xlsx转xls )</li><li>PPT ( ppt转pptx、pptx转ppt )</li><li>在线图片文件格式转换（支持文件格式：jpg、bmp、emf、gif、ico、png、tif、wmf）</li></ol><p>#功能计划：</p><ol><li>在线音频文件格式转换</li><li>在线视频文件格式转换</li><li>在线音视频互转换</li><li>在线汇率转换 在线翻译 在线进制转换 在线加密 等等</li></ol><hr><p>请大家持续关注呀!<br>有需要的功能可以私聊我，目前还存在一些bug，修复中……<br>感谢大家支持</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="代码（内含注释）"><a href="#代码（内含注释）" class="headerlink" title="代码（内含注释）"></a>代码（内含注释）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line"></div><div class="line">&lt;head&gt;</div><div class="line">    &lt;title&gt;&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">&lt;body&gt;</div><div class="line">    &lt;div id=&quot;svg-wrap&quot;&gt;</div><div class="line">        &lt;svg width=&quot;200&quot; height=&quot;200&quot; xmlns=&apos;http://www.w3.org/2000/svg&apos;&gt;</div><div class="line">            &lt;rect width=&quot;200&quot; height=&quot;200&quot; style=&quot;fill:#ddd&quot;&gt;&lt;/rect&gt;</div><div class="line">        &lt;/svg&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;canvas id=&quot;canvas&quot;&gt;&lt;/canvas&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">    window.onload = function()&#123;</div><div class="line">        //获取svg内容</div><div class="line">        var svg = document.getElementById(&apos;svg-wrap&apos;).innerHTML;</div><div class="line"></div><div class="line">        var canvas = document.getElementById(&apos;canvas&apos;);</div><div class="line">        var c = canvas.getContext(&apos;2d&apos;);</div><div class="line"></div><div class="line">        //新建Image对象</div><div class="line">        var img = new Image();</div><div class="line"></div><div class="line">        //svg内容</div><div class="line">        img.src = &apos;data:image/svg+xml,&apos; + unescape(encodeURIComponent(svg));//svg内容中可以有中文字符</div><div class="line">        img.src = &apos;data:image/svg+xml,&apos; + svg;//svg内容中不能有中文字符</div><div class="line"></div><div class="line">        //svg编码成base64</div><div class="line">        img.src = &apos;data:image/svg+xml;base64,&apos; + window.btoa(unescape(encodeURIComponent(svg)));//svg内容中可以有中文字符</div><div class="line">        img.src = &apos;data:image/svg+xml;base64,&apos; + window.btoa(svg);//svg内容中不能有中文字符</div><div class="line"></div><div class="line">        //图片初始化完成后调用</div><div class="line">        img.onload = function() &#123;</div><div class="line">            //将canvas的宽高设置为图像的宽高</div><div class="line">            canvas.width = img.width;</div><div class="line">            canvas.height = img.height;</div><div class="line">            </div><div class="line">            //canvas画图片</div><div class="line">            c.drawImage(img, 0, 0);</div><div class="line"></div><div class="line">            //将图片添加到body中</div><div class="line">            document.body.appendChild(img)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line"></div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure><h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="http://upload-images.jianshu.io/upload_images/2381669-5e1fe4184f2468fc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><blockquote><p>svg标签一定要加属性<code>xmlns=&#39;http://www.w3.org/2000/svg&#39;</code><br>svg标签一定要加属性<code>xmlns=&#39;http://www.w3.org/2000/svg&#39;</code><br>svg标签一定要加属性<code>xmlns=&#39;http://www.w3.org/2000/svg&#39;</code><br>不然svg内容和base64添加到<code>img.src</code>会出错，canvas和image都不会在页面显示出来</p></blockquote>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;个人在线服务网站Loveconvert上线啦!&lt;br&gt;服务器在洛杉矶，国内访问速度一般，欢迎大家访问：&lt;br&gt;&lt;a href=&quot;http://www.loveconvert.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.lo
+        &lt;h2 id=&quot;代码（内含注释）&quot;&gt;&lt;a href=&quot;#代码（内含注释）&quot; class=&quot;headerlink&quot; title=&quot;代码（内含注释）&quot;&gt;&lt;/a&gt;代码（内含注释）&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td cl
       
     
     </summary>
     
-      <category term="小胡资源" scheme="http://yoursite.com/categories/%E5%B0%8F%E8%83%A1%E8%B5%84%E6%BA%90/"/>
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="Loveconvert" scheme="http://yoursite.com/tags/Loveconvert/"/>
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="image" scheme="http://yoursite.com/tags/image/"/>
+    
+      <category term="canvas" scheme="http://yoursite.com/tags/canvas/"/>
+    
+      <category term="svg" scheme="http://yoursite.com/tags/svg/"/>
     
   </entry>
   
   <entry>
-    <title>Loveconvert服务站点新增微博视频解析</title>
-    <link href="http://yoursite.com/2017/12/10/Loveconvert%E6%9C%8D%E5%8A%A1%E7%AB%99%E7%82%B9%E6%96%B0%E5%A2%9E%E5%BE%AE%E5%8D%9A%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90/"/>
-    <id>http://yoursite.com/2017/12/10/Loveconvert服务站点新增微博视频解析/</id>
-    <published>2017-12-10T04:51:44.683Z</published>
-    <updated>2017-12-10T04:59:12.118Z</updated>
+    <title>javascript-split单个或连续空格</title>
+    <link href="http://yoursite.com/2017/12/10/javascript-split%E5%8D%95%E4%B8%AA%E6%88%96%E8%BF%9E%E7%BB%AD%E7%A9%BA%E6%A0%BC/"/>
+    <id>http://yoursite.com/2017/12/10/javascript-split单个或连续空格/</id>
+    <published>2017-12-10T09:58:46.699Z</published>
+    <updated>2017-12-10T09:51:04.263Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Loveconvert服务站点"><a href="#Loveconvert服务站点" class="headerlink" title="#Loveconvert服务站点"></a>#Loveconvert服务站点</h2><p>新增微博视频解析下载功能</p><p>小伙伴们可以在此网页输入微博视频的短地址或者长地址，点击解析后根据提示下载视频</p><p><a href="http://loveconvert.com/weiboconvert" target="_blank" rel="external">Loveconvert微博视频解析工具</a></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-0b22640d7186bd9d.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" alt="图片发自简书App"><br><img src="http://upload-images.jianshu.io/upload_images/2381669-349e88c5762dead9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" alt="图片发自简书App"><br><img src="http://upload-images.jianshu.io/upload_images/2381669-b01bfab90f6908de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" alt="图片发自简书App"></p>]]></content>
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">str.split(/[ ]+/);</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;Loveconvert服务站点&quot;&gt;&lt;a href=&quot;#Loveconvert服务站点&quot; class=&quot;headerlink&quot; title=&quot;#Loveconvert服务站点&quot;&gt;&lt;/a&gt;#Loveconvert服务站点&lt;/h2&gt;&lt;p&gt;新增微博视频解析下载功能&lt;/p&gt;
+        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;lin
       
     
     </summary>
     
-      <category term="小胡资源" scheme="http://yoursite.com/categories/%E5%B0%8F%E8%83%A1%E8%B5%84%E6%BA%90/"/>
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="Loveconvert 微博视频解析" scheme="http://yoursite.com/tags/Loveconvert-%E5%BE%AE%E5%8D%9A%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90/"/>
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="split" scheme="http://yoursite.com/tags/split/"/>
     
   </entry>
   
   <entry>
-    <title>搬瓦工Ubuntu系统中安装FTP服务</title>
-    <link href="http://yoursite.com/2017/12/10/%E6%90%AC%E7%93%A6%E5%B7%A5Ubuntu%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%AE%89%E8%A3%85FTP%E6%9C%8D%E5%8A%A1/"/>
-    <id>http://yoursite.com/2017/12/10/搬瓦工Ubuntu系统中安装FTP服务/</id>
-    <published>2017-12-10T04:51:44.683Z</published>
-    <updated>2017-12-10T04:55:10.950Z</updated>
+    <title>javascript-canvas与image互转</title>
+    <link href="http://yoursite.com/2017/12/10/javascript-canvas%E4%B8%8Eimage%E4%BA%92%E8%BD%AC/"/>
+    <id>http://yoursite.com/2017/12/10/javascript-canvas与image互转/</id>
+    <published>2017-12-10T09:58:46.697Z</published>
+    <updated>2017-12-10T09:50:38.798Z</updated>
     
-    <content type="html"><![CDATA[<p>想要在自己的服务器上存放东西，并且能够分享给小伙伴，那我们可以选择FTP服务器，接下来就大家讲一下如何在搬瓦工Ubuntu系统中安装FTP服务</p><p>#FTP服务安装及配置步骤:</p><ol><li>执行命令 <code>sudo apt-get update</code> （<strong>如果已经更新可以跳过该步骤</strong>）</li><li>执行命令 <code>sudo apt-get install vsftpd</code><br>安装vsftpd</li><li>执行命令 <code>nano /etc/vsftpd.conf</code><br>编辑<code>/etc</code>目录下的<code>vsftpd.conf</code>配置文件<br>修改一下参数的值（如果该参数前面有注释（#），请去掉注释）<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">anonymous_enable=YES    #设置匿名可登录</div><div class="line">local_enable=YES        #本地用户允许登录</div><div class="line">write_enable=YES        #用户是否有写的权限</div><div class="line">anon_upload_enable=YES   #允许匿名用户上传</div><div class="line">anon_mkdir_write_enable=YES   #允许匿名用户创建目录文件</div></pre></td></tr></table></figure></li></ol><blockquote><p>nano编辑器的使用方法请自行查找资料，这里不详细讲解<br>保存退出步骤:<br>1.Ctrl+x<br>2.按y<br>3.回车</p></blockquote><p>4.编辑好后保存退出<br>执行命令 <code>sudo service vsftpd start</code><br>最后的字符串可以是start/restart/stop(开启/重启/停止)</p><p>5.执行命令 <code>cd /srv/ftp</code><br>进入FTP服务器存放文件的文件夹<br>你可以在里面存放文件，然后在浏览器域名栏中输入 <code>ftp://ip</code> （ip为你搬瓦工服务器的ip）进入FTP文件浏览界面，点击即可下载<br><img src="http://upload-images.jianshu.io/upload_images/2381669-193c23714d652649.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ftp"></p><blockquote><p>如果出现登陆FTP服务器时要输入用户名和密码，就重启一下FTP服务器（重启命令 <code>sudo service vsftpd restart</code>），有可能是配置文件没有更新</p></blockquote><p><strong>到此FTP服务器已经安装和配置完成</strong></p><p>大家也可以通过一些第三方工具对FTP服务器进行管理，这里推荐大家使用Xftp</p><blockquote><p>Xftp下载地址：<a href="http://pan.baidu.com/s/1c1PQK6W" target="_blank" rel="external">http://pan.baidu.com/s/1c1PQK6W</a></p></blockquote><p><strong>好啦，今天的教程就到这里，欢迎提问、纠错以及分享自己的想法(｡・`ω´･)</strong></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="代码（内含注释）"><a href="#代码（内含注释）" class="headerlink" title="代码（内含注释）"></a>代码（内含注释）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line"></div><div class="line">&lt;head&gt;</div><div class="line">    &lt;title&gt;&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">&lt;body&gt;</div><div class="line">    &lt;canvas id=&quot;canvas&quot;&gt;&lt;/canvas&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">    window.onload = function() &#123;</div><div class="line">        var canvas = document.getElementById(&apos;canvas&apos;);</div><div class="line">        var c = canvas.getContext(&apos;2d&apos;);</div><div class="line">        // canvas2image();//canvas转图片</div><div class="line">        // image2canvas();//图片转canvas</div><div class="line"></div><div class="line">        //canvas转图片</div><div class="line">        function canvas2image() &#123;</div><div class="line">            //canvas画一个正方形</div><div class="line">            c.fillStyle = &quot;#ddd&quot;;</div><div class="line">            c.fillRect(0, 0, 100, 100);</div><div class="line"></div><div class="line">            //新建Image对象，将canvas转换为base64添加到image的src属性上</div><div class="line">            var img = new Image();</div><div class="line">            img.src = canvas.toDataURL(&apos;image/jpg&apos;);</div><div class="line"></div><div class="line">            //添加到body中</div><div class="line">            document.body.appendChild(img);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        //图片转canvas</div><div class="line">        function image2canvas() &#123;</div><div class="line">            //新建Image对象，引入当前目录下的图片</div><div class="line">            var img = new Image();</div><div class="line">            img.src = &quot;1.jpg&quot;;</div><div class="line"></div><div class="line">            //图片初始化完成后调用</div><div class="line">            img.onload = function() &#123;</div><div class="line">                //将canvas的宽高设置为图像的宽高</div><div class="line">                canvas.width = img.width;</div><div class="line">                canvas.height = img.height;</div><div class="line"></div><div class="line">                //canvas画图片</div><div class="line">                c.drawImage(img, 0, 0, img.width, img.height);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line"></div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;想要在自己的服务器上存放东西，并且能够分享给小伙伴，那我们可以选择FTP服务器，接下来就大家讲一下如何在搬瓦工Ubuntu系统中安装FTP服务&lt;/p&gt;
-&lt;p&gt;#FTP服务安装及配置步骤:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;执行命令 &lt;code&gt;sudo apt-get update
+        &lt;h2 id=&quot;代码（内含注释）&quot;&gt;&lt;a href=&quot;#代码（内含注释）&quot; class=&quot;headerlink&quot; title=&quot;代码（内含注释）&quot;&gt;&lt;/a&gt;代码（内含注释）&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td cl
       
     
     </summary>
     
-      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="linux ubuntu ftp" scheme="http://yoursite.com/tags/linux-ubuntu-ftp/"/>
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="image" scheme="http://yoursite.com/tags/image/"/>
+    
+      <category term="canvas" scheme="http://yoursite.com/tags/canvas/"/>
     
   </entry>
   
   <entry>
-    <title>shell-中-[-eq]-[-ne]-[-gt]-[-lt]-[ge]-[le]</title>
-    <link href="http://yoursite.com/2017/12/10/shell-%E4%B8%AD-%5B-eq%5D-%5B-ne%5D-%5B-gt%5D-%5B-lt%5D-%5Bge%5D-%5Ble%5D/"/>
-    <id>http://yoursite.com/2017/12/10/shell-中-[-eq]-[-ne]-[-gt]-[-lt]-[ge]-[le]/</id>
-    <published>2017-12-10T04:51:44.683Z</published>
-    <updated>2017-12-10T04:54:09.094Z</updated>
+    <title>input选择图片再显示</title>
+    <link href="http://yoursite.com/2017/12/10/input%E9%80%89%E6%8B%A9%E5%9B%BE%E7%89%87%E5%86%8D%E6%98%BE%E7%A4%BA/"/>
+    <id>http://yoursite.com/2017/12/10/input选择图片再显示/</id>
+    <published>2017-12-10T09:58:46.695Z</published>
+    <updated>2017-12-10T09:50:42.517Z</updated>
     
-    <content type="html"><![CDATA[<p>-eq        //等于<br>-ne        //不等于<br>-gt        //大于<br>-lt        //小于<br>ge        //大于等于<br>le        //小于等于</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line"></div><div class="line">&lt;head&gt;</div><div class="line">    &lt;title&gt;&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">&lt;body&gt;</div><div class="line">    &lt;div&gt;</div><div class="line">        &lt;label&gt;请选择图片&lt;/label&gt;</div><div class="line">        &lt;input id=&quot;img&quot; type=&quot;file&quot; accept=&quot;image/*&quot; name=&quot;img&quot;&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;div id=&quot;box&quot;&gt;&lt;/div&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">    var img = document.getElementById(&apos;img&apos;);</div><div class="line">    var box = document.getElementById(&apos;box&apos;);</div><div class="line">    img.addEventListener(&apos;change&apos;, function() &#123;</div><div class="line">        var file = this.files[0];</div><div class="line">        var reader = new FileReader();</div><div class="line">        reader.readAsDataURL(file);</div><div class="line">        reader.onload = function() &#123;</div><div class="line">            var imgbox = new Image();</div><div class="line">            imgbox.width = 300;</div><div class="line">            imgbox.height = 300;</div><div class="line">            imgbox.src = this.result;</div><div class="line">            box.appendChild(imgbox);</div><div class="line">        &#125;</div><div class="line">    &#125;, false);</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line"></div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure><h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p><img src="http://upload-images.jianshu.io/upload_images/2381669-1b0564c1d145f027.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-2a22db5254289133.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;-eq        //等于&lt;br&gt;-ne        //不等于&lt;br&gt;-gt        //大于&lt;br&gt;-lt        //小于&lt;br&gt;ge        //大于等于&lt;br&gt;le        //小于等于&lt;/p&gt;
+        &lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div c
+      
+    
+    </summary>
+    
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+    
+    
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
+    
+      <category term="image" scheme="http://yoursite.com/tags/image/"/>
+    
+      <category term="input" scheme="http://yoursite.com/tags/input/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>html-img在div中，下方有空隙的解决方案</title>
+    <link href="http://yoursite.com/2017/12/10/html--img%E5%9C%A8div%E4%B8%AD%EF%BC%8C%E4%B8%8B%E6%96%B9%E6%9C%89%E7%A9%BA%E9%9A%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>http://yoursite.com/2017/12/10/html--img在div中，下方有空隙的解决方案/</id>
+    <published>2017-12-10T09:58:46.693Z</published>
+    <updated>2017-12-10T09:50:47.139Z</updated>
+    
+    <content type="html"><![CDATA[<p>如果img在div中，会发现图片并没有完全填充div，而是在下方出现了一点空隙<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;title&gt;&lt;/title&gt;</div><div class="line">    &lt;style type=&quot;text/css&quot;&gt;</div><div class="line">        .wrap&#123;</div><div class="line">            background:lightblue;</div><div class="line">        &#125;</div><div class="line">        .img&#123;</div><div class="line">            height: 400px;</div><div class="line">        &#125;</div><div class="line">    &lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;div class=&quot;wrap&quot;&gt;</div><div class="line">    &lt;img class=&quot;img&quot; src=&quot;1.jpg&quot;&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-231bcba447ba0d75.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ol><li><p>img设置display:block;</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.img&#123;</div><div class="line">    height: 400px;</div><div class="line">    display: block;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li><li><p>div设置font-size:0;</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.wrap&#123;</div><div class="line">    background:lightblue;</div><div class="line">    font-size: 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li></ol><h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p><img src="http://upload-images.jianshu.io/upload_images/2381669-85c6358b2b7d6ee2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;如果img在div中，会发现图片并没有完全填充div，而是在下方出现了一点空隙&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;d
+      
+    
+    </summary>
+    
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+    
+    
+      <category term="div" scheme="http://yoursite.com/tags/div/"/>
+    
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
+    
+      <category term="image" scheme="http://yoursite.com/tags/image/"/>
+    
+      <category term="空隙" scheme="http://yoursite.com/tags/%E7%A9%BA%E9%9A%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>html5拖放（Drag-&amp;-Drop）基本使用</title>
+    <link href="http://yoursite.com/2017/12/10/html5-%E6%8B%96%E6%94%BE%EF%BC%88Drag-&amp;-Drop%EF%BC%89%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2017/12/10/html5-拖放（Drag-&amp;-Drop）基本使用/</id>
+    <published>2017-12-10T09:58:46.692Z</published>
+    <updated>2017-12-10T09:49:52.127Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line"></div><div class="line">&lt;head&gt;</div><div class="line">    &lt;title&gt;&lt;/title&gt;</div><div class="line">    &lt;style&gt;</div><div class="line">        div&#123;</div><div class="line">            width: 100px;</div><div class="line">            height: 100px;</div><div class="line">            background: #ddd;</div><div class="line">            margin-bottom: 10px;</div><div class="line">        &#125;</div><div class="line">    &lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">&lt;body&gt;</div><div class="line">    &lt;div id=&quot;a&quot; draggable=&quot;true&quot;&gt;a&lt;/div&gt;</div><div class="line">    &lt;div id=&quot;b&quot; draggable=&quot;true&quot;&gt;b&lt;/div&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">    var a = document.getElementById(&apos;a&apos;);</div><div class="line">    var b = document.getElementById(&apos;b&apos;);</div><div class="line">    a.ondragstart = function(e) &#123;</div><div class="line">        e.dataTransfer.setData(&quot;id&quot;, e.target.id);</div><div class="line">    &#125;</div><div class="line">    b.ondragover = function(e) &#123;</div><div class="line">        e.preventDefault();</div><div class="line">    &#125;</div><div class="line">    b.ondrop = function(e) &#123;</div><div class="line">        var id = e.dataTransfer.getData(&quot;id&quot;);</div><div class="line">        console.log(id);</div><div class="line">    &#125;</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line"></div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure><hr><h2 id="设置元素可拖放："><a href="#设置元素可拖放：" class="headerlink" title="设置元素可拖放："></a>设置元素可拖放：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">draggable=&quot;true&quot;</div></pre></td></tr></table></figure><p>##触发事件：</p><p><strong>1.拖动目标时触发事件：</strong></p><ul><li>ondragstart：开始拖动元素时触发</li><li>ondrag：元素正在拖动时触发</li><li>ondragend：完成元素拖动后触发</li></ul><p><strong>2.释放目标时触发事件：</strong></p><ul><li>ondragenter：当被拖动的对象进入容器范围内时触发</li><li>ondragover：当被拖动的对象在另一对象容器范围内拖动时触发</li><li>ondragleave：当被拖动的对象离开容器范围内时触发</li><li>ondrop：在一个拖动过程中，释放鼠标键时触发此事件</li></ul><h2 id="数据操作："><a href="#数据操作：" class="headerlink" title="数据操作："></a>数据操作：</h2><ul><li><strong>设置</strong>数据：<figure class="highlight plain"><figcaption><span>value);``` （在ondragstart中操作）</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">- **获取**数据：```e.dataTransfer.getData(key);``` （在```ondragover```中阻止对元素的默认处理方式，通过调用```ondragover```事件的 ```e.preventDefault()```方法，然后在ondrop中操作）</div><div class="line">- **清除**数据：清除全部数据```e.dataTransfer.clearData()```或清除指定数据```e.dataTransfer.clearData([&quot;id&quot;])</div></pre></td></tr></table></figure></li></ul><p><strong>实例：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">b.ondragover = function(e) &#123;</div><div class="line">    e.preventDefault();</div><div class="line">&#125;</div><div class="line">b.ondrop = function(e) &#123;</div><div class="line">    var id = e.dataTransfer.getData(&quot;id&quot;);</div><div class="line">    console.log(id);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><h2 id="设置拖放操作的自定义图标："><a href="#设置拖放操作的自定义图标：" class="headerlink" title="设置拖放操作的自定义图标："></a>设置拖放操作的自定义图标：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">**实例：**</div><div class="line">```e.dataTransfer.setDragImage(document.getElementById(&apos;img&apos;),0,0);</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div c
+      
+    
+    </summary>
+    
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+    
+    
+      <category term="html5" scheme="http://yoursite.com/tags/html5/"/>
+    
+      <category term="拖放" scheme="http://yoursite.com/tags/%E6%8B%96%E6%94%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo-利用Git发布到Github</title>
+    <link href="http://yoursite.com/2017/12/10/hexo-%E5%88%A9%E7%94%A8Git%E5%8F%91%E5%B8%83%E5%88%B0Github/"/>
+    <id>http://yoursite.com/2017/12/10/hexo-利用Git发布到Github/</id>
+    <published>2017-12-10T09:58:46.690Z</published>
+    <updated>2017-12-10T09:49:23.863Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li><p>在hexo根目录下执行命令，安装hexo-deployer-git（一般默认都有，可以打开根目录下的package.json查看）：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></li><li><p>找到github项目对应的git地址：</p></li></ol><p><img src="http://upload-images.jianshu.io/upload_images/2381669-7f34c9ac7070bce5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><ol><li><p>在根目录下的_config.yml文件末尾添加配置：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository: https://github.com/garuhester/garuhester.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></li><li><p>在hexo根目录依次执行命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo clean //清除缓存</div><div class="line">$ hexo g //生成静态网页文件</div><div class="line">$ hexo d //发布到github</div></pre></td></tr></table></figure></li></ol><hr><blockquote><p>为了方便使用，可以做成bat文件：<br>开启服务：<figure class="highlight plain"><figcaption><span>clean & hexo g & hexo s```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Git上传：```hexo clean &amp; hexo g &amp; hexo d</div></pre></td></tr></table></figure></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;在hexo根目录下执行命令，安装hexo-deployer-git（一般默认都有，可以打开根目录下的package.json查看）：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gut
+      
+    
+    </summary>
+    
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+    
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客搭建步骤</title>
+    <link href="http://yoursite.com/2017/12/10/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%AD%A5%E9%AA%A4/"/>
+    <id>http://yoursite.com/2017/12/10/Hexo博客搭建步骤/</id>
+    <published>2017-12-10T09:58:46.688Z</published>
+    <updated>2017-12-10T09:49:17.669Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>npm install hexo-cli -g</li><li>hexo init blog</li><li>cd blog</li><li>npm install</li><li>hexo server</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;npm install hexo-cli -g&lt;/li&gt;
+&lt;li&gt;hexo init blog&lt;/li&gt;
+&lt;li&gt;cd blog&lt;/li&gt;
+&lt;li&gt;npm install&lt;/li&gt;
+&lt;li&gt;hexo server&lt;/li&gt;
+&lt;/ol&gt;
 
       
     
     </summary>
     
-      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="linux shell" scheme="http://yoursite.com/tags/linux-shell/"/>
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+      <category term="博客搭建" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   
   <entry>
-    <title>cmd中有趣的命令一之合并文件（不定期更新）</title>
-    <link href="http://yoursite.com/2017/12/10/cmd%E4%B8%AD%E6%9C%89%E8%B6%A3%E7%9A%84%E5%91%BD%E4%BB%A4%E4%B8%80%E4%B9%8B%E5%90%88%E5%B9%B6%E6%96%87%E4%BB%B6%EF%BC%88%E4%B8%8D%E5%AE%9A%E6%9C%9F%E6%9B%B4%E6%96%B0%EF%BC%89/"/>
-    <id>http://yoursite.com/2017/12/10/cmd中有趣的命令一之合并文件（不定期更新）/</id>
-    <published>2017-12-10T04:51:44.683Z</published>
-    <updated>2017-12-10T04:53:33.491Z</updated>
+    <title>Hexo-Next主题文件结构</title>
+    <link href="http://yoursite.com/2017/12/10/Hexo-Next%E4%B8%BB%E9%A2%98%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/"/>
+    <id>http://yoursite.com/2017/12/10/Hexo-Next主题文件结构/</id>
+    <published>2017-12-10T09:58:46.686Z</published>
+    <updated>2017-12-10T09:49:04.763Z</updated>
     
-    <content type="html"><![CDATA[<p>今天给大家介绍的是命令一之<strong>合并文件</strong>(ฅ&gt;ω&lt;*ฅ)，后面我会不定期的进行更新</p><p>#合并文件（老司机必备）<br><strong>图片下的秘密</strong><br>如果你想要把一个文件藏在一张图片里改怎么做呢（手动滑稽）<br>首先这里有两张图片（1.jpg和2.jpg）：<br><img src="http://upload-images.jianshu.io/upload_images/2381669-56773029fa7468cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="两张图片"><br>那么现在我们要把<code>2.jpg</code>藏在<code>1.jpg</code>里，步骤如下：</p><ol><li>将<code>2.jpg</code>添加到压缩文件（这里以rar格式为例）<br><img src="http://upload-images.jianshu.io/upload_images/2381669-92beaa051d74a93d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="2.rar"></li><li>在当前目录下新建一个<strong>文本文件</strong>，命名为”合并”（名字可以随意），并将后缀名改为<code>.bat</code>，如图：<br><img src="http://upload-images.jianshu.io/upload_images/2381669-0cd18cef6bd6673d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="合并.bat"></li><li>然后右键<code>合并.bat</code>，点击编辑，在文本中输入<code>copy /b 1.jpg+2.rar 3.jpg</code><br>意思是将<code>1.jpg</code>与<code>2.rar</code>合并成<code>3.jpg</code><br><img src="http://upload-images.jianshu.io/upload_images/2381669-c1252bb729009386.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="编辑"></li><li>然后保存退出，再双击<code>合并.bat</code>文件即可生成<code>3.jpg</code><br><img src="http://upload-images.jianshu.io/upload_images/2381669-ef275470f720ada4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="3.jpg"><br>这个时候打开<code>3.jpg</code>会发现只是一张普通的图片</li><li>但是！！！！！！！！！<br>如果你把<code>3.jpg</code>的后缀名改成<code>.rar</code>后<br><img src="http://upload-images.jianshu.io/upload_images/2381669-376291489045768e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="3.rar"><br>再双击它，你会发现打开的是一个压缩文件，而且文件里面有一张叫2.jpg的图片，嘿嘿嘿~~~~</li></ol><blockquote><p>原理：<br>是把两个的文件的二进制代码进行合并，并且你会发现，合并过后图片的大小刚好的两个文件的大小总和</p></blockquote><p>当然你也可以尝试各种文件格式的组合，比如把图片放进一首歌里，或者是两个文本的组合等等，反正你能想到好玩的都可以自己试一试，方法就是<br><code>copy /b 文件1+文件2 文件3</code><br>记得（/b和文件1）（文件2和文件3）之间都有空格</p><p><strong>好啦今天的教程就到这里，自己试试吧（￣︶￣）</strong></p>]]></content>
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">├── .github            #git信息</div><div class="line">├── languages          #多语言</div><div class="line">|   ├── default.yml    #默认语言</div><div class="line">|   └── zh-Hans.yml      #简体中文</div><div class="line">|   └── zh-tw.yml      #繁体中文</div><div class="line">├── layout             #布局，根目录下的*.ejs文件是对主页，分页，存档等的控制</div><div class="line">|   ├── _custom        #可以自己修改的模板，覆盖原有模板</div><div class="line">|   |   ├── _header.swig    #头部样式</div><div class="line">|   |   ├── _sidebar.swig   #侧边栏样式</div><div class="line">|   ├── _macro        #可以自己修改的模板，覆盖原有模板</div><div class="line">|   |   ├── post.swig    #文章模板</div><div class="line">|   |   ├── reward.swig    #打赏模板</div><div class="line">|   |   ├── sidebar.swig   #侧边栏模板</div><div class="line">|   ├── _partial       #局部的布局</div><div class="line">|   |   ├── head       #头部模板</div><div class="line">|   |   ├── search     #搜索模板</div><div class="line">|   |   ├── share      #分享模板</div><div class="line">|   ├── _script        #局部的布局</div><div class="line">|   ├── _third-party   #第三方模板</div><div class="line">|   ├── _layout.swig   #主页面模板</div><div class="line">|   ├── index.swig     #主页面模板</div><div class="line">|   ├── page           #页面模板</div><div class="line">|   └── tag.swig       #tag模板</div><div class="line">├── scripts            #script源码</div><div class="line">|   ├── tags           #tags的script源码</div><div class="line">|   ├── marge.js       #页面模板</div><div class="line">├── source             #源码</div><div class="line">|   ├── css            #css源码</div><div class="line">|   |   ├── _common    #*.styl基础css</div><div class="line">|   |   ├── _custom    #*.styl局部css</div><div class="line">|   |   └── _mixins    #mixins的css</div><div class="line">|   ├── fonts          #字体</div><div class="line">|   ├── images         #图片</div><div class="line">|   ├── uploads        #添加的文件</div><div class="line">|   └── js             #javascript源代码</div><div class="line">├── _config.yml        #主题配置文件</div><div class="line">└── README.md          #说明文档</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;今天给大家介绍的是命令一之&lt;strong&gt;合并文件&lt;/strong&gt;(ฅ&amp;gt;ω&amp;lt;*ฅ)，后面我会不定期的进行更新&lt;/p&gt;
-&lt;p&gt;#合并文件（老司机必备）&lt;br&gt;&lt;strong&gt;图片下的秘密&lt;/strong&gt;&lt;br&gt;如果你想要把一个文件藏在一张图片里改怎么做呢（手动
+        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/di
       
     
     </summary>
     
-      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="cmd" scheme="http://yoursite.com/tags/cmd/"/>
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+      <category term="next主题" scheme="http://yoursite.com/tags/next%E4%B8%BB%E9%A2%98/"/>
+    
+      <category term="文件结构" scheme="http://yoursite.com/tags/%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
   <entry>
-    <title>Ubuntu系统中安装与卸载sublime-text编辑器</title>
-    <link href="http://yoursite.com/2017/12/10/Ubuntu%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%AE%89%E8%A3%85%E4%B8%8E%E5%8D%B8%E8%BD%BDsublime-text%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    <id>http://yoursite.com/2017/12/10/Ubuntu系统中安装与卸载sublime-text编辑器/</id>
-    <published>2017-12-10T04:51:44.683Z</published>
-    <updated>2017-12-10T04:54:54.567Z</updated>
+    <title>Hexo-Next主题统计功能</title>
+    <link href="http://yoursite.com/2017/12/10/Hexo-Next%E4%B8%BB%E9%A2%98%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/"/>
+    <id>http://yoursite.com/2017/12/10/Hexo-Next主题统计功能/</id>
+    <published>2017-12-10T09:58:46.684Z</published>
+    <updated>2017-12-10T09:48:56.658Z</updated>
     
-    <content type="html"><![CDATA[<p>今天给大家介绍如何在ubuntu系统安装与卸载sublime text编辑器</p><p>#sublime text 3安装及配置步骤：</p><ul><li><p><strong>安装方式一：通过软件库安装</strong></p><ol><li>首先打开终端<br>执行命令 <code>sudo add-apt-repository ppa:webupd8team/sublime-text-3</code><br>添加sublime text 3的仓库<blockquote><p>中间如要需要等待的时候直接按enter就好（建立信任数据库）</p></blockquote></li><li>执行命令 <code>sudo apt-get update</code><br>更新软件库</li><li>执行命令 <code>sudo apt-get install sublime-text-installer</code><br>安装sublime text 3</li></ol><p>到此通过方式一已经将sublime text 3安装完成 </p></li><li><p><strong>安装方式二：通过安装Debian包裹文件（手动下载的文件，后缀名为<code>.deb</code>）</strong></p><blockquote><p><code>sublime-text_build-3126_amd64.deb</code>下载地址：<a href="http://pan.baidu.com/s/1dFOd23B" target="_blank" rel="external">http://pan.baidu.com/s/1dFOd23B</a></p></blockquote><ol><li>下载好文件过后，打开终端并进入该文件所在目录（比如<code>~/Downloads</code>）</li><li>执行命令 <code>sudo dpkg -i sublime-text_build-3126_amd64.deb</code></li></ol><p>到此通过方式二已经将sublime text 3安装完成</p></li></ul><hr><p>#卸载sublime text 3</p><ol><li>首先查看一下sublime text 3在系统中存在的程序名<br>执行命令 <code>dpkg -l | grep sublime</code></li><li>查看到程序名后<br>执行命令 <code>sudo dpkg -r sublime-text</code><br>卸载sublime text<blockquote><p>最后的名字取决查看的程序名<br>方式一安装程序名为：<code>sublime-text-installer</code><br>方式二安装程序名为：<code>sublime-text</code></p></blockquote></li><li>执行命令 <code>sudo rm -rf /home/username/.config/sublime-text-3/</code><br>删除配置文件，其中的<code>username</code>为系统的用户名</li><li>执行命令 <code>sudo find / -name sublime*</code><br>查看系统中与sublime text 3相关的文件，然后再根据路径依次删除即可完全卸载掉sublime text 3</li></ol><hr><blockquote><p>sublime text 2安装命令稍微不同（对应安装方式一的三条命令）：</p><ol><li>sudo add-apt-repository ppa:webupd8team/sublime-text-2   </li><li>sudo apt-get update  </li><li>sudo apt-get install sublime-text-dev </li></ol></blockquote><p><strong>好啦，今天的教程就到这里，拜拜咯~~~</strong></p>]]></content>
+    <content type="html"><![CDATA[<ol><li><p>在hexo的根目录下执行命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-wordcount --save</div></pre></td></tr></table></figure></li><li><p>在根目录下的/theme/next/_config.yml文件中搜索<code>Post wordcount</code>，并配置以下参数：<br><code>wordcount</code>：字数统计<br><code>min2read</code>：阅读时长预计<br><code>totalcount</code>：总字数统计</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">post_wordcount:</div><div class="line">    item_text: true</div><div class="line">    wordcount: true</div><div class="line">    min2read: false</div><div class="line">    totalcount: false</div><div class="line">    separated_meta: true</div></pre></td></tr></table></figure></li><li><p>运行效果：</p></li></ol><p><img src="http://upload-images.jianshu.io/upload_images/2381669-894f711aebad1122.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;今天给大家介绍如何在ubuntu系统安装与卸载sublime text编辑器&lt;/p&gt;
-&lt;p&gt;#sublime text 3安装及配置步骤：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;安装方式一：通过软件库安装&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;首先打开终端&lt;
+        &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;在hexo的根目录下执行命令：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td c
       
     
     </summary>
     
-      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="linux ubuntu sublime" scheme="http://yoursite.com/tags/linux-ubuntu-sublime/"/>
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+      <category term="next主题" scheme="http://yoursite.com/tags/next%E4%B8%BB%E9%A2%98/"/>
+    
+      <category term="统计" scheme="http://yoursite.com/tags/%E7%BB%9F%E8%AE%A1/"/>
     
   </entry>
   
   <entry>
-    <title>cmd中有趣的命令二之隐藏文件（不定期更新）</title>
-    <link href="http://yoursite.com/2017/12/10/cmd%E4%B8%AD%E6%9C%89%E8%B6%A3%E7%9A%84%E5%91%BD%E4%BB%A4%E4%BA%8C%E4%B9%8B%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6%EF%BC%88%E4%B8%8D%E5%AE%9A%E6%9C%9F%E6%9B%B4%E6%96%B0%EF%BC%89/"/>
-    <id>http://yoursite.com/2017/12/10/cmd中有趣的命令二之隐藏文件（不定期更新）/</id>
-    <published>2017-12-10T04:51:44.683Z</published>
-    <updated>2017-12-10T04:53:07.870Z</updated>
+    <title>Hexo-Next主题添加友情链接</title>
+    <link href="http://yoursite.com/2017/12/10/Hexo-Next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/"/>
+    <id>http://yoursite.com/2017/12/10/Hexo-Next主题添加友情链接/</id>
+    <published>2017-12-10T09:58:46.682Z</published>
+    <updated>2017-12-10T09:48:51.618Z</updated>
     
-    <content type="html"><![CDATA[<p>今天给大家介绍的是命令二之<strong>隐藏文件</strong> (￣y▽￣)~*捂嘴偷笑</p><p>#隐藏文件<br>说到隐藏文件，你可能会说“可以把文件的属性改成隐藏”，像这样：<br><img src="http://upload-images.jianshu.io/upload_images/2381669-976a6aacb7a9505e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="隐藏属性"><br>这样当然可以达到文件隐藏的目的，如果想要查看的话，只需要把文件管理器里面的显示隐藏的文件和文件夹选项勾上就可以看到了，并且隐藏后图片变成了半透明的状态<br><img src="http://upload-images.jianshu.io/upload_images/2381669-c8dc263ce02db2b1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="显示隐藏"></p><hr><p>#但是，咱们今天要说的当然不是这种隐藏方式<br>我们可以用一条cmd命令来达到隐藏文件的目的，想要查看这种方式隐藏的文件的话我们也要用命令才能显示</p><ol><li>首先准备一张图片<br><img src="http://upload-images.jianshu.io/upload_images/2381669-438d822c27bd4762.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="a.png"></li><li>然后在当前目录下建立一个文本文件，将后缀名改成<code>.bat</code></li><li>然后右键编辑输入 <code>Attrib +h +s +r a.png</code>，保存退出（a.png是你文件的名称，要加上后缀名）</li><li>双击bat文件即可将图片隐藏，并且你打开显示隐藏文件的选项也不会看到</li><li>想要重新显示图片的话，将bat文件的命令改为 <code>Attrib -h -s -r a.png</code> ，再次执行即可显示图片<blockquote><p>当然也可以直接在该文件目录下打开cmd，直接执行上面两条命令也是可以的，也可以建立两个bat文件，像这样，里面分别写入显示和隐藏命令即可<br><img src="http://upload-images.jianshu.io/upload_images/2381669-15a1f6921345ca1b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="显示/隐藏"></p></blockquote></li></ol><p><strong>赶紧自己试试吧(￣y▽￣)~*</strong></p>]]></content>
+    <content type="html"><![CDATA[<p>在根目录下的/theme/next/_config.yml文件中搜索<code>Blog rolls</code>，在下面配置相应的网站名和网站链接即可：<br><img src="http://upload-images.jianshu.io/upload_images/2381669-1e379a41bb5cc984.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-0657b97d9704c40f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;今天给大家介绍的是命令二之&lt;strong&gt;隐藏文件&lt;/strong&gt; (￣y▽￣)~*捂嘴偷笑&lt;/p&gt;
-&lt;p&gt;#隐藏文件&lt;br&gt;说到隐藏文件，你可能会说“可以把文件的属性改成隐藏”，像这样：&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu
+        &lt;p&gt;在根目录下的/theme/next/_config.yml文件中搜索&lt;code&gt;Blog rolls&lt;/code&gt;，在下面配置相应的网站名和网站链接即可：&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/
       
     
     </summary>
     
-      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="cmd" scheme="http://yoursite.com/tags/cmd/"/>
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+      <category term="next主题" scheme="http://yoursite.com/tags/next%E4%B8%BB%E9%A2%98/"/>
+    
+      <category term="友情链接" scheme="http://yoursite.com/tags/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/"/>
     
   </entry>
   
   <entry>
-    <title>Android-实现语言切换</title>
-    <link href="http://yoursite.com/2017/12/10/Android-%E5%AE%9E%E7%8E%B0%E8%AF%AD%E8%A8%80%E5%88%87%E6%8D%A2/"/>
-    <id>http://yoursite.com/2017/12/10/Android-实现语言切换/</id>
-    <published>2017-12-09T16:28:46.976Z</published>
-    <updated>2017-12-09T16:30:41.024Z</updated>
+    <title>Hexo-Next主题添加搜索功能</title>
+    <link href="http://yoursite.com/2017/12/10/Hexo-Next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/"/>
+    <id>http://yoursite.com/2017/12/10/Hexo-Next主题添加搜索功能/</id>
+    <published>2017-12-10T09:58:46.681Z</published>
+    <updated>2017-12-10T09:48:42.363Z</updated>
     
-    <content type="html"><![CDATA[<p>Android APP如果要实现语言（中英文为例）的切换该怎么做呢？</p><p>#1. 在res文件下建立文件夹values-en，并且新建strings.xml文件<br><img src="http://upload-images.jianshu.io/upload_images/2381669-cb6c9699d500ed64.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="strings.xml"></p><p>###文件内容对应如下：</p><ul><li>values/strings.xml：<br><img src="http://upload-images.jianshu.io/upload_images/2381669-e510ff30bbad0cd2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="values/strings.xml"></li><li>values-en/strings.xml：<br><img src="http://upload-images.jianshu.io/upload_images/2381669-54fa935c8c4c6845.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="values-en/strings.xml"></li></ul><p>#2. 实现语言切换的方法：<br><code>Configuration config = getResources().getConfiguration();Resources resources = getResources();if (config.locale.equals(Locale.ENGLISH)){//如果已经为英文      config.locale = Locale.CHINESE;//切换中文}else if (config.locale.equals(Locale.CHINESE)){//如果已经为中文      config.locale = Locale.ENGLISH;//切换英文}                    DisplayMetrics dm = resources.getDisplayMetrics();resources.updateConfiguration(config, dm);</code></p><p>#3. 在AndroidManifest.xml文件中对需要改变语言的Activity添加属性<code>android:configChanges=&quot;locale&quot;</code><br><img src="http://upload-images.jianshu.io/upload_images/2381669-332362bb4b5de95a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="AndroidManifest.xml"></p><blockquote><p>小提示：如果需要保存用户修改的语言以便下一次打开APP时改变语言，可以将用户选择的信息保存至SharedPreferences储存类或者数据库中，在打开时读取判断即可，这里不详细叙述</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<ol><li><p>在hexo的根目录下执行命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-searchdb --save</div></pre></td></tr></table></figure></li><li><p>在根目录下的/theme/next/_config.yml文件中添加配置：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">search:</div><div class="line">  path: search.xml</div><div class="line">  field: post</div><div class="line">  format: html</div><div class="line">  limit: 10000</div></pre></td></tr></table></figure></li><li><p>在根目录下的/theme/next/_config.yml文件中搜索<code>local_search</code>，将<code>enable</code>改为<code>true</code>：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">local_search:</div><div class="line">  enable: true</div></pre></td></tr></table></figure></li></ol><p>运行效果：<br><img src="http://upload-images.jianshu.io/upload_images/2381669-1266010024fc13b1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-8814b3bd571b6302.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Android APP如果要实现语言（中英文为例）的切换该怎么做呢？&lt;/p&gt;
-&lt;p&gt;#1. 在res文件下建立文件夹values-en，并且新建strings.xml文件&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload
+        &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;在hexo的根目录下执行命令：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td c
       
     
     </summary>
     
-      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="android language java" scheme="http://yoursite.com/tags/android-language-java/"/>
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
     
-  </entry>
-  
-  <entry>
-    <title>Java实现MySql数据库与Excel文件转换</title>
-    <link href="http://yoursite.com/2017/12/10/Java%E5%AE%9E%E7%8E%B0MySql%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%8EExcel%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2/"/>
-    <id>http://yoursite.com/2017/12/10/Java实现MySql数据库与Excel文件转换/</id>
-    <published>2017-12-09T16:28:46.976Z</published>
-    <updated>2017-12-10T09:41:46.426Z</updated>
+      <category term="next主题" scheme="http://yoursite.com/tags/next%E4%B8%BB%E9%A2%98/"/>
     
-    <content type="html"><![CDATA[<h3 id="导入Jar包：poi-和-mysql-connector-java"><a href="#导入Jar包：poi-和-mysql-connector-java" class="headerlink" title="导入Jar包：poi 和 mysql-connector-java"></a>导入Jar包：<strong>poi</strong> 和 <strong>mysql-connector-java</strong></h3><p><img src="http://upload-images.jianshu.io/upload_images/2381669-f79f95916b74afd5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="poi"></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-ae3dc74431615ec6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="mysql-connector-java"></p><blockquote><p>poi下载地址：<br><a href="http://mirrors.hust.edu.cn/apache/poi/dev/bin/poi-bin-3.16-beta2-20170202.zip" target="_blank" rel="external"><strong>http://mirrors.hust.edu.cn/apache/poi/dev/bin/poi-bin-3.16-beta2-20170202.zip</strong></a><br>mysql-connector-java下载地址：<br><a href="https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.41.zip" target="_blank" rel="external">https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.41.zip</a></p></blockquote><hr><p>###转换均采用以下两图的内容<br><strong>数据库表：</strong><br><img src="http://upload-images.jianshu.io/upload_images/2381669-cac7d098e9eb6a2f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="数据库表"></p><p><strong>Excel（workbook.xls）：</strong><br><img src="http://upload-images.jianshu.io/upload_images/2381669-7b7d18f3473eaa38.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="workbook.xls"></p><hr><p>###数据库转Excel：</p><ul><li><p>核心代码：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">//初始化excel文件</div><div class="line">HSSFWorkbook wb = new HSSFWorkbook();//excel文件对象</div><div class="line">HSSFSheet sheet = wb.createSheet(&quot;sheet&quot;);//表</div><div class="line">sheet.setDefaultColumnWidth(20);//设置默认列宽为20</div><div class="line">HSSFRow row0 = sheet.createRow(0);//创建第一行</div><div class="line">row0.createCell(0).setCellValue(&quot;id&quot;);//第一行第一列</div><div class="line">FileOutputStream outputStream = new  FileOutputStream(&quot;workbook.xls&quot;);</div><div class="line">wb.write(outputStream);</div><div class="line">outputStream.flush();</div></pre></td></tr></table></figure></li><li><p>全部代码：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line">import org.apache.poi.hssf.usermodel.HSSFRow;</div><div class="line">import org.apache.poi.hssf.usermodel.HSSFSheet;</div><div class="line">import org.apache.poi.hssf.usermodel.HSSFWorkbook;</div><div class="line">public static void main(String[] args) throws IOException, SQLException, ClassNotFoundException &#123;</div><div class="line">        //数据库变量</div><div class="line">        String driver = &quot;com.mysql.jdbc.Driver&quot;;</div><div class="line">        String dvUrl = &quot;jdbc:mysql://localhost:3306/&quot;;</div><div class="line">        String user = &quot;root&quot;;</div><div class="line">        String password = &quot;root&quot;;</div><div class="line">        String database = &quot;test&quot;;</div><div class="line">        Connection conn;</div><div class="line">        PreparedStatement pre;</div><div class="line">        String sql;</div><div class="line"></div><div class="line">        //初始化数据库</div><div class="line">        Class.forName(driver);</div><div class="line">        conn = DriverManager.getConnection(dvUrl + database, user, password);</div><div class="line"></div><div class="line">        //初始化excel文件</div><div class="line">        HSSFWorkbook wb = new HSSFWorkbook();//excel文件对象</div><div class="line">        HSSFSheet sheet = wb.createSheet(&quot;sheet&quot;);//表</div><div class="line">        sheet.setDefaultColumnWidth(20);//设置默认列宽为20</div><div class="line"></div><div class="line">        HSSFRow row0 = sheet.createRow(0);//创建第一行</div><div class="line">        row0.createCell(0).setCellValue(&quot;id&quot;);//第一行第一列</div><div class="line">        row0.createCell(1).setCellValue(&quot;title&quot;);第一行第二列</div><div class="line">        row0.createCell(2).setCellValue(&quot;href&quot;);第一行第三列</div><div class="line">        row0.createCell(3).setCellValue(&quot;author&quot;);第一行第四列</div><div class="line">        row0.createCell(4).setCellValue(&quot;time&quot;);第一行第五列</div><div class="line"></div><div class="line">        sql = &quot;select * from blog&quot;;//查询blog表</div><div class="line">        pre = conn.prepareStatement(sql);</div><div class="line">        ResultSet rs = pre.executeQuery();//</div><div class="line">        int row_count = 1;</div><div class="line">        while (rs.next()) &#123;//遍历表内容</div><div class="line">            String id = rs.getString(&quot;id&quot;);</div><div class="line">            String title = rs.getString(&quot;title&quot;);</div><div class="line">            String href = rs.getString(&quot;href&quot;);</div><div class="line">            String author = rs.getString(&quot;author&quot;);</div><div class="line">            String time = rs.getString(&quot;time&quot;);</div><div class="line">            HSSFRow row = sheet.createRow(row_count);</div><div class="line">            row.createCell(0).setCellValue(id);</div><div class="line">            row.createCell(1).setCellValue(title);</div><div class="line">            row.createCell(2).setCellValue(href);</div><div class="line">            row.createCell(3).setCellValue(author);</div><div class="line">            row.createCell(4).setCellValue(time);</div><div class="line">            row_count++;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        FileOutputStream outputStream = new FileOutputStream(&quot;workbook.xls&quot;);</div><div class="line">        wb.write(outputStream);</div><div class="line">        outputStream.flush();</div><div class="line">      &#125;</div></pre></td></tr></table></figure></li></ul><hr><p>###Excel转数据库：</p><ul><li><p>核心代码：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">File file = new File(&quot;workbook.xls&quot;);</div><div class="line">FileInputStream fileInputStream = new FileInputStream(file);</div><div class="line">//根据指定的文件输入流导入Excel从而产生Workbook对象</div><div class="line">Workbook wb = new HSSFWorkbook(fileInputStream);</div><div class="line">//获取Excel文档中的第一个表单</div><div class="line">Sheet sheet = wb.getSheetAt(0);</div><div class="line">//对Sheet中的每一行进行遍历</div><div class="line">for (Row row : sheet) &#123;</div><div class="line">         //跳过第一行标题</div><div class="line">         if (row.getRowNum() == 0) &#123;</div><div class="line">             continue;</div><div class="line">         &#125;</div><div class="line">         ExcelBean excelBean = new ExcelBean();</div><div class="line">         excelBean.setId(row.getCell(0).getStringCellValue());//第一行第一列的值</div><div class="line">&#125;</div></pre></td></tr></table></figure></li><li><p>全部代码：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div></pre></td><td class="code"><pre><div class="line">import org.apache.poi.hssf.usermodel.HSSFWorkbook;</div><div class="line">import org.apache.poi.ss.usermodel.Row;</div><div class="line">import org.apache.poi.ss.usermodel.Sheet;</div><div class="line">import org.apache.poi.ss.usermodel.Workbook;</div><div class="line"> public static void main(String[] args) throws ClassNotFoundException, SQLException, IOException &#123;</div><div class="line">  //数据库变量</div><div class="line">  String driver = &quot;com.mysql.jdbc.Driver&quot;;</div><div class="line">  String dvUrl = &quot;jdbc:mysql://localhost:3306/&quot;;</div><div class="line">  String user = &quot;root&quot;;</div><div class="line">  String password = &quot;root&quot;;</div><div class="line">  String database = &quot;test&quot;;</div><div class="line">  Connection conn;</div><div class="line">  PreparedStatement pre;</div><div class="line">  String sql;</div><div class="line"></div><div class="line">  ArrayList&lt;ExcelBean&gt; excelBeans = new ArrayList&lt;&gt;();</div><div class="line"></div><div class="line">  //初始化数据库</div><div class="line">  Class.forName(driver);</div><div class="line">  conn = DriverManager.getConnection(dvUrl + database, user, password);</div><div class="line">  pre = conn.prepareStatement(&quot;SHOW TABLES LIKE &apos;excel&apos;&quot;);</div><div class="line">  ResultSet rs = pre.executeQuery();</div><div class="line">  if (rs.next()) &#123;</div><div class="line">      //表存在</div><div class="line">      sql = &quot;truncate table excel&quot;;</div><div class="line">  &#125; else &#123;</div><div class="line">      //表不存在</div><div class="line">      sql = &quot;CREATE TABLE excel(&quot; +</div><div class="line">              &quot;id varchar(255),&quot; +</div><div class="line">              &quot;title varchar(255),&quot; +</div><div class="line">              &quot;href varchar(255),&quot; +</div><div class="line">              &quot;author varchar(255),&quot; +</div><div class="line">              &quot;time varchar(255)&quot; +</div><div class="line">              &quot;) ENGINE=MyISAM DEFAULT CHARSET=utf8&quot;;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  pre = conn.prepareStatement(sql);</div><div class="line">  pre.execute();</div><div class="line"></div><div class="line">  File file = new File(&quot;workbook.xls&quot;);</div><div class="line">  FileInputStream fileInputStream = new FileInputStream(file);</div><div class="line">  //根据指定的文件输入流导入Excel从而产生Workbook对象</div><div class="line">  Workbook wb = new HSSFWorkbook(fileInputStream);</div><div class="line">  //获取Excel文档中的第一个表单</div><div class="line">  Sheet sheet = wb.getSheetAt(0);</div><div class="line">  //对Sheet中的每一行进行遍历</div><div class="line">  for (Row row : sheet) &#123;</div><div class="line">      //跳过第一行标题</div><div class="line">      if (row.getRowNum() == 0) &#123;</div><div class="line">          continue;</div><div class="line">      &#125;</div><div class="line">      ExcelBean excelBean = new ExcelBean();</div><div class="line">      excelBean.setId(row.getCell(0).getStringCellValue());</div><div class="line">      excelBean.setTitle(row.getCell(1).getStringCellValue());</div><div class="line">      excelBean.setHref(row.getCell(2).getStringCellValue());</div><div class="line">      excelBean.setAuthor(row.getCell(3).getStringCellValue());</div><div class="line">      excelBean.setTime(row.getCell(4).getStringCellValue());</div><div class="line">      excelBeans.add(excelBean);</div><div class="line">  &#125;</div><div class="line">  //遍历集合将数据插入到数据库</div><div class="line">  for (ExcelBean eb : excelBeans) &#123;</div><div class="line">      sql = &quot;INSERT INTO excel(id,title,href,author,time) &quot; +</div><div class="line">              &quot;VALUES (&apos;&quot; +</div><div class="line">              eb.getId() + &quot;&apos;,&apos;&quot; +</div><div class="line">              eb.getTitle() + &quot;&apos;,&apos;&quot; +</div><div class="line">              eb.getHref() + &quot;&apos;,&apos;&quot; +</div><div class="line">              eb.getAuthor() + &quot;&apos;,&apos;&quot; +</div><div class="line">              eb.getTime() + &quot;&apos;)&quot;;</div><div class="line">      pre = conn.prepareStatement(sql);</div><div class="line">      pre.execute();</div><div class="line">  &#125;</div><div class="line">  pre.close();</div><div class="line">  conn.close();</div><div class="line">&#125;</div><div class="line"></div><div class="line">public class ExcelBean &#123;</div><div class="line">    private String id;</div><div class="line">    private String title;</div><div class="line">    private String href;</div><div class="line">    private String author;</div><div class="line">    private String time;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;导入Jar包：poi-和-mysql-connector-java&quot;&gt;&lt;a href=&quot;#导入Jar包：poi-和-mysql-connector-java&quot; class=&quot;headerlink&quot; title=&quot;导入Jar包：poi 和 mysql-connect
-      
-    
-    </summary>
-    
-      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
-    
-    
-      <category term="java" scheme="http://yoursite.com/tags/java/"/>
-    
-      <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
-    
-      <category term="excel" scheme="http://yoursite.com/tags/excel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android-Fragment的切换</title>
-    <link href="http://yoursite.com/2017/12/10/Android-Fragment%E7%9A%84%E5%88%87%E6%8D%A2/"/>
-    <id>http://yoursite.com/2017/12/10/Android-Fragment的切换/</id>
-    <published>2017-12-09T16:28:46.976Z</published>
-    <updated>2017-12-09T16:30:21.524Z</updated>
-    
-    <content type="html"><![CDATA[<p>在主布局中有FrameLayout，如何在代码中对FrameLayout进行切换不同的Fragment呢？</p><p><strong>布局文件中的FrameLayout：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;LinearLayout</div><div class="line">        android:layout_width=&quot;match_parent&quot;</div><div class="line">        android:layout_height=&quot;match_parent&quot;</div><div class="line">        android:fitsSystemWindows=&quot;true&quot;</div><div class="line">        android:orientation=&quot;vertical&quot;&gt;</div><div class="line">        &lt;FrameLayout</div><div class="line">            android:id=&quot;@+id/content_layout&quot;</div><div class="line">            android:layout_width=&quot;match_parent&quot;</div><div class="line">            android:layout_height=&quot;match_parent&quot; /&gt;</div><div class="line">&lt;/LinearLayout&gt;</div></pre></td></tr></table></figure></p><p><strong>主界面：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line">//记录当前Fragment</div><div class="line">private Fragment nowFragment;</div><div class="line">//其他的Fragment</div><div class="line">private NewsFragment newsFragment;</div><div class="line"></div><div class="line">protected void onCreate(Bundle savedInstanceState) &#123;</div><div class="line">    super.onCreate(savedInstanceState);</div><div class="line">    setContentView(R.layout.activity_main);</div><div class="line">    //初始化Fragment</div><div class="line">    initFragment(savedInstanceState);</div><div class="line">    if (newsFragment == null) &#123;</div><div class="line">        newsFragment = new NewsFragment();</div><div class="line">    &#125;</div><div class="line">    switchContent(nowFragment, newsFragment);</div><div class="line">&#125;</div><div class="line"></div><div class="line">/**</div><div class="line"> * 初始化Fragment</div><div class="line"> *</div><div class="line"> * @param savedInstanceState</div><div class="line"> */</div><div class="line">private void initFragment(Bundle savedInstanceState) &#123;</div><div class="line">    //避免横竖屏时出现页面叠加，判断activity是否重新加载</div><div class="line">    if (savedInstanceState == null) &#123;</div><div class="line">        FragmentManager fm = getSupportFragmentManager();</div><div class="line">        FragmentTransaction ft = fm.beginTransaction();</div><div class="line">        if (newsFragment == null) &#123;</div><div class="line">            newsFragment = new NewsFragment();</div><div class="line">        &#125;</div><div class="line">        nowFragment = newsFragment;</div><div class="line">        ft.replace(R.id.content_layout, nowFragment).commitAllowingStateLoss();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">/**</div><div class="line"> * 防止Fragement数据重复加载，采用显示和隐藏的方式</div><div class="line"> *</div><div class="line"> * @param from</div><div class="line"> * @param to</div><div class="line"> */</div><div class="line">public void switchContent(Fragment from, Fragment to) &#123;</div><div class="line">    if (nowFragment != to) &#123;</div><div class="line">        nowFragment = to;</div><div class="line">        FragmentManager fm = getSupportFragmentManager();</div><div class="line">        FragmentTransaction ft = fm.beginTransaction();</div><div class="line">        //检测去往的Fragment是否被添加</div><div class="line">        if (!to.isAdded()) &#123;</div><div class="line">            //如果没有添加，就隐藏当前Fragment，添加下一个Fragment</div><div class="line">            ft.hide(from).add(R.id.content_layout, to).commitAllowingStateLoss();</div><div class="line">        &#125; else &#123;</div><div class="line">            //如果已经被添加，就隐藏当前Fragment，直接显示下一个Fragement</div><div class="line">            ft.hide(from).show(to).commitAllowingStateLoss();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;在主布局中有FrameLayout，如何在代码中对FrameLayout进行切换不同的Fragment呢？&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;布局文件中的FrameLayout：&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;tabl
-      
-    
-    </summary>
-    
-      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
-    
-    
-      <category term="android fragment java" scheme="http://yoursite.com/tags/android-fragment-java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android-DrawerLayout+Toolbar实现</title>
-    <link href="http://yoursite.com/2017/12/10/Android-DrawerLayout+Toolbar%E5%AE%9E%E7%8E%B0/"/>
-    <id>http://yoursite.com/2017/12/10/Android-DrawerLayout+Toolbar实现/</id>
-    <published>2017-12-09T16:28:46.976Z</published>
-    <updated>2017-12-09T16:29:59.260Z</updated>
-    
-    <content type="html"><![CDATA[<p>#DrawerLayout+Toolbar实现<br>导入material design 组件</p><blockquote><p>‘com.android.support:design:25.0.1’</p></blockquote><ul><li>主布局：</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line">&lt;android.support.v4.widget.DrawerLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</div><div class="line">    xmlns:tools=&quot;http://schemas.android.com/tools&quot;</div><div class="line">    android:id=&quot;@+id/drawerlayout&quot;</div><div class="line">    android:layout_width=&quot;match_parent&quot;</div><div class="line">    android:layout_height=&quot;match_parent&quot;</div><div class="line">    android:fitsSystemWindows=&quot;true&quot;</div><div class="line">    tools:context=&quot;com.example.hester.aaaaaa.MainActivity&quot;</div><div class="line">    tools:openDrawer=&quot;start&quot;&gt;</div><div class="line"></div><div class="line">    &lt;!--主界面--&gt;</div><div class="line">    &lt;LinearLayout</div><div class="line">        android:layout_width=&quot;match_parent&quot;</div><div class="line">        android:layout_height=&quot;match_parent&quot;</div><div class="line">        android:fitsSystemWindows=&quot;true&quot;</div><div class="line">        android:orientation=&quot;vertical&quot;&gt;</div><div class="line"></div><div class="line">        &lt;android.support.design.widget.AppBarLayout</div><div class="line">            android:layout_width=&quot;match_parent&quot;</div><div class="line">            android:layout_height=&quot;wrap_content&quot;&gt;</div><div class="line"></div><div class="line">            &lt;android.support.v7.widget.Toolbar</div><div class="line">                android:id=&quot;@+id/toolbar&quot;</div><div class="line">                android:layout_width=&quot;match_parent&quot;</div><div class="line">                android:layout_height=&quot;wrap_content&quot;&gt;&lt;/android.support.v7.widget.Toolbar&gt;</div><div class="line">        &lt;/android.support.design.widget.AppBarLayout&gt;</div><div class="line"></div><div class="line">        &lt;TextView</div><div class="line">            android:layout_width=&quot;match_parent&quot;</div><div class="line">            android:layout_height=&quot;wrap_content&quot;</div><div class="line">            android:text=&quot;hello world&quot;</div><div class="line">            android:textSize=&quot;30dp&quot; /&gt;</div><div class="line">    &lt;/LinearLayout&gt;</div><div class="line"></div><div class="line">    &lt;!--侧滑界面--&gt;</div><div class="line">    &lt;LinearLayout</div><div class="line">        android:layout_width=&quot;match_parent&quot;</div><div class="line">        android:layout_height=&quot;match_parent&quot;</div><div class="line">        android:layout_gravity=&quot;start&quot;</div><div class="line">        android:background=&quot;#ffffff&quot;</div><div class="line">        android:fitsSystemWindows=&quot;true&quot;&gt;</div><div class="line"></div><div class="line">        &lt;TextView</div><div class="line">            android:layout_width=&quot;match_parent&quot;</div><div class="line">            android:layout_height=&quot;wrap_content&quot;</div><div class="line">            android:text=&quot;新闻头条&quot;</div><div class="line">            android:textSize=&quot;30dp&quot; /&gt;</div><div class="line">    &lt;/LinearLayout&gt;</div><div class="line"></div><div class="line">&lt;/android.support.v4.widget.DrawerLayout&gt;</div></pre></td></tr></table></figure><ul><li>主界面初始化ToolBar</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">public class MainActivity extends AppCompatActivity &#123;</div><div class="line"></div><div class="line">    Toolbar toolbar;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</div><div class="line">        super.onCreate(savedInstanceState);</div><div class="line">        setContentView(R.layout.activity_main);</div><div class="line">        toolbar = (Toolbar) findViewById(R.id.toolbar);</div><div class="line">        setSupportActionBar(toolbar);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><ul><li>添加NoActionBar主题（values/styles.xml）</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;style name=&quot;AppTheme.NoActionBar&quot;&gt;</div><div class="line">        &lt;item name=&quot;windowActionBar&quot;&gt;false&lt;/item&gt;</div><div class="line">        &lt;item name=&quot;windowNoTitle&quot;&gt;true&lt;/item&gt;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure><ul><li><p>设置主布局的主题为NoActionBar<br><img src="http://upload-images.jianshu.io/upload_images/2381669-33deb4f3a953778a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="snipaste20170314_221750.png"></p></li><li><p>AndroidManifest.xml中将主题改为AppTheme.NoActionBar</p></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;application</div><div class="line">        android:allowBackup=&quot;true&quot;</div><div class="line">        android:icon=&quot;@mipmap/ic_launcher&quot;</div><div class="line">        android:label=&quot;@string/app_name&quot;</div><div class="line">        android:supportsRtl=&quot;true&quot;</div><div class="line">        android:theme=&quot;@style/AppTheme.NoActionBar&quot;&gt;</div><div class="line">        &lt;activity android:name=&quot;.MainActivity&quot;&gt;</div><div class="line">            &lt;intent-filter&gt;</div><div class="line">                &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;</div><div class="line"></div><div class="line">                &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;</div><div class="line">            &lt;/intent-filter&gt;</div><div class="line">        &lt;/activity&gt;</div><div class="line">    &lt;/application&gt;</div></pre></td></tr></table></figure><p>注意事项：</p><ol><li>侧滑布局位置属性：android:layout_gravity=”start”</li><li>DrawerLayout添加适应系统窗口：android:fitsSystemWindows=”true”  </li></ol><hr><p>#侧滑布局改为NavigationView<br>侧滑布局</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;!--侧滑布局--&gt;</div><div class="line">&lt;android.support.design.widget.NavigationView</div><div class="line">    android:id=&quot;@+id/nav_view&quot;</div><div class="line">    android:layout_width=&quot;wrap_content&quot;</div><div class="line">    android:layout_height=&quot;match_parent&quot;</div><div class="line">    android:layout_gravity=&quot;start&quot;</div><div class="line">    android:fitsSystemWindows=&quot;true&quot;</div><div class="line">    app:headerLayout=&quot;@layout/nav_header&quot;</div><div class="line">    app:menu=&quot;@menu/nav_menu&quot; /&gt;</div><div class="line"></div><div class="line">提示：</div><div class="line">* app:headerLayout=&quot;@layout/header&quot;（添加布局头部）</div><div class="line">* app:menu=&quot;@menu/nav_menu&quot;（添加布局菜单）</div></pre></td></tr></table></figure><p>@menu/nav_menu：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">&lt;menu xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;</div><div class="line">    &lt;group android:checkableBehavior=&quot;single&quot;&gt;</div><div class="line">        &lt;item</div><div class="line">            android:id=&quot;@+id/news&quot;</div><div class="line">            android:title=&quot;@string/zh_news&quot; /&gt;</div><div class="line">        &lt;item</div><div class="line">            android:id=&quot;@+id/wechat&quot;</div><div class="line">            android:title=&quot;@string/zh_wechat&quot; /&gt;</div><div class="line">    &lt;/group&gt;</div><div class="line">    &lt;item android:title=&quot;Communicate&quot;&gt;</div><div class="line">        &lt;menu&gt;</div><div class="line">            &lt;item</div><div class="line">                android:id=&quot;@+id/nav_share&quot;</div><div class="line">                android:icon=&quot;@drawable/ic_menu_share&quot;</div><div class="line">                android:title=&quot;Share&quot; /&gt;</div><div class="line">            &lt;item</div><div class="line">                android:id=&quot;@+id/nav_send&quot;</div><div class="line">                android:icon=&quot;@drawable/ic_menu_send&quot;</div><div class="line">                android:title=&quot;Send&quot; /&gt;</div><div class="line">        &lt;/menu&gt;</div><div class="line">    &lt;/item&gt;</div><div class="line">&lt;/menu&gt;</div></pre></td></tr></table></figure><p>初始化NavigationView：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">//navigationView  icon显示原始颜色</div><div class="line">navigationView.setItemIconTintList(null);</div><div class="line">//navigationView添加item选择监听事件</div><div class="line">navigationView.setNavigationItemSelectedListener(this);</div><div class="line"></div><div class="line">@Override</div><div class="line">    public boolean onNavigationItemSelected(MenuItem item) &#123;</div><div class="line">        getSupportActionBar().setTitle(item.getTitle());</div><div class="line">        switch (item.getItemId()) &#123;</div><div class="line">            case R.id.news:</div><div class="line">                break;</div><div class="line">        &#125;</div><div class="line">        drawerLayout.closeDrawer(GravityCompat.START);</div><div class="line">        return true;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;#DrawerLayout+Toolbar实现&lt;br&gt;导入material design 组件&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;‘com.android.support:design:25.0.1’&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;主布局：&lt;/
-      
-    
-    </summary>
-    
-      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
-    
-    
-      <category term="android layout toolbar java" scheme="http://yoursite.com/tags/android-layout-toolbar-java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2017/10/26/hello-world/"/>
-    <id>http://yoursite.com/2017/10/26/hello-world/</id>
-    <published>2017-10-26T15:10:54.202Z</published>
-    <updated>2017-11-06T08:54:57.192Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
-    
-    </summary>
-    
+      <category term="搜索" scheme="http://yoursite.com/tags/%E6%90%9C%E7%B4%A2/"/>
     
   </entry>
   

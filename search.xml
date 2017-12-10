@@ -1,14 +1,722 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[是时候用它代替你PPT了——FocuSky]]></title>
-    <url>%2F2017%2F12%2F10%2F%E6%98%AF%E6%97%B6%E5%80%99%E7%94%A8%E5%AE%83%E4%BB%A3%E6%9B%BF%E4%BD%A0PPT%E4%BA%86%E2%80%94%E2%80%94FocuSky%2F</url>
-    <content type="text"><![CDATA[之前国外有一款制作动态演示文档的软件——Prezi，不知道大家有没有听说过，但是这款国外软件对中文的支持并不是很好，限制也比较多。 这次给大家推荐一个国内的制作动态演示文档的软件——FocuSky**，**首先软件的使用是免费的，而且还完美支持中文 它的操作简单，很容易上手，可以插入各种文件格式，还有很多功能，包括制作动画，交互等 通过组件的拖拉可以像制作PPT那样很快的做出一个动态的演示文档，是不是比静态枯燥的PPT有趣多了呢，大家做报告的时候放一个这样的动态演示文档是不是感觉高大上呢 还有一个大家担心的问题，就是做好了过后，如果要去其他电脑上看，是不是得装一个这个软件才能播放？答案当然不是，这也是我觉得比较实用的地方，它可以直接导出为windows应用程序、视频、flash、h5网页、mac app，PDF等文件格式，这样就可以直接拷到其他电脑上进行演示啦，是不是很方便呢 FocuSky软件官网：http://www.focusky.com.cn/ 在线工具服务网站Loveconvert网址：http://www.loveconvert.com欢迎关注微信：小胡资源]]></content>
+    <title><![CDATA[javascript-判断鼠标滚轮]]></title>
+    <url>%2F2017%2F12%2F10%2Fjs-%E5%88%A4%E6%96%AD%E9%BC%A0%E6%A0%87%E6%BB%9A%E8%BD%AE%2F</url>
+    <content type="text"><![CDATA[代码123456789101112131415161718window.onmousewheel = document.onmousewheel = function(e) &#123; e = e || window.event; if (e.wheelDelta) &#123; //判断浏览器IE，谷歌滑轮事件 if (e.wheelDelta &gt; 0) &#123; //当滑轮向上滚动时 console.log(&quot;滑轮向上滚动&quot;); &#125; if (e.wheelDelta &lt; 0) &#123; //当滑轮向下滚动时 console.log(&quot;滑轮向下滚动&quot;); &#125; &#125; else if (e.detail) &#123; //Firefox滑轮事件 if (e.detail &gt; 0) &#123; //当滑轮向上滚动时 console.log(&quot;滑轮向上滚动&quot;); &#125; if (e.detail &lt; 0) &#123; //当滑轮向下滚动时 console.log(&quot;滑轮向下滚动&quot;); &#125; &#125;&#125;]]></content>
       <categories>
-        <category>小胡资源</category>
+        <category>Web</category>
       </categories>
       <tags>
-        <tag>FocuSky</tag>
+        <tag>javascript</tag>
+        <tag>鼠标</tag>
+        <tag>滚轮</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Javascript中的编码解码函数]]></title>
+    <url>%2F2017%2F12%2F10%2FJavascript%E4%B8%AD%E7%9A%84%E7%BC%96%E7%A0%81%E8%A7%A3%E7%A0%81%E5%87%BD%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[123456789101112![](http://upload-images.jianshu.io/upload_images/2381669-ad5a4b65d1847869.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)![](http://upload-images.jianshu.io/upload_images/2381669-b1f60a0ec906c540.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)---- ```decodeURI()```： 解码一个由 encodeURI 编码过的 URI。![](http://upload-images.jianshu.io/upload_images/2381669-5bae1e56d9d01d19.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)---- ```encodeURIComponent() decodeURIComponent()：解码一个由 encodeURIComponent 编码过的字符串。 window.btoa()：将一个只有 ASCII 字符的字符串或二进制数据转换成一个 base64 编码过的字符串。 如果想对一个 Unicode 字符串进行编码，可以使用 encodeURIComponent 先对其进行编码，然后再进行 base64 编码。 window.atob()： 用来解码被 base64 编码过的数据，直接对 ASCII 字符串进行 base64 解码会出现乱码。]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>编码</tag>
+        <tag>解码</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[javascript-在div前、中、后插入另一个div]]></title>
+    <url>%2F2017%2F12%2F10%2Fjavascript-%E5%9C%A8div%E5%89%8D%E3%80%81%E4%B8%AD%E3%80%81%E5%90%8E%E6%8F%92%E5%85%A5%E5%8F%A6%E4%B8%80%E4%B8%AAdiv%2F</url>
+    <content type="text"><![CDATA[代码123456789101112131415161718192021222324252627282930313233343536373839&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt; &lt;meta charset=&quot;UTF-8&quot;&gt; &lt;title&gt;Document&lt;/title&gt; &lt;style&gt; div&#123; height: 30px; &#125; #d1&#123; background: blue; &#125; #d2&#123; background: red; &#125; &lt;/style&gt;&lt;/head&gt;&lt;body&gt; &lt;div id=&quot;d1&quot;&gt;1&lt;/div&gt; &lt;div id=&quot;d2&quot;&gt;2&lt;/div&gt; &lt;script&gt; var d1 = document.getElementById(&apos;d1&apos;); var d2 = document.getElementById(&apos;d2&apos;); //移动d1到d2后面 function move_d1_to_d2_after()&#123; d1.parentNode.insertBefore(d1,d2.nextSibling); &#125; //移动d1到d2里面 function move_d1_into_d2()&#123; d2.appendChild(d1); &#125; //移动d2到d1前面 function move_d2_to_d1_before()&#123; d2.parentNode.insertBefore(d2,d1); &#125; &lt;/script&gt;&lt;/body&gt;&lt;/html&gt; 初始 执行move_d1_to_d2_after，即移动d1到d2后面 执行move_d1_into_d2，移动d1到d2里面 执行move_d2_to_d1_before，即移动d2到d1前面]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>div</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[javascript-选择器的区别]]></title>
+    <url>%2F2017%2F12%2F10%2Fjavascript-%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
+    <content type="text"><![CDATA[选择器作用： document.getElementById(&#39;&#39;)：通过ID选取元素 document.getElementsByName(&#39;&#39;)：通过名称name选取元素 document.getElementsByClassName(&#39;&#39;)：通过class类选取元素 document.getElementsByTagName(&#39;&#39;)：通过标签名选取元素 document.all：选取全部元素 document.querySelector(&#39;&#39;)：根据css选择器选取id或class元素 document.querySelectorAll(&#39;&#39;)：根据css选择器选取相应全部的元素 选择器的返回类型： document.getElementById(&#39;&#39;)：返回含标签名的元素 document.getElementsByName(&#39;&#39;)：返回一个nodeList集合 document.getElementsByName(&#39;&#39;)[index]：返回第index个含名称name，含标签名的元素 document.getElementsByClassName(&#39;&#39;)：返回一个nodeList集合 document.getElementsByClassName(&#39;&#39;)[index]：返回第index个含类名class，含标签名的元素 document.getElementsByTagName(&#39;&#39;)：返回一个nodeList集合 document.getElementsByTagName(&#39;&#39;)[index]：返回一个第index个含标签名，含标签名的元素 document.all：返回一个nodeList集合 document.querySelector(&#39;&#39;)：返回含标签名的元素 document.querySelector(&#39;&#39;)[index]：返回第index个，含标签名的元素 document.querySelectorAll(&#39;&#39;)：返回一个nodeList集合]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>选择器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[javascript-图像二值化处理]]></title>
+    <url>%2F2017%2F12%2F10%2Fjavascript-%E5%9B%BE%E5%83%8F%E4%BA%8C%E5%80%BC%E5%8C%96%E5%A4%84%E7%90%86%2F</url>
+    <content type="text"><![CDATA[代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt; &lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;canvas id=&quot;canvas&quot; onclick=&quot;showInfo()&quot;&gt;&lt;/canvas&gt; &lt;img id=&quot;img&quot; src=&quot;1.jpg&quot; width=&quot;300&quot; height=&quot;200&quot; hidden&gt; &lt;script&gt; window.onload = function() &#123; var canvas = document.getElementById(&apos;canvas&apos;); var img = document.getElementById(&apos;img&apos;); var c = canvas.getContext(&apos;2d&apos;); canvas.width = img.width; canvas.height = img.height; c.drawImage(img, 0, 0, canvas.width, canvas.height); this.showInfo = function() &#123; var imgData = c.getImageData(0, 0, canvas.width, canvas.height); var index = 255/2;//阈值 for (var i = 0; i &lt; imgData.data.length; i += 4) &#123; var R = imgData.data[i]; //R(0-255) var G = imgData.data[i + 1]; //G(0-255) var B = imgData.data[i + 2]; //B(0-255) var Alpha = imgData.data[i + 3]; //Alpha(0-255) var sum = (R + G + B) / 3; if (sum &gt; index) &#123; imgData.data[i] = 255; imgData.data[i + 1] = 255; imgData.data[i + 2] = 255; imgData.data[i + 3] = Alpha; &#125; else &#123; imgData.data[i] = 0; imgData.data[i + 1] = 0; imgData.data[i + 2] = 0; imgData.data[i + 3] = Alpha; &#125; &#125; c.putImageData(imgData, 0, 0); &#125; &#125; &lt;/script&gt;&lt;/body&gt;&lt;/html&gt; 处理前 处理后 记得在服务器端中运行，不然会有跨域问题，推荐使用Node的http-server，使用比较方便]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>image</tag>
+        <tag>二值化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[javascript-如何修改css伪元素的内容]]></title>
+    <url>%2F2017%2F12%2F10%2Fjavascript-%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9css%E4%BC%AA%E5%85%83%E7%B4%A0%E7%9A%84%E5%86%85%E5%AE%B9%2F</url>
+    <content type="text"><![CDATA[思路：直接在html中添加样式覆盖掉之前样式规则 代码1234567891011121314151617181920212223242526272829&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt; &lt;style&gt; .main&#123; width:100px; height:100px; background:#000; &#125; .main:after&#123; content:&quot;hello world&quot;; background:red; &#125; &lt;/style&gt;&lt;/head&gt;&lt;body&gt; &lt;div class=&quot;main&quot; onclick=&quot;change()&quot;&gt;&lt;/div&gt; &lt;script&gt; var s = document.createElement(&apos;style&apos;); document.body.appendChild(s); function change()&#123; s.innerText = &quot;.main:after&#123;background:blue&#125;&quot;; &#125; &lt;/script&gt;&lt;/body&gt;&lt;/html&gt; 关键代码：12var s = document.createElement(&apos;style&apos;);document.body.appendChild(s); 1s.innerText = &quot;.main:after&#123;background:blue&#125;&quot;;]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>javascript</tag>
+        <tag>伪元素</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[javascript-利用数组制作分页效果]]></title>
+    <url>%2F2017%2F12%2F10%2Fjavascript-%E5%88%A9%E7%94%A8%E6%95%B0%E7%BB%84%E5%88%B6%E4%BD%9C%E5%88%86%E9%A1%B5%E6%95%88%E6%9E%9C%2F</url>
+    <content type="text"><![CDATA[代码参数：123456```currentPage```：当前的页数```skipNum```：跳过的数量```arr```：数组返回值：```newArr```分页后的数组 var pagination = function(pageSize, currentPage, arr) { var skipNum = (currentPage - 1) * pageSize; var newArr = (skipNum + pageSize &gt;= arr.length) ? arr.slice(skipNum, arr.length) : arr.slice(skipNum, skipNum + pageSize); return newArr;}```]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>数组</tag>
+        <tag>分页</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[javascript-根据数组中对象的属性排序]]></title>
+    <url>%2F2017%2F12%2F10%2Fjavascript-%E6%A0%B9%E6%8D%AE%E6%95%B0%E7%BB%84%E4%B8%AD%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E6%8E%92%E5%BA%8F%2F</url>
+    <content type="text"><![CDATA[有如下数组：1234567891011121314151617var arr = [ &#123; id: 1, name: &quot;a&quot;, time: &quot;2017-11-22T06:28:13.615Z&quot; &#125;, &#123; id: 2, name: &quot;b&quot;, time: &quot;2017-11-22T06:30:13.615Z&quot; &#125;, &#123; id: 3, name: &quot;c&quot;, time: &quot;2017-11-22T06:32:13.615Z&quot; &#125;] 根据数组中每个对象的id进行排序1arr.sort((a, b) =&gt; b.id - a.id); 等价于:123arr.sort(function(a,b)&#123; return b.id - a.id;&#125;); 根据数组中每个对象的time进行排序1arr.sort((a, b) =&gt; new Date(b.time) - new Date(a.time)); 等价于:123arr.sort(function(a,b)&#123; return new Date(b.time) - new Date(a.time);&#125;);]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>数组</tag>
+        <tag>排序</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[javascript-svg转canvas和image]]></title>
+    <url>%2F2017%2F12%2F10%2Fjavascript-svg%E8%BD%ACcanvas%E5%92%8Cimage%2F</url>
+    <content type="text"><![CDATA[代码（内含注释）1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt; &lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;div id=&quot;svg-wrap&quot;&gt; &lt;svg width=&quot;200&quot; height=&quot;200&quot; xmlns=&apos;http://www.w3.org/2000/svg&apos;&gt; &lt;rect width=&quot;200&quot; height=&quot;200&quot; style=&quot;fill:#ddd&quot;&gt;&lt;/rect&gt; &lt;/svg&gt; &lt;/div&gt; &lt;canvas id=&quot;canvas&quot;&gt;&lt;/canvas&gt; &lt;script&gt; window.onload = function()&#123; //获取svg内容 var svg = document.getElementById(&apos;svg-wrap&apos;).innerHTML; var canvas = document.getElementById(&apos;canvas&apos;); var c = canvas.getContext(&apos;2d&apos;); //新建Image对象 var img = new Image(); //svg内容 img.src = &apos;data:image/svg+xml,&apos; + unescape(encodeURIComponent(svg));//svg内容中可以有中文字符 img.src = &apos;data:image/svg+xml,&apos; + svg;//svg内容中不能有中文字符 //svg编码成base64 img.src = &apos;data:image/svg+xml;base64,&apos; + window.btoa(unescape(encodeURIComponent(svg)));//svg内容中可以有中文字符 img.src = &apos;data:image/svg+xml;base64,&apos; + window.btoa(svg);//svg内容中不能有中文字符 //图片初始化完成后调用 img.onload = function() &#123; //将canvas的宽高设置为图像的宽高 canvas.width = img.width; canvas.height = img.height; //canvas画图片 c.drawImage(img, 0, 0); //将图片添加到body中 document.body.appendChild(img) &#125; &#125; &lt;/script&gt;&lt;/body&gt;&lt;/html&gt; 效果图 svg标签一定要加属性xmlns=&#39;http://www.w3.org/2000/svg&#39;svg标签一定要加属性xmlns=&#39;http://www.w3.org/2000/svg&#39;svg标签一定要加属性xmlns=&#39;http://www.w3.org/2000/svg&#39;不然svg内容和base64添加到img.src会出错，canvas和image都不会在页面显示出来]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>image</tag>
+        <tag>canvas</tag>
+        <tag>svg</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[javascript-split单个或连续空格]]></title>
+    <url>%2F2017%2F12%2F10%2Fjavascript-split%E5%8D%95%E4%B8%AA%E6%88%96%E8%BF%9E%E7%BB%AD%E7%A9%BA%E6%A0%BC%2F</url>
+    <content type="text"><![CDATA[1str.split(/[ ]+/);]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>split</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[javascript-canvas与image互转]]></title>
+    <url>%2F2017%2F12%2F10%2Fjavascript-canvas%E4%B8%8Eimage%E4%BA%92%E8%BD%AC%2F</url>
+    <content type="text"><![CDATA[代码（内含注释）123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt; &lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;canvas id=&quot;canvas&quot;&gt;&lt;/canvas&gt; &lt;script&gt; window.onload = function() &#123; var canvas = document.getElementById(&apos;canvas&apos;); var c = canvas.getContext(&apos;2d&apos;); // canvas2image();//canvas转图片 // image2canvas();//图片转canvas //canvas转图片 function canvas2image() &#123; //canvas画一个正方形 c.fillStyle = &quot;#ddd&quot;; c.fillRect(0, 0, 100, 100); //新建Image对象，将canvas转换为base64添加到image的src属性上 var img = new Image(); img.src = canvas.toDataURL(&apos;image/jpg&apos;); //添加到body中 document.body.appendChild(img); &#125; //图片转canvas function image2canvas() &#123; //新建Image对象，引入当前目录下的图片 var img = new Image(); img.src = &quot;1.jpg&quot;; //图片初始化完成后调用 img.onload = function() &#123; //将canvas的宽高设置为图像的宽高 canvas.width = img.width; canvas.height = img.height; //canvas画图片 c.drawImage(img, 0, 0, img.width, img.height); &#125; &#125; &#125; &lt;/script&gt;&lt;/body&gt;&lt;/html&gt;]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>image</tag>
+        <tag>canvas</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[input选择图片再显示]]></title>
+    <url>%2F2017%2F12%2F10%2Finput%E9%80%89%E6%8B%A9%E5%9B%BE%E7%89%87%E5%86%8D%E6%98%BE%E7%A4%BA%2F</url>
+    <content type="text"><![CDATA[代码1234567891011121314151617181920212223242526272829303132&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt; &lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;div&gt; &lt;label&gt;请选择图片&lt;/label&gt; &lt;input id=&quot;img&quot; type=&quot;file&quot; accept=&quot;image/*&quot; name=&quot;img&quot;&gt; &lt;/div&gt; &lt;div id=&quot;box&quot;&gt;&lt;/div&gt; &lt;script&gt; var img = document.getElementById(&apos;img&apos;); var box = document.getElementById(&apos;box&apos;); img.addEventListener(&apos;change&apos;, function() &#123; var file = this.files[0]; var reader = new FileReader(); reader.readAsDataURL(file); reader.onload = function() &#123; var imgbox = new Image(); imgbox.width = 300; imgbox.height = 300; imgbox.src = this.result; box.appendChild(imgbox); &#125; &#125;, false); &lt;/script&gt;&lt;/body&gt;&lt;/html&gt; 效果]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>html</tag>
+        <tag>image</tag>
+        <tag>input</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[html-img在div中，下方有空隙的解决方案]]></title>
+    <url>%2F2017%2F12%2F10%2Fhtml--img%E5%9C%A8div%E4%B8%AD%EF%BC%8C%E4%B8%8B%E6%96%B9%E6%9C%89%E7%A9%BA%E9%9A%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%2F</url>
+    <content type="text"><![CDATA[如果img在div中，会发现图片并没有完全填充div，而是在下方出现了一点空隙12345678910111213141516171819&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt; &lt;title&gt;&lt;/title&gt; &lt;style type=&quot;text/css&quot;&gt; .wrap&#123; background:lightblue; &#125; .img&#123; height: 400px; &#125; &lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;wrap&quot;&gt; &lt;img class=&quot;img&quot; src=&quot;1.jpg&quot;&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt; 解决方案 img设置display:block; 1234.img&#123; height: 400px; display: block;&#125; div设置font-size:0; 1234.wrap&#123; background:lightblue; font-size: 0;&#125; 效果]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>div</tag>
+        <tag>html</tag>
+        <tag>image</tag>
+        <tag>空隙</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[html5拖放（Drag-&-Drop）基本使用]]></title>
+    <url>%2F2017%2F12%2F10%2Fhtml5-%E6%8B%96%E6%94%BE%EF%BC%88Drag-%26-Drop%EF%BC%89%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[代码1234567891011121314151617181920212223242526272829303132333435&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt; &lt;title&gt;&lt;/title&gt; &lt;style&gt; div&#123; width: 100px; height: 100px; background: #ddd; margin-bottom: 10px; &#125; &lt;/style&gt;&lt;/head&gt;&lt;body&gt; &lt;div id=&quot;a&quot; draggable=&quot;true&quot;&gt;a&lt;/div&gt; &lt;div id=&quot;b&quot; draggable=&quot;true&quot;&gt;b&lt;/div&gt; &lt;script&gt; var a = document.getElementById(&apos;a&apos;); var b = document.getElementById(&apos;b&apos;); a.ondragstart = function(e) &#123; e.dataTransfer.setData(&quot;id&quot;, e.target.id); &#125; b.ondragover = function(e) &#123; e.preventDefault(); &#125; b.ondrop = function(e) &#123; var id = e.dataTransfer.getData(&quot;id&quot;); console.log(id); &#125; &lt;/script&gt;&lt;/body&gt;&lt;/html&gt; 设置元素可拖放：1draggable=&quot;true&quot; ##触发事件： 1.拖动目标时触发事件： ondragstart：开始拖动元素时触发 ondrag：元素正在拖动时触发 ondragend：完成元素拖动后触发 2.释放目标时触发事件： ondragenter：当被拖动的对象进入容器范围内时触发 ondragover：当被拖动的对象在另一对象容器范围内拖动时触发 ondragleave：当被拖动的对象离开容器范围内时触发 ondrop：在一个拖动过程中，释放鼠标键时触发此事件 数据操作： 设置数据：value);``` （在ondragstart中操作）12- **获取**数据：```e.dataTransfer.getData(key);``` （在```ondragover```中阻止对元素的默认处理方式，通过调用```ondragover```事件的 ```e.preventDefault()```方法，然后在ondrop中操作）- **清除**数据：清除全部数据```e.dataTransfer.clearData()```或清除指定数据```e.dataTransfer.clearData([&quot;id&quot;]) 实例：1234567b.ondragover = function(e) &#123; e.preventDefault();&#125;b.ondrop = function(e) &#123; var id = e.dataTransfer.getData(&quot;id&quot;); console.log(id);&#125; 设置拖放操作的自定义图标：123**实例：**```e.dataTransfer.setDragImage(document.getElementById(&apos;img&apos;),0,0);]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>html5</tag>
+        <tag>拖放</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo-利用Git发布到Github]]></title>
+    <url>%2F2017%2F12%2F10%2Fhexo-%E5%88%A9%E7%94%A8Git%E5%8F%91%E5%B8%83%E5%88%B0Github%2F</url>
+    <content type="text"><![CDATA[在hexo根目录下执行命令，安装hexo-deployer-git（一般默认都有，可以打开根目录下的package.json查看）： 1npm install hexo-deployer-git --save 找到github项目对应的git地址： 在根目录下的_config.yml文件末尾添加配置： 1234deploy: type: git repository: https://github.com/garuhester/garuhester.github.io.git branch: master 在hexo根目录依次执行命令： 123$ hexo clean //清除缓存$ hexo g //生成静态网页文件$ hexo d //发布到github 为了方便使用，可以做成bat文件：开启服务：clean & hexo g & hexo s```1Git上传：```hexo clean &amp; hexo g &amp; hexo d]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>github</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo博客搭建步骤]]></title>
+    <url>%2F2017%2F12%2F10%2FHexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%AD%A5%E9%AA%A4%2F</url>
+    <content type="text"><![CDATA[npm install hexo-cli -g hexo init blog cd blog npm install hexo server]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>博客搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo-Next主题文件结构]]></title>
+    <url>%2F2017%2F12%2F10%2FHexo-Next%E4%B8%BB%E9%A2%98%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%2F</url>
+    <content type="text"><![CDATA[12345678910111213141516171819202122232425262728293031323334353637├── .github #git信息├── languages #多语言| ├── default.yml #默认语言| └── zh-Hans.yml #简体中文| └── zh-tw.yml #繁体中文├── layout #布局，根目录下的*.ejs文件是对主页，分页，存档等的控制| ├── _custom #可以自己修改的模板，覆盖原有模板| | ├── _header.swig #头部样式| | ├── _sidebar.swig #侧边栏样式| ├── _macro #可以自己修改的模板，覆盖原有模板| | ├── post.swig #文章模板| | ├── reward.swig #打赏模板| | ├── sidebar.swig #侧边栏模板| ├── _partial #局部的布局| | ├── head #头部模板| | ├── search #搜索模板| | ├── share #分享模板| ├── _script #局部的布局| ├── _third-party #第三方模板| ├── _layout.swig #主页面模板| ├── index.swig #主页面模板| ├── page #页面模板| └── tag.swig #tag模板├── scripts #script源码| ├── tags #tags的script源码| ├── marge.js #页面模板├── source #源码| ├── css #css源码| | ├── _common #*.styl基础css| | ├── _custom #*.styl局部css| | └── _mixins #mixins的css| ├── fonts #字体| ├── images #图片| ├── uploads #添加的文件| └── js #javascript源代码├── _config.yml #主题配置文件└── README.md #说明文档]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next主题</tag>
+        <tag>文件结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo-Next主题统计功能]]></title>
+    <url>%2F2017%2F12%2F10%2FHexo-Next%E4%B8%BB%E9%A2%98%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD%2F</url>
+    <content type="text"><![CDATA[在hexo的根目录下执行命令： 1npm install hexo-wordcount --save 在根目录下的/theme/next/_config.yml文件中搜索Post wordcount，并配置以下参数：wordcount：字数统计min2read：阅读时长预计totalcount：总字数统计 123456post_wordcount: item_text: true wordcount: true min2read: false totalcount: false separated_meta: true 运行效果：]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next主题</tag>
+        <tag>统计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo-Next主题添加友情链接]]></title>
+    <url>%2F2017%2F12%2F10%2FHexo-Next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5%2F</url>
+    <content type="text"><![CDATA[在根目录下的/theme/next/_config.yml文件中搜索Blog rolls，在下面配置相应的网站名和网站链接即可：]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next主题</tag>
+        <tag>友情链接</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo-Next主题添加搜索功能]]></title>
+    <url>%2F2017%2F12%2F10%2FHexo-Next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%2F</url>
+    <content type="text"><![CDATA[在hexo的根目录下执行命令： 1npm install hexo-generator-searchdb --save 在根目录下的/theme/next/_config.yml文件中添加配置： 12345search: path: search.xml field: post format: html limit: 10000 在根目录下的/theme/next/_config.yml文件中搜索local_search，将enable改为true： 12local_search: enable: true 运行效果：]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next主题</tag>
+        <tag>搜索</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo-Next主题添加社交链接]]></title>
+    <url>%2F2017%2F12%2F10%2FHexo-Next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%A4%BE%E4%BA%A4%E9%93%BE%E6%8E%A5%2F</url>
+    <content type="text"><![CDATA[在根目录下的/theme/next/_config.yml文件中搜索Social Links，在下面配置相应的社交平台和链接即可：]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next主题</tag>
+        <tag>社交</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo-Next主题添加RSS]]></title>
+    <url>%2F2017%2F12%2F10%2FHexo-Next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0RSS%2F</url>
+    <content type="text"><![CDATA[在hexo的根目录下执行命令： 1npm install hexo-generator-feed --save 在根目录下的/theme/next/_config.yml文件中添加配置： 123456feed: type: rss2 path: rss2.xml limit: 5 hub: content: &apos;true&apos; 运行效果：]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next主题</tag>
+        <tag>RSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo-Next主题设置和取消页面动画]]></title>
+    <url>%2F2017%2F12%2F10%2FHexo-Next%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE%E5%92%8C%E5%8F%96%E6%B6%88%E9%A1%B5%E9%9D%A2%E5%8A%A8%E7%94%BB%2F</url>
+    <content type="text"><![CDATA[在根目录下的/theme/next/_config.yml文件中搜索motion 设置动画在motion下的transition参数下设置页面动画（注释中有参考的动画名称） 123456transition: post_block: fadeIn post_header: slideDownIn post_body: slideDownIn coll_header: slideLeftIn sidebar: slideUpIn 取消动画将motion下的enable参数设置为false即可关闭页面动画12motion: enable: false]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next主题</tag>
+        <tag>页面动画</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo-Next主题嵌入网易云音乐]]></title>
+    <url>%2F2017%2F12%2F10%2FHexo-Next%E4%B8%BB%E9%A2%98%E5%B5%8C%E5%85%A5%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%2F</url>
+    <content type="text"><![CDATA[进入网页版的网易云音乐找到自己需要添加的歌曲 在歌曲详情页点击生成外链播放器 这里可以设置外链播放器的类型，尺寸等参数，设置完成过后复制下面的外链接 在根目录下的/theme/next/layout/_macro/sidebar.swig文件（侧边栏布局文件）中选择你要添加播放器的位置，然后粘贴外链接 最后的效果]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next主题</tag>
+        <tag>网易云音乐</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[gulp基本使用]]></title>
+    <url>%2F2017%2F12%2F10%2Fgulp%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[gulpfile.js代码123456789101112131415161718192021222324252627var gulp = require(&apos;gulp&apos;), del = require(&apos;del&apos;), //删除文件 concat = require(&apos;gulp-concat&apos;), //合并文件 uglyfly = require(&apos;gulp-uglyfly&apos;), //js压缩 wrap = require(&apos;gulp-wrap&apos;), //定义公共头部和底部 autoprefixer = require(&apos;gulp-autoprefixer&apos;) //css属性加上浏览器的前缀gulp.task(&apos;clean&apos;, function() &#123; return del([&apos;dist/*&apos;]);&#125;);gulp.task(&apos;script&apos;, [&apos;clean&apos;], function() &#123; gulp.src(&apos;js/*.js&apos;) .pipe(concat(&apos;a.js&apos;)) .pipe(uglyfly()) .pipe(wrap(&#123; src: &apos;src/header.js&apos; &#125;)) .pipe(gulp.dest(&apos;dist/&apos;));&#125;);gulp.task(&apos;css&apos;, [&apos;clean&apos;, &apos;script&apos;], function() &#123; gulp.src(&apos;css/*.css&apos;) .pipe(concat(&apos;a.css&apos;)) .pipe(autoprefixer()) .pipe(gulp.dest(&apos;dist/&apos;));&#125;);gulp.task(&apos;default&apos;, [&apos;clean&apos;, &apos;script&apos;, &apos;css&apos;]);]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>node</tag>
+        <tag>gulp</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Grunt-中-Gruntfile.js结构]]></title>
+    <url>%2F2017%2F12%2F10%2FGrunt-%E4%B8%AD-Gruntfile-js%E7%BB%93%E6%9E%84%2F</url>
+    <content type="text"><![CDATA[Gruntfile.js中有三个结构： 初始化配置 加载插件 注册任务 以下为代码结构：12345678910111213141516module.exports = function(grunt)&#123; //初始化配置 grunt.initConfig(&#123; &#125;); //加载插件 grunt.loadNpmTasks(&apos; &apos;); //注册任务 grunt.registerTask(&apos; &apos; , function()&#123; &#125;); //或者 grunt.registerTask(&apos; &apos; , [&apos;&apos;]);&#125;]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>node</tag>
+        <tag>grunt</tag>
+        <tag>gruntfile</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Grunt常用插件]]></title>
+    <url>%2F2017%2F12%2F10%2FGrunt%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%2F</url>
+    <content type="text"><![CDATA[grunt-contrib-jshint（js语法检查） grunt-contrib-concat（js合并） grunt-contrib-uglify（JS压缩） grunt-contrib-cssmin（CSS压缩合并） grunt-contrib-htmlmin（HTML压缩） grunt-htmlhint（html语法验查） grunt-contrib-clean（清空文件和文件夹） grunt-contrib-copy（复制文件和文件夹） grunt-contrib-concat（连接、合并文件）]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>node</tag>
+        <tag>grunt</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[grunt-contrib-concat插件使用]]></title>
+    <url>%2F2017%2F12%2F10%2Fgrunt-contrib-concat%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[123456789101112131415161718192021222324module.exports = function(grunt) &#123; // 初始化配置 grunt.initConfig(&#123; concat: &#123; js: &#123; src: [&apos;js/*.js&apos;], dest: &apos;build/all.js&apos; &#125;, css: &#123; src: [&apos;css/*.css&apos;], dest: &apos;build/all.css&apos; &#125; &#125; &#125;); // 加载插件 grunt.loadNpmTasks(&apos;grunt-contrib-concat&apos;); //js合并 // 注册任务 grunt.registerTask(&apos;concat-js&apos;, [&apos;concat:js&apos;]);//单独执行js合并 grunt.registerTask(&apos;concat-css&apos;, [&apos;concat:css&apos;]);//单独执行css合并&#125; 控制台执行： grunt concat：会在当前目录下新建build文件夹，然后分别将当前js文件夹中的所有js文件和当前css文件夹中的所有css文件进行合并，并在build下生成合并后的all.js和all.css grunt concat-js：只合并js文件 grunt concat-css：只合并css文件]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>node</tag>
+        <tag>grunt</tag>
+        <tag>concat</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Git-本地提交到服务器命令]]></title>
+    <url>%2F2017%2F12%2F10%2FGit-%E6%9C%AC%E5%9C%B0%E6%8F%90%E4%BA%A4%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[git add -A git commit -m “info” git pull git push]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Github-第三方授权登录教程]]></title>
+    <url>%2F2017%2F12%2F10%2FGithub-%E7%AC%AC%E4%B8%89%E6%96%B9%E6%8E%88%E6%9D%83%E7%99%BB%E5%BD%95%E6%95%99%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[大致流程图 1.首先注册一个github帐号,Applications&gt;Developer applications&gt;Register a new application. 2.填入参数 Application name－－应用名称,随意填 Homepage URL－－如上图可以填本地地址进行测试,127.0.0.1:port/xx/xx Application description－－应用描述,随意填 Authorization callback URL－－后端回调url,最重要的一环因为github那边回调会传你一个code参数,下面会提到.提交申请 注册之后会得到 github提供的client id和client secret有了这两个东东就可以换取更多的信息了,不要交给坏人0.0 3.用户点击github登录本地应用引导用户跳转到第三方授权页 跳转地址为:https://github.com/login/oauth/authorize?client_id=xxxxx&amp;state=xxx&amp;redirect_uri=xxxx; (client_id 上面已经拿到了,state参数随便传多少,redirect_uri 就是你上面填的Authorization callback URL) 4.授权成功后会回调我们平台,会重定向带参数访问我们上面的redirect_uri,后台接收code这个参数,我们带着这个code再次访问github 地址:https://github.com/login/oauth/access_token?client_id=xxx&amp;client_secret=xxx&amp;code=xxx&amp;redirect_uri=http://127.0.0.1:8080/cqput-bbs/User/RegisteredByGithub.do （这次会得到响应的access_token） 5.成功获取access_token后就可以换取用户信息了地址：https://api.github.com/user?access_token=xxx; （注意一下,这里会有个坑,4,5步骤都尽量用get请求去访问,第5步骤后端必须是模拟http get请求才能正确访问拿到返回值,post 请求 直接报404）6.得到github授权用户的个人信息,就可以插入到我们的数据库中去了,授权登录成功,跳转主页]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[div多余文字用省略号代替]]></title>
+    <url>%2F2017%2F12%2F10%2Fdiv%E5%A4%9A%E4%BD%99%E6%96%87%E5%AD%97%E7%94%A8%E7%9C%81%E7%95%A5%E5%8F%B7%E4%BB%A3%E6%9B%BF%2F</url>
+    <content type="text"><![CDATA[代码123white-space: nowrap;text-overflow: ellipsis;overflow: hidden;]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[div顶部吸附]]></title>
+    <url>%2F2017%2F12%2F10%2Fdiv%E9%A1%B6%E9%83%A8%E5%90%B8%E9%99%84%2F</url>
+    <content type="text"><![CDATA[功能：滚动页面时div到达顶部时固定在顶部 原生实现：123456789101112131415161718192021222324252627282930313233&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt; &lt;title&gt;&lt;/title&gt; &lt;style type=&quot;text/css&quot;&gt; #title&#123; background: #ddd; width: 100%; padding:30px; box-sizing: border-box; &#125; &lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;a&quot; style=&quot;height:200px;&quot;&gt;&lt;/div&gt;&lt;div id=&quot;title&quot;&gt;hello world&lt;/div&gt;&lt;div class=&quot;d&quot; style=&quot;height: 1000px;&quot;&gt;&lt;/div&gt;&lt;script&gt; var a; var title = document.getElementById(&apos;title&apos;); var v = title.offsetTop;//存储原来的距离顶部的距离 window.onscroll = function()&#123; a = document.documentElement.scrollTop;//存储滚动高度 if(a&gt;v)&#123; title.style.position = &apos;fixed&apos;; title.style.top = 0; &#125;else if(title.style.position != &apos;static&apos;)&#123; title.style.position = &apos;static&apos;; &#125; &#125;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt; jquery实现：123456789101112131415161718192021222324252627282930313233343536373839404142&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt; &lt;title&gt;&lt;/title&gt; &lt;style type=&quot;text/css&quot;&gt; #text &#123; background: #ffffff; width: 100%; padding:30px; &#125; &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot;margin:0px;&quot;&gt; &lt;div style=&quot;height:300px;background:lightcoral&quot;&gt;&lt;/div&gt; &lt;div id=&quot;text&quot;&gt;div顶部吸附&lt;/div&gt; &lt;div style=&quot;height:2000px;background:lightblue&quot;&gt;&lt;/div&gt; &lt;script src=&quot;https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js&quot;&gt;&lt;/script&gt; &lt;script type=&quot;text/javascript&quot;&gt; $(function() &#123; var ie6 = document.all; var dv = $(&apos;#text&apos;); var st; dv.attr(&apos;otop&apos;, dv.offset().top); //存储原来的距离顶部的距离 $(window).scroll(function() &#123; st = Math.max(document.body.scrollTop || document.documentElement.scrollTop); if (st &gt; parseInt(dv.attr(&apos;otop&apos;))) &#123; if (ie6) &#123; //IE6不支持fixed属性，所以只能靠设置position为absolute和top实现此效果 dv.css(&#123; position: &apos;absolute&apos;, top: st &#125;); &#125; else if (dv.css(&apos;position&apos;) != &apos;fixed&apos;)&#123; dv.css(&#123; &apos;position&apos;: &apos;fixed&apos;, top: 0 &#125;); &#125; &#125; else if (dv.css(&apos;position&apos;) != &apos;static&apos;) &#123; dv.css(&#123; &apos;position&apos;: &apos;static&apos; &#125;); &#125; &#125;); &#125;); &lt;/script&gt;&lt;/body&gt;&lt;/html&gt;]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>div</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[css修改页面滚动条样式]]></title>
+    <url>%2F2017%2F12%2F10%2Fcss%E4%BF%AE%E6%94%B9%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8%E6%9D%A1%E6%A0%B7%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[代码1234567891011121314151617181920212223242526272829303132/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/ ::-webkit-scrollbar &#123; width: 10px; /*滚动条宽度*/ height: 10px /*滚动条高度*/&#125; /*定义滚动条轨道 内阴影+圆角*/ ::-webkit-scrollbar-track &#123; /*滚动条的背景区域的内阴影*/ box-shadow:0px 1px 3px rgba(0,0,0,0.3) inset; /*滚动条的背景区域的圆角*/ border-radius: 10px; /*滚动条的背景颜色*/ background-color: #ddd;&#125; /*定义滑块 内阴影+圆角*/ ::-webkit-scrollbar-thumb &#123; /*滚动条的内阴影*/ box-shadow:0px 1px 3px rgba(0,0,0,0.3) inset; /*滚动条的圆角*/ border-radius: 10px; /*滚动条的背景颜色*/ background-color: #aaa; &#125; 效果]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>scrollbar</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CSS-网格实现快速响应式布局]]></title>
+    <url>%2F2017%2F12%2F10%2FCSS-%E7%BD%91%E6%A0%BC%E5%AE%9E%E7%8E%B0%E5%BF%AB%E9%80%9F%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80%2F</url>
+    <content type="text"><![CDATA[实现效果宽度 &gt; 640px： 宽度 &lt; 640px： 代码html：123456&lt;div class=&quot;main&quot;&gt; &lt;div class=&quot;header&quot;&gt;&lt;/div&gt; &lt;div class=&quot;menu&quot;&gt;&lt;/div&gt; &lt;div class=&quot;content&quot;&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;/div&gt;&lt;/div&gt; css：12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849.main &#123; display: grid; grid-template-columns: repeat(12, 1fr); grid-gap: 5px; grid-template-areas: &quot;h h h h h h h h h h h h&quot; &quot;c c c c c c c c m m m m&quot; &quot;f f f f f f f f f f f f&quot;; margin: 0 auto;&#125;.header &#123; height: 50px; grid-area: h; background: #BBF2BB;&#125;.menu &#123; height: 200px; grid-area: m; background: #FCE885; padding: 10px; box-sizing: border-box;&#125;.content &#123; height: 200px; grid-area: c; background: #8AFDFA;&#125;.footer &#123; height: 50px; grid-area: f; background: #DFB8F7;&#125;@media screen and (max-width:640px) &#123; .main &#123; grid-template-areas: &quot;h h h h h h h h h h h h&quot; &quot;m m m m m m m m m m m m&quot; &quot;c c c c c c c c c c c c&quot; &quot;f f f f f f f f f f f f&quot;; &#125; .menu &#123; height: 50px; &#125;&#125; 响应式布局主要部分：1234567.main &#123; ... grid-template-areas: &quot;h h h h h h h h h h h h&quot; &quot;c c c c c c c c m m m m&quot; &quot;f f f f f f f f f f f f&quot;;&#125; 123456789@media screen and (max-width:640px) &#123; .main &#123; grid-template-areas: &quot;h h h h h h h h h h h h&quot; &quot;m m m m m m m m m m m m&quot; &quot;c c c c c c c c c c c c&quot; &quot;f f f f f f f f f f f f&quot;; &#125;&#125;]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>grid</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CSS-网格（Grid）学习记录]]></title>
+    <url>%2F2017%2F12%2F10%2FCSS-%E7%BD%91%E6%A0%BC%EF%BC%88Grid%EF%BC%89%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[推荐学习网站：http://cssgridgarden.com 属性：父元素属性： grid-template-columns grid-template-rows grid-template：rows / columns 子（列）元素属性： grid-column-start grid-column-end grid-column：start / end 子（行）元素属性： grid-row-start grid-row-end grid-row：start / end 子（区域：列和行）元素属性： grid-area：row-start / column-start / row-end / column-end]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>grid</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CSS实现footer置底]]></title>
+    <url>%2F2017%2F12%2F10%2FCSS%E5%AE%9E%E7%8E%B0footer%E7%BD%AE%E5%BA%95%2F</url>
+    <content type="text"><![CDATA[页脚置底（Sticky footer） 就是让网页的footer部分始终在浏览器窗口的底部。 当网页内容足够长以至超出浏览器可视高度时，页脚会随着内容被推到网页底部； 但如果网页内容不够长，置底的页脚就会保持在浏览器窗口底部。 方法一： main的margin-bottom属性为负 html：1234&lt;div class=&quot;main&quot;&gt; &lt;!-- 内容 --&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;/div&gt; css：123456789101112131415161718html,body &#123; margin: 0; padding: 0; height: 100%;&#125;.main &#123; min-height: 100%; background: #aaa; margin-bottom: -50px; padding-bottom: 50px;&#125;.footer &#123; height: 50px; background: #fff;&#125; 方法二： footer的margin-top属性为负 html：1234&lt;div class=&quot;main&quot;&gt; &lt;!-- 内容 --&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;/div&gt; css：123456789101112131415161718html,body &#123; margin: 0; padding: 0; height: 100%;&#125;.main &#123; min-height: 100%; background: #aaa; padding-bottom: 50px;&#125;.footer &#123; height: 50px; background: #fff; margin-top:-50px;&#125; 方法三： flexbox弹性盒布局 html：1234&lt;div class=&quot;main&quot;&gt; &lt;!-- 内容 --&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;/div&gt; css：123456789101112131415161718192021html&#123; height: 100%;&#125;body&#123; margin:0; padding:0; display: flex; flex-direction:column; min-height: 100%;&#125;.main&#123; flex:1; background:#aaa;&#125;.footer&#123; height: 50px; background:#fff;&#125; 方法四： grid网格布局 html：1234&lt;div class=&quot;main&quot;&gt; &lt;!-- 内容 --&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;/div&gt; css：1234567891011121314151617181920html&#123; height: 100%;&#125;body&#123; margin:0; padding:0; display: grid; grid-template-rows: 1fr; min-height: 100%;&#125;.main&#123; background:#aaa;&#125;.footer&#123; height: 50px; background:lightblue;&#125;]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>footer</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[css-三栏布局总结]]></title>
+    <url>%2F2017%2F12%2F10%2Fcss-%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80%E6%80%BB%E7%BB%93%2F</url>
+    <content type="text"><![CDATA[以下三栏布局均为左右固定宽度，中间自适应 1.浮动方式（float） 左右先加载，中间后加载12345678910111213141516171819202122232425262728293031323334353637&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt; &lt;title&gt;&lt;/title&gt; &lt;style type=&quot;text/css&quot;&gt; .left &#123; width: 300px; height: 500px; background: red; float: left; &#125; .right &#123; width: 300px; height: 500px; background: blue; float: right; &#125; .middle &#123; height: 500px; background: yellow; margin: 0 320px 0 320px; &#125; &lt;/style&gt;&lt;/head&gt;&lt;body&gt; &lt;div class=&quot;main&quot;&gt; &lt;div class=&quot;left&quot;&gt;&lt;/div&gt; &lt;div class=&quot;right&quot;&gt;&lt;/div&gt; &lt;div class=&quot;middle&quot;&gt;&lt;/div&gt; &lt;/div&gt;&lt;/body&gt;&lt;/html&gt; 2.绝对定位方式1（absolute） 左右先加载，中间后加载123456789101112131415161718192021222324252627282930313233343536373839&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt; &lt;title&gt;&lt;/title&gt; &lt;style type=&quot;text/css&quot;&gt; .left &#123; width: 300px; height: 500px; background: red; position:absolute; left: 10px; &#125; .right &#123; width: 300px; height: 500px; background: blue; position:absolute; right:10px; &#125; .middle &#123; height: 500px; background: yellow; margin:0 320px 0 320px; &#125; &lt;/style&gt;&lt;/head&gt;&lt;body&gt; &lt;div class=&quot;main&quot;&gt; &lt;div class=&quot;left&quot;&gt;&lt;/div&gt; &lt;div class=&quot;right&quot;&gt;&lt;/div&gt; &lt;div class=&quot;middle&quot;&gt;&lt;/div&gt; &lt;/div&gt;&lt;/body&gt;&lt;/html&gt; 3.绝对定位方式2（absolute） 中间先加载，左右后加载1234567891011121314151617181920212223242526272829303132333435363738394041&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt; &lt;title&gt;&lt;/title&gt; &lt;style type=&quot;text/css&quot;&gt; .left &#123; width: 300px; height: 500px; background: red; position:absolute; top:10px; left: 10px; &#125; .right &#123; width: 300px; height: 500px; background: blue; position:absolute; top:10px; right:10px; &#125; .middle &#123; height: 500px; background: yellow; margin:0 320px 0 320px; &#125; &lt;/style&gt;&lt;/head&gt;&lt;body&gt; &lt;div class=&quot;main&quot;&gt; &lt;div class=&quot;middle&quot;&gt;&lt;/div&gt; &lt;div class=&quot;left&quot;&gt;&lt;/div&gt; &lt;div class=&quot;right&quot;&gt;&lt;/div&gt; &lt;/div&gt;&lt;/body&gt;&lt;/html&gt; 4.Table方式（table） 无法设置栏间距1234567891011121314151617181920212223242526272829303132333435363738394041&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt; &lt;title&gt;&lt;/title&gt; &lt;style type=&quot;text/css&quot;&gt; .main&#123; display: table; width: 100%; &#125; .left,.right,.middle&#123; display: table-cell; &#125; .left &#123; width: 300px; height: 500px; background: red; &#125; .right &#123; width: 300px; height: 500px; background: blue; &#125; .middle &#123; height: 500px; background: yellow; &#125; &lt;/style&gt;&lt;/head&gt;&lt;body&gt; &lt;div class=&quot;main&quot;&gt; &lt;div class=&quot;left&quot;&gt;&lt;/div&gt; &lt;div class=&quot;middle&quot;&gt;&lt;/div&gt; &lt;div class=&quot;right&quot;&gt;&lt;/div&gt; &lt;/div&gt;&lt;/body&gt;&lt;/html&gt; 5.BFC方式 左右先加载，中间后加载123456789101112131415161718192021222324252627282930313233343536373839&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt; &lt;title&gt;&lt;/title&gt; &lt;style type=&quot;text/css&quot;&gt; .left &#123; width: 300px; height: 500px; background: red; float:left; margin-right:20px; &#125; .right &#123; width: 300px; height: 500px; background: blue; float:right; margin-left:20px; &#125; .middle &#123; height: 500px; background: yellow; overflow: hidden; &#125; &lt;/style&gt;&lt;/head&gt;&lt;body&gt; &lt;div class=&quot;main&quot;&gt; &lt;div class=&quot;left&quot;&gt;&lt;/div&gt; &lt;div class=&quot;right&quot;&gt;&lt;/div&gt; &lt;div class=&quot;middle&quot;&gt;&lt;/div&gt; &lt;/div&gt;&lt;/body&gt;&lt;/html&gt; 6.Flex方式 中间先加载，左右后加载，未来趋势，需考虑浏览器兼容问题1234567891011121314151617181920212223242526272829303132333435363738394041&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt; &lt;title&gt;&lt;/title&gt; &lt;style type=&quot;text/css&quot;&gt; .main&#123; display: flex; &#125; .left &#123; height: 500px; background: red; order:-1; flex-basis:300px; &#125; .right &#123; height: 500px; background: blue; flex-basis:300px; &#125; .middle &#123; height: 500px; background: yellow; flex:1; margin:0 20px 0 20px; &#125; &lt;/style&gt;&lt;/head&gt;&lt;body&gt; &lt;div class=&quot;main&quot;&gt; &lt;div class=&quot;middle&quot;&gt;&lt;/div&gt; &lt;div class=&quot;left&quot;&gt;&lt;/div&gt; &lt;div class=&quot;right&quot;&gt;&lt;/div&gt; &lt;/div&gt;&lt;/body&gt;&lt;/html&gt;]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>layout</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CSS-flex学习记录]]></title>
+    <url>%2F2017%2F12%2F10%2FCSS-flex%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[推荐学习网站：http://flexboxfroggy.com 属性： justify-content： flex-start：元素和容器的左端对齐。 flex-end：元素和容器的右端对齐。 center：元素在容器里居中。 space-between（边距小）：元素之间保持相等的距离。 space-around（边距大）：元素周围保持相等的距离。 align-items： flex-start：元素与容器的顶部对齐。 flex-end：元素与容器的底部对齐。 center：元素纵向居中。 baseline：元素在容器的基线位置显示。 stretch：元素被拉伸以填满整个容器。 flex-direction： row：元素摆放的方向和文字方向一致。 row-reverse：元素摆放的方向和文字方向相反。 column：元素从上放到下。 column-reverse：元素从下放到上。 align-self（针对单个元素）： flex-start：元素与容器的顶部对齐。 flex-end：元素与容器的底部对齐。 center：元素纵向居中。 baseline：元素在容器的基线位置显示。 stretch：元素被拉伸以填满整个容器。 flex-wrap： nowrap: 所有的元素都在一行。 wrap: 元素自动换成多行。 wrap-reverse: 元素自动换成逆序的多行。 - ## order：调整元素顺序- ## flex-flow（缩写属性）：flex-direction flex-wrap align-content（决定行间距）： flex-start: 多行都集中在顶部。 flex-end: 多行都集中在底部。 center: 多行居中。 space-between: 行与行之间保持相等距离。 space-around: 每行的周围保持相等距离。 stretch: 每一行都被拉伸以填满容器。 注意：1.当flex-direction：row（即默认情况下）时： justify-content控制横向 align-items控制纵向 align-content控制行之间的距离。2.当flex-direction：column时： justify-content控制纵向 align-items控制横向 align-content控制列之间的距离。]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>flex</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[css-cursor鼠标光标样式]]></title>
+    <url>%2F2017%2F12%2F10%2Fcss-cursor%E9%BC%A0%E6%A0%87%E5%85%89%E6%A0%87%E6%A0%B7%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>cursor</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[connect-mongo基本用法]]></title>
+    <url>%2F2017%2F12%2F10%2Fconnect-mongo%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[代码实现：1234567891011121314151617181920212223242526var express = require(&apos;express&apos;);var cookieParser = require(&apos;cookie-parser&apos;);var session = require(&apos;express-session&apos;);var MongoStore = require(&apos;connect-mongo&apos;)(session);var app = express();app.use(cookieParser(&apos;sessiontest&apos;));app.use(session(&#123; secret: &apos;sessiontest&apos;, resave: true, saveUninitalized: true, store: new MongoStore(&#123; url: &apos;mongodb://localhost:27017/sessionmongo&apos; &#125;)&#125;));app.get(&apos;/login&apos;, function(req, res) &#123; var user = &#123; name: &quot;hester&quot;, age: &quot;21&quot; &#125;; req.session.user = user; res.redirect(&apos;/user&apos;);&#125;);app.listen(8080, function() &#123; console.log(&quot;http://localhost:8080&quot;);&#125;); 引用模块：12var session = require(&apos;express-session&apos;);var MongoStore = require(&apos;connect-mongo&apos;)(session); 基本使用：12345app.use(session(&#123; store: new MongoStore(&#123; url: &apos;mongodb://localhost:27017/sessionmongo&apos; &#125;)&#125;)); 在页面创建session：12345var user = &#123; name: &quot;hester&quot;, age: &quot;21&quot;&#125;;req.session.user = user; 更多详细使用：https://github.com/jdesboeufs/connect-mongo]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>mongodb</tag>
+        <tag>session</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[在ejs中使用函数（nodejs-express）]]></title>
+    <url>%2F2017%2F12%2F10%2F%E5%9C%A8ejs%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%87%BD%E6%95%B0%EF%BC%88nodejs-express%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[要在页面ejs模板中使用函数的方法（以moment.js为例） 要实现下面这个在ejs模板中格式化时间123&lt;div class=&quot;time&quot;&gt; &lt;%= dateFormat(time) %&gt;&lt;/div&gt; 实现12345678910var express = require(&apos;express&apos;);var moment = require(&apos;moment&apos;);var app = express();app.locals.dateFormat = function(date) &#123; return moment(date).format(&apos;YYYY-MM-DD HH:mm:ss&apos;);&#125;app.get(&apos;/&apos;, function(req, res) &#123; res.render(&apos;index&apos;);&#125;);app.listen(8080); 关键语句123app.locals.dateFormat = function(date) &#123; return moment(date).format(&apos;YYYY-MM-DD HH:mm:ss&apos;);&#125;]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>node</tag>
+        <tag>express</tag>
+        <tag>ejs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[引用GitHub---Star，Watch，Fork，Follow-按钮]]></title>
+    <url>%2F2017%2F12%2F10%2F%E5%BC%95%E7%94%A8GitHub---Star%EF%BC%8CWatch%EF%BC%8CFork%EF%BC%8CFollow-%E6%8C%89%E9%92%AE%2F</url>
+    <content type="text"><![CDATA[网站链接：https://ghbtns.com]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[添加Fork-me-on-GitHub]]></title>
+    <url>%2F2017%2F12%2F10%2F%E6%B7%BB%E5%8A%A0Fork-me-on-GitHub%2F</url>
+    <content type="text"><![CDATA[网址：https://github.com/blog/273-github-ribbons在以上的网址中选择自己喜欢的样式，复制代码，粘贴到页面即可记得把url换成自己的github地址哦]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[实现canvas上图形的操作]]></title>
+    <url>%2F2017%2F12%2F10%2F%E5%AE%9E%E7%8E%B0canvas%E4%B8%8A%E5%9B%BE%E5%BD%A2%E7%9A%84%E6%93%8D%E4%BD%9C%2F</url>
+    <content type="text"><![CDATA[将一个与canvas图形大小一样的div覆盖在上面 记录每次绘制图形的坐标等信息，进行碰撞检测]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>html</tag>
+        <tag>canvas</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[侵占浮动元素问题]]></title>
+    <url>%2F2017%2F12%2F10%2F%E4%BE%B5%E5%8D%A0%E6%B5%AE%E5%8A%A8%E5%85%83%E7%B4%A0%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[代码html：12&lt;div class=&quot;box1&quot;&gt;box1&lt;/div&gt;&lt;div class=&quot;box2&quot;&gt;box2&lt;/div&gt; css：1234567891011.box1&#123; width:100px; height:100px; background:skyblue; float:left;&#125;.box2&#123; width:200px; height:200px; background:tomato;&#125; 侵占效果： 解决方法修改box2样式（添加1234567```.box2&#123; width:200px; height:200px; background:tomato; overflow:hidden;&#125; 修正效果：]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>浮动</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[利用js判断页面是否滚动到了底部]]></title>
+    <url>%2F2017%2F12%2F10%2F%E5%88%A9%E7%94%A8js%E5%88%A4%E6%96%AD%E9%A1%B5%E9%9D%A2%E6%98%AF%E5%90%A6%E6%BB%9A%E5%8A%A8%E5%88%B0%E4%BA%86%E5%BA%95%E9%83%A8%2F</url>
+    <content type="text"><![CDATA[代码实现：12345678910111213141516&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt; &lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;div class=&quot;d&quot; style=&quot;height: 1000px;&quot;&gt;&lt;/div&gt;&lt;script&gt; window.onscroll = function()&#123; if(document.documentElement.scrollTop + document.documentElement.clientHeight == document.documentElement.scrollHeight)&#123; console.log(&quot;到底部了&quot;) &#125; &#125;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt; 关键代码：12345window.onscroll = function()&#123; if(document.documentElement.scrollTop + document.documentElement.clientHeight == document.documentElement.scrollHeight)&#123; console.log(&quot;到底部了&quot;) &#125;&#125;]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[禁止div蒙层跟随底部页面滚动]]></title>
+    <url>%2F2017%2F12%2F10%2F%E7%A6%81%E6%AD%A2div%E8%92%99%E5%B1%82%E8%B7%9F%E9%9A%8F%E5%BA%95%E9%83%A8%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8%2F</url>
+    <content type="text"><![CDATA[div蒙层跟随底部页面滚动代码：html：12&lt;div class=&quot;content&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mask&quot;&gt;&lt;/div&gt; css：12345678910111213#content &#123; height: 2000px; background: skyblue;&#125;#mask &#123; position: absolute; width: 100%; height: 100%; top: 0; left: 0; background: rgba(0, 0, 0, .7);&#125; 效果： 禁止div蒙层跟随底部页面滚动 方法一 打开蒙层时，给body添加属性 1234body&#123; overflow:hidden; height:100%;&#125; 方法二 将蒙层的position属性改为fixed 123#mask &#123; position: fixed;&#125;]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>div</tag>
+        <tag>html</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[纯CSS实现两种聊天气泡]]></title>
+    <url>%2F2017%2F12%2F10%2F%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0%E4%B8%A4%E7%A7%8D%E8%81%8A%E5%A4%A9%E6%B0%94%E6%B3%A1%2F</url>
+    <content type="text"><![CDATA[效果图 代码html：1234567&lt;div class=&quot;message1&quot;&gt; 大家好，我是小胡&lt;br&gt;个人主页：hlz.space&lt;br&gt;个人服务网站：www.loveconvert.com&lt;/div&gt;&lt;div class=&quot;message2&quot;&gt; 大家好，我是小胡&lt;br&gt;个人主页：hlz.space&lt;br&gt;个人服务网站：www.loveconvert.com&lt;/div&gt; css：1234567891011121314151617181920212223242526272829303132333435363738394041424344454647.message1,.message2 &#123; float:left; width: 200px; height: 80px; margin: 50px; background-color: skyblue; border-bottom-color: skyblue; /*为了给after伪元素自动继承*/ color: #fff; font-size: 12px; line-height: 18px; padding: 5px 12px 5px 12px; box-sizing: border-box; border-radius: 6px; position: relative; word-break: break-all;&#125;.message1::after &#123; content: &apos;&apos;; position: absolute; top: 0; right: -24px; width: 20px; height: 20px; border-width: 0 0 20px 20px; border-style: solid; border-bottom-color: inherit; /*自动继承父元素的border-bottom-color*/ border-left-color: transparent; border-radius: 0 0 60px 0;&#125;/** 通过对小正方形旋转45度解决 **/.message2::before &#123; content: &apos;&apos;; position: absolute; top: 50%; left: -5px; width: 10px; height: 10px; margin-top: -10px; background: inherit; /*自动继承父元素的背景*/ transform: rotate(45deg);&#125;]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[创建自己的npm包]]></title>
+    <url>%2F2017%2F12%2F10%2F%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84npm%E5%8C%85%2F</url>
+    <content type="text"><![CDATA[新建一个文件夹（这里名为：npmmodule） 进入文件夹后，命令输入npm init，生成package.json文件 创建文件index.js，则当前文件结构为： 输入简单的测试内容 index.js package.json name为要创建的npm包名，要先确认名字是否存在 version为npm包的版本 命令输入npm login，填写登录信息（提前在npm官网进行注册：https://www.npmjs.com/） 命令输入npm publish，即可完成npm包的创建，现在就可以用npm install name（name为之前创建的npm包名）进行模块安装了]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>node</tag>
+        <tag>npm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[安装Grunt步骤]]></title>
+    <url>%2F2017%2F12%2F10%2F%E5%AE%89%E8%A3%85Grunt%E6%AD%A5%E9%AA%A4%2F</url>
+    <content type="text"><![CDATA[安装node.js 全局安装grunt-cli 创建package.json文件 本地安装grunt 创建Gruntfile.js 安装插件]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>node</tag>
+        <tag>grunt</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[npm中---save-dev-和---save-的区别]]></title>
+    <url>%2F2017%2F12%2F10%2Fnpm%E4%B8%AD---save-dev-%E5%92%8C---save-%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
+    <content type="text"><![CDATA[简单一句话：–save-dev 是开发时依赖的包，–save 是发布之后还依赖的包 npm install 在安装依赖包的时候，使用–save-dev和–save都会将包的信息写入package.json中，–save-dev会写入package.json的devDependencies键下，–save会写入package.json的description键下。 使用–save-dev：构建工具，测试工具使用–save：开发应用中使用的框架，库]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>node</tag>
+        <tag>npm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[node-原生GET-POST请求]]></title>
+    <url>%2F2017%2F12%2F10%2Fnode-%E5%8E%9F%E7%94%9FGET-POST%E8%AF%B7%E6%B1%82%2F</url>
+    <content type="text"><![CDATA[GET请求1url：http://localhost:8080/?name=abc 1234567891011var http = require(&apos;http&apos;);var url = require(&apos;url&apos;);var server = http.createServer(function(req, res) &#123; var params = url.parse(req.url, true).query; res.end(params.name);&#125;);server.listen(8080, function() &#123; console.log(&quot;http://localhost:8080&quot;);&#125;); 关键部分1var params = url.parse(req.url, true).query;//true表示输出json格式 POST请求12345678910111213141516171819202122232425262728293031var http = require(&apos;http&apos;);var querystring = require(&apos;querystring&apos;);var postHTML = &apos;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;/head&gt;&apos; + &apos;&lt;body&gt;&apos; + &apos;&lt;form action=&quot;/post&quot; method=&quot;post&quot;&gt;&apos; + &apos;name： &lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;&lt;br&gt;&apos; + &apos;&lt;input type=&quot;submit&quot;&gt;&apos; + &apos;&lt;/form&gt;&apos; + &apos;&lt;/body&gt;&lt;/html&gt;&apos;;var server = http.createServer(function(req, res) &#123; var body = &quot;&quot;; req.on(&apos;data&apos;, function(chunk) &#123; body += chunk; &#125;); req.on(&apos;end&apos;, function() &#123; body = querystring.parse(body);//输出json格式 res.writeHead(200, &#123; &apos;Content-Type&apos;: &apos;text/html;charset=utf-8&apos; &#125;); if (body.name &amp;&amp; req.url === &quot;/post&quot;) &#123; res.end(body.name); &#125; else &#123; res.end(postHTML); &#125; &#125;);&#125;);server.listen(8080, function() &#123; console.log(&quot;http://localhost:8080&quot;);&#125;);]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>node</tag>
+        <tag>get</tag>
+        <tag>post</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[nodemailer基本使用]]></title>
+    <url>%2F2017%2F12%2F10%2Fnodemailer%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[代码123456789101112131415161718192021222324252627282930313233343536var nodemailer = require(&apos;nodemailer&apos;);var transporter = nodemailer.createTransport(&#123; //配置发送者的邮箱服务器和登录信息 service:&apos;163&apos;,//163、qq等 auth:&#123; user:&apos;xxxxxx@163.com&apos;,//邮箱 pass:&apos;*******&apos;//邮箱密码或授权码 &#125;&#125;);var mailOptions = &#123; from:&apos;15111823732@163.com&apos;,//发送者 to:&apos;815621501@qq.com&apos;,//接受者 subject:&apos;hello body&apos;,//主题名 text:&apos;hello nodemailer&apos;,//文本 html:`&lt;h2&gt;nodemailer基本使用&lt;/h2&gt;`,//内容, //附件 attachments:[ &#123; //当前目录下的文件 filename:&apos;package.json&apos;, path:&apos;./package.json&apos; &#125;, &#123; //创建一个文件 filename:&apos;hello.txt&apos;, content:&apos;hello nodemailer&apos; &#125; ]&#125;transporter.sendMail(mailOptions,function(err,info)&#123; if(err)&#123; console.log(err); return; &#125; console.log(&quot;发送成功&quot;);&#125;);]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>node</tag>
+        <tag>nodemailer</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Mongoose中Schema的内置类型]]></title>
+    <url>%2F2017%2F12%2F10%2FMongoose%E4%B8%ADSchema%E7%9A%84%E5%86%85%E7%BD%AE%E7%B1%BB%E5%9E%8B%2F</url>
+    <content type="text"><![CDATA[String Number Boolean | Bool Array Buffer Date ObjectId | Oid Mixed]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>node</tag>
+        <tag>mongoose</tag>
+        <tag>schema</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Mongoose中Connection的Events]]></title>
+    <url>%2F2017%2F12%2F10%2FMongoose%E4%B8%ADConnection%E7%9A%84Events%2F</url>
+    <content type="text"><![CDATA[connecting：在connection.{open,openSet}()连接上执行时发出。 connected：当连接到数据库成功时发出。 open：connected之后发出，onOpen执行在所有连接模式。 disconnecting：connection.close()执行时发出。 disconnected：从数据库断开连接后发出。 close：disconnected之后发出，onClose执行在所有连接模式。 reconnected：在connected之后disconnected，随后又成功地连接了另一个成功的连接时发出。 error：在连接发生错误时发出。 fullsetup：发生在复制集方案中，当连接字符串中指定的主要和至少一个seconaries被连接时发出。 all：在连接字符串中指定的所有节点都连接在复制集方案中时发出。]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>node</tag>
+        <tag>mongoose</tag>
+        <tag>connection</tag>
+        <tag>events</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[mongoose-连接数据库]]></title>
+    <url>%2F2017%2F12%2F10%2Fmongoose-%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93%2F</url>
+    <content type="text"><![CDATA[代码1234567891011121314151617var mongoose = require(&apos;mongoose&apos;);var DB_URL = &quot;mongodb://localhost:27017/blog&quot;;//connect mongodbmongoose.Promise = global.Promise;mongoose.connect(DB_URL);//mongodb statusmongoose.connection.on(&apos;connected&apos;, function() &#123; console.log(&quot;mongodb connected success&quot;);&#125;);mongoose.connection.on(&apos;error&apos;, function(err) &#123; console.log(&quot;mongodb connected error &quot; + err);&#125;);mongoose.connection.on(&apos;disconnected&apos;, function() &#123; console.log(&quot;mongodb disconnected&quot;);&#125;);]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>node</tag>
+        <tag>mongoose</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MongoDB添加管理员和用户]]></title>
+    <url>%2F2017%2F12%2F10%2FMongoDB%E6%B7%BB%E5%8A%A0%E7%AE%A1%E7%90%86%E5%91%98%E5%92%8C%E7%94%A8%E6%88%B7%2F</url>
+    <content type="text"><![CDATA[添加管理员使用命令mongo进入命令行创建第一个用户，该用户需要有用户管理权限这里设置其角色为root12&gt; use admin&gt; db.createUser(&#123;user:&quot;admin&quot;,pwd:&quot;password&quot;,roles: [&#123; role: &quot;root&quot;, db: &quot;admin&quot; &#125;]&#125;) 新增的用户在system.users中12&gt; db.getCollectionNames()[ &quot;system.indexes&quot;, &quot;system.users&quot;, &quot;system.version&quot; ] 第一个用户添加完成后，便需要认证才能继续添加其他用户使用db.auth(“admin”, “password”)认证 添加数据库用户为其他数据库添加用户，添加用户前需要切换到该数据库这里设置其角色为dbOwner12&gt; use testdb1&gt; db.createUser(&#123;user: &quot;testdb1u1&quot;, pwd: &quot;xyz123&quot;, roles: [&#123; role: &quot;dbOwner&quot;, db: &quot;testdb1&quot; &#125;]&#125;) 查看用户12&gt; use admin&gt; db.system.users.find()]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>node</tag>
+        <tag>mongodb</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[margin-重叠问题]]></title>
+    <url>%2F2017%2F12%2F10%2Fmargin-%E9%87%8D%E5%8F%A0%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[代码html：12345&lt;div class=&quot;box&quot;&gt; &lt;p&gt;hello world&lt;/p&gt; &lt;p&gt;hello world&lt;/p&gt; &lt;p&gt;hello world&lt;/p&gt;&lt;/div&gt; css：12345678910* &#123; margin: 0; padding: 0;&#125;.box p &#123; margin-top: 20px; margin-bottom: 20px; background: skyblue;&#125; 重叠效果： 解决方法修改html为：1234567&lt;div class=&quot;box&quot;&gt; &lt;p&gt;hello world&lt;/p&gt; &lt;div style=&quot;overflow:hidden&quot;&gt; &lt;p&gt;hello world&lt;/p&gt; &lt;/div&gt; &lt;p&gt;hello world&lt;/p&gt;&lt;/div&gt; 修正效果：]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>html</tag>
+        <tag>margin</tag>
+        <tag>重叠</tag>
       </tags>
   </entry>
   <entry>
@@ -19,7 +727,19 @@
         <category>小胡资源</category>
       </categories>
       <tags>
-        <tag>sublime 更新</tag>
+        <tag>sublime</tag>
+        <tag>更新</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[是时候用它代替你PPT了——FocuSky]]></title>
+    <url>%2F2017%2F12%2F10%2F%E6%98%AF%E6%97%B6%E5%80%99%E7%94%A8%E5%AE%83%E4%BB%A3%E6%9B%BF%E4%BD%A0PPT%E4%BA%86%E2%80%94%E2%80%94FocuSky%2F</url>
+    <content type="text"><![CDATA[之前国外有一款制作动态演示文档的软件——Prezi，不知道大家有没有听说过，但是这款国外软件对中文的支持并不是很好，限制也比较多。 这次给大家推荐一个国内的制作动态演示文档的软件——FocuSky**，**首先软件的使用是免费的，而且还完美支持中文 它的操作简单，很容易上手，可以插入各种文件格式，还有很多功能，包括制作动画，交互等 通过组件的拖拉可以像制作PPT那样很快的做出一个动态的演示文档，是不是比静态枯燥的PPT有趣多了呢，大家做报告的时候放一个这样的动态演示文档是不是感觉高大上呢 还有一个大家担心的问题，就是做好了过后，如果要去其他电脑上看，是不是得装一个这个软件才能播放？答案当然不是，这也是我觉得比较实用的地方，它可以直接导出为windows应用程序、视频、flash、h5网页、mac app，PDF等文件格式，这样就可以直接拷到其他电脑上进行演示啦，是不是很方便呢 FocuSky软件官网：http://www.focusky.com.cn/ 在线工具服务网站Loveconvert网址：http://www.loveconvert.com欢迎关注微信：小胡资源]]></content>
+      <categories>
+        <category>小胡资源</category>
+      </categories>
+      <tags>
+        <tag>FocuSky</tag>
       </tags>
   </entry>
   <entry>
@@ -67,17 +787,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[如何在搬瓦工ubuntu系统下配置shadowsocks以翻墙]]></title>
-    <url>%2F2017%2F12%2F10%2F%E5%A6%82%E4%BD%95%E5%9C%A8%E6%90%AC%E7%93%A6%E5%B7%A5ubuntu%E7%B3%BB%E7%BB%9F%E4%B8%8B%E9%85%8D%E7%BD%AEshadowsocks%E4%BB%A5%E7%BF%BB%E5%A2%99%2F</url>
-    <content type="text"><![CDATA[首先进入到搬瓦工VPS的管理界面可以看到一键安装shadowsocks服务只支持Centos，但是如果我们想要安装ubuntu系统，那该怎么安装shadowsocks服务呢？ #shadowsocks服务端配置: 首先利用SSH客户端(比如Xshell等)登陆到ubuntu服务端 执行命令 sudo apt-get update更新命令 执行命令 sudo apt-get install git安装git 执行命令 sudo apt-get install nano安装nano（可选择安装，用于编辑json文件） 执行命令 git clone -b manyuser https://github.com/breakwa11/shadowsocks.git从github上获取shadowsocks安装脚本 执行命令 ll 查看目录，会发现目录里多了一个叫shadowsocks的文件 执行命令 cd ~/shadowsocks/进入到此目录中 执行命令 bash initcfg.sh初始化配置 执行命令 mv user-config.json ./shadowsocks/把该目录下(~/shadowsocks)的user-config.json移动到下一个shadowsocks目录中(~/shadowsocks/shadowsocks) 执行命令 cd shadowsocks/进入目录中(~/shadowsocks/shadowsocks) 执行命令 chmod +x server.py给目录下的server.py文件添加权限 执行命令 nano user-config.json用nano编辑器打开json文件(你也可以用其他编辑器打开) 打开过后进行编辑:1234567891011121314151617&#123; &quot;server&quot;: &quot;0.0.0.0&quot;, &quot;server_ipv6&quot;: &quot;::&quot;, &quot;server_port&quot;: 8388, &quot;local_address&quot;: &quot;127.0.0.1&quot;, &quot;local_port&quot;: 1080, &quot;password&quot;: &quot;123456&quot;, &quot;timeout&quot;: 120, &quot;udp_timeout&quot;: 60, &quot;method&quot;: &quot;aes-256-cfb&quot;, &quot;protocol&quot;: &quot;auth_sha1_v2_compatible&quot;, &quot;protocol_param&quot;: &quot;&quot;, &quot;dns_ipv6&quot;: false, &quot;connect_verbose_info&quot;: 0, &quot;redirect&quot;: &quot;&quot;, &quot;fast_open&quot;: false&#125; nano编辑器的使用方法请自行查找资料，这里不详细讲解去掉某一行:Ctrl+k保存退出步骤:1.Ctrl+x2.按y3.回车 编辑好后保存退出然后执行命令1python ~/shadowsocks/shadowsocks/server.py -c ~/shadowsocks/shadowsocks/user-config.json -d start 最后的字符串可以是start/restart/stop(开启/重启/停止) 到此ubuntu系统中的shadowsocks服务端配置完成，并且已经启动服务 如果重启服务器，请再次执行第14步的操作重新开启shadowsocks服务(可设置开机自启动，这里不做介绍) #shadowsocksR客户端配置: shadowsocksR下载地址:http://pan.baidu.com/share/link?shareid=4081447275&amp;uk=2134016402 解压过后打开 ShadowsocksR-dotnet4.0.exe 配置如下： 服务器IP为ubuntu服务器IP服务器端口为user-config.json中的server_port密码为user-config.json中的password加密为user-config.json中的method协议为user-config.json中的protocol混淆选择plain 右键任务栏的shadowsockR图标 配置参数： 系统代理模式——PAC模式 PAC——更新PAC为绕过大陆常见域名列表 代理规则——绕过局域网和大陆 如果遇到有些网页打不开，请将第二项的PAC选择为更新为PAC为GFWList 开始愉快的翻墙吧(ฅ&gt;ω&lt;*ฅ)]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>搬瓦工 ubuntu shadowsocks</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[搬瓦工中的Snapshots（快照）功能]]></title>
     <url>%2F2017%2F12%2F10%2F%E6%90%AC%E7%93%A6%E5%B7%A5%E4%B8%AD%E7%9A%84Snapshots%EF%BC%88%E5%BF%AB%E7%85%A7%EF%BC%89%E5%8A%9F%E8%83%BD%2F</url>
     <content type="text"><![CDATA[搬瓦工VPS自带Snapshots快照备份，每个VPS可以备份2次且有效期是30天 #如何创建Snapshots快照 进入搬瓦工VPS管理界面(KiwiVM Extras — Snapshots)从图中可以看到，我们可以创建快照也可以导入快照 点击Create new snapshot创建快照，设置一个名称，开始备份备份过程中服务器会暂停，备份完成后服务器会重启 点击Import a snapshot导入快照，这里需要输入VEID:和TOKEN:参数在后面会说到 #Snapshots快照管理 快照创建成功后，会有以下界面 download: 将快照下载到本地 restore: 恢复到此快照，并且会重写当前服务器的所有数据（如果当前服务器出现问题可以点此进行恢复） delete: 删除快照 set sticky: 设置永久保存（最多允许2个快照设置为永久保存） export: 导出参数，参数为VEID:和TOKEN:，可用于Import a snapshot导入快照 就先到这里啦，喜欢折腾的孩子还是建个快照吧（笑），不然到时候哭都哭不出来，哈哈哈]]></content>
@@ -85,7 +794,8 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>搬瓦工 bandwagon</tag>
+        <tag>搬瓦工</tag>
+        <tag>bandwagon</tag>
       </tags>
   </entry>
   <entry>
@@ -100,6 +810,19 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[如何在搬瓦工ubuntu系统下配置shadowsocks以翻墙]]></title>
+    <url>%2F2017%2F12%2F10%2F%E5%A6%82%E4%BD%95%E5%9C%A8%E6%90%AC%E7%93%A6%E5%B7%A5ubuntu%E7%B3%BB%E7%BB%9F%E4%B8%8B%E9%85%8D%E7%BD%AEshadowsocks%E4%BB%A5%E7%BF%BB%E5%A2%99%2F</url>
+    <content type="text"><![CDATA[首先进入到搬瓦工VPS的管理界面可以看到一键安装shadowsocks服务只支持Centos，但是如果我们想要安装ubuntu系统，那该怎么安装shadowsocks服务呢？ #shadowsocks服务端配置: 首先利用SSH客户端(比如Xshell等)登陆到ubuntu服务端 执行命令 sudo apt-get update更新命令 执行命令 sudo apt-get install git安装git 执行命令 sudo apt-get install nano安装nano（可选择安装，用于编辑json文件） 执行命令 git clone -b manyuser https://github.com/breakwa11/shadowsocks.git从github上获取shadowsocks安装脚本 执行命令 ll 查看目录，会发现目录里多了一个叫shadowsocks的文件 执行命令 cd ~/shadowsocks/进入到此目录中 执行命令 bash initcfg.sh初始化配置 执行命令 mv user-config.json ./shadowsocks/把该目录下(~/shadowsocks)的user-config.json移动到下一个shadowsocks目录中(~/shadowsocks/shadowsocks) 执行命令 cd shadowsocks/进入目录中(~/shadowsocks/shadowsocks) 执行命令 chmod +x server.py给目录下的server.py文件添加权限 执行命令 nano user-config.json用nano编辑器打开json文件(你也可以用其他编辑器打开) 打开过后进行编辑:1234567891011121314151617&#123; &quot;server&quot;: &quot;0.0.0.0&quot;, &quot;server_ipv6&quot;: &quot;::&quot;, &quot;server_port&quot;: 8388, &quot;local_address&quot;: &quot;127.0.0.1&quot;, &quot;local_port&quot;: 1080, &quot;password&quot;: &quot;123456&quot;, &quot;timeout&quot;: 120, &quot;udp_timeout&quot;: 60, &quot;method&quot;: &quot;aes-256-cfb&quot;, &quot;protocol&quot;: &quot;auth_sha1_v2_compatible&quot;, &quot;protocol_param&quot;: &quot;&quot;, &quot;dns_ipv6&quot;: false, &quot;connect_verbose_info&quot;: 0, &quot;redirect&quot;: &quot;&quot;, &quot;fast_open&quot;: false&#125; nano编辑器的使用方法请自行查找资料，这里不详细讲解去掉某一行:Ctrl+k保存退出步骤:1.Ctrl+x2.按y3.回车 编辑好后保存退出然后执行命令1python ~/shadowsocks/shadowsocks/server.py -c ~/shadowsocks/shadowsocks/user-config.json -d start 最后的字符串可以是start/restart/stop(开启/重启/停止) 到此ubuntu系统中的shadowsocks服务端配置完成，并且已经启动服务 如果重启服务器，请再次执行第14步的操作重新开启shadowsocks服务(可设置开机自启动，这里不做介绍) #shadowsocksR客户端配置: shadowsocksR下载地址:http://pan.baidu.com/share/link?shareid=4081447275&amp;uk=2134016402 解压过后打开 ShadowsocksR-dotnet4.0.exe 配置如下： 服务器IP为ubuntu服务器IP服务器端口为user-config.json中的server_port密码为user-config.json中的password加密为user-config.json中的method协议为user-config.json中的protocol混淆选择plain 右键任务栏的shadowsockR图标 配置参数： 系统代理模式——PAC模式 PAC——更新PAC为绕过大陆常见域名列表 代理规则——绕过局域网和大陆 如果遇到有些网页打不开，请将第二项的PAC选择为更新为PAC为GFWList 开始愉快的翻墙吧(ฅ&gt;ω&lt;*ฅ)]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>ubuntu</tag>
+        <tag>搬瓦工</tag>
+        <tag>shadowsocks</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Loveconvert服务站点新增微博视频解析]]></title>
     <url>%2F2017%2F12%2F10%2FLoveconvert%E6%9C%8D%E5%8A%A1%E7%AB%99%E7%82%B9%E6%96%B0%E5%A2%9E%E5%BE%AE%E5%8D%9A%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90%2F</url>
     <content type="text"><![CDATA[#Loveconvert服务站点新增微博视频解析下载功能 小伙伴们可以在此网页输入微博视频的短地址或者长地址，点击解析后根据提示下载视频 Loveconvert微博视频解析工具]]></content>
@@ -107,35 +830,14 @@
         <category>小胡资源</category>
       </categories>
       <tags>
-        <tag>Loveconvert 微博视频解析</tag>
+        <tag>Loveconvert</tag>
+        <tag>微博视频解析</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[搬瓦工Ubuntu系统中安装FTP服务]]></title>
-    <url>%2F2017%2F12%2F10%2F%E6%90%AC%E7%93%A6%E5%B7%A5Ubuntu%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%AE%89%E8%A3%85FTP%E6%9C%8D%E5%8A%A1%2F</url>
-    <content type="text"><![CDATA[想要在自己的服务器上存放东西，并且能够分享给小伙伴，那我们可以选择FTP服务器，接下来就大家讲一下如何在搬瓦工Ubuntu系统中安装FTP服务 #FTP服务安装及配置步骤: 执行命令 sudo apt-get update （如果已经更新可以跳过该步骤） 执行命令 sudo apt-get install vsftpd安装vsftpd 执行命令 nano /etc/vsftpd.conf编辑/etc目录下的vsftpd.conf配置文件修改一下参数的值（如果该参数前面有注释（#），请去掉注释）12345anonymous_enable=YES #设置匿名可登录local_enable=YES #本地用户允许登录write_enable=YES #用户是否有写的权限anon_upload_enable=YES #允许匿名用户上传anon_mkdir_write_enable=YES #允许匿名用户创建目录文件 nano编辑器的使用方法请自行查找资料，这里不详细讲解保存退出步骤:1.Ctrl+x2.按y3.回车 4.编辑好后保存退出执行命令 sudo service vsftpd start最后的字符串可以是start/restart/stop(开启/重启/停止) 5.执行命令 cd /srv/ftp进入FTP服务器存放文件的文件夹你可以在里面存放文件，然后在浏览器域名栏中输入 ftp://ip （ip为你搬瓦工服务器的ip）进入FTP文件浏览界面，点击即可下载 如果出现登陆FTP服务器时要输入用户名和密码，就重启一下FTP服务器（重启命令 sudo service vsftpd restart），有可能是配置文件没有更新 到此FTP服务器已经安装和配置完成 大家也可以通过一些第三方工具对FTP服务器进行管理，这里推荐大家使用Xftp Xftp下载地址：http://pan.baidu.com/s/1c1PQK6W 好啦，今天的教程就到这里，欢迎提问、纠错以及分享自己的想法(｡・`ω´･)]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>linux ubuntu ftp</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[shell-中-[-eq]-[-ne]-[-gt]-[-lt]-[ge]-[le]]]></title>
-    <url>%2F2017%2F12%2F10%2Fshell-%E4%B8%AD-%5B-eq%5D-%5B-ne%5D-%5B-gt%5D-%5B-lt%5D-%5Bge%5D-%5Ble%5D%2F</url>
-    <content type="text"><![CDATA[-eq //等于-ne //不等于-gt //大于-lt //小于ge //大于等于le //小于等于]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>linux shell</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[cmd中有趣的命令一之合并文件（不定期更新）]]></title>
-    <url>%2F2017%2F12%2F10%2Fcmd%E4%B8%AD%E6%9C%89%E8%B6%A3%E7%9A%84%E5%91%BD%E4%BB%A4%E4%B8%80%E4%B9%8B%E5%90%88%E5%B9%B6%E6%96%87%E4%BB%B6%EF%BC%88%E4%B8%8D%E5%AE%9A%E6%9C%9F%E6%9B%B4%E6%96%B0%EF%BC%89%2F</url>
-    <content type="text"><![CDATA[今天给大家介绍的是命令一之合并文件(ฅ&gt;ω&lt;*ฅ)，后面我会不定期的进行更新 #合并文件（老司机必备）图片下的秘密如果你想要把一个文件藏在一张图片里改怎么做呢（手动滑稽）首先这里有两张图片（1.jpg和2.jpg）：那么现在我们要把2.jpg藏在1.jpg里，步骤如下： 将2.jpg添加到压缩文件（这里以rar格式为例） 在当前目录下新建一个文本文件，命名为”合并”（名字可以随意），并将后缀名改为.bat，如图： 然后右键合并.bat，点击编辑，在文本中输入copy /b 1.jpg+2.rar 3.jpg意思是将1.jpg与2.rar合并成3.jpg 然后保存退出，再双击合并.bat文件即可生成3.jpg这个时候打开3.jpg会发现只是一张普通的图片 但是！！！！！！！！！如果你把3.jpg的后缀名改成.rar后再双击它，你会发现打开的是一个压缩文件，而且文件里面有一张叫2.jpg的图片，嘿嘿嘿~~~~ 原理：是把两个的文件的二进制代码进行合并，并且你会发现，合并过后图片的大小刚好的两个文件的大小总和 当然你也可以尝试各种文件格式的组合，比如把图片放进一首歌里，或者是两个文本的组合等等，反正你能想到好玩的都可以自己试一试，方法就是copy /b 文件1+文件2 文件3记得（/b和文件1）（文件2和文件3）之间都有空格 好啦今天的教程就到这里，自己试试吧（￣︶￣）]]></content>
+    <title><![CDATA[cmd中有趣的命令二之隐藏文件（不定期更新）]]></title>
+    <url>%2F2017%2F12%2F10%2Fcmd%E4%B8%AD%E6%9C%89%E8%B6%A3%E7%9A%84%E5%91%BD%E4%BB%A4%E4%BA%8C%E4%B9%8B%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6%EF%BC%88%E4%B8%8D%E5%AE%9A%E6%9C%9F%E6%9B%B4%E6%96%B0%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[今天给大家介绍的是命令二之隐藏文件 (￣y▽￣)~*捂嘴偷笑 #隐藏文件说到隐藏文件，你可能会说“可以把文件的属性改成隐藏”，像这样：这样当然可以达到文件隐藏的目的，如果想要查看的话，只需要把文件管理器里面的显示隐藏的文件和文件夹选项勾上就可以看到了，并且隐藏后图片变成了半透明的状态 #但是，咱们今天要说的当然不是这种隐藏方式我们可以用一条cmd命令来达到隐藏文件的目的，想要查看这种方式隐藏的文件的话我们也要用命令才能显示 首先准备一张图片 然后在当前目录下建立一个文本文件，将后缀名改成.bat 然后右键编辑输入 Attrib +h +s +r a.png，保存退出（a.png是你文件的名称，要加上后缀名） 双击bat文件即可将图片隐藏，并且你打开显示隐藏文件的选项也不会看到 想要重新显示图片的话，将bat文件的命令改为 Attrib -h -s -r a.png ，再次执行即可显示图片 当然也可以直接在该文件目录下打开cmd，直接执行上面两条命令也是可以的，也可以建立两个bat文件，像这样，里面分别写入显示和隐藏命令即可 赶紧自己试试吧(￣y▽￣)~*]]></content>
       <categories>
         <category>技术</category>
       </categories>
@@ -151,29 +853,45 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>linux ubuntu sublime</tag>
+        <tag>linux</tag>
+        <tag>ubuntu</tag>
+        <tag>sublime</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[cmd中有趣的命令二之隐藏文件（不定期更新）]]></title>
-    <url>%2F2017%2F12%2F10%2Fcmd%E4%B8%AD%E6%9C%89%E8%B6%A3%E7%9A%84%E5%91%BD%E4%BB%A4%E4%BA%8C%E4%B9%8B%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6%EF%BC%88%E4%B8%8D%E5%AE%9A%E6%9C%9F%E6%9B%B4%E6%96%B0%EF%BC%89%2F</url>
-    <content type="text"><![CDATA[今天给大家介绍的是命令二之隐藏文件 (￣y▽￣)~*捂嘴偷笑 #隐藏文件说到隐藏文件，你可能会说“可以把文件的属性改成隐藏”，像这样：这样当然可以达到文件隐藏的目的，如果想要查看的话，只需要把文件管理器里面的显示隐藏的文件和文件夹选项勾上就可以看到了，并且隐藏后图片变成了半透明的状态 #但是，咱们今天要说的当然不是这种隐藏方式我们可以用一条cmd命令来达到隐藏文件的目的，想要查看这种方式隐藏的文件的话我们也要用命令才能显示 首先准备一张图片 然后在当前目录下建立一个文本文件，将后缀名改成.bat 然后右键编辑输入 Attrib +h +s +r a.png，保存退出（a.png是你文件的名称，要加上后缀名） 双击bat文件即可将图片隐藏，并且你打开显示隐藏文件的选项也不会看到 想要重新显示图片的话，将bat文件的命令改为 Attrib -h -s -r a.png ，再次执行即可显示图片 当然也可以直接在该文件目录下打开cmd，直接执行上面两条命令也是可以的，也可以建立两个bat文件，像这样，里面分别写入显示和隐藏命令即可 赶紧自己试试吧(￣y▽￣)~*]]></content>
+    <title><![CDATA[搬瓦工Ubuntu系统中安装FTP服务]]></title>
+    <url>%2F2017%2F12%2F10%2F%E6%90%AC%E7%93%A6%E5%B7%A5Ubuntu%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%AE%89%E8%A3%85FTP%E6%9C%8D%E5%8A%A1%2F</url>
+    <content type="text"><![CDATA[想要在自己的服务器上存放东西，并且能够分享给小伙伴，那我们可以选择FTP服务器，接下来就大家讲一下如何在搬瓦工Ubuntu系统中安装FTP服务 #FTP服务安装及配置步骤: 执行命令 sudo apt-get update （如果已经更新可以跳过该步骤） 执行命令 sudo apt-get install vsftpd安装vsftpd 执行命令 nano /etc/vsftpd.conf编辑/etc目录下的vsftpd.conf配置文件修改一下参数的值（如果该参数前面有注释（#），请去掉注释）12345anonymous_enable=YES #设置匿名可登录local_enable=YES #本地用户允许登录write_enable=YES #用户是否有写的权限anon_upload_enable=YES #允许匿名用户上传anon_mkdir_write_enable=YES #允许匿名用户创建目录文件 nano编辑器的使用方法请自行查找资料，这里不详细讲解保存退出步骤:1.Ctrl+x2.按y3.回车 4.编辑好后保存退出执行命令 sudo service vsftpd start最后的字符串可以是start/restart/stop(开启/重启/停止) 5.执行命令 cd /srv/ftp进入FTP服务器存放文件的文件夹你可以在里面存放文件，然后在浏览器域名栏中输入 ftp://ip （ip为你搬瓦工服务器的ip）进入FTP文件浏览界面，点击即可下载 如果出现登陆FTP服务器时要输入用户名和密码，就重启一下FTP服务器（重启命令 sudo service vsftpd restart），有可能是配置文件没有更新 到此FTP服务器已经安装和配置完成 大家也可以通过一些第三方工具对FTP服务器进行管理，这里推荐大家使用Xftp Xftp下载地址：http://pan.baidu.com/s/1c1PQK6W 好啦，今天的教程就到这里，欢迎提问、纠错以及分享自己的想法(｡・`ω´･)]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>ubuntu</tag>
+        <tag>ftp</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[shell-中-[-eq]-[-ne]-[-gt]-[-lt]-[ge]-[le]]]></title>
+    <url>%2F2017%2F12%2F10%2Fshell-%E4%B8%AD-%5B-eq%5D-%5B-ne%5D-%5B-gt%5D-%5B-lt%5D-%5Bge%5D-%5Ble%5D%2F</url>
+    <content type="text"><![CDATA[-eq //等于-ne //不等于-gt //大于-lt //小于ge //大于等于le //小于等于]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>shell</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[cmd中有趣的命令一之合并文件（不定期更新）]]></title>
+    <url>%2F2017%2F12%2F10%2Fcmd%E4%B8%AD%E6%9C%89%E8%B6%A3%E7%9A%84%E5%91%BD%E4%BB%A4%E4%B8%80%E4%B9%8B%E5%90%88%E5%B9%B6%E6%96%87%E4%BB%B6%EF%BC%88%E4%B8%8D%E5%AE%9A%E6%9C%9F%E6%9B%B4%E6%96%B0%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[今天给大家介绍的是命令一之合并文件(ฅ&gt;ω&lt;*ฅ)，后面我会不定期的进行更新 #合并文件（老司机必备）图片下的秘密如果你想要把一个文件藏在一张图片里改怎么做呢（手动滑稽）首先这里有两张图片（1.jpg和2.jpg）：那么现在我们要把2.jpg藏在1.jpg里，步骤如下： 将2.jpg添加到压缩文件（这里以rar格式为例） 在当前目录下新建一个文本文件，命名为”合并”（名字可以随意），并将后缀名改为.bat，如图： 然后右键合并.bat，点击编辑，在文本中输入copy /b 1.jpg+2.rar 3.jpg意思是将1.jpg与2.rar合并成3.jpg 然后保存退出，再双击合并.bat文件即可生成3.jpg这个时候打开3.jpg会发现只是一张普通的图片 但是！！！！！！！！！如果你把3.jpg的后缀名改成.rar后再双击它，你会发现打开的是一个压缩文件，而且文件里面有一张叫2.jpg的图片，嘿嘿嘿~~~~ 原理：是把两个的文件的二进制代码进行合并，并且你会发现，合并过后图片的大小刚好的两个文件的大小总和 当然你也可以尝试各种文件格式的组合，比如把图片放进一首歌里，或者是两个文本的组合等等，反正你能想到好玩的都可以自己试一试，方法就是copy /b 文件1+文件2 文件3记得（/b和文件1）（文件2和文件3）之间都有空格 好啦今天的教程就到这里，自己试试吧（￣︶￣）]]></content>
       <categories>
         <category>技术</category>
       </categories>
       <tags>
         <tag>cmd</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Android-实现语言切换]]></title>
-    <url>%2F2017%2F12%2F10%2FAndroid-%E5%AE%9E%E7%8E%B0%E8%AF%AD%E8%A8%80%E5%88%87%E6%8D%A2%2F</url>
-    <content type="text"><![CDATA[Android APP如果要实现语言（中英文为例）的切换该怎么做呢？ #1. 在res文件下建立文件夹values-en，并且新建strings.xml文件 ###文件内容对应如下： values/strings.xml： values-en/strings.xml： #2. 实现语言切换的方法：Configuration config = getResources().getConfiguration(); Resources resources = getResources(); if (config.locale.equals(Locale.ENGLISH)){//如果已经为英文 config.locale = Locale.CHINESE;//切换中文 }else if (config.locale.equals(Locale.CHINESE)){//如果已经为中文 config.locale = Locale.ENGLISH;//切换英文 } DisplayMetrics dm = resources.getDisplayMetrics(); resources.updateConfiguration(config, dm); #3. 在AndroidManifest.xml文件中对需要改变语言的Activity添加属性android:configChanges=&quot;locale&quot; 小提示：如果需要保存用户修改的语言以便下一次打开APP时改变语言，可以将用户选择的信息保存至SharedPreferences储存类或者数据库中，在打开时读取判断即可，这里不详细叙述]]></content>
-      <categories>
-        <category>Android</category>
-      </categories>
-      <tags>
-        <tag>android language java</tag>
       </tags>
   </entry>
   <entry>
@@ -190,6 +908,19 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[Android-实现语言切换]]></title>
+    <url>%2F2017%2F12%2F10%2FAndroid-%E5%AE%9E%E7%8E%B0%E8%AF%AD%E8%A8%80%E5%88%87%E6%8D%A2%2F</url>
+    <content type="text"><![CDATA[Android APP如果要实现语言（中英文为例）的切换该怎么做呢？ #1. 在res文件下建立文件夹values-en，并且新建strings.xml文件 ###文件内容对应如下： values/strings.xml： values-en/strings.xml： #2. 实现语言切换的方法：Configuration config = getResources().getConfiguration(); Resources resources = getResources(); if (config.locale.equals(Locale.ENGLISH)){//如果已经为英文 config.locale = Locale.CHINESE;//切换中文 }else if (config.locale.equals(Locale.CHINESE)){//如果已经为中文 config.locale = Locale.ENGLISH;//切换英文 } DisplayMetrics dm = resources.getDisplayMetrics(); resources.updateConfiguration(config, dm); #3. 在AndroidManifest.xml文件中对需要改变语言的Activity添加属性android:configChanges=&quot;locale&quot; 小提示：如果需要保存用户修改的语言以便下一次打开APP时改变语言，可以将用户选择的信息保存至SharedPreferences储存类或者数据库中，在打开时读取判断即可，这里不详细叙述]]></content>
+      <categories>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+        <tag>java</tag>
+        <tag>language</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Android-Fragment的切换]]></title>
     <url>%2F2017%2F12%2F10%2FAndroid-Fragment%E7%9A%84%E5%88%87%E6%8D%A2%2F</url>
     <content type="text"><![CDATA[在主布局中有FrameLayout，如何在代码中对FrameLayout进行切换不同的Fragment呢？ 布局文件中的FrameLayout：12345678910&lt;LinearLayout android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;match_parent&quot; android:fitsSystemWindows=&quot;true&quot; android:orientation=&quot;vertical&quot;&gt; &lt;FrameLayout android:id=&quot;@+id/content_layout&quot; android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;match_parent&quot; /&gt;&lt;/LinearLayout&gt; 主界面：12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455//记录当前Fragmentprivate Fragment nowFragment;//其他的Fragmentprivate NewsFragment newsFragment;protected void onCreate(Bundle savedInstanceState) &#123; super.onCreate(savedInstanceState); setContentView(R.layout.activity_main); //初始化Fragment initFragment(savedInstanceState); if (newsFragment == null) &#123; newsFragment = new NewsFragment(); &#125; switchContent(nowFragment, newsFragment);&#125;/** * 初始化Fragment * * @param savedInstanceState */private void initFragment(Bundle savedInstanceState) &#123; //避免横竖屏时出现页面叠加，判断activity是否重新加载 if (savedInstanceState == null) &#123; FragmentManager fm = getSupportFragmentManager(); FragmentTransaction ft = fm.beginTransaction(); if (newsFragment == null) &#123; newsFragment = new NewsFragment(); &#125; nowFragment = newsFragment; ft.replace(R.id.content_layout, nowFragment).commitAllowingStateLoss(); &#125;&#125;/** * 防止Fragement数据重复加载，采用显示和隐藏的方式 * * @param from * @param to */public void switchContent(Fragment from, Fragment to) &#123; if (nowFragment != to) &#123; nowFragment = to; FragmentManager fm = getSupportFragmentManager(); FragmentTransaction ft = fm.beginTransaction(); //检测去往的Fragment是否被添加 if (!to.isAdded()) &#123; //如果没有添加，就隐藏当前Fragment，添加下一个Fragment ft.hide(from).add(R.id.content_layout, to).commitAllowingStateLoss(); &#125; else &#123; //如果已经被添加，就隐藏当前Fragment，直接显示下一个Fragement ft.hide(from).show(to).commitAllowingStateLoss(); &#125; &#125;&#125;]]></content>
@@ -197,7 +928,9 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>android fragment java</tag>
+        <tag>android</tag>
+        <tag>java</tag>
+        <tag>fragment</tag>
       </tags>
   </entry>
   <entry>
@@ -208,7 +941,10 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>android layout toolbar java</tag>
+        <tag>android</tag>
+        <tag>layout</tag>
+        <tag>toolbar</tag>
+        <tag>java</tag>
       </tags>
   </entry>
   <entry>
