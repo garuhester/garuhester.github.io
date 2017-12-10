@@ -720,6 +720,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[是时候用它代替你PPT了——FocuSky]]></title>
+    <url>%2F2017%2F12%2F10%2F%E6%98%AF%E6%97%B6%E5%80%99%E7%94%A8%E5%AE%83%E4%BB%A3%E6%9B%BF%E4%BD%A0PPT%E4%BA%86%E2%80%94%E2%80%94FocuSky%2F</url>
+    <content type="text"><![CDATA[之前国外有一款制作动态演示文档的软件——Prezi，不知道大家有没有听说过，但是这款国外软件对中文的支持并不是很好，限制也比较多。 这次给大家推荐一个国内的制作动态演示文档的软件——FocuSky**，**首先软件的使用是免费的，而且还完美支持中文 它的操作简单，很容易上手，可以插入各种文件格式，还有很多功能，包括制作动画，交互等 通过组件的拖拉可以像制作PPT那样很快的做出一个动态的演示文档，是不是比静态枯燥的PPT有趣多了呢，大家做报告的时候放一个这样的动态演示文档是不是感觉高大上呢 还有一个大家担心的问题，就是做好了过后，如果要去其他电脑上看，是不是得装一个这个软件才能播放？答案当然不是，这也是我觉得比较实用的地方，它可以直接导出为windows应用程序、视频、flash、h5网页、mac app，PDF等文件格式，这样就可以直接拷到其他电脑上进行演示啦，是不是很方便呢 FocuSky软件官网：http://www.focusky.com.cn/ 在线工具服务网站Loveconvert网址：http://www.loveconvert.com欢迎关注微信：小胡资源]]></content>
+      <categories>
+        <category>小胡资源</category>
+      </categories>
+      <tags>
+        <tag>FocuSky</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[时隔一年的Sublime-Text-3终于更新啦]]></title>
     <url>%2F2017%2F12%2F10%2F%E6%97%B6%E9%9A%94%E4%B8%80%E5%B9%B4%E7%9A%84Sublime-Text-3%E7%BB%88%E4%BA%8E%E6%9B%B4%E6%96%B0%E5%95%A6%2F</url>
     <content type="text"><![CDATA[作为自己最爱的一款编辑器，自从2016年9月23日开始，Sublime Text 3 的版本就一直是3126版本（很多bug） 虽然官方不停的在刷预览版，但是正式的版本一直没有更新，还以为它放弃维护了呢但是在昨天（2017年9月13日）Sublime Text 3时隔了一年终于迎来了正式版的更新 在Sublime Text 3 Build 3143版本中更新的东西还是挺多的首先就是Sublime Text 3 的Logo 发生了改变，下图是新的Logo 然后呢，编辑器内部的一些UI风格也发生了改变 还有就是编辑器的主题有了一点变化 还有很多的变更等着你去发现总之Sublime Text 3是一款十分强大且好看好用的编辑器之前还有介绍过Sublime Text 3的一些强大的功能而且这次更新修复了很多的bug小伙伴们可以用用，不会让你失望滴Sublime Text 3 官网：https://www.sublimetext.com/ （手动华丽的分割线，以下是更新日志，可跳过= =） Changelog3.0 (BUILD 3143)13 September 2017See also the Announcement PostRefreshed UI theme, including full high DPI supportNew iconAdded alternate theme, Adaptive, that inherits colors from the color schemeAdded new color schemes Breakers, Mariana and Sixteen, derived from the excellent work of Chris Kempson and Dmitri VoronianskiAdded color scheme and theme switchers with live preview via the command paletteWindows: Added touch inputLinux: Added repositories for apt, yum and pacmanMac: Added Touch Bar supportMac: Support for custom color window title bars on OS X 10.10+Many additions and bug fixes to the theme engine, plus full documentationSignificant improvements to Markdown syntax highlighting, with thanks to keith-hallSignificant improvements to C# syntax highlighting, with thanks to gwenzekSignificant improvements to Java syntax highlighting, with thanks to djspiewakSignificant improvements to Python syntax highlighting, with thanks to FichteFollSignificant improvements for R syntax highlighting, with thanks to randy3kMarkdown: Improved symbol handlingC#: Improved symbol handlingMany other syntax highlighting improvementsVarious bugs with the syntax highlighting engine have been resolvedFixed several crash issuesImproved responsiveness when the system is under high CPU loadHigh DPI textures are used on Windows and Linux when the DPI scale is greater than 1.0Improved font selection on all platforms, allowing selection of different weights by nameAdded setting theme_font_options to control font rendering of UI elementsImproved auto indent rules for HTML and PHPFont geometry issues that prevent bold or italics are now printed in the consoleFixed flash-of-white that could occur when the auto complete window is closedDisable scroll animation when animation_enabled is false in settingsFiles can now be renamed when only the case has changedNew windows start with an empty find historyFind in Files panel now responds to find_all and replace_all commandsVarious regex handling improvements in the Find panelFixed text widgets cutting off the bottom pixel of their selection borderFixed an issue with close_windows_when_empty in empty sessionFixed empty panes on startup when hot_exit was set to falseFix Open Containing Folder on Windows with a folder containing a commaFix multi-cursor pasting when clipboard contains one or more full linesPrevent UNC paths from being mangled by edit_settingsPrevent a crash when a malformed regex is used in indentation settingsImproved rendering performance with a large number of gutter iconsGutter icons are now sized properly on Windows and Linux high DPI screensImproved sidebar performance when folders contain many thousands of filesImproved inline error message styleFixed an issue where multiple indexing status windows could be shownWindows: Font rendering defaults to DirectWrite unless using Consolas or Courier NewWindows: Added support for no_antialias font option when using DirectWriteWindows: Improved touch pad scrollingWindows: Improved file change detection robustnessWindows: Improved font selection logicWindows: Fix ctrl+` shortcut for UK (ISO) keyboardsWindows: Improved fallback font handling in UI elementsWindows: The subl executable on OS X and plugin_host.exe on Windows are now signedWindows: sublime_text.exe now has CompanyName set in VERSIONINFOMac: Handle layout changes due to macOS Sierra tabsMac: Improved default web browser detectionMac: OS X 10.11 and macOS 10.12+ default to using San Francisco for the UI fontMac: Fixed file change notifications from freezing UI on macOS SierraMac: the user’s default shell is executed and environmental variables are set in the plugin Python environmentLinux: Update X11 selection on clipboard every time selection changesLinux: Improved MOD3 modifier key handlingminihtml: Added support for bordersminihtml: Respects font_options from the settingsminihtml: Fixed layout of html popups on Windows and Linux under High DPIminihtml: Fixed crash when doctype is presentminihtml: Fixed a crash from non-existent CSS varsminihtml: Fixed a crash triggered by bad image pathsAPI: Add View.text_to_window() and View.layout_to_window()API: All API functions now accept and return device-independent-pixelsAPI: Fixed input panel not running on_cancel when re-showing the input panelAPI: Fixed selector scoring with the &amp; operatorAPI: Fixed a bug causing incorrect phantom contentsAPI: Fixed crash in Window.set_view_index()API: Updated OpenSSL to 1.0.2k, SQLite to 3.16.02 在线工具服务网站Loveconvert网址：http://www.loveconvert.com欢迎关注微信：小胡资源]]></content>
@@ -729,17 +740,6 @@
       <tags>
         <tag>sublime</tag>
         <tag>更新</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[是时候用它代替你PPT了——FocuSky]]></title>
-    <url>%2F2017%2F12%2F10%2F%E6%98%AF%E6%97%B6%E5%80%99%E7%94%A8%E5%AE%83%E4%BB%A3%E6%9B%BF%E4%BD%A0PPT%E4%BA%86%E2%80%94%E2%80%94FocuSky%2F</url>
-    <content type="text"><![CDATA[之前国外有一款制作动态演示文档的软件——Prezi，不知道大家有没有听说过，但是这款国外软件对中文的支持并不是很好，限制也比较多。 这次给大家推荐一个国内的制作动态演示文档的软件——FocuSky**，**首先软件的使用是免费的，而且还完美支持中文 它的操作简单，很容易上手，可以插入各种文件格式，还有很多功能，包括制作动画，交互等 通过组件的拖拉可以像制作PPT那样很快的做出一个动态的演示文档，是不是比静态枯燥的PPT有趣多了呢，大家做报告的时候放一个这样的动态演示文档是不是感觉高大上呢 还有一个大家担心的问题，就是做好了过后，如果要去其他电脑上看，是不是得装一个这个软件才能播放？答案当然不是，这也是我觉得比较实用的地方，它可以直接导出为windows应用程序、视频、flash、h5网页、mac app，PDF等文件格式，这样就可以直接拷到其他电脑上进行演示啦，是不是很方便呢 FocuSky软件官网：http://www.focusky.com.cn/ 在线工具服务网站Loveconvert网址：http://www.loveconvert.com欢迎关注微信：小胡资源]]></content>
-      <categories>
-        <category>小胡资源</category>
-      </categories>
-      <tags>
-        <tag>FocuSky</tag>
       </tags>
   </entry>
   <entry>
@@ -787,6 +787,19 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[如何在搬瓦工ubuntu系统下配置shadowsocks以翻墙]]></title>
+    <url>%2F2017%2F12%2F10%2F%E5%A6%82%E4%BD%95%E5%9C%A8%E6%90%AC%E7%93%A6%E5%B7%A5ubuntu%E7%B3%BB%E7%BB%9F%E4%B8%8B%E9%85%8D%E7%BD%AEshadowsocks%E4%BB%A5%E7%BF%BB%E5%A2%99%2F</url>
+    <content type="text"><![CDATA[首先进入到搬瓦工VPS的管理界面可以看到一键安装shadowsocks服务只支持Centos，但是如果我们想要安装ubuntu系统，那该怎么安装shadowsocks服务呢？ #shadowsocks服务端配置: 首先利用SSH客户端(比如Xshell等)登陆到ubuntu服务端 执行命令 sudo apt-get update更新命令 执行命令 sudo apt-get install git安装git 执行命令 sudo apt-get install nano安装nano（可选择安装，用于编辑json文件） 执行命令 git clone -b manyuser https://github.com/breakwa11/shadowsocks.git从github上获取shadowsocks安装脚本 执行命令 ll 查看目录，会发现目录里多了一个叫shadowsocks的文件 执行命令 cd ~/shadowsocks/进入到此目录中 执行命令 bash initcfg.sh初始化配置 执行命令 mv user-config.json ./shadowsocks/把该目录下(~/shadowsocks)的user-config.json移动到下一个shadowsocks目录中(~/shadowsocks/shadowsocks) 执行命令 cd shadowsocks/进入目录中(~/shadowsocks/shadowsocks) 执行命令 chmod +x server.py给目录下的server.py文件添加权限 执行命令 nano user-config.json用nano编辑器打开json文件(你也可以用其他编辑器打开) 打开过后进行编辑:1234567891011121314151617&#123; &quot;server&quot;: &quot;0.0.0.0&quot;, &quot;server_ipv6&quot;: &quot;::&quot;, &quot;server_port&quot;: 8388, &quot;local_address&quot;: &quot;127.0.0.1&quot;, &quot;local_port&quot;: 1080, &quot;password&quot;: &quot;123456&quot;, &quot;timeout&quot;: 120, &quot;udp_timeout&quot;: 60, &quot;method&quot;: &quot;aes-256-cfb&quot;, &quot;protocol&quot;: &quot;auth_sha1_v2_compatible&quot;, &quot;protocol_param&quot;: &quot;&quot;, &quot;dns_ipv6&quot;: false, &quot;connect_verbose_info&quot;: 0, &quot;redirect&quot;: &quot;&quot;, &quot;fast_open&quot;: false&#125; nano编辑器的使用方法请自行查找资料，这里不详细讲解去掉某一行:Ctrl+k保存退出步骤:1.Ctrl+x2.按y3.回车 编辑好后保存退出然后执行命令1python ~/shadowsocks/shadowsocks/server.py -c ~/shadowsocks/shadowsocks/user-config.json -d start 最后的字符串可以是start/restart/stop(开启/重启/停止) 到此ubuntu系统中的shadowsocks服务端配置完成，并且已经启动服务 如果重启服务器，请再次执行第14步的操作重新开启shadowsocks服务(可设置开机自启动，这里不做介绍) #shadowsocksR客户端配置: shadowsocksR下载地址:http://pan.baidu.com/share/link?shareid=4081447275&amp;uk=2134016402 解压过后打开 ShadowsocksR-dotnet4.0.exe 配置如下： 服务器IP为ubuntu服务器IP服务器端口为user-config.json中的server_port密码为user-config.json中的password加密为user-config.json中的method协议为user-config.json中的protocol混淆选择plain 右键任务栏的shadowsockR图标 配置参数： 系统代理模式——PAC模式 PAC——更新PAC为绕过大陆常见域名列表 代理规则——绕过局域网和大陆 如果遇到有些网页打不开，请将第二项的PAC选择为更新为PAC为GFWList 开始愉快的翻墙吧(ฅ&gt;ω&lt;*ฅ)]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>ubuntu</tag>
+        <tag>搬瓦工</tag>
+        <tag>shadowsocks</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[搬瓦工中的Snapshots（快照）功能]]></title>
     <url>%2F2017%2F12%2F10%2F%E6%90%AC%E7%93%A6%E5%B7%A5%E4%B8%AD%E7%9A%84Snapshots%EF%BC%88%E5%BF%AB%E7%85%A7%EF%BC%89%E5%8A%9F%E8%83%BD%2F</url>
     <content type="text"><![CDATA[搬瓦工VPS自带Snapshots快照备份，每个VPS可以备份2次且有效期是30天 #如何创建Snapshots快照 进入搬瓦工VPS管理界面(KiwiVM Extras — Snapshots)从图中可以看到，我们可以创建快照也可以导入快照 点击Create new snapshot创建快照，设置一个名称，开始备份备份过程中服务器会暂停，备份完成后服务器会重启 点击Import a snapshot导入快照，这里需要输入VEID:和TOKEN:参数在后面会说到 #Snapshots快照管理 快照创建成功后，会有以下界面 download: 将快照下载到本地 restore: 恢复到此快照，并且会重写当前服务器的所有数据（如果当前服务器出现问题可以点此进行恢复） delete: 删除快照 set sticky: 设置永久保存（最多允许2个快照设置为永久保存） export: 导出参数，参数为VEID:和TOKEN:，可用于Import a snapshot导入快照 就先到这里啦，喜欢折腾的孩子还是建个快照吧（笑），不然到时候哭都哭不出来，哈哈哈]]></content>
@@ -810,31 +823,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[如何在搬瓦工ubuntu系统下配置shadowsocks以翻墙]]></title>
-    <url>%2F2017%2F12%2F10%2F%E5%A6%82%E4%BD%95%E5%9C%A8%E6%90%AC%E7%93%A6%E5%B7%A5ubuntu%E7%B3%BB%E7%BB%9F%E4%B8%8B%E9%85%8D%E7%BD%AEshadowsocks%E4%BB%A5%E7%BF%BB%E5%A2%99%2F</url>
-    <content type="text"><![CDATA[首先进入到搬瓦工VPS的管理界面可以看到一键安装shadowsocks服务只支持Centos，但是如果我们想要安装ubuntu系统，那该怎么安装shadowsocks服务呢？ #shadowsocks服务端配置: 首先利用SSH客户端(比如Xshell等)登陆到ubuntu服务端 执行命令 sudo apt-get update更新命令 执行命令 sudo apt-get install git安装git 执行命令 sudo apt-get install nano安装nano（可选择安装，用于编辑json文件） 执行命令 git clone -b manyuser https://github.com/breakwa11/shadowsocks.git从github上获取shadowsocks安装脚本 执行命令 ll 查看目录，会发现目录里多了一个叫shadowsocks的文件 执行命令 cd ~/shadowsocks/进入到此目录中 执行命令 bash initcfg.sh初始化配置 执行命令 mv user-config.json ./shadowsocks/把该目录下(~/shadowsocks)的user-config.json移动到下一个shadowsocks目录中(~/shadowsocks/shadowsocks) 执行命令 cd shadowsocks/进入目录中(~/shadowsocks/shadowsocks) 执行命令 chmod +x server.py给目录下的server.py文件添加权限 执行命令 nano user-config.json用nano编辑器打开json文件(你也可以用其他编辑器打开) 打开过后进行编辑:1234567891011121314151617&#123; &quot;server&quot;: &quot;0.0.0.0&quot;, &quot;server_ipv6&quot;: &quot;::&quot;, &quot;server_port&quot;: 8388, &quot;local_address&quot;: &quot;127.0.0.1&quot;, &quot;local_port&quot;: 1080, &quot;password&quot;: &quot;123456&quot;, &quot;timeout&quot;: 120, &quot;udp_timeout&quot;: 60, &quot;method&quot;: &quot;aes-256-cfb&quot;, &quot;protocol&quot;: &quot;auth_sha1_v2_compatible&quot;, &quot;protocol_param&quot;: &quot;&quot;, &quot;dns_ipv6&quot;: false, &quot;connect_verbose_info&quot;: 0, &quot;redirect&quot;: &quot;&quot;, &quot;fast_open&quot;: false&#125; nano编辑器的使用方法请自行查找资料，这里不详细讲解去掉某一行:Ctrl+k保存退出步骤:1.Ctrl+x2.按y3.回车 编辑好后保存退出然后执行命令1python ~/shadowsocks/shadowsocks/server.py -c ~/shadowsocks/shadowsocks/user-config.json -d start 最后的字符串可以是start/restart/stop(开启/重启/停止) 到此ubuntu系统中的shadowsocks服务端配置完成，并且已经启动服务 如果重启服务器，请再次执行第14步的操作重新开启shadowsocks服务(可设置开机自启动，这里不做介绍) #shadowsocksR客户端配置: shadowsocksR下载地址:http://pan.baidu.com/share/link?shareid=4081447275&amp;uk=2134016402 解压过后打开 ShadowsocksR-dotnet4.0.exe 配置如下： 服务器IP为ubuntu服务器IP服务器端口为user-config.json中的server_port密码为user-config.json中的password加密为user-config.json中的method协议为user-config.json中的protocol混淆选择plain 右键任务栏的shadowsockR图标 配置参数： 系统代理模式——PAC模式 PAC——更新PAC为绕过大陆常见域名列表 代理规则——绕过局域网和大陆 如果遇到有些网页打不开，请将第二项的PAC选择为更新为PAC为GFWList 开始愉快的翻墙吧(ฅ&gt;ω&lt;*ฅ)]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>ubuntu</tag>
-        <tag>搬瓦工</tag>
-        <tag>shadowsocks</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Loveconvert服务站点新增微博视频解析]]></title>
-    <url>%2F2017%2F12%2F10%2FLoveconvert%E6%9C%8D%E5%8A%A1%E7%AB%99%E7%82%B9%E6%96%B0%E5%A2%9E%E5%BE%AE%E5%8D%9A%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90%2F</url>
-    <content type="text"><![CDATA[#Loveconvert服务站点新增微博视频解析下载功能 小伙伴们可以在此网页输入微博视频的短地址或者长地址，点击解析后根据提示下载视频 Loveconvert微博视频解析工具]]></content>
-      <categories>
-        <category>小胡资源</category>
-      </categories>
-      <tags>
-        <tag>Loveconvert</tag>
-        <tag>微博视频解析</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[cmd中有趣的命令二之隐藏文件（不定期更新）]]></title>
     <url>%2F2017%2F12%2F10%2Fcmd%E4%B8%AD%E6%9C%89%E8%B6%A3%E7%9A%84%E5%91%BD%E4%BB%A4%E4%BA%8C%E4%B9%8B%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6%EF%BC%88%E4%B8%8D%E5%AE%9A%E6%9C%9F%E6%9B%B4%E6%96%B0%EF%BC%89%2F</url>
     <content type="text"><![CDATA[今天给大家介绍的是命令二之隐藏文件 (￣y▽￣)~*捂嘴偷笑 #隐藏文件说到隐藏文件，你可能会说“可以把文件的属性改成隐藏”，像这样：这样当然可以达到文件隐藏的目的，如果想要查看的话，只需要把文件管理器里面的显示隐藏的文件和文件夹选项勾上就可以看到了，并且隐藏后图片变成了半透明的状态 #但是，咱们今天要说的当然不是这种隐藏方式我们可以用一条cmd命令来达到隐藏文件的目的，想要查看这种方式隐藏的文件的话我们也要用命令才能显示 首先准备一张图片 然后在当前目录下建立一个文本文件，将后缀名改成.bat 然后右键编辑输入 Attrib +h +s +r a.png，保存退出（a.png是你文件的名称，要加上后缀名） 双击bat文件即可将图片隐藏，并且你打开显示隐藏文件的选项也不会看到 想要重新显示图片的话，将bat文件的命令改为 Attrib -h -s -r a.png ，再次执行即可显示图片 当然也可以直接在该文件目录下打开cmd，直接执行上面两条命令也是可以的，也可以建立两个bat文件，像这样，里面分别写入显示和隐藏命令即可 赶紧自己试试吧(￣y▽￣)~*]]></content>
@@ -843,19 +831,6 @@
       </categories>
       <tags>
         <tag>cmd</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Ubuntu系统中安装与卸载sublime-text编辑器]]></title>
-    <url>%2F2017%2F12%2F10%2FUbuntu%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%AE%89%E8%A3%85%E4%B8%8E%E5%8D%B8%E8%BD%BDsublime-text%E7%BC%96%E8%BE%91%E5%99%A8%2F</url>
-    <content type="text"><![CDATA[今天给大家介绍如何在ubuntu系统安装与卸载sublime text编辑器 #sublime text 3安装及配置步骤： 安装方式一：通过软件库安装 首先打开终端执行命令 sudo add-apt-repository ppa:webupd8team/sublime-text-3添加sublime text 3的仓库 中间如要需要等待的时候直接按enter就好（建立信任数据库） 执行命令 sudo apt-get update更新软件库 执行命令 sudo apt-get install sublime-text-installer安装sublime text 3 到此通过方式一已经将sublime text 3安装完成 安装方式二：通过安装Debian包裹文件（手动下载的文件，后缀名为.deb） sublime-text_build-3126_amd64.deb下载地址：http://pan.baidu.com/s/1dFOd23B 下载好文件过后，打开终端并进入该文件所在目录（比如~/Downloads） 执行命令 sudo dpkg -i sublime-text_build-3126_amd64.deb 到此通过方式二已经将sublime text 3安装完成 #卸载sublime text 3 首先查看一下sublime text 3在系统中存在的程序名执行命令 dpkg -l | grep sublime 查看到程序名后执行命令 sudo dpkg -r sublime-text卸载sublime text 最后的名字取决查看的程序名方式一安装程序名为：sublime-text-installer方式二安装程序名为：sublime-text 执行命令 sudo rm -rf /home/username/.config/sublime-text-3/删除配置文件，其中的username为系统的用户名 执行命令 sudo find / -name sublime*查看系统中与sublime text 3相关的文件，然后再根据路径依次删除即可完全卸载掉sublime text 3 sublime text 2安装命令稍微不同（对应安装方式一的三条命令）： sudo add-apt-repository ppa:webupd8team/sublime-text-2 sudo apt-get update sudo apt-get install sublime-text-dev 好啦，今天的教程就到这里，拜拜咯~~~]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>ubuntu</tag>
-        <tag>sublime</tag>
       </tags>
   </entry>
   <entry>
@@ -872,15 +847,16 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[shell-中-[-eq]-[-ne]-[-gt]-[-lt]-[ge]-[le]]]></title>
-    <url>%2F2017%2F12%2F10%2Fshell-%E4%B8%AD-%5B-eq%5D-%5B-ne%5D-%5B-gt%5D-%5B-lt%5D-%5Bge%5D-%5Ble%5D%2F</url>
-    <content type="text"><![CDATA[-eq //等于-ne //不等于-gt //大于-lt //小于ge //大于等于le //小于等于]]></content>
+    <title><![CDATA[Ubuntu系统中安装与卸载sublime-text编辑器]]></title>
+    <url>%2F2017%2F12%2F10%2FUbuntu%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%AE%89%E8%A3%85%E4%B8%8E%E5%8D%B8%E8%BD%BDsublime-text%E7%BC%96%E8%BE%91%E5%99%A8%2F</url>
+    <content type="text"><![CDATA[今天给大家介绍如何在ubuntu系统安装与卸载sublime text编辑器 #sublime text 3安装及配置步骤： 安装方式一：通过软件库安装 首先打开终端执行命令 sudo add-apt-repository ppa:webupd8team/sublime-text-3添加sublime text 3的仓库 中间如要需要等待的时候直接按enter就好（建立信任数据库） 执行命令 sudo apt-get update更新软件库 执行命令 sudo apt-get install sublime-text-installer安装sublime text 3 到此通过方式一已经将sublime text 3安装完成 安装方式二：通过安装Debian包裹文件（手动下载的文件，后缀名为.deb） sublime-text_build-3126_amd64.deb下载地址：http://pan.baidu.com/s/1dFOd23B 下载好文件过后，打开终端并进入该文件所在目录（比如~/Downloads） 执行命令 sudo dpkg -i sublime-text_build-3126_amd64.deb 到此通过方式二已经将sublime text 3安装完成 #卸载sublime text 3 首先查看一下sublime text 3在系统中存在的程序名执行命令 dpkg -l | grep sublime 查看到程序名后执行命令 sudo dpkg -r sublime-text卸载sublime text 最后的名字取决查看的程序名方式一安装程序名为：sublime-text-installer方式二安装程序名为：sublime-text 执行命令 sudo rm -rf /home/username/.config/sublime-text-3/删除配置文件，其中的username为系统的用户名 执行命令 sudo find / -name sublime*查看系统中与sublime text 3相关的文件，然后再根据路径依次删除即可完全卸载掉sublime text 3 sublime text 2安装命令稍微不同（对应安装方式一的三条命令）： sudo add-apt-repository ppa:webupd8team/sublime-text-2 sudo apt-get update sudo apt-get install sublime-text-dev 好啦，今天的教程就到这里，拜拜咯~~~]]></content>
       <categories>
         <category>技术</category>
       </categories>
       <tags>
         <tag>linux</tag>
-        <tag>shell</tag>
+        <tag>ubuntu</tag>
+        <tag>sublime</tag>
       </tags>
   </entry>
   <entry>
@@ -895,16 +871,40 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Java实现MySql数据库与Excel文件转换]]></title>
-    <url>%2F2017%2F12%2F10%2FJava%E5%AE%9E%E7%8E%B0MySql%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%8EExcel%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%2F</url>
-    <content type="text"><![CDATA[导入Jar包：poi 和 mysql-connector-java poi下载地址：http://mirrors.hust.edu.cn/apache/poi/dev/bin/poi-bin-3.16-beta2-20170202.zipmysql-connector-java下载地址：https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.41.zip ###转换均采用以下两图的内容数据库表： Excel（workbook.xls）： ###数据库转Excel： 核心代码： 123456789//初始化excel文件HSSFWorkbook wb = new HSSFWorkbook();//excel文件对象HSSFSheet sheet = wb.createSheet(&quot;sheet&quot;);//表sheet.setDefaultColumnWidth(20);//设置默认列宽为20HSSFRow row0 = sheet.createRow(0);//创建第一行row0.createCell(0).setCellValue(&quot;id&quot;);//第一行第一列FileOutputStream outputStream = new FileOutputStream(&quot;workbook.xls&quot;);wb.write(outputStream);outputStream.flush(); 全部代码： 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253import org.apache.poi.hssf.usermodel.HSSFRow;import org.apache.poi.hssf.usermodel.HSSFSheet;import org.apache.poi.hssf.usermodel.HSSFWorkbook;public static void main(String[] args) throws IOException, SQLException, ClassNotFoundException &#123; //数据库变量 String driver = &quot;com.mysql.jdbc.Driver&quot;; String dvUrl = &quot;jdbc:mysql://localhost:3306/&quot;; String user = &quot;root&quot;; String password = &quot;root&quot;; String database = &quot;test&quot;; Connection conn; PreparedStatement pre; String sql; //初始化数据库 Class.forName(driver); conn = DriverManager.getConnection(dvUrl + database, user, password); //初始化excel文件 HSSFWorkbook wb = new HSSFWorkbook();//excel文件对象 HSSFSheet sheet = wb.createSheet(&quot;sheet&quot;);//表 sheet.setDefaultColumnWidth(20);//设置默认列宽为20 HSSFRow row0 = sheet.createRow(0);//创建第一行 row0.createCell(0).setCellValue(&quot;id&quot;);//第一行第一列 row0.createCell(1).setCellValue(&quot;title&quot;);第一行第二列 row0.createCell(2).setCellValue(&quot;href&quot;);第一行第三列 row0.createCell(3).setCellValue(&quot;author&quot;);第一行第四列 row0.createCell(4).setCellValue(&quot;time&quot;);第一行第五列 sql = &quot;select * from blog&quot;;//查询blog表 pre = conn.prepareStatement(sql); ResultSet rs = pre.executeQuery();// int row_count = 1; while (rs.next()) &#123;//遍历表内容 String id = rs.getString(&quot;id&quot;); String title = rs.getString(&quot;title&quot;); String href = rs.getString(&quot;href&quot;); String author = rs.getString(&quot;author&quot;); String time = rs.getString(&quot;time&quot;); HSSFRow row = sheet.createRow(row_count); row.createCell(0).setCellValue(id); row.createCell(1).setCellValue(title); row.createCell(2).setCellValue(href); row.createCell(3).setCellValue(author); row.createCell(4).setCellValue(time); row_count++; &#125; FileOutputStream outputStream = new FileOutputStream(&quot;workbook.xls&quot;); wb.write(outputStream); outputStream.flush(); &#125; ###Excel转数据库： 核心代码： 123456789101112131415File file = new File(&quot;workbook.xls&quot;);FileInputStream fileInputStream = new FileInputStream(file);//根据指定的文件输入流导入Excel从而产生Workbook对象Workbook wb = new HSSFWorkbook(fileInputStream);//获取Excel文档中的第一个表单Sheet sheet = wb.getSheetAt(0);//对Sheet中的每一行进行遍历for (Row row : sheet) &#123; //跳过第一行标题 if (row.getRowNum() == 0) &#123; continue; &#125; ExcelBean excelBean = new ExcelBean(); excelBean.setId(row.getCell(0).getStringCellValue());//第一行第一列的值&#125; 全部代码： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182import org.apache.poi.hssf.usermodel.HSSFWorkbook;import org.apache.poi.ss.usermodel.Row;import org.apache.poi.ss.usermodel.Sheet;import org.apache.poi.ss.usermodel.Workbook; public static void main(String[] args) throws ClassNotFoundException, SQLException, IOException &#123; //数据库变量 String driver = &quot;com.mysql.jdbc.Driver&quot;; String dvUrl = &quot;jdbc:mysql://localhost:3306/&quot;; String user = &quot;root&quot;; String password = &quot;root&quot;; String database = &quot;test&quot;; Connection conn; PreparedStatement pre; String sql; ArrayList&lt;ExcelBean&gt; excelBeans = new ArrayList&lt;&gt;(); //初始化数据库 Class.forName(driver); conn = DriverManager.getConnection(dvUrl + database, user, password); pre = conn.prepareStatement(&quot;SHOW TABLES LIKE &apos;excel&apos;&quot;); ResultSet rs = pre.executeQuery(); if (rs.next()) &#123; //表存在 sql = &quot;truncate table excel&quot;; &#125; else &#123; //表不存在 sql = &quot;CREATE TABLE excel(&quot; + &quot;id varchar(255),&quot; + &quot;title varchar(255),&quot; + &quot;href varchar(255),&quot; + &quot;author varchar(255),&quot; + &quot;time varchar(255)&quot; + &quot;) ENGINE=MyISAM DEFAULT CHARSET=utf8&quot;; &#125; pre = conn.prepareStatement(sql); pre.execute(); File file = new File(&quot;workbook.xls&quot;); FileInputStream fileInputStream = new FileInputStream(file); //根据指定的文件输入流导入Excel从而产生Workbook对象 Workbook wb = new HSSFWorkbook(fileInputStream); //获取Excel文档中的第一个表单 Sheet sheet = wb.getSheetAt(0); //对Sheet中的每一行进行遍历 for (Row row : sheet) &#123; //跳过第一行标题 if (row.getRowNum() == 0) &#123; continue; &#125; ExcelBean excelBean = new ExcelBean(); excelBean.setId(row.getCell(0).getStringCellValue()); excelBean.setTitle(row.getCell(1).getStringCellValue()); excelBean.setHref(row.getCell(2).getStringCellValue()); excelBean.setAuthor(row.getCell(3).getStringCellValue()); excelBean.setTime(row.getCell(4).getStringCellValue()); excelBeans.add(excelBean); &#125; //遍历集合将数据插入到数据库 for (ExcelBean eb : excelBeans) &#123; sql = &quot;INSERT INTO excel(id,title,href,author,time) &quot; + &quot;VALUES (&apos;&quot; + eb.getId() + &quot;&apos;,&apos;&quot; + eb.getTitle() + &quot;&apos;,&apos;&quot; + eb.getHref() + &quot;&apos;,&apos;&quot; + eb.getAuthor() + &quot;&apos;,&apos;&quot; + eb.getTime() + &quot;&apos;)&quot;; pre = conn.prepareStatement(sql); pre.execute(); &#125; pre.close(); conn.close();&#125;public class ExcelBean &#123; private String id; private String title; private String href; private String author; private String time;&#125;]]></content>
+    <title><![CDATA[Loveconvert服务站点新增微博视频解析]]></title>
+    <url>%2F2017%2F12%2F10%2FLoveconvert%E6%9C%8D%E5%8A%A1%E7%AB%99%E7%82%B9%E6%96%B0%E5%A2%9E%E5%BE%AE%E5%8D%9A%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90%2F</url>
+    <content type="text"><![CDATA[#Loveconvert服务站点新增微博视频解析下载功能 小伙伴们可以在此网页输入微博视频的短地址或者长地址，点击解析后根据提示下载视频 Loveconvert微博视频解析工具]]></content>
       <categories>
-        <category>Java</category>
+        <category>小胡资源</category>
       </categories>
       <tags>
+        <tag>Loveconvert</tag>
+        <tag>微博视频解析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[shell-中-[-eq]-[-ne]-[-gt]-[-lt]-[ge]-[le]]]></title>
+    <url>%2F2017%2F12%2F10%2Fshell-%E4%B8%AD-%5B-eq%5D-%5B-ne%5D-%5B-gt%5D-%5B-lt%5D-%5Bge%5D-%5Ble%5D%2F</url>
+    <content type="text"><![CDATA[-eq //等于-ne //不等于-gt //大于-lt //小于ge //大于等于le //小于等于]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>shell</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Android-Fragment的切换]]></title>
+    <url>%2F2017%2F12%2F10%2FAndroid-Fragment%E7%9A%84%E5%88%87%E6%8D%A2%2F</url>
+    <content type="text"><![CDATA[在主布局中有FrameLayout，如何在代码中对FrameLayout进行切换不同的Fragment呢？ 布局文件中的FrameLayout：12345678910&lt;LinearLayout android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;match_parent&quot; android:fitsSystemWindows=&quot;true&quot; android:orientation=&quot;vertical&quot;&gt; &lt;FrameLayout android:id=&quot;@+id/content_layout&quot; android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;match_parent&quot; /&gt;&lt;/LinearLayout&gt; 主界面：12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455//记录当前Fragmentprivate Fragment nowFragment;//其他的Fragmentprivate NewsFragment newsFragment;protected void onCreate(Bundle savedInstanceState) &#123; super.onCreate(savedInstanceState); setContentView(R.layout.activity_main); //初始化Fragment initFragment(savedInstanceState); if (newsFragment == null) &#123; newsFragment = new NewsFragment(); &#125; switchContent(nowFragment, newsFragment);&#125;/** * 初始化Fragment * * @param savedInstanceState */private void initFragment(Bundle savedInstanceState) &#123; //避免横竖屏时出现页面叠加，判断activity是否重新加载 if (savedInstanceState == null) &#123; FragmentManager fm = getSupportFragmentManager(); FragmentTransaction ft = fm.beginTransaction(); if (newsFragment == null) &#123; newsFragment = new NewsFragment(); &#125; nowFragment = newsFragment; ft.replace(R.id.content_layout, nowFragment).commitAllowingStateLoss(); &#125;&#125;/** * 防止Fragement数据重复加载，采用显示和隐藏的方式 * * @param from * @param to */public void switchContent(Fragment from, Fragment to) &#123; if (nowFragment != to) &#123; nowFragment = to; FragmentManager fm = getSupportFragmentManager(); FragmentTransaction ft = fm.beginTransaction(); //检测去往的Fragment是否被添加 if (!to.isAdded()) &#123; //如果没有添加，就隐藏当前Fragment，添加下一个Fragment ft.hide(from).add(R.id.content_layout, to).commitAllowingStateLoss(); &#125; else &#123; //如果已经被添加，就隐藏当前Fragment，直接显示下一个Fragement ft.hide(from).show(to).commitAllowingStateLoss(); &#125; &#125;&#125;]]></content>
+      <categories>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
         <tag>java</tag>
-        <tag>mysql</tag>
-        <tag>excel</tag>
+        <tag>fragment</tag>
       </tags>
   </entry>
   <entry>
@@ -921,16 +921,16 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Android-Fragment的切换]]></title>
-    <url>%2F2017%2F12%2F10%2FAndroid-Fragment%E7%9A%84%E5%88%87%E6%8D%A2%2F</url>
-    <content type="text"><![CDATA[在主布局中有FrameLayout，如何在代码中对FrameLayout进行切换不同的Fragment呢？ 布局文件中的FrameLayout：12345678910&lt;LinearLayout android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;match_parent&quot; android:fitsSystemWindows=&quot;true&quot; android:orientation=&quot;vertical&quot;&gt; &lt;FrameLayout android:id=&quot;@+id/content_layout&quot; android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;match_parent&quot; /&gt;&lt;/LinearLayout&gt; 主界面：12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455//记录当前Fragmentprivate Fragment nowFragment;//其他的Fragmentprivate NewsFragment newsFragment;protected void onCreate(Bundle savedInstanceState) &#123; super.onCreate(savedInstanceState); setContentView(R.layout.activity_main); //初始化Fragment initFragment(savedInstanceState); if (newsFragment == null) &#123; newsFragment = new NewsFragment(); &#125; switchContent(nowFragment, newsFragment);&#125;/** * 初始化Fragment * * @param savedInstanceState */private void initFragment(Bundle savedInstanceState) &#123; //避免横竖屏时出现页面叠加，判断activity是否重新加载 if (savedInstanceState == null) &#123; FragmentManager fm = getSupportFragmentManager(); FragmentTransaction ft = fm.beginTransaction(); if (newsFragment == null) &#123; newsFragment = new NewsFragment(); &#125; nowFragment = newsFragment; ft.replace(R.id.content_layout, nowFragment).commitAllowingStateLoss(); &#125;&#125;/** * 防止Fragement数据重复加载，采用显示和隐藏的方式 * * @param from * @param to */public void switchContent(Fragment from, Fragment to) &#123; if (nowFragment != to) &#123; nowFragment = to; FragmentManager fm = getSupportFragmentManager(); FragmentTransaction ft = fm.beginTransaction(); //检测去往的Fragment是否被添加 if (!to.isAdded()) &#123; //如果没有添加，就隐藏当前Fragment，添加下一个Fragment ft.hide(from).add(R.id.content_layout, to).commitAllowingStateLoss(); &#125; else &#123; //如果已经被添加，就隐藏当前Fragment，直接显示下一个Fragement ft.hide(from).show(to).commitAllowingStateLoss(); &#125; &#125;&#125;]]></content>
+    <title><![CDATA[Java实现MySql数据库与Excel文件转换]]></title>
+    <url>%2F2017%2F12%2F10%2FJava%E5%AE%9E%E7%8E%B0MySql%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%8EExcel%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%2F</url>
+    <content type="text"><![CDATA[导入Jar包：poi 和 mysql-connector-java poi下载地址：http://mirrors.hust.edu.cn/apache/poi/dev/bin/poi-bin-3.16-beta2-20170202.zipmysql-connector-java下载地址：https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.41.zip ###转换均采用以下两图的内容数据库表： Excel（workbook.xls）： ###数据库转Excel： 核心代码： 123456789//初始化excel文件HSSFWorkbook wb = new HSSFWorkbook();//excel文件对象HSSFSheet sheet = wb.createSheet(&quot;sheet&quot;);//表sheet.setDefaultColumnWidth(20);//设置默认列宽为20HSSFRow row0 = sheet.createRow(0);//创建第一行row0.createCell(0).setCellValue(&quot;id&quot;);//第一行第一列FileOutputStream outputStream = new FileOutputStream(&quot;workbook.xls&quot;);wb.write(outputStream);outputStream.flush(); 全部代码： 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253import org.apache.poi.hssf.usermodel.HSSFRow;import org.apache.poi.hssf.usermodel.HSSFSheet;import org.apache.poi.hssf.usermodel.HSSFWorkbook;public static void main(String[] args) throws IOException, SQLException, ClassNotFoundException &#123; //数据库变量 String driver = &quot;com.mysql.jdbc.Driver&quot;; String dvUrl = &quot;jdbc:mysql://localhost:3306/&quot;; String user = &quot;root&quot;; String password = &quot;root&quot;; String database = &quot;test&quot;; Connection conn; PreparedStatement pre; String sql; //初始化数据库 Class.forName(driver); conn = DriverManager.getConnection(dvUrl + database, user, password); //初始化excel文件 HSSFWorkbook wb = new HSSFWorkbook();//excel文件对象 HSSFSheet sheet = wb.createSheet(&quot;sheet&quot;);//表 sheet.setDefaultColumnWidth(20);//设置默认列宽为20 HSSFRow row0 = sheet.createRow(0);//创建第一行 row0.createCell(0).setCellValue(&quot;id&quot;);//第一行第一列 row0.createCell(1).setCellValue(&quot;title&quot;);第一行第二列 row0.createCell(2).setCellValue(&quot;href&quot;);第一行第三列 row0.createCell(3).setCellValue(&quot;author&quot;);第一行第四列 row0.createCell(4).setCellValue(&quot;time&quot;);第一行第五列 sql = &quot;select * from blog&quot;;//查询blog表 pre = conn.prepareStatement(sql); ResultSet rs = pre.executeQuery();// int row_count = 1; while (rs.next()) &#123;//遍历表内容 String id = rs.getString(&quot;id&quot;); String title = rs.getString(&quot;title&quot;); String href = rs.getString(&quot;href&quot;); String author = rs.getString(&quot;author&quot;); String time = rs.getString(&quot;time&quot;); HSSFRow row = sheet.createRow(row_count); row.createCell(0).setCellValue(id); row.createCell(1).setCellValue(title); row.createCell(2).setCellValue(href); row.createCell(3).setCellValue(author); row.createCell(4).setCellValue(time); row_count++; &#125; FileOutputStream outputStream = new FileOutputStream(&quot;workbook.xls&quot;); wb.write(outputStream); outputStream.flush(); &#125; ###Excel转数据库： 核心代码： 123456789101112131415File file = new File(&quot;workbook.xls&quot;);FileInputStream fileInputStream = new FileInputStream(file);//根据指定的文件输入流导入Excel从而产生Workbook对象Workbook wb = new HSSFWorkbook(fileInputStream);//获取Excel文档中的第一个表单Sheet sheet = wb.getSheetAt(0);//对Sheet中的每一行进行遍历for (Row row : sheet) &#123; //跳过第一行标题 if (row.getRowNum() == 0) &#123; continue; &#125; ExcelBean excelBean = new ExcelBean(); excelBean.setId(row.getCell(0).getStringCellValue());//第一行第一列的值&#125; 全部代码： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182import org.apache.poi.hssf.usermodel.HSSFWorkbook;import org.apache.poi.ss.usermodel.Row;import org.apache.poi.ss.usermodel.Sheet;import org.apache.poi.ss.usermodel.Workbook; public static void main(String[] args) throws ClassNotFoundException, SQLException, IOException &#123; //数据库变量 String driver = &quot;com.mysql.jdbc.Driver&quot;; String dvUrl = &quot;jdbc:mysql://localhost:3306/&quot;; String user = &quot;root&quot;; String password = &quot;root&quot;; String database = &quot;test&quot;; Connection conn; PreparedStatement pre; String sql; ArrayList&lt;ExcelBean&gt; excelBeans = new ArrayList&lt;&gt;(); //初始化数据库 Class.forName(driver); conn = DriverManager.getConnection(dvUrl + database, user, password); pre = conn.prepareStatement(&quot;SHOW TABLES LIKE &apos;excel&apos;&quot;); ResultSet rs = pre.executeQuery(); if (rs.next()) &#123; //表存在 sql = &quot;truncate table excel&quot;; &#125; else &#123; //表不存在 sql = &quot;CREATE TABLE excel(&quot; + &quot;id varchar(255),&quot; + &quot;title varchar(255),&quot; + &quot;href varchar(255),&quot; + &quot;author varchar(255),&quot; + &quot;time varchar(255)&quot; + &quot;) ENGINE=MyISAM DEFAULT CHARSET=utf8&quot;; &#125; pre = conn.prepareStatement(sql); pre.execute(); File file = new File(&quot;workbook.xls&quot;); FileInputStream fileInputStream = new FileInputStream(file); //根据指定的文件输入流导入Excel从而产生Workbook对象 Workbook wb = new HSSFWorkbook(fileInputStream); //获取Excel文档中的第一个表单 Sheet sheet = wb.getSheetAt(0); //对Sheet中的每一行进行遍历 for (Row row : sheet) &#123; //跳过第一行标题 if (row.getRowNum() == 0) &#123; continue; &#125; ExcelBean excelBean = new ExcelBean(); excelBean.setId(row.getCell(0).getStringCellValue()); excelBean.setTitle(row.getCell(1).getStringCellValue()); excelBean.setHref(row.getCell(2).getStringCellValue()); excelBean.setAuthor(row.getCell(3).getStringCellValue()); excelBean.setTime(row.getCell(4).getStringCellValue()); excelBeans.add(excelBean); &#125; //遍历集合将数据插入到数据库 for (ExcelBean eb : excelBeans) &#123; sql = &quot;INSERT INTO excel(id,title,href,author,time) &quot; + &quot;VALUES (&apos;&quot; + eb.getId() + &quot;&apos;,&apos;&quot; + eb.getTitle() + &quot;&apos;,&apos;&quot; + eb.getHref() + &quot;&apos;,&apos;&quot; + eb.getAuthor() + &quot;&apos;,&apos;&quot; + eb.getTime() + &quot;&apos;)&quot;; pre = conn.prepareStatement(sql); pre.execute(); &#125; pre.close(); conn.close();&#125;public class ExcelBean &#123; private String id; private String title; private String href; private String author; private String time;&#125;]]></content>
       <categories>
-        <category>Android</category>
+        <category>Java</category>
       </categories>
       <tags>
-        <tag>android</tag>
         <tag>java</tag>
-        <tag>fragment</tag>
+        <tag>mysql</tag>
+        <tag>excel</tag>
       </tags>
   </entry>
   <entry>
