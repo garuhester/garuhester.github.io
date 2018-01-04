@@ -95,7 +95,7 @@
 <meta property="og:description" content="html：1234567891011121314&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;head&amp;gt;	&amp;lt;title&amp;gt;Electron&amp;lt;/title&amp;gt;	&amp;lt;script src=&amp;quot;jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;	&amp;lt;button id=&amp;quot;b">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2381669-a0c2c04600552e00.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-01-04T09:49:36.507Z">
+<meta property="og:updated_time" content="2018-01-04T09:55:19.281Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Electron-引用第三方库">
 <meta name="twitter:description" content="html：1234567891011121314&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;head&amp;gt;	&amp;lt;title&amp;gt;Electron&amp;lt;/title&amp;gt;	&amp;lt;script src=&amp;quot;jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;	&amp;lt;button id=&amp;quot;b">
@@ -389,7 +389,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  101
+                  102
                 </span>
               
 
@@ -418,7 +418,7 @@
 <p>可以看到html文件引用了jquery.min.js<br>如果直接执行命令npm start运行electron程序后，点击按钮会出现错误，原因是jquery没有被成功的引用</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/2381669-a0c2c04600552e00.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <hr>
-<h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p>将<code>&lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;</code>改为<code>&lt;script&gt;window.$ = window.JQuery = require(&#39;./jquery.min.js&#39;);</code></p>
+<h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p>将<code>&lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;</code>改为<code>&lt;script&gt;window.$ = window.JQuery = require(&#39;./jquery.min.js&#39;);&lt;/script&gt;</code></p>
 
       
     </div>
@@ -449,8 +449,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/04/div实现文字超出两行显示省略符号/" rel="next" title="div实现文字超出两行显示省略符号">
-                <i class="fa fa-chevron-left"></i> div实现文字超出两行显示省略符号
+              <a href="/2018/01/04/Electron-打包/" rel="next" title="Electron-打包">
+                <i class="fa fa-chevron-left"></i> Electron-打包
               </a>
             
           </div>

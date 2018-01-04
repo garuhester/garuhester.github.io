@@ -16,65 +16,7 @@
   <entry>
     <title><![CDATA[Electron-引用第三方库]]></title>
     <url>%2F2018%2F01%2F04%2FElectron-%E5%BC%95%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%2F</url>
-    <content type="text"><![CDATA[html：1234567891011121314&lt;!DOCTYPE html&gt;&lt;head&gt; &lt;title&gt;Electron&lt;/title&gt; &lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt; &lt;button id=&quot;btn&quot;&gt;open&lt;/button&gt; &lt;script&gt; $(&apos;#btn&apos;).click(function()&#123; console.log(&quot;hello world&quot;); &#125;); &lt;/script&gt;&lt;/body&gt;&lt;/html&gt; 可以看到html文件引用了jquery.min.js如果直接执行命令npm start运行electron程序后，点击按钮会出现错误，原因是jquery没有被成功的引用 解决方法：将&lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;改为&lt;script&gt;window.$ = window.JQuery = require(&#39;./jquery.min.js&#39;);]]></content>
-      <categories>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>electron</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[div实现文字超出两行显示省略符号]]></title>
-    <url>%2F2018%2F01%2F04%2Fdiv%E5%AE%9E%E7%8E%B0%E6%96%87%E5%AD%97%E8%B6%85%E5%87%BA%E4%B8%A4%E8%A1%8C%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E7%AC%A6%E5%8F%B7%2F</url>
-    <content type="text"><![CDATA[代码：1234overflow:hidden;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;]]></content>
-      <categories>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>html</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[CSS实现发光链接按钮]]></title>
-    <url>%2F2018%2F01%2F04%2FCSS%E5%AE%9E%E7%8E%B0%E5%8F%91%E5%85%89%E9%93%BE%E6%8E%A5%E6%8C%89%E9%92%AE%2F</url>
-    <content type="text"><![CDATA[效果： 代码：html：1&lt;a href=&quot;&quot;&gt;GETSTART&lt;/a&gt; css：1234567891011121314151617body&#123; background:#404593;&#125;a&#123; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); border-radius: 50px; padding: 12px 25px; font-weight: 600; font-size: 14px; background: #FD76B2; box-shadow: 5px 5px 50px #e4498e; color:#fff; text-decoration: none;&#125;]]></content>
-      <categories>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>html</tag>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[CSS实现含文字的分割线]]></title>
-    <url>%2F2018%2F01%2F04%2FCSS%E5%AE%9E%E7%8E%B0%E5%90%AB%E6%96%87%E5%AD%97%E7%9A%84%E5%88%86%E5%89%B2%E7%BA%BF%2F</url>
-    <content type="text"><![CDATA[效果： 代码：html：1&lt;p&gt;OR&lt;/p&gt; css：12345678910111213141516171819202122p&#123; text-align:center; position:relative; &#125;p::before&#123; content:&apos;&apos;; width:45%; height:1px; background:#000; position:absolute; left:10px; top:50%;&#125;p::after&#123; content:&apos;&apos;; width:45%; height:1px; background:#000; position:absolute; right:10px; top:50%;&#125;]]></content>
-      <categories>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>html</tag>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[CSS实现最右元素边界线消失]]></title>
-    <url>%2F2018%2F01%2F04%2FCSS%E5%AE%9E%E7%8E%B0%E6%9C%80%E5%8F%B3%E5%85%83%E7%B4%A0%E8%BE%B9%E7%95%8C%E7%BA%BF%E6%B6%88%E5%A4%B1%2F</url>
-    <content type="text"><![CDATA[效果： 实现：html：12345678&lt;div class=&quot;main&quot;&gt; &lt;div class=&quot;content&quot;&gt; &lt;div class=&quot;box&quot;&gt;第1个&lt;/div&gt; &lt;div class=&quot;box&quot;&gt;第2个&lt;/div&gt; &lt;div class=&quot;box&quot;&gt;第3个&lt;/div&gt; &lt;div class=&quot;box&quot;&gt;第4个&lt;/div&gt; &lt;/div&gt;&lt;/div&gt; css：12345.box&#123; float:left; padding:5px; border-left:1px solid #000; &#125; 这里给每个元素都添加了左边框线，可以看到第一个元素有两条边界（一条是自己的，一条是右边元素的），现在要将第一个的左边界线去掉： 取掉第一个元素的左边界线，修改CSS：css：1234567891011.main&#123; overflow:hidden;&#125;.content&#123; margin-left:-1px;&#125;.box&#123; float:left; padding:5px; border-left:1px solid #000; &#125; 原理：将四个元素整体向左移动一个像素，然后将外容器设置overflow:hidden就可以刚好将第一个元素的1px的左边界遮住]]></content>
-      <categories>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>html</tag>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Electron-安装及实例运行]]></title>
-    <url>%2F2018%2F01%2F04%2FElectron-%E5%AE%89%E8%A3%85%E5%8F%8A%E5%AE%9E%E4%BE%8B%E8%BF%90%E8%A1%8C%2F</url>
-    <content type="text"><![CDATA[创建目录 demo 进入目录 demo，运行命令init```123. 运行命令```npm install electron --save-dev```或者```cnpm install electron --save-dev```（淘宝镜像）4. 创建文件index.js，写入代码： const {app,BrowserWindow} = require(‘electron’); var mainWindow;app.on(‘ready’,function(){ mainWindow = new BrowserWindow({ width:700, height:630, backgroundColor:’#ddd’ }); //加载网页 // mainWindow.loadURL(&quot;http://hlz.space/blog&quot;); //加载当前目录文件 mainWindow.loadURL(`file://${__dirname}/index.html`); });15. 修改package.json中的&quot;script&quot; “scripts”: { “start”: “electron .”}16. 运行命令```npm start]]></content>
+    <content type="text"><![CDATA[html：1234567891011121314&lt;!DOCTYPE html&gt;&lt;head&gt; &lt;title&gt;Electron&lt;/title&gt; &lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt; &lt;button id=&quot;btn&quot;&gt;open&lt;/button&gt; &lt;script&gt; $(&apos;#btn&apos;).click(function()&#123; console.log(&quot;hello world&quot;); &#125;); &lt;/script&gt;&lt;/body&gt;&lt;/html&gt; 可以看到html文件引用了jquery.min.js如果直接执行命令npm start运行electron程序后，点击按钮会出现错误，原因是jquery没有被成功的引用 解决方法：将&lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;改为&lt;script&gt;window.$ = window.JQuery = require(&#39;./jquery.min.js&#39;);&lt;/script&gt;]]></content>
       <categories>
         <category>Web</category>
       </categories>
@@ -94,51 +36,61 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[CSS实现多列均匀布局]]></title>
-    <url>%2F2018%2F01%2F04%2FCSS%E5%AE%9E%E7%8E%B0%E5%A4%9A%E5%88%97%E5%9D%87%E5%8C%80%E5%B8%83%E5%B1%80%2F</url>
-    <content type="text"><![CDATA[效果： 实现： 方法一： html：12345678&lt;div class=&quot;main&quot;&gt; &lt;div class=&quot;box&quot;&gt;&lt;/div&gt; &lt;div class=&quot;box&quot;&gt;&lt;/div&gt; &lt;div class=&quot;box&quot;&gt;&lt;/div&gt; &lt;div class=&quot;box&quot;&gt;&lt;/div&gt; &lt;div class=&quot;box&quot;&gt;&lt;/div&gt; &lt;div class=&quot;box&quot;&gt;&lt;/div&gt; &lt;/div&gt; css：1234567891011.main&#123; text-align:justify; text-align-last:justify;&#125;.box&#123; width:50px; height:50px; background:tomato; border-radius:50%; display:inline-block;&#125; 方法二（兼容性好）： html：12345678&lt;div class=&quot;main&quot;&gt; &lt;div class=&quot;box&quot;&gt;&lt;/div&gt; &lt;div class=&quot;box&quot;&gt;&lt;/div&gt; &lt;div class=&quot;box&quot;&gt;&lt;/div&gt; &lt;div class=&quot;box&quot;&gt;&lt;/div&gt; &lt;div class=&quot;box&quot;&gt;&lt;/div&gt; &lt;div class=&quot;box&quot;&gt;&lt;/div&gt; &lt;/div&gt; css：123456789101112131415.main&#123; text-align:justify;&#125;.main::after&#123; content:&apos;&apos;; display:inline-block; width:100%;&#125;.box&#123; width:50px; height:50px; background:tomato; border-radius:50%; display:inline-block;&#125;]]></content>
+    <title><![CDATA[div实现文字超出两行显示省略符号]]></title>
+    <url>%2F2018%2F01%2F04%2Fdiv%E5%AE%9E%E7%8E%B0%E6%96%87%E5%AD%97%E8%B6%85%E5%87%BA%E4%B8%A4%E8%A1%8C%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E7%AC%A6%E5%8F%B7%2F</url>
+    <content type="text"><![CDATA[代码：1234overflow:hidden;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;]]></content>
       <categories>
         <category>Web</category>
       </categories>
       <tags>
         <tag>html</tag>
-        <tag>css</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[CSS实现checkbox计数]]></title>
-    <url>%2F2018%2F01%2F04%2FCSS%E5%AE%9E%E7%8E%B0checkbox%E8%AE%A1%E6%95%B0%2F</url>
-    <content type="text"><![CDATA[效果：计数前： 计数后： 代码：html：123456789&lt;div class=&quot;choose&quot;&gt; &lt;label&gt;&lt;input type=&quot;checkbox&quot; /&gt;重庆&lt;/label&gt; &lt;label&gt;&lt;input type=&quot;checkbox&quot; /&gt;北京&lt;/label&gt; &lt;label&gt;&lt;input type=&quot;checkbox&quot; /&gt;广州&lt;/label&gt; &lt;label&gt;&lt;input type=&quot;checkbox&quot; /&gt;成都&lt;/label&gt; &lt;label&gt;&lt;input type=&quot;checkbox&quot; /&gt;云南&lt;/label&gt; &lt;label&gt;&lt;input type=&quot;checkbox&quot; /&gt;上海&lt;/label&gt;&lt;/div&gt;&lt;div&gt;你选择了&lt;span class=&quot;count&quot;&gt;&lt;/span&gt;个城市&lt;/div&gt; css：123456789.choose&#123; counter-reset:city;&#125;.choose input:checked&#123; counter-increment:city;&#125;.count::before&#123; content:counter(city);&#125;]]></content>
+    <title><![CDATA[CSS实现含文字的分割线]]></title>
+    <url>%2F2018%2F01%2F04%2FCSS%E5%AE%9E%E7%8E%B0%E5%90%AB%E6%96%87%E5%AD%97%E7%9A%84%E5%88%86%E5%89%B2%E7%BA%BF%2F</url>
+    <content type="text"><![CDATA[效果： 代码：html：1&lt;p&gt;OR&lt;/p&gt; css：12345678910111213141516171819202122p&#123; text-align:center; position:relative; &#125;p::before&#123; content:&apos;&apos;; width:45%; height:1px; background:#000; position:absolute; left:10px; top:50%;&#125;p::after&#123; content:&apos;&apos;; width:45%; height:1px; background:#000; position:absolute; right:10px; top:50%;&#125;]]></content>
       <categories>
         <category>Web</category>
       </categories>
       <tags>
-        <tag>html</tag>
         <tag>css</tag>
+        <tag>html</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[CSS-单标签实现左边竖条的6种方法]]></title>
-    <url>%2F2018%2F01%2F04%2FCSS-%E5%8D%95%E6%A0%87%E7%AD%BE%E5%AE%9E%E7%8E%B0%E5%B7%A6%E8%BE%B9%E7%AB%96%E6%9D%A1%E7%9A%846%E7%A7%8D%E6%96%B9%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[效果： html：1&lt;div class=&quot;main&quot;&gt;&lt;/div&gt; 实现： 方法一：border 1234.main&#123; ... border-left:5px solid tomato;&#125; 方法二：伪元素（before或after） 12345678910111213.main&#123; ... position:relative;&#125;.main::after&#123; content:&apos;&apos;; width:5px; height:100%; position:absolute; top:0; left:0; background:tomato;&#125; 方法三：外部box-shadow 1234.main&#123; ... box-shadow:-5px 0px 0 0 tomato;&#125; 方法四：内部box-shadow 1234.main&#123; ... box-shadow:inset 5px 0px 0 0 tomato;&#125; 方法五：drop-shadow 1234.main&#123; ... filter:drop-shadow(-5px 0 0 tomato);&#125; 方法六：linear-gradient 1234.main&#123; ... background-image:linear-gradient(90deg, deeppink 0px, deeppink 5px, transparent 0px);&#125;]]></content>
+    <title><![CDATA[CSS实现发光链接按钮]]></title>
+    <url>%2F2018%2F01%2F04%2FCSS%E5%AE%9E%E7%8E%B0%E5%8F%91%E5%85%89%E9%93%BE%E6%8E%A5%E6%8C%89%E9%92%AE%2F</url>
+    <content type="text"><![CDATA[效果： 代码：html：1&lt;a href=&quot;&quot;&gt;GETSTART&lt;/a&gt; css：1234567891011121314151617body&#123; background:#404593;&#125;a&#123; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); border-radius: 50px; padding: 12px 25px; font-weight: 600; font-size: 14px; background: #FD76B2; box-shadow: 5px 5px 50px #e4498e; color:#fff; text-decoration: none;&#125;]]></content>
       <categories>
         <category>Web</category>
       </categories>
       <tags>
-        <tag>html</tag>
         <tag>css</tag>
+        <tag>html</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[CSS-利用table实现五种常用布局]]></title>
-    <url>%2F2018%2F01%2F04%2FCSS-%E5%88%A9%E7%94%A8table%E5%AE%9E%E7%8E%B0%E4%BA%94%E7%A7%8D%E5%B8%B8%E7%94%A8%E5%B8%83%E5%B1%80%2F</url>
-    <content type="text"><![CDATA[布局一： 效果： 代码： html：123&lt;div class=&quot;header&quot;&gt;header&lt;/div&gt;&lt;div class=&quot;main&quot;&gt;main&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;footer&lt;/div&gt; 注意：div中要有内容，不然显示不出来 css：12345678910111213141516171819202122body&#123; margin:0; padding:0; width:100%; min-height:100vh; display:table; text-align:center;&#125;.header,.main,.footer&#123; display:table-row;&#125;.header&#123; height:50px; background:tomato;&#125;.main&#123; background:skyblue;&#125;.footer&#123; height:50px; background:#9d70ff;&#125; 布局二： 效果： 代码： html：123456&lt;div class=&quot;header&quot;&gt;header&lt;/div&gt;&lt;div class=&quot;main&quot;&gt; &lt;div class=&quot;left&quot;&gt;left&lt;/div&gt; &lt;div class=&quot;right&quot;&gt;right&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;footer&lt;/div&gt; css：123456789101112131415161718192021222324252627282930313233body&#123; margin:0; padding:0; width:100%; min-height:100vh; display:table; text-align:center;&#125;.header,.main,.footer&#123; display:table-row;&#125;.header&#123; height:50px; background:tomato;&#125;.main&#123; width:100%; display:table; height:calc(100vh - 100px);&#125;.main .left&#123; width:300px; display:table-cell; background:#fcea96;&#125;.main .right&#123; display:table-cell; background:skyblue;&#125;.footer&#123; height:50px; background:#9d70ff;&#125; &gt;注意：.main的height属性中的100px是header和footer的高度之和布局三： 效果： 代码： html：123456&lt;div class=&quot;left&quot;&gt;left&lt;/div&gt;&lt;div class=&quot;right&quot;&gt; &lt;div class=&quot;header&quot;&gt;header&lt;/div&gt; &lt;div class=&quot;main&quot;&gt;main&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;footer&lt;/div&gt;&lt;/div&gt; css：12345678910111213141516171819202122232425262728293031body&#123; margin:0; padding:0; min-height:100vh; display:table; text-align:center;&#125;.left&#123; display:table-cell; width:200px; background:tomato;&#125;.right&#123; display:table; width:calc(100vw - 200px); height:100vh;&#125;.header,.main,.footer&#123; display:table-row;&#125;.header&#123; height:50px; background:skyblue;&#125;.main&#123; background:#fcea96;&#125;.footer&#123; height:50px; background:#9d70ff;&#125; 布局四（双栏布局，例子为左边固定，右边自适应）： 效果： 代码： html：12&lt;div class=&quot;left&quot;&gt;left&lt;/div&gt;&lt;div class=&quot;right&quot;&gt;right&lt;/div&gt; css：123456789101112131415161718body&#123; margin:0; padding:0; width:100%; height:100vh; display:table; text-align:center;&#125;.left,.right&#123; display:table-cell;&#125;.left&#123; width:300px; background:tomato;&#125;.right&#123; background:skyblue;&#125; 布局五（三栏布局，例子为左边固定，右边固定，中间自适应）： 效果： 代码： html：123&lt;div class=&quot;left&quot;&gt;left&lt;/div&gt;&lt;div class=&quot;middle&quot;&gt;middle&lt;/div&gt;&lt;div class=&quot;right&quot;&gt;right&lt;/div&gt; css：12345678910111213141516171819202122body&#123; margin:0; padding:0; width:100%; height:100vh; display:table; text-align:center;&#125;.left,.middle,.right&#123; display:table-cell;&#125;.left&#123; width:300px; background:tomato;&#125;.middle&#123; background:#ffe69e;&#125;.right&#123; width:200px; background:skyblue;&#125;]]></content>
+    <title><![CDATA[Electron-安装及实例运行]]></title>
+    <url>%2F2018%2F01%2F04%2FElectron-%E5%AE%89%E8%A3%85%E5%8F%8A%E5%AE%9E%E4%BE%8B%E8%BF%90%E8%A1%8C%2F</url>
+    <content type="text"><![CDATA[创建目录 demo 进入目录 demo，运行命令init```123. 运行命令```npm install electron --save-dev```或者```cnpm install electron --save-dev```（淘宝镜像）4. 创建文件index.js，写入代码： const {app,BrowserWindow} = require(‘electron’); var mainWindow;app.on(‘ready’,function(){ mainWindow = new BrowserWindow({ width:700, height:630, backgroundColor:’#ddd’ }); //加载网页 // mainWindow.loadURL(&quot;http://hlz.space/blog&quot;); //加载当前目录文件 mainWindow.loadURL(`file://${__dirname}/index.html`); });15. 修改package.json中的&quot;script&quot; “scripts”: { “start”: “electron .”}16. 运行命令```npm start]]></content>
       <categories>
         <category>Web</category>
       </categories>
       <tags>
-        <tag>html</tag>
+        <tag>electron</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CSS实现最右元素边界线消失]]></title>
+    <url>%2F2018%2F01%2F04%2FCSS%E5%AE%9E%E7%8E%B0%E6%9C%80%E5%8F%B3%E5%85%83%E7%B4%A0%E8%BE%B9%E7%95%8C%E7%BA%BF%E6%B6%88%E5%A4%B1%2F</url>
+    <content type="text"><![CDATA[效果： 实现：html：12345678&lt;div class=&quot;main&quot;&gt; &lt;div class=&quot;content&quot;&gt; &lt;div class=&quot;box&quot;&gt;第1个&lt;/div&gt; &lt;div class=&quot;box&quot;&gt;第2个&lt;/div&gt; &lt;div class=&quot;box&quot;&gt;第3个&lt;/div&gt; &lt;div class=&quot;box&quot;&gt;第4个&lt;/div&gt; &lt;/div&gt;&lt;/div&gt; css：12345.box&#123; float:left; padding:5px; border-left:1px solid #000; &#125; 这里给每个元素都添加了左边框线，可以看到第一个元素有两条边界（一条是自己的，一条是右边元素的），现在要将第一个的左边界线去掉： 取掉第一个元素的左边界线，修改CSS：css：1234567891011.main&#123; overflow:hidden;&#125;.content&#123; margin-left:-1px;&#125;.box&#123; float:left; padding:5px; border-left:1px solid #000; &#125; 原理：将四个元素整体向左移动一个像素，然后将外容器设置overflow:hidden就可以刚好将第一个元素的1px的左边界遮住]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
         <tag>css</tag>
+        <tag>html</tag>
       </tags>
   </entry>
   <entry>
@@ -149,33 +101,56 @@
         <category>Web</category>
       </categories>
       <tags>
-        <tag>html</tag>
         <tag>css</tag>
+        <tag>html</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[canvas绘画封装记录]]></title>
-    <url>%2F2018%2F01%2F04%2Fcanvas%E7%BB%98%E7%94%BB%E5%B0%81%E8%A3%85%E8%AE%B0%E5%BD%95%2F</url>
-    <content type="text"><![CDATA[初始化html：1&lt;canvas id=&quot;canvas&quot; width=&quot;500&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt; javascript：12var canv = document.getElementById(&apos;canvas&apos;);var ctx = canv.getContext(&apos;2d&apos;); 画直线 1234567891011121314/** x1：起始横坐标* y1：起始纵坐标* x2：结束横坐标* y2：结束纵坐标* color：颜色*/function drawLine(x1,y1,x2,y2,color)&#123; ctx.beginPath(); ctx.strokeStyle = color; ctx.moveTo(x1,y1); ctx.lineTo(x2,y2); ctx.stroke();&#125; 画弧线（实心或空心） 12345678910111213141516/** x：弧心横坐标* y：弧心纵坐标* r：弧半径* startAngle：起始角度* endAngle：结束角度* dir：方向（默认：false（顺时针），true（逆时针））* color：颜色* type：类型（0（空心），1（实心））*/function drawArc(x,y,r,sa,ea,dir,color,type)&#123; ctx.beginPath(); type == 0 ? ctx.strokeStyle=color : ctx.fillStyle=color; ctx.arc(x,y,r,(Math.PI/180)*sa,(Math.PI/180)*ea,dir); type == 0 ? ctx.stroke() : ctx.fill();&#125; 画多边形（实心或空心） 1234567891011121314/** arr：多边形顶角坐标* color：颜色* type：类型（0（空心），1（实心））*/function drawShape(arr,color,type)&#123; ctx.beginPath(); type == 0 ? ctx.strokeStyle=color : ctx.fillStyle=color; ctx.moveTo(arr[0][0],arr[0][1]); for(var i=1;i&lt;arr.length;i++)&#123; ctx.lineTo(arr[i][0],arr[i][1]); &#125; type == 0 ? ctx.stroke() : ctx.fill();&#125;]]></content>
+    <title><![CDATA[CSS-单标签实现左边竖条的6种方法]]></title>
+    <url>%2F2018%2F01%2F04%2FCSS-%E5%8D%95%E6%A0%87%E7%AD%BE%E5%AE%9E%E7%8E%B0%E5%B7%A6%E8%BE%B9%E7%AB%96%E6%9D%A1%E7%9A%846%E7%A7%8D%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[效果： html：1&lt;div class=&quot;main&quot;&gt;&lt;/div&gt; 实现： 方法一：border 1234.main&#123; ... border-left:5px solid tomato;&#125; 方法二：伪元素（before或after） 12345678910111213.main&#123; ... position:relative;&#125;.main::after&#123; content:&apos;&apos;; width:5px; height:100%; position:absolute; top:0; left:0; background:tomato;&#125; 方法三：外部box-shadow 1234.main&#123; ... box-shadow:-5px 0px 0 0 tomato;&#125; 方法四：内部box-shadow 1234.main&#123; ... box-shadow:inset 5px 0px 0 0 tomato;&#125; 方法五：drop-shadow 1234.main&#123; ... filter:drop-shadow(-5px 0 0 tomato);&#125; 方法六：linear-gradient 1234.main&#123; ... background-image:linear-gradient(90deg, deeppink 0px, deeppink 5px, transparent 0px);&#125;]]></content>
       <categories>
         <category>Web</category>
       </categories>
       <tags>
+        <tag>css</tag>
         <tag>html</tag>
-        <tag>canvas</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[SCSS学习记录]]></title>
-    <url>%2F2018%2F01%2F04%2FSCSS%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%2F</url>
-    <content type="text"><![CDATA[1. 选择器嵌套html：123&lt;div class=&quot;parent&quot;&gt; &lt;div class=&quot;child&quot;&gt;&lt;/div&gt;&lt;/div&gt; css：12345678910.main&#123; width:200px; height:200px; background:tomato; .content&#123; width:100px; height:100px; background:skyblue; &#125;&#125; 2. 父选择器 &amp;html：1234&lt;a href=&quot;#&quot;&gt;goto&lt;/a&gt;&lt;div class=&quot;main-one&quot;&gt;one&lt;/div&gt;&lt;div class=&quot;main-two&quot;&gt;two&lt;/div&gt; css：123456789101112131415a&#123; text-decoration:none; &amp;:hover&#123; text-decoration:underline; &#125;&#125;.main&#123; &amp;-one&#123; color:red; &#125; &amp;-two&#123; color:green; &#125;&#125; 3. 属性嵌套html：1&lt;div class=&quot;main&quot;&gt;&lt;/div&gt; css：12345678910111213.content&#123; width:100px; height:100px; background:skyblue; /* 属性嵌套 */ margin:&#123; left:10px; top:10px; right:10px; bottom:10px; &#125;&#125; 4. 注释 */``` 与 ```//```12345```/* */```：在编译时**会**写进CSS文件```//```：在编译时**不会**写进CSS文件## 5. 插值语句编译前：$name:”hester”;/ hello,my name id #{$name} /1编译后： / hello,my name id hester /123## 6. 变量- 全局变量： $w:200px;$h:200px;.main{ width:$w; height:$h;}1- 局部变量： .main{ $w:200px; $h:200px; width:$w; height:$h;}1- 局部变量转换为全局变量（添加 ```!global```）： .main{ $w:200px !global; $h:200px !global; width:$w; height:$h;}123## 7. @mixin 和 @includehtml： goto1css： @mixin mainstyle($word){ #{$word}{ text-decoration:none; } #{$word}:hover{ text-decoration:underline; }}@include mainstyle(“.main a”);12345## 8. 变量定义 !default：&gt;如果变量已经被赋值，不会再被重新赋值，但是如果变量还没有被赋值，则会被赋予新的值。编译前： $content: “First”;$content: “Second” !default;$new_content: “New” !default; #main { content: $content; new-content: $new_content;}1编译后： #main { content: “First”; new-content: “New”;}```]]></content>
+    <title><![CDATA[CSS实现checkbox计数]]></title>
+    <url>%2F2018%2F01%2F04%2FCSS%E5%AE%9E%E7%8E%B0checkbox%E8%AE%A1%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[效果：计数前： 计数后： 代码：html：123456789&lt;div class=&quot;choose&quot;&gt; &lt;label&gt;&lt;input type=&quot;checkbox&quot; /&gt;重庆&lt;/label&gt; &lt;label&gt;&lt;input type=&quot;checkbox&quot; /&gt;北京&lt;/label&gt; &lt;label&gt;&lt;input type=&quot;checkbox&quot; /&gt;广州&lt;/label&gt; &lt;label&gt;&lt;input type=&quot;checkbox&quot; /&gt;成都&lt;/label&gt; &lt;label&gt;&lt;input type=&quot;checkbox&quot; /&gt;云南&lt;/label&gt; &lt;label&gt;&lt;input type=&quot;checkbox&quot; /&gt;上海&lt;/label&gt;&lt;/div&gt;&lt;div&gt;你选择了&lt;span class=&quot;count&quot;&gt;&lt;/span&gt;个城市&lt;/div&gt; css：123456789.choose&#123; counter-reset:city;&#125;.choose input:checked&#123; counter-increment:city;&#125;.count::before&#123; content:counter(city);&#125;]]></content>
       <categories>
         <category>Web</category>
       </categories>
       <tags>
-        <tag>html</tag>
         <tag>css</tag>
-        <tag>scss</tag>
+        <tag>html</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CSS-利用table实现五种常用布局]]></title>
+    <url>%2F2018%2F01%2F04%2FCSS-%E5%88%A9%E7%94%A8table%E5%AE%9E%E7%8E%B0%E4%BA%94%E7%A7%8D%E5%B8%B8%E7%94%A8%E5%B8%83%E5%B1%80%2F</url>
+    <content type="text"><![CDATA[布局一： 效果： 代码： html：123&lt;div class=&quot;header&quot;&gt;header&lt;/div&gt;&lt;div class=&quot;main&quot;&gt;main&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;footer&lt;/div&gt; 注意：div中要有内容，不然显示不出来 css：12345678910111213141516171819202122body&#123; margin:0; padding:0; width:100%; min-height:100vh; display:table; text-align:center;&#125;.header,.main,.footer&#123; display:table-row;&#125;.header&#123; height:50px; background:tomato;&#125;.main&#123; background:skyblue;&#125;.footer&#123; height:50px; background:#9d70ff;&#125; 布局二： 效果： 代码： html：123456&lt;div class=&quot;header&quot;&gt;header&lt;/div&gt;&lt;div class=&quot;main&quot;&gt; &lt;div class=&quot;left&quot;&gt;left&lt;/div&gt; &lt;div class=&quot;right&quot;&gt;right&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;footer&lt;/div&gt; css：123456789101112131415161718192021222324252627282930313233body&#123; margin:0; padding:0; width:100%; min-height:100vh; display:table; text-align:center;&#125;.header,.main,.footer&#123; display:table-row;&#125;.header&#123; height:50px; background:tomato;&#125;.main&#123; width:100%; display:table; height:calc(100vh - 100px);&#125;.main .left&#123; width:300px; display:table-cell; background:#fcea96;&#125;.main .right&#123; display:table-cell; background:skyblue;&#125;.footer&#123; height:50px; background:#9d70ff;&#125; &gt;注意：.main的height属性中的100px是header和footer的高度之和布局三： 效果： 代码： html：123456&lt;div class=&quot;left&quot;&gt;left&lt;/div&gt;&lt;div class=&quot;right&quot;&gt; &lt;div class=&quot;header&quot;&gt;header&lt;/div&gt; &lt;div class=&quot;main&quot;&gt;main&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;footer&lt;/div&gt;&lt;/div&gt; css：12345678910111213141516171819202122232425262728293031body&#123; margin:0; padding:0; min-height:100vh; display:table; text-align:center;&#125;.left&#123; display:table-cell; width:200px; background:tomato;&#125;.right&#123; display:table; width:calc(100vw - 200px); height:100vh;&#125;.header,.main,.footer&#123; display:table-row;&#125;.header&#123; height:50px; background:skyblue;&#125;.main&#123; background:#fcea96;&#125;.footer&#123; height:50px; background:#9d70ff;&#125; 布局四（双栏布局，例子为左边固定，右边自适应）： 效果： 代码： html：12&lt;div class=&quot;left&quot;&gt;left&lt;/div&gt;&lt;div class=&quot;right&quot;&gt;right&lt;/div&gt; css：123456789101112131415161718body&#123; margin:0; padding:0; width:100%; height:100vh; display:table; text-align:center;&#125;.left,.right&#123; display:table-cell;&#125;.left&#123; width:300px; background:tomato;&#125;.right&#123; background:skyblue;&#125; 布局五（三栏布局，例子为左边固定，右边固定，中间自适应）： 效果： 代码： html：123&lt;div class=&quot;left&quot;&gt;left&lt;/div&gt;&lt;div class=&quot;middle&quot;&gt;middle&lt;/div&gt;&lt;div class=&quot;right&quot;&gt;right&lt;/div&gt; css：12345678910111213141516171819202122body&#123; margin:0; padding:0; width:100%; height:100vh; display:table; text-align:center;&#125;.left,.middle,.right&#123; display:table-cell;&#125;.left&#123; width:300px; background:tomato;&#125;.middle&#123; background:#ffe69e;&#125;.right&#123; width:200px; background:skyblue;&#125;]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>html</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CSS实现多列均匀布局]]></title>
+    <url>%2F2018%2F01%2F04%2FCSS%E5%AE%9E%E7%8E%B0%E5%A4%9A%E5%88%97%E5%9D%87%E5%8C%80%E5%B8%83%E5%B1%80%2F</url>
+    <content type="text"><![CDATA[效果： 实现： 方法一： html：12345678&lt;div class=&quot;main&quot;&gt; &lt;div class=&quot;box&quot;&gt;&lt;/div&gt; &lt;div class=&quot;box&quot;&gt;&lt;/div&gt; &lt;div class=&quot;box&quot;&gt;&lt;/div&gt; &lt;div class=&quot;box&quot;&gt;&lt;/div&gt; &lt;div class=&quot;box&quot;&gt;&lt;/div&gt; &lt;div class=&quot;box&quot;&gt;&lt;/div&gt; &lt;/div&gt; css：1234567891011.main&#123; text-align:justify; text-align-last:justify;&#125;.box&#123; width:50px; height:50px; background:tomato; border-radius:50%; display:inline-block;&#125; 方法二（兼容性好）： html：12345678&lt;div class=&quot;main&quot;&gt; &lt;div class=&quot;box&quot;&gt;&lt;/div&gt; &lt;div class=&quot;box&quot;&gt;&lt;/div&gt; &lt;div class=&quot;box&quot;&gt;&lt;/div&gt; &lt;div class=&quot;box&quot;&gt;&lt;/div&gt; &lt;div class=&quot;box&quot;&gt;&lt;/div&gt; &lt;div class=&quot;box&quot;&gt;&lt;/div&gt; &lt;/div&gt; css：123456789101112131415.main&#123; text-align:justify;&#125;.main::after&#123; content:&apos;&apos;; display:inline-block; width:100%;&#125;.box&#123; width:50px; height:50px; background:tomato; border-radius:50%; display:inline-block;&#125;]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>html</tag>
       </tags>
   </entry>
   <entry>
@@ -191,6 +166,31 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[纯CSS实现Tab导航栏切换]]></title>
+    <url>%2F2018%2F01%2F04%2F%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0Tab%E5%AF%BC%E8%88%AA%E6%A0%8F%E5%88%87%E6%8D%A2%2F</url>
+    <content type="text"><![CDATA[效果： 代码：html：12345678&lt;div class=&quot;main&quot;&gt; &lt;div id=&quot;content1&quot;&gt;列表一内容&lt;/div&gt; &lt;div id=&quot;content2&quot;&gt;列表二内容&lt;/div&gt; &lt;ul class=&quot;tab&quot;&gt; &lt;li&gt;&lt;a href=&quot;#content1&quot;&gt;列表一&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#content2&quot;&gt;列表二&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt;&lt;/div&gt; css：12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152.main&#123; position: absolute; left: 50%; top:30%; transform: translate(-50%,-50%);&#125;.tab &#123; margin: 0; padding: 0; overflow: hidden; list-style-type: none;&#125;.tab li &#123; float: left;&#125;.tab li a &#123; text-decoration: none; color: #000; background: #ddd; display: inline-block; width: 120px; height: 40px; text-align: center; line-height: 40px;&#125;#content1,#content2 &#123; display: none; width:240px; height:100px; border:1px solid #ddd; position: absolute; top:40px; padding:10px; box-sizing: border-box;&#125;#content1:target,#content2:target &#123; display: block;&#125;#content1:target ~ .tab li:nth-child(1) a&#123; background:skyblue; color:#fff;&#125;#content2:target ~ .tab li:nth-child(2) a&#123; background:skyblue; color:#fff;&#125; css关键部分：12345678910111213141516#content1,#content2 &#123; display: none;&#125;#content1:target,#content2:target &#123; display: block;&#125;#content1:target ~ .tab li:nth-child(1) a&#123; background:skyblue; color:#fff;&#125;#content2:target ~ .tab li:nth-child(2) a&#123; background:skyblue; color:#fff;&#125;]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>html</tag>
+        <tag>tab</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[canvas绘画封装记录]]></title>
+    <url>%2F2018%2F01%2F04%2Fcanvas%E7%BB%98%E7%94%BB%E5%B0%81%E8%A3%85%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[初始化html：1&lt;canvas id=&quot;canvas&quot; width=&quot;500&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt; javascript：12var canv = document.getElementById(&apos;canvas&apos;);var ctx = canv.getContext(&apos;2d&apos;); 画直线 1234567891011121314/** x1：起始横坐标* y1：起始纵坐标* x2：结束横坐标* y2：结束纵坐标* color：颜色*/function drawLine(x1,y1,x2,y2,color)&#123; ctx.beginPath(); ctx.strokeStyle = color; ctx.moveTo(x1,y1); ctx.lineTo(x2,y2); ctx.stroke();&#125; 画弧线（实心或空心） 12345678910111213141516/** x：弧心横坐标* y：弧心纵坐标* r：弧半径* startAngle：起始角度* endAngle：结束角度* dir：方向（默认：false（顺时针），true（逆时针））* color：颜色* type：类型（0（空心），1（实心））*/function drawArc(x,y,r,sa,ea,dir,color,type)&#123; ctx.beginPath(); type == 0 ? ctx.strokeStyle=color : ctx.fillStyle=color; ctx.arc(x,y,r,(Math.PI/180)*sa,(Math.PI/180)*ea,dir); type == 0 ? ctx.stroke() : ctx.fill();&#125; 画多边形（实心或空心） 1234567891011121314/** arr：多边形顶角坐标* color：颜色* type：类型（0（空心），1（实心））*/function drawShape(arr,color,type)&#123; ctx.beginPath(); type == 0 ? ctx.strokeStyle=color : ctx.fillStyle=color; ctx.moveTo(arr[0][0],arr[0][1]); for(var i=1;i&lt;arr.length;i++)&#123; ctx.lineTo(arr[i][0],arr[i][1]); &#125; type == 0 ? ctx.stroke() : ctx.fill();&#125;]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>html</tag>
+        <tag>canvas</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[子div设置margin-top使父div也跟着向下移动]]></title>
     <url>%2F2018%2F01%2F04%2F%E5%AD%90div%E8%AE%BE%E7%BD%AEmargin-top%E4%BD%BF%E7%88%B6div%E4%B9%9F%E8%B7%9F%E7%9D%80%E5%90%91%E4%B8%8B%E7%A7%BB%E5%8A%A8%2F</url>
     <content type="text"><![CDATA[代码：html：123&lt;div class=&quot;main&quot;&gt; &lt;div class=&quot;content&quot;&gt;&lt;/div&gt;&lt;/div&gt; css：1234567891011121314body&#123; margin:0; padding:0;&#125;.main&#123; width:200px; height:200px; background:tomato;&#125;.content&#123; width:100px; height:100px; background:skyblue;&#125; 效果： 原理：一个盒子如果没有上补白(padding-top)和上边框(border-top)，那么这个盒子的上边距会和其内部文档流中的第一个子元素的上边距重叠。 解决方法：1. 父div设置padding-top1234.main&#123; ... padding-top:1px;&#125; 2. 父div设置border-top1234.main&#123; ... border-top:1px solid #fff;&#125; 3. 父div设置overflow（推荐使用）1234.main&#123; ... overflow:hidden;&#125;]]></content>
@@ -202,28 +202,16 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[纯CSS实现Tab导航栏切换]]></title>
-    <url>%2F2018%2F01%2F04%2F%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0Tab%E5%AF%BC%E8%88%AA%E6%A0%8F%E5%88%87%E6%8D%A2%2F</url>
-    <content type="text"><![CDATA[效果： 代码：html：12345678&lt;div class=&quot;main&quot;&gt; &lt;div id=&quot;content1&quot;&gt;列表一内容&lt;/div&gt; &lt;div id=&quot;content2&quot;&gt;列表二内容&lt;/div&gt; &lt;ul class=&quot;tab&quot;&gt; &lt;li&gt;&lt;a href=&quot;#content1&quot;&gt;列表一&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#content2&quot;&gt;列表二&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt;&lt;/div&gt; css：12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152.main&#123; position: absolute; left: 50%; top:30%; transform: translate(-50%,-50%);&#125;.tab &#123; margin: 0; padding: 0; overflow: hidden; list-style-type: none;&#125;.tab li &#123; float: left;&#125;.tab li a &#123; text-decoration: none; color: #000; background: #ddd; display: inline-block; width: 120px; height: 40px; text-align: center; line-height: 40px;&#125;#content1,#content2 &#123; display: none; width:240px; height:100px; border:1px solid #ddd; position: absolute; top:40px; padding:10px; box-sizing: border-box;&#125;#content1:target,#content2:target &#123; display: block;&#125;#content1:target ~ .tab li:nth-child(1) a&#123; background:skyblue; color:#fff;&#125;#content2:target ~ .tab li:nth-child(2) a&#123; background:skyblue; color:#fff;&#125; css关键部分：12345678910111213141516#content1,#content2 &#123; display: none;&#125;#content1:target,#content2:target &#123; display: block;&#125;#content1:target ~ .tab li:nth-child(1) a&#123; background:skyblue; color:#fff;&#125;#content2:target ~ .tab li:nth-child(2) a&#123; background:skyblue; color:#fff;&#125;]]></content>
+    <title><![CDATA[SCSS学习记录]]></title>
+    <url>%2F2018%2F01%2F04%2FSCSS%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[1. 选择器嵌套html：123&lt;div class=&quot;parent&quot;&gt; &lt;div class=&quot;child&quot;&gt;&lt;/div&gt;&lt;/div&gt; css：12345678910.main&#123; width:200px; height:200px; background:tomato; .content&#123; width:100px; height:100px; background:skyblue; &#125;&#125; 2. 父选择器 &amp;html：1234&lt;a href=&quot;#&quot;&gt;goto&lt;/a&gt;&lt;div class=&quot;main-one&quot;&gt;one&lt;/div&gt;&lt;div class=&quot;main-two&quot;&gt;two&lt;/div&gt; css：123456789101112131415a&#123; text-decoration:none; &amp;:hover&#123; text-decoration:underline; &#125;&#125;.main&#123; &amp;-one&#123; color:red; &#125; &amp;-two&#123; color:green; &#125;&#125; 3. 属性嵌套html：1&lt;div class=&quot;main&quot;&gt;&lt;/div&gt; css：12345678910111213.content&#123; width:100px; height:100px; background:skyblue; /* 属性嵌套 */ margin:&#123; left:10px; top:10px; right:10px; bottom:10px; &#125;&#125; 4. 注释 */``` 与 ```//```12345```/* */```：在编译时**会**写进CSS文件```//```：在编译时**不会**写进CSS文件## 5. 插值语句编译前：$name:”hester”;/ hello,my name id #{$name} /1编译后： / hello,my name id hester /123## 6. 变量- 全局变量： $w:200px;$h:200px;.main{ width:$w; height:$h;}1- 局部变量： .main{ $w:200px; $h:200px; width:$w; height:$h;}1- 局部变量转换为全局变量（添加 ```!global```）： .main{ $w:200px !global; $h:200px !global; width:$w; height:$h;}123## 7. @mixin 和 @includehtml： goto1css： @mixin mainstyle($word){ #{$word}{ text-decoration:none; } #{$word}:hover{ text-decoration:underline; }}@include mainstyle(“.main a”);12345## 8. 变量定义 !default：&gt;如果变量已经被赋值，不会再被重新赋值，但是如果变量还没有被赋值，则会被赋予新的值。编译前： $content: “First”;$content: “Second” !default;$new_content: “New” !default; #main { content: $content; new-content: $new_content;}1编译后： #main { content: “First”; new-content: “New”;}```]]></content>
       <categories>
         <category>Web</category>
       </categories>
       <tags>
-        <tag>html</tag>
         <tag>css</tag>
-        <tag>tab</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[javascript-原生实现返回顶部]]></title>
-    <url>%2F2018%2F01%2F04%2Fjavascript-%E5%8E%9F%E7%94%9F%E5%AE%9E%E7%8E%B0%E8%BF%94%E5%9B%9E%E9%A1%B6%E9%83%A8%2F</url>
-    <content type="text"><![CDATA[代码123456789var scrollTop = function()&#123; var c = document.documentElement.scrollTop || document.body.scrollTop; if(c &gt; 0) &#123; window.requestAnimationFrame(scrollTop); window.scrollTo(0,c - c/5); &#125;&#125;scrollTop();]]></content>
-      <categories>
-        <category>Web</category>
-      </categories>
-      <tags>
         <tag>html</tag>
-        <tag>javascript</tag>
+        <tag>scss</tag>
       </tags>
   </entry>
   <entry>
@@ -242,6 +230,18 @@
     <title><![CDATA[Javascript获取时间毫秒数的三种方法]]></title>
     <url>%2F2018%2F01%2F04%2FJavascript%E8%8E%B7%E5%8F%96%E6%97%B6%E9%97%B4%E6%AF%AB%E7%A7%92%E6%95%B0%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95%2F</url>
     <content type="text"><![CDATA[new Date().getTime() new Date().valueOf() +new Date()]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>html</tag>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[javascript-原生实现返回顶部]]></title>
+    <url>%2F2018%2F01%2F04%2Fjavascript-%E5%8E%9F%E7%94%9F%E5%AE%9E%E7%8E%B0%E8%BF%94%E5%9B%9E%E9%A1%B6%E9%83%A8%2F</url>
+    <content type="text"><![CDATA[代码123456789var scrollTop = function()&#123; var c = document.documentElement.scrollTop || document.body.scrollTop; if(c &gt; 0) &#123; window.requestAnimationFrame(scrollTop); window.scrollTo(0,c - c/5); &#125;&#125;scrollTop();]]></content>
       <categories>
         <category>Web</category>
       </categories>
@@ -711,8 +711,8 @@
         <category>Web</category>
       </categories>
       <tags>
-        <tag>css</tag>
         <tag>layout</tag>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -1048,6 +1048,18 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[搬瓦工中的Snapshots（快照）功能]]></title>
+    <url>%2F2017%2F12%2F10%2F%E6%90%AC%E7%93%A6%E5%B7%A5%E4%B8%AD%E7%9A%84Snapshots%EF%BC%88%E5%BF%AB%E7%85%A7%EF%BC%89%E5%8A%9F%E8%83%BD%2F</url>
+    <content type="text"><![CDATA[搬瓦工VPS自带Snapshots快照备份，每个VPS可以备份2次且有效期是30天 #如何创建Snapshots快照 进入搬瓦工VPS管理界面(KiwiVM Extras — Snapshots)从图中可以看到，我们可以创建快照也可以导入快照 点击Create new snapshot创建快照，设置一个名称，开始备份备份过程中服务器会暂停，备份完成后服务器会重启 点击Import a snapshot导入快照，这里需要输入VEID:和TOKEN:参数在后面会说到 #Snapshots快照管理 快照创建成功后，会有以下界面 download: 将快照下载到本地 restore: 恢复到此快照，并且会重写当前服务器的所有数据（如果当前服务器出现问题可以点此进行恢复） delete: 删除快照 set sticky: 设置永久保存（最多允许2个快照设置为永久保存） export: 导出参数，参数为VEID:和TOKEN:，可用于Import a snapshot导入快照 就先到这里啦，喜欢折腾的孩子还是建个快照吧（笑），不然到时候哭都哭不出来，哈哈哈]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>搬瓦工</tag>
+        <tag>bandwagon</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[如何在搬瓦工ubuntu系统下配置shadowsocks以翻墙]]></title>
     <url>%2F2017%2F12%2F10%2F%E5%A6%82%E4%BD%95%E5%9C%A8%E6%90%AC%E7%93%A6%E5%B7%A5ubuntu%E7%B3%BB%E7%BB%9F%E4%B8%8B%E9%85%8D%E7%BD%AEshadowsocks%E4%BB%A5%E7%BF%BB%E5%A2%99%2F</url>
     <content type="text"><![CDATA[首先进入到搬瓦工VPS的管理界面可以看到一键安装shadowsocks服务只支持Centos，但是如果我们想要安装ubuntu系统，那该怎么安装shadowsocks服务呢？ #shadowsocks服务端配置: 首先利用SSH客户端(比如Xshell等)登陆到ubuntu服务端 执行命令 sudo apt-get update更新命令 执行命令 sudo apt-get install git安装git 执行命令 sudo apt-get install nano安装nano（可选择安装，用于编辑json文件） 执行命令 git clone -b manyuser https://github.com/breakwa11/shadowsocks.git从github上获取shadowsocks安装脚本 执行命令 ll 查看目录，会发现目录里多了一个叫shadowsocks的文件 执行命令 cd ~/shadowsocks/进入到此目录中 执行命令 bash initcfg.sh初始化配置 执行命令 mv user-config.json ./shadowsocks/把该目录下(~/shadowsocks)的user-config.json移动到下一个shadowsocks目录中(~/shadowsocks/shadowsocks) 执行命令 cd shadowsocks/进入目录中(~/shadowsocks/shadowsocks) 执行命令 chmod +x server.py给目录下的server.py文件添加权限 执行命令 nano user-config.json用nano编辑器打开json文件(你也可以用其他编辑器打开) 打开过后进行编辑:1234567891011121314151617&#123; &quot;server&quot;: &quot;0.0.0.0&quot;, &quot;server_ipv6&quot;: &quot;::&quot;, &quot;server_port&quot;: 8388, &quot;local_address&quot;: &quot;127.0.0.1&quot;, &quot;local_port&quot;: 1080, &quot;password&quot;: &quot;123456&quot;, &quot;timeout&quot;: 120, &quot;udp_timeout&quot;: 60, &quot;method&quot;: &quot;aes-256-cfb&quot;, &quot;protocol&quot;: &quot;auth_sha1_v2_compatible&quot;, &quot;protocol_param&quot;: &quot;&quot;, &quot;dns_ipv6&quot;: false, &quot;connect_verbose_info&quot;: 0, &quot;redirect&quot;: &quot;&quot;, &quot;fast_open&quot;: false&#125; nano编辑器的使用方法请自行查找资料，这里不详细讲解去掉某一行:Ctrl+k保存退出步骤:1.Ctrl+x2.按y3.回车 编辑好后保存退出然后执行命令1python ~/shadowsocks/shadowsocks/server.py -c ~/shadowsocks/shadowsocks/user-config.json -d start 最后的字符串可以是start/restart/stop(开启/重启/停止) 到此ubuntu系统中的shadowsocks服务端配置完成，并且已经启动服务 如果重启服务器，请再次执行第14步的操作重新开启shadowsocks服务(可设置开机自启动，这里不做介绍) #shadowsocksR客户端配置: shadowsocksR下载地址:http://pan.baidu.com/share/link?shareid=4081447275&amp;uk=2134016402 解压过后打开 ShadowsocksR-dotnet4.0.exe 配置如下： 服务器IP为ubuntu服务器IP服务器端口为user-config.json中的server_port密码为user-config.json中的password加密为user-config.json中的method协议为user-config.json中的protocol混淆选择plain 右键任务栏的shadowsockR图标 配置参数： 系统代理模式——PAC模式 PAC——更新PAC为绕过大陆常见域名列表 代理规则——绕过局域网和大陆 如果遇到有些网页打不开，请将第二项的PAC选择为更新为PAC为GFWList 开始愉快的翻墙吧(ฅ&gt;ω&lt;*ฅ)]]></content>
@@ -1061,15 +1073,52 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[搬瓦工中的Snapshots（快照）功能]]></title>
-    <url>%2F2017%2F12%2F10%2F%E6%90%AC%E7%93%A6%E5%B7%A5%E4%B8%AD%E7%9A%84Snapshots%EF%BC%88%E5%BF%AB%E7%85%A7%EF%BC%89%E5%8A%9F%E8%83%BD%2F</url>
-    <content type="text"><![CDATA[搬瓦工VPS自带Snapshots快照备份，每个VPS可以备份2次且有效期是30天 #如何创建Snapshots快照 进入搬瓦工VPS管理界面(KiwiVM Extras — Snapshots)从图中可以看到，我们可以创建快照也可以导入快照 点击Create new snapshot创建快照，设置一个名称，开始备份备份过程中服务器会暂停，备份完成后服务器会重启 点击Import a snapshot导入快照，这里需要输入VEID:和TOKEN:参数在后面会说到 #Snapshots快照管理 快照创建成功后，会有以下界面 download: 将快照下载到本地 restore: 恢复到此快照，并且会重写当前服务器的所有数据（如果当前服务器出现问题可以点此进行恢复） delete: 删除快照 set sticky: 设置永久保存（最多允许2个快照设置为永久保存） export: 导出参数，参数为VEID:和TOKEN:，可用于Import a snapshot导入快照 就先到这里啦，喜欢折腾的孩子还是建个快照吧（笑），不然到时候哭都哭不出来，哈哈哈]]></content>
+    <title><![CDATA[cmd中有趣的命令一之合并文件（不定期更新）]]></title>
+    <url>%2F2017%2F12%2F10%2Fcmd%E4%B8%AD%E6%9C%89%E8%B6%A3%E7%9A%84%E5%91%BD%E4%BB%A4%E4%B8%80%E4%B9%8B%E5%90%88%E5%B9%B6%E6%96%87%E4%BB%B6%EF%BC%88%E4%B8%8D%E5%AE%9A%E6%9C%9F%E6%9B%B4%E6%96%B0%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[今天给大家介绍的是命令一之合并文件(ฅ&gt;ω&lt;*ฅ)，后面我会不定期的进行更新 #合并文件（老司机必备）图片下的秘密如果你想要把一个文件藏在一张图片里改怎么做呢（手动滑稽）首先这里有两张图片（1.jpg和2.jpg）：那么现在我们要把2.jpg藏在1.jpg里，步骤如下： 将2.jpg添加到压缩文件（这里以rar格式为例） 在当前目录下新建一个文本文件，命名为”合并”（名字可以随意），并将后缀名改为.bat，如图： 然后右键合并.bat，点击编辑，在文本中输入copy /b 1.jpg+2.rar 3.jpg意思是将1.jpg与2.rar合并成3.jpg 然后保存退出，再双击合并.bat文件即可生成3.jpg这个时候打开3.jpg会发现只是一张普通的图片 但是！！！！！！！！！如果你把3.jpg的后缀名改成.rar后再双击它，你会发现打开的是一个压缩文件，而且文件里面有一张叫2.jpg的图片，嘿嘿嘿~~~~ 原理：是把两个的文件的二进制代码进行合并，并且你会发现，合并过后图片的大小刚好的两个文件的大小总和 当然你也可以尝试各种文件格式的组合，比如把图片放进一首歌里，或者是两个文本的组合等等，反正你能想到好玩的都可以自己试一试，方法就是copy /b 文件1+文件2 文件3记得（/b和文件1）（文件2和文件3）之间都有空格 好啦今天的教程就到这里，自己试试吧（￣︶￣）]]></content>
       <categories>
         <category>技术</category>
       </categories>
       <tags>
-        <tag>搬瓦工</tag>
-        <tag>bandwagon</tag>
+        <tag>cmd</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[搬瓦工Ubuntu系统中安装FTP服务]]></title>
+    <url>%2F2017%2F12%2F10%2F%E6%90%AC%E7%93%A6%E5%B7%A5Ubuntu%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%AE%89%E8%A3%85FTP%E6%9C%8D%E5%8A%A1%2F</url>
+    <content type="text"><![CDATA[想要在自己的服务器上存放东西，并且能够分享给小伙伴，那我们可以选择FTP服务器，接下来就大家讲一下如何在搬瓦工Ubuntu系统中安装FTP服务 #FTP服务安装及配置步骤: 执行命令 sudo apt-get update （如果已经更新可以跳过该步骤） 执行命令 sudo apt-get install vsftpd安装vsftpd 执行命令 nano /etc/vsftpd.conf编辑/etc目录下的vsftpd.conf配置文件修改一下参数的值（如果该参数前面有注释（#），请去掉注释）12345anonymous_enable=YES #设置匿名可登录local_enable=YES #本地用户允许登录write_enable=YES #用户是否有写的权限anon_upload_enable=YES #允许匿名用户上传anon_mkdir_write_enable=YES #允许匿名用户创建目录文件 nano编辑器的使用方法请自行查找资料，这里不详细讲解保存退出步骤:1.Ctrl+x2.按y3.回车 4.编辑好后保存退出执行命令 sudo service vsftpd start最后的字符串可以是start/restart/stop(开启/重启/停止) 5.执行命令 cd /srv/ftp进入FTP服务器存放文件的文件夹你可以在里面存放文件，然后在浏览器域名栏中输入 ftp://ip （ip为你搬瓦工服务器的ip）进入FTP文件浏览界面，点击即可下载 如果出现登陆FTP服务器时要输入用户名和密码，就重启一下FTP服务器（重启命令 sudo service vsftpd restart），有可能是配置文件没有更新 到此FTP服务器已经安装和配置完成 大家也可以通过一些第三方工具对FTP服务器进行管理，这里推荐大家使用Xftp Xftp下载地址：http://pan.baidu.com/s/1c1PQK6W 好啦，今天的教程就到这里，欢迎提问、纠错以及分享自己的想法(｡・`ω´･)]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>ubuntu</tag>
+        <tag>ftp</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu系统中安装与卸载sublime-text编辑器]]></title>
+    <url>%2F2017%2F12%2F10%2FUbuntu%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%AE%89%E8%A3%85%E4%B8%8E%E5%8D%B8%E8%BD%BDsublime-text%E7%BC%96%E8%BE%91%E5%99%A8%2F</url>
+    <content type="text"><![CDATA[今天给大家介绍如何在ubuntu系统安装与卸载sublime text编辑器 #sublime text 3安装及配置步骤： 安装方式一：通过软件库安装 首先打开终端执行命令 sudo add-apt-repository ppa:webupd8team/sublime-text-3添加sublime text 3的仓库 中间如要需要等待的时候直接按enter就好（建立信任数据库） 执行命令 sudo apt-get update更新软件库 执行命令 sudo apt-get install sublime-text-installer安装sublime text 3 到此通过方式一已经将sublime text 3安装完成 安装方式二：通过安装Debian包裹文件（手动下载的文件，后缀名为.deb） sublime-text_build-3126_amd64.deb下载地址：http://pan.baidu.com/s/1dFOd23B 下载好文件过后，打开终端并进入该文件所在目录（比如~/Downloads） 执行命令 sudo dpkg -i sublime-text_build-3126_amd64.deb 到此通过方式二已经将sublime text 3安装完成 #卸载sublime text 3 首先查看一下sublime text 3在系统中存在的程序名执行命令 dpkg -l | grep sublime 查看到程序名后执行命令 sudo dpkg -r sublime-text卸载sublime text 最后的名字取决查看的程序名方式一安装程序名为：sublime-text-installer方式二安装程序名为：sublime-text 执行命令 sudo rm -rf /home/username/.config/sublime-text-3/删除配置文件，其中的username为系统的用户名 执行命令 sudo find / -name sublime*查看系统中与sublime text 3相关的文件，然后再根据路径依次删除即可完全卸载掉sublime text 3 sublime text 2安装命令稍微不同（对应安装方式一的三条命令）： sudo add-apt-repository ppa:webupd8team/sublime-text-2 sudo apt-get update sudo apt-get install sublime-text-dev 好啦，今天的教程就到这里，拜拜咯~~~]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>ubuntu</tag>
+        <tag>sublime</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[shell-中-[-eq]-[-ne]-[-gt]-[-lt]-[ge]-[le]]]></title>
+    <url>%2F2017%2F12%2F10%2Fshell-%E4%B8%AD-%5B-eq%5D-%5B-ne%5D-%5B-gt%5D-%5B-lt%5D-%5Bge%5D-%5Ble%5D%2F</url>
+    <content type="text"><![CDATA[-eq //等于-ne //不等于-gt //大于-lt //小于ge //大于等于le //小于等于]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>shell</tag>
       </tags>
   </entry>
   <entry>
@@ -1096,52 +1145,16 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[cmd中有趣的命令一之合并文件（不定期更新）]]></title>
-    <url>%2F2017%2F12%2F10%2Fcmd%E4%B8%AD%E6%9C%89%E8%B6%A3%E7%9A%84%E5%91%BD%E4%BB%A4%E4%B8%80%E4%B9%8B%E5%90%88%E5%B9%B6%E6%96%87%E4%BB%B6%EF%BC%88%E4%B8%8D%E5%AE%9A%E6%9C%9F%E6%9B%B4%E6%96%B0%EF%BC%89%2F</url>
-    <content type="text"><![CDATA[今天给大家介绍的是命令一之合并文件(ฅ&gt;ω&lt;*ฅ)，后面我会不定期的进行更新 #合并文件（老司机必备）图片下的秘密如果你想要把一个文件藏在一张图片里改怎么做呢（手动滑稽）首先这里有两张图片（1.jpg和2.jpg）：那么现在我们要把2.jpg藏在1.jpg里，步骤如下： 将2.jpg添加到压缩文件（这里以rar格式为例） 在当前目录下新建一个文本文件，命名为”合并”（名字可以随意），并将后缀名改为.bat，如图： 然后右键合并.bat，点击编辑，在文本中输入copy /b 1.jpg+2.rar 3.jpg意思是将1.jpg与2.rar合并成3.jpg 然后保存退出，再双击合并.bat文件即可生成3.jpg这个时候打开3.jpg会发现只是一张普通的图片 但是！！！！！！！！！如果你把3.jpg的后缀名改成.rar后再双击它，你会发现打开的是一个压缩文件，而且文件里面有一张叫2.jpg的图片，嘿嘿嘿~~~~ 原理：是把两个的文件的二进制代码进行合并，并且你会发现，合并过后图片的大小刚好的两个文件的大小总和 当然你也可以尝试各种文件格式的组合，比如把图片放进一首歌里，或者是两个文本的组合等等，反正你能想到好玩的都可以自己试一试，方法就是copy /b 文件1+文件2 文件3记得（/b和文件1）（文件2和文件3）之间都有空格 好啦今天的教程就到这里，自己试试吧（￣︶￣）]]></content>
+    <title><![CDATA[Android-实现语言切换]]></title>
+    <url>%2F2017%2F12%2F10%2FAndroid-%E5%AE%9E%E7%8E%B0%E8%AF%AD%E8%A8%80%E5%88%87%E6%8D%A2%2F</url>
+    <content type="text"><![CDATA[Android APP如果要实现语言（中英文为例）的切换该怎么做呢？ #1. 在res文件下建立文件夹values-en，并且新建strings.xml文件 ###文件内容对应如下： values/strings.xml： values-en/strings.xml： #2. 实现语言切换的方法：Configuration config = getResources().getConfiguration(); Resources resources = getResources(); if (config.locale.equals(Locale.ENGLISH)){//如果已经为英文 config.locale = Locale.CHINESE;//切换中文 }else if (config.locale.equals(Locale.CHINESE)){//如果已经为中文 config.locale = Locale.ENGLISH;//切换英文 } DisplayMetrics dm = resources.getDisplayMetrics(); resources.updateConfiguration(config, dm); #3. 在AndroidManifest.xml文件中对需要改变语言的Activity添加属性android:configChanges=&quot;locale&quot; 小提示：如果需要保存用户修改的语言以便下一次打开APP时改变语言，可以将用户选择的信息保存至SharedPreferences储存类或者数据库中，在打开时读取判断即可，这里不详细叙述]]></content>
       <categories>
-        <category>技术</category>
+        <category>Android</category>
       </categories>
       <tags>
-        <tag>cmd</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[shell-中-[-eq]-[-ne]-[-gt]-[-lt]-[ge]-[le]]]></title>
-    <url>%2F2017%2F12%2F10%2Fshell-%E4%B8%AD-%5B-eq%5D-%5B-ne%5D-%5B-gt%5D-%5B-lt%5D-%5Bge%5D-%5Ble%5D%2F</url>
-    <content type="text"><![CDATA[-eq //等于-ne //不等于-gt //大于-lt //小于ge //大于等于le //小于等于]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>shell</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Ubuntu系统中安装与卸载sublime-text编辑器]]></title>
-    <url>%2F2017%2F12%2F10%2FUbuntu%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%AE%89%E8%A3%85%E4%B8%8E%E5%8D%B8%E8%BD%BDsublime-text%E7%BC%96%E8%BE%91%E5%99%A8%2F</url>
-    <content type="text"><![CDATA[今天给大家介绍如何在ubuntu系统安装与卸载sublime text编辑器 #sublime text 3安装及配置步骤： 安装方式一：通过软件库安装 首先打开终端执行命令 sudo add-apt-repository ppa:webupd8team/sublime-text-3添加sublime text 3的仓库 中间如要需要等待的时候直接按enter就好（建立信任数据库） 执行命令 sudo apt-get update更新软件库 执行命令 sudo apt-get install sublime-text-installer安装sublime text 3 到此通过方式一已经将sublime text 3安装完成 安装方式二：通过安装Debian包裹文件（手动下载的文件，后缀名为.deb） sublime-text_build-3126_amd64.deb下载地址：http://pan.baidu.com/s/1dFOd23B 下载好文件过后，打开终端并进入该文件所在目录（比如~/Downloads） 执行命令 sudo dpkg -i sublime-text_build-3126_amd64.deb 到此通过方式二已经将sublime text 3安装完成 #卸载sublime text 3 首先查看一下sublime text 3在系统中存在的程序名执行命令 dpkg -l | grep sublime 查看到程序名后执行命令 sudo dpkg -r sublime-text卸载sublime text 最后的名字取决查看的程序名方式一安装程序名为：sublime-text-installer方式二安装程序名为：sublime-text 执行命令 sudo rm -rf /home/username/.config/sublime-text-3/删除配置文件，其中的username为系统的用户名 执行命令 sudo find / -name sublime*查看系统中与sublime text 3相关的文件，然后再根据路径依次删除即可完全卸载掉sublime text 3 sublime text 2安装命令稍微不同（对应安装方式一的三条命令）： sudo add-apt-repository ppa:webupd8team/sublime-text-2 sudo apt-get update sudo apt-get install sublime-text-dev 好啦，今天的教程就到这里，拜拜咯~~~]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>ubuntu</tag>
-        <tag>sublime</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[搬瓦工Ubuntu系统中安装FTP服务]]></title>
-    <url>%2F2017%2F12%2F10%2F%E6%90%AC%E7%93%A6%E5%B7%A5Ubuntu%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%AE%89%E8%A3%85FTP%E6%9C%8D%E5%8A%A1%2F</url>
-    <content type="text"><![CDATA[想要在自己的服务器上存放东西，并且能够分享给小伙伴，那我们可以选择FTP服务器，接下来就大家讲一下如何在搬瓦工Ubuntu系统中安装FTP服务 #FTP服务安装及配置步骤: 执行命令 sudo apt-get update （如果已经更新可以跳过该步骤） 执行命令 sudo apt-get install vsftpd安装vsftpd 执行命令 nano /etc/vsftpd.conf编辑/etc目录下的vsftpd.conf配置文件修改一下参数的值（如果该参数前面有注释（#），请去掉注释）12345anonymous_enable=YES #设置匿名可登录local_enable=YES #本地用户允许登录write_enable=YES #用户是否有写的权限anon_upload_enable=YES #允许匿名用户上传anon_mkdir_write_enable=YES #允许匿名用户创建目录文件 nano编辑器的使用方法请自行查找资料，这里不详细讲解保存退出步骤:1.Ctrl+x2.按y3.回车 4.编辑好后保存退出执行命令 sudo service vsftpd start最后的字符串可以是start/restart/stop(开启/重启/停止) 5.执行命令 cd /srv/ftp进入FTP服务器存放文件的文件夹你可以在里面存放文件，然后在浏览器域名栏中输入 ftp://ip （ip为你搬瓦工服务器的ip）进入FTP文件浏览界面，点击即可下载 如果出现登陆FTP服务器时要输入用户名和密码，就重启一下FTP服务器（重启命令 sudo service vsftpd restart），有可能是配置文件没有更新 到此FTP服务器已经安装和配置完成 大家也可以通过一些第三方工具对FTP服务器进行管理，这里推荐大家使用Xftp Xftp下载地址：http://pan.baidu.com/s/1c1PQK6W 好啦，今天的教程就到这里，欢迎提问、纠错以及分享自己的想法(｡・`ω´･)]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>ubuntu</tag>
-        <tag>ftp</tag>
+        <tag>android</tag>
+        <tag>java</tag>
+        <tag>language</tag>
       </tags>
   </entry>
   <entry>
@@ -1168,19 +1181,6 @@
         <tag>android</tag>
         <tag>java</tag>
         <tag>fragment</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Android-实现语言切换]]></title>
-    <url>%2F2017%2F12%2F10%2FAndroid-%E5%AE%9E%E7%8E%B0%E8%AF%AD%E8%A8%80%E5%88%87%E6%8D%A2%2F</url>
-    <content type="text"><![CDATA[Android APP如果要实现语言（中英文为例）的切换该怎么做呢？ #1. 在res文件下建立文件夹values-en，并且新建strings.xml文件 ###文件内容对应如下： values/strings.xml： values-en/strings.xml： #2. 实现语言切换的方法：Configuration config = getResources().getConfiguration(); Resources resources = getResources(); if (config.locale.equals(Locale.ENGLISH)){//如果已经为英文 config.locale = Locale.CHINESE;//切换中文 }else if (config.locale.equals(Locale.CHINESE)){//如果已经为中文 config.locale = Locale.ENGLISH;//切换英文 } DisplayMetrics dm = resources.getDisplayMetrics(); resources.updateConfiguration(config, dm); #3. 在AndroidManifest.xml文件中对需要改变语言的Activity添加属性android:configChanges=&quot;locale&quot; 小提示：如果需要保存用户修改的语言以便下一次打开APP时改变语言，可以将用户选择的信息保存至SharedPreferences储存类或者数据库中，在打开时读取判断即可，这里不详细叙述]]></content>
-      <categories>
-        <category>Android</category>
-      </categories>
-      <tags>
-        <tag>android</tag>
-        <tag>java</tag>
-        <tag>language</tag>
       </tags>
   </entry>
   <entry>
