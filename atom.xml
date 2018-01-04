@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-12-10T09:52:56.305Z</updated>
+  <updated>2018-01-04T09:50:08.932Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,49 +17,24 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>javascript-判断鼠标滚轮</title>
-    <link href="http://yoursite.com/2017/12/10/js-%E5%88%A4%E6%96%AD%E9%BC%A0%E6%A0%87%E6%BB%9A%E8%BD%AE/"/>
-    <id>http://yoursite.com/2017/12/10/js-判断鼠标滚轮/</id>
-    <published>2017-12-10T09:58:46.744Z</published>
-    <updated>2017-12-10T09:52:56.305Z</updated>
+    <title>javascript-Math的ceil、floor、round方法区别</title>
+    <link href="http://yoursite.com/2018/01/04/javascript-Math%E7%9A%84ceil%E3%80%81floor%E3%80%81round%E6%96%B9%E6%B3%95%E5%8C%BA%E5%88%AB/"/>
+    <id>http://yoursite.com/2018/01/04/javascript-Math的ceil、floor、round方法区别/</id>
+    <published>2018-01-04T09:51:21.470Z</published>
+    <updated>2018-01-04T09:50:08.932Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">window.onmousewheel = document.onmousewheel = function(e) &#123;</div><div class="line">    e = e || window.event;</div><div class="line">    if (e.wheelDelta) &#123; //判断浏览器IE，谷歌滑轮事件               </div><div class="line">        if (e.wheelDelta &gt; 0) &#123; //当滑轮向上滚动时  </div><div class="line">            console.log(&quot;滑轮向上滚动&quot;);</div><div class="line">        &#125;</div><div class="line">        if (e.wheelDelta &lt; 0) &#123; //当滑轮向下滚动时  </div><div class="line">            console.log(&quot;滑轮向下滚动&quot;);</div><div class="line">        &#125;</div><div class="line">    &#125; else if (e.detail) &#123; //Firefox滑轮事件  </div><div class="line">        if (e.detail &gt; 0) &#123; //当滑轮向上滚动时  </div><div class="line">            console.log(&quot;滑轮向上滚动&quot;);</div><div class="line">        &#125;</div><div class="line">        if (e.detail &lt; 0) &#123; //当滑轮向下滚动时  </div><div class="line">            console.log(&quot;滑轮向下滚动&quot;);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div c
-      
-    
-    </summary>
-    
-      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
-    
-    
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
-    
-      <category term="鼠标" scheme="http://yoursite.com/tags/%E9%BC%A0%E6%A0%87/"/>
-    
-      <category term="滚轮" scheme="http://yoursite.com/tags/%E6%BB%9A%E8%BD%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Javascript中的编码解码函数</title>
-    <link href="http://yoursite.com/2017/12/10/Javascript%E4%B8%AD%E7%9A%84%E7%BC%96%E7%A0%81%E8%A7%A3%E7%A0%81%E5%87%BD%E6%95%B0/"/>
-    <id>http://yoursite.com/2017/12/10/Javascript中的编码解码函数/</id>
-    <published>2017-12-10T09:58:46.743Z</published>
-    <updated>2017-12-10T09:52:41.534Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">![](http://upload-images.jianshu.io/upload_images/2381669-ad5a4b65d1847869.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</div><div class="line"></div><div class="line">![](http://upload-images.jianshu.io/upload_images/2381669-b1f60a0ec906c540.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</div><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line">- ```decodeURI()```： 解码一个由 encodeURI 编码过的 URI。</div><div class="line">![](http://upload-images.jianshu.io/upload_images/2381669-5bae1e56d9d01d19.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</div><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line">- ```encodeURIComponent()</div></pre></td></tr></table></figure></li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-aa016db5030cacc1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-de3d56c8e656eef5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><hr><ul><li><code>decodeURIComponent()</code>：解码一个由 encodeURIComponent 编码过的字符串。<br><img src="http://upload-images.jianshu.io/upload_images/2381669-a858e460a87b88a8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li></ul><hr><ul><li><code>window.btoa()</code>：将一个只有 ASCII 字符的字符串或二进制数据转换成一个 base64 编码过的字符串。</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-b6975a2c7dd53c1f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><blockquote><p>如果想对一个 Unicode 字符串进行编码，可以使用 encodeURIComponent 先对其进行编码，然后再进行 base64 编码。</p></blockquote><p><img src="http://upload-images.jianshu.io/upload_images/2381669-b181a5eb5e60ba97.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><hr><ul><li><code>window.atob()</code>： 用来解码被 base64 编码过的数据，直接对 ASCII 字符串进行 base64 解码会出现乱码。<br><img src="http://upload-images.jianshu.io/upload_images/2381669-1edc12cfc9ba739b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li></ul>]]></content>
+    <content type="html"><![CDATA[<ul><li>Math.ceil()：向上取舍</li><li>Math.floor()：向下取舍</li><li>Math.round()：标准取舍</li></ul><h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Math.ceil(25.9); //26</div><div class="line">Math.ceil(25.5); //26</div><div class="line">Math.ceil(25.1); //26</div><div class="line"></div><div class="line">Math.floor(25.9); //25</div><div class="line">Math.floor(25.5); //25</div><div class="line">Math.floor(25.1); //25</div><div class="line"></div><div class="line">Math.round(25.9); //26</div><div class="line">Math.round(25.5); //26</div><div class="line">Math.round(25.1); //25</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
         &lt;ul&gt;
-&lt;li&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;li
+&lt;li&gt;Math.ceil()：向上取舍&lt;/li&gt;
+&lt;li&gt;Math.floor()：向下取舍&lt;/li&gt;
+&lt;li&gt;Math.round()：标准取舍&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;实例&quot;&gt;&lt;a href=&quot;#实例&quot; class=&quot;headerlink&quot; titl
       
     
     </summary>
@@ -67,28 +42,28 @@
       <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
+    
       <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
     
-      <category term="编码" scheme="http://yoursite.com/tags/%E7%BC%96%E7%A0%81/"/>
-    
-      <category term="解码" scheme="http://yoursite.com/tags/%E8%A7%A3%E7%A0%81/"/>
+      <category term="math" scheme="http://yoursite.com/tags/math/"/>
     
   </entry>
   
   <entry>
-    <title>javascript-在div前、中、后插入另一个div</title>
-    <link href="http://yoursite.com/2017/12/10/javascript-%E5%9C%A8div%E5%89%8D%E3%80%81%E4%B8%AD%E3%80%81%E5%90%8E%E6%8F%92%E5%85%A5%E5%8F%A6%E4%B8%80%E4%B8%AAdiv/"/>
-    <id>http://yoursite.com/2017/12/10/javascript-在div前、中、后插入另一个div/</id>
-    <published>2017-12-10T09:58:46.741Z</published>
-    <updated>2017-12-10T09:52:34.154Z</updated>
+    <title>Electron-引用第三方库</title>
+    <link href="http://yoursite.com/2018/01/04/Electron-%E5%BC%95%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/"/>
+    <id>http://yoursite.com/2018/01/04/Electron-引用第三方库/</id>
+    <published>2018-01-04T09:51:21.470Z</published>
+    <updated>2018-01-04T09:49:36.507Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">&lt;title&gt;Document&lt;/title&gt;</div><div class="line">&lt;style&gt;</div><div class="line">div&#123;</div><div class="line">height: 30px;</div><div class="line">&#125;</div><div class="line">#d1&#123;</div><div class="line">background: blue;</div><div class="line">&#125;</div><div class="line">#d2&#123;</div><div class="line">background: red;</div><div class="line">&#125;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;div id=&quot;d1&quot;&gt;1&lt;/div&gt;</div><div class="line">&lt;div id=&quot;d2&quot;&gt;2&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">var d1 = document.getElementById(&apos;d1&apos;);</div><div class="line">var d2 = document.getElementById(&apos;d2&apos;);</div><div class="line"></div><div class="line">//移动d1到d2后面</div><div class="line">function move_d1_to_d2_after()&#123;</div><div class="line">d1.parentNode.insertBefore(d1,d2.nextSibling);</div><div class="line">&#125;</div><div class="line">//移动d1到d2里面</div><div class="line">function move_d1_into_d2()&#123;</div><div class="line">d2.appendChild(d1);</div><div class="line">&#125;</div><div class="line">//移动d2到d1前面</div><div class="line">function move_d2_to_d1_before()&#123;</div><div class="line">d2.parentNode.insertBefore(d2,d1);</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure><ul><li>初始</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-0f5191a6e6a4b170.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-24a076f3c7e1fb84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><ul><li>执行<code>move_d1_to_d2_after</code>，即移动d1到d2后面</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-0cc1f9726367b86c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-e019ad318e880294.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><ul><li>执行<code>move_d1_into_d2</code>，移动d1到d2里面</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-0b10e5a91c7879e1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-092af5fa475b22fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><ul><li>执行<code>move_d2_to_d1_before</code>，即移动d2到d1前面</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-0cc1f9726367b86c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-e019ad318e880294.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">&lt;title&gt;Electron&lt;/title&gt;</div><div class="line">&lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;button id=&quot;btn&quot;&gt;open&lt;/button&gt;</div><div class="line">&lt;script&gt;</div><div class="line">$(&apos;#btn&apos;).click(function()&#123;</div><div class="line">console.log(&quot;hello world&quot;);</div><div class="line">&#125;);</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p><p>可以看到html文件引用了jquery.min.js<br>如果直接执行命令npm start运行electron程序后，点击按钮会出现错误，原因是jquery没有被成功的引用</p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-a0c2c04600552e00.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><hr><h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p>将<code>&lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;</code>改为<code>&lt;script&gt;window.$ = window.JQuery = require(&#39;./jquery.min.js&#39;);</code></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div c
+        &lt;p&gt;html：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=
       
     
     </summary>
@@ -96,28 +71,24 @@
       <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
-    
-      <category term="div" scheme="http://yoursite.com/tags/div/"/>
+      <category term="electron" scheme="http://yoursite.com/tags/electron/"/>
     
   </entry>
   
   <entry>
-    <title>javascript-选择器的区别</title>
-    <link href="http://yoursite.com/2017/12/10/javascript-%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
-    <id>http://yoursite.com/2017/12/10/javascript-选择器的区别/</id>
-    <published>2017-12-10T09:58:46.739Z</published>
-    <updated>2017-12-10T09:52:29.014Z</updated>
+    <title>div实现文字超出两行显示省略符号</title>
+    <link href="http://yoursite.com/2018/01/04/div%E5%AE%9E%E7%8E%B0%E6%96%87%E5%AD%97%E8%B6%85%E5%87%BA%E4%B8%A4%E8%A1%8C%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E7%AC%A6%E5%8F%B7/"/>
+    <id>http://yoursite.com/2018/01/04/div实现文字超出两行显示省略符号/</id>
+    <published>2018-01-04T09:51:21.460Z</published>
+    <updated>2018-01-04T09:49:25.944Z</updated>
     
-    <content type="html"><![CDATA[<hr><h4 id="选择器作用："><a href="#选择器作用：" class="headerlink" title="选择器作用："></a>选择器作用：</h4><ul><li><code>document.getElementById(&#39;&#39;)</code>：通过<strong>ID</strong>选取元素</li><li><code>document.getElementsByName(&#39;&#39;)</code>：通过<strong>名称name</strong>选取元素</li><li><code>document.getElementsByClassName(&#39;&#39;)</code>：通过<strong>class类</strong>选取元素</li><li><code>document.getElementsByTagName(&#39;&#39;)</code>：通过<strong>标签名</strong>选取元素</li><li><code>document.all</code>：选取<strong>全部</strong>元素</li></ul><ul><li><code>document.querySelector(&#39;&#39;)</code>：根据<strong>css选择器</strong>选取id或class元素</li><li><code>document.querySelectorAll(&#39;&#39;)</code>：根据<strong>css选择器</strong>选取相应<strong>全部的</strong>元素</li></ul><hr><h4 id="选择器的返回类型："><a href="#选择器的返回类型：" class="headerlink" title="选择器的返回类型："></a>选择器的返回类型：</h4><ul><li><code>document.getElementById(&#39;&#39;)</code>：返回<strong>含标签名</strong>的元素</li><li><code>document.getElementsByName(&#39;&#39;)</code>：返回一个<strong>nodeList</strong>集合</li><li><code>document.getElementsByName(&#39;&#39;)[index]</code>：返回<strong>第index个含名称name</strong>，<strong>含标签名</strong>的元素</li><li><code>document.getElementsByClassName(&#39;&#39;)</code>：返回一个<strong>nodeList</strong>集合</li><li><code>document.getElementsByClassName(&#39;&#39;)[index]</code>：返回<strong>第index个含类名class</strong>，<strong>含标签名</strong>的元素</li><li><code>document.getElementsByTagName(&#39;&#39;)</code>：返回一个<strong>nodeList</strong>集合</li><li><code>document.getElementsByTagName(&#39;&#39;)[index]</code>：返回一个<strong>第index个含标签名</strong>，<strong>含标签名</strong>的元素</li><li><code>document.all</code>：返回一个<strong>nodeList</strong>集合</li></ul><ul><li><code>document.querySelector(&#39;&#39;)</code>：返回<strong>含标签名</strong>的元素</li><li><code>document.querySelector(&#39;&#39;)[index]</code>：返回<strong>第index个</strong>，<strong>含标签名</strong>的元素</li><li><code>document.querySelectorAll(&#39;&#39;)</code>：返回一个<strong>nodeList</strong>集合</li></ul><hr>]]></content>
+    <content type="html"><![CDATA[<h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">overflow:hidden;</div><div class="line">display: -webkit-box;</div><div class="line">-webkit-line-clamp: 2;</div><div class="line">-webkit-box-orient: vertical;</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;hr&gt;
-&lt;h4 id=&quot;选择器作用：&quot;&gt;&lt;a href=&quot;#选择器作用：&quot; class=&quot;headerlink&quot; title=&quot;选择器作用：&quot;&gt;&lt;/a&gt;选择器作用：&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;document.getElementById(&amp;#39;&amp;#39;)&lt;/
+        &lt;h2 id=&quot;代码：&quot;&gt;&lt;a href=&quot;#代码：&quot; class=&quot;headerlink&quot; title=&quot;代码：&quot;&gt;&lt;/a&gt;代码：&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;d
       
     
     </summary>
@@ -125,26 +96,24 @@
       <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
-    
-      <category term="选择器" scheme="http://yoursite.com/tags/%E9%80%89%E6%8B%A9%E5%99%A8/"/>
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
     
   </entry>
   
   <entry>
-    <title>javascript-图像二值化处理</title>
-    <link href="http://yoursite.com/2017/12/10/javascript-%E5%9B%BE%E5%83%8F%E4%BA%8C%E5%80%BC%E5%8C%96%E5%A4%84%E7%90%86/"/>
-    <id>http://yoursite.com/2017/12/10/javascript-图像二值化处理/</id>
-    <published>2017-12-10T09:58:46.708Z</published>
-    <updated>2017-12-10T09:52:22.256Z</updated>
+    <title>CSS实现发光链接按钮</title>
+    <link href="http://yoursite.com/2018/01/04/CSS%E5%AE%9E%E7%8E%B0%E5%8F%91%E5%85%89%E9%93%BE%E6%8E%A5%E6%8C%89%E9%92%AE/"/>
+    <id>http://yoursite.com/2018/01/04/CSS实现发光链接按钮/</id>
+    <published>2018-01-04T09:51:21.460Z</published>
+    <updated>2018-01-04T09:49:17.074Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line"></div><div class="line">&lt;head&gt;</div><div class="line">    &lt;title&gt;&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">&lt;body&gt;</div><div class="line">    &lt;canvas id=&quot;canvas&quot; onclick=&quot;showInfo()&quot;&gt;&lt;/canvas&gt;</div><div class="line">    &lt;img id=&quot;img&quot; src=&quot;1.jpg&quot; width=&quot;300&quot; height=&quot;200&quot; hidden&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">    window.onload = function() &#123;</div><div class="line">        var canvas = document.getElementById(&apos;canvas&apos;);</div><div class="line">        var img = document.getElementById(&apos;img&apos;);</div><div class="line">        var c = canvas.getContext(&apos;2d&apos;);</div><div class="line">        canvas.width = img.width;</div><div class="line">        canvas.height = img.height;</div><div class="line"></div><div class="line">        c.drawImage(img, 0, 0, canvas.width, canvas.height);</div><div class="line"></div><div class="line">        this.showInfo = function() &#123;</div><div class="line">            var imgData = c.getImageData(0, 0, canvas.width, canvas.height);</div><div class="line">            var index = 255/2;//阈值</div><div class="line">            for (var i = 0; i &lt; imgData.data.length; i += 4) &#123;</div><div class="line">                var R = imgData.data[i]; //R(0-255)</div><div class="line">                var G = imgData.data[i + 1]; //G(0-255)</div><div class="line">                var B = imgData.data[i + 2]; //B(0-255)</div><div class="line">                var Alpha = imgData.data[i + 3]; //Alpha(0-255)</div><div class="line">                var sum = (R + G + B) / 3;</div><div class="line">                if (sum &gt; index) &#123;</div><div class="line">                    imgData.data[i] = 255;</div><div class="line">                    imgData.data[i + 1] = 255;</div><div class="line">                    imgData.data[i + 2] = 255;</div><div class="line">                    imgData.data[i + 3] = Alpha;</div><div class="line">                &#125; else &#123;</div><div class="line">                    imgData.data[i] = 0;</div><div class="line">                    imgData.data[i + 1] = 0;</div><div class="line">                    imgData.data[i + 2] = 0;</div><div class="line">                    imgData.data[i + 3] = Alpha;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            c.putImageData(imgData, 0, 0);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line"></div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure><h2 id="处理前"><a href="#处理前" class="headerlink" title="处理前"></a>处理前</h2><p><img src="http://upload-images.jianshu.io/upload_images/2381669-73266139bd021beb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="处理前"></p><h2 id="处理后"><a href="#处理后" class="headerlink" title="处理后"></a>处理后</h2><p><img src="http://upload-images.jianshu.io/upload_images/2381669-739f37e508e0e9ee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="处理后"></p><blockquote><p>记得在服务器端中运行，不然会有跨域问题，推荐使用Node的http-server，使用比较方便</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h2 id="效果："><a href="#效果：" class="headerlink" title="效果："></a>效果：</h2><p><img src="http://upload-images.jianshu.io/upload_images/2381669-bab0cd213a483746.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;a href=&quot;&quot;&gt;GETSTART&lt;/a&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">  background:#404593;</div><div class="line">&#125;</div><div class="line">a&#123;</div><div class="line">  position:absolute;</div><div class="line">  top:50%;</div><div class="line">  left:50%;</div><div class="line">  transform:translate(-50%,-50%);</div><div class="line">  border-radius: 50px;</div><div class="line">  padding: 12px 25px;</div><div class="line">  font-weight: 600;</div><div class="line">  font-size: 14px;</div><div class="line">  background: #FD76B2;</div><div class="line">  box-shadow: 5px 5px 50px #e4498e;</div><div class="line">  color:#fff;</div><div class="line">  text-decoration: none;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div c
+        &lt;h2 id=&quot;效果：&quot;&gt;&lt;a href=&quot;#效果：&quot; class=&quot;headerlink&quot; title=&quot;效果：&quot;&gt;&lt;/a&gt;效果：&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2381669-ba
       
     
     </summary>
@@ -152,58 +121,26 @@
       <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
-    
-      <category term="image" scheme="http://yoursite.com/tags/image/"/>
-    
-      <category term="二值化" scheme="http://yoursite.com/tags/%E4%BA%8C%E5%80%BC%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>javascript-如何修改css伪元素的内容</title>
-    <link href="http://yoursite.com/2017/12/10/javascript-%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9css%E4%BC%AA%E5%85%83%E7%B4%A0%E7%9A%84%E5%86%85%E5%AE%B9/"/>
-    <id>http://yoursite.com/2017/12/10/javascript-如何修改css伪元素的内容/</id>
-    <published>2017-12-10T09:58:46.706Z</published>
-    <updated>2017-12-10T09:51:54.938Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>直接在html中添加样式覆盖掉之前样式规则</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">&lt;!doctype html&gt;</div><div class="line">&lt;html&gt;</div><div class="line"></div><div class="line">&lt;head&gt;</div><div class="line">  &lt;style&gt;</div><div class="line">    .main&#123;</div><div class="line">      width:100px;</div><div class="line">      height:100px;</div><div class="line">      background:#000;</div><div class="line">    &#125;</div><div class="line">    .main:after&#123;</div><div class="line">      content:&quot;hello world&quot;;</div><div class="line">      background:red;</div><div class="line">    &#125;</div><div class="line">  &lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">&lt;body&gt;</div><div class="line">  &lt;div class=&quot;main&quot; onclick=&quot;change()&quot;&gt;&lt;/div&gt;</div><div class="line">  &lt;script&gt;</div><div class="line">    var s = document.createElement(&apos;style&apos;);</div><div class="line">    document.body.appendChild(s);</div><div class="line">    function change()&#123;</div><div class="line">      s.innerText = &quot;.main:after&#123;background:blue&#125;&quot;;</div><div class="line">    &#125;</div><div class="line">  &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line"></div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure><p>关键代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var s = document.createElement(&apos;style&apos;);</div><div class="line">document.body.appendChild(s);</div></pre></td></tr></table></figure></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">s.innerText = &quot;.main:after&#123;background:blue&#125;&quot;;</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;思路：&quot;&gt;&lt;a href=&quot;#思路：&quot; class=&quot;headerlink&quot; title=&quot;思路：&quot;&gt;&lt;/a&gt;思路：&lt;/h2&gt;&lt;p&gt;直接在html中添加样式覆盖掉之前样式规则&lt;/p&gt;
-&lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerl
-      
-    
-    </summary>
-    
-      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
-    
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
     
       <category term="css" scheme="http://yoursite.com/tags/css/"/>
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
-    
-      <category term="伪元素" scheme="http://yoursite.com/tags/%E4%BC%AA%E5%85%83%E7%B4%A0/"/>
-    
   </entry>
   
   <entry>
-    <title>javascript-利用数组制作分页效果</title>
-    <link href="http://yoursite.com/2017/12/10/javascript-%E5%88%A9%E7%94%A8%E6%95%B0%E7%BB%84%E5%88%B6%E4%BD%9C%E5%88%86%E9%A1%B5%E6%95%88%E6%9E%9C/"/>
-    <id>http://yoursite.com/2017/12/10/javascript-利用数组制作分页效果/</id>
-    <published>2017-12-10T09:58:46.704Z</published>
-    <updated>2017-12-10T09:51:44.441Z</updated>
+    <title>CSS实现含文字的分割线</title>
+    <link href="http://yoursite.com/2018/01/04/CSS%E5%AE%9E%E7%8E%B0%E5%90%AB%E6%96%87%E5%AD%97%E7%9A%84%E5%88%86%E5%89%B2%E7%BA%BF/"/>
+    <id>http://yoursite.com/2018/01/04/CSS实现含文字的分割线/</id>
+    <published>2018-01-04T09:51:21.460Z</published>
+    <updated>2018-01-04T09:49:19.193Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>参数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">```currentPage```：当前的页数</div><div class="line">```skipNum```：跳过的数量</div><div class="line">```arr```：数组</div><div class="line"></div><div class="line">返回值：</div><div class="line">```newArr```分页后的数组</div></pre></td></tr></table></figure></p><p>var pagination = function(pageSize, currentPage, arr) {<br>    var skipNum = (currentPage - 1) * pageSize;<br>    var newArr = (skipNum + pageSize &gt;= arr.length) ? arr.slice(skipNum, arr.length) : arr.slice(skipNum, skipNum + pageSize);<br>    return newArr;<br>}<br>```</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="效果："><a href="#效果：" class="headerlink" title="效果："></a>效果：</h2><p><img src="http://upload-images.jianshu.io/upload_images/2381669-579346183178bcf3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;p&gt;OR&lt;/p&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">p&#123;</div><div class="line">  text-align:center;</div><div class="line">  position:relative;  </div><div class="line">&#125;</div><div class="line">p::before&#123;</div><div class="line">  content:&apos;&apos;;</div><div class="line">  width:45%;</div><div class="line">  height:1px;</div><div class="line">  background:#000;</div><div class="line">  position:absolute;</div><div class="line">  left:10px;</div><div class="line">  top:50%;</div><div class="line">&#125;</div><div class="line">p::after&#123;</div><div class="line">  content:&apos;&apos;;</div><div class="line">  width:45%;</div><div class="line">  height:1px;</div><div class="line">  background:#000;</div><div class="line">  position:absolute;</div><div class="line">  right:10px;</div><div class="line">  top:50%;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;p&gt;参数：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;
+        &lt;h2 id=&quot;效果：&quot;&gt;&lt;a href=&quot;#效果：&quot; class=&quot;headerlink&quot; title=&quot;效果：&quot;&gt;&lt;/a&gt;效果：&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2381669-57
       
     
     </summary>
@@ -211,28 +148,26 @@
       <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
     
-      <category term="数组" scheme="http://yoursite.com/tags/%E6%95%B0%E7%BB%84/"/>
-    
-      <category term="分页" scheme="http://yoursite.com/tags/%E5%88%86%E9%A1%B5/"/>
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
     
   </entry>
   
   <entry>
-    <title>javascript-根据数组中对象的属性排序</title>
-    <link href="http://yoursite.com/2017/12/10/javascript-%E6%A0%B9%E6%8D%AE%E6%95%B0%E7%BB%84%E4%B8%AD%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E6%8E%92%E5%BA%8F/"/>
-    <id>http://yoursite.com/2017/12/10/javascript-根据数组中对象的属性排序/</id>
-    <published>2017-12-10T09:58:46.702Z</published>
-    <updated>2017-12-10T09:51:32.980Z</updated>
+    <title>CSS实现最右元素边界线消失</title>
+    <link href="http://yoursite.com/2018/01/04/CSS%E5%AE%9E%E7%8E%B0%E6%9C%80%E5%8F%B3%E5%85%83%E7%B4%A0%E8%BE%B9%E7%95%8C%E7%BA%BF%E6%B6%88%E5%A4%B1/"/>
+    <id>http://yoursite.com/2018/01/04/CSS实现最右元素边界线消失/</id>
+    <published>2018-01-04T09:51:21.460Z</published>
+    <updated>2018-01-04T09:49:21.474Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="有如下数组："><a href="#有如下数组：" class="headerlink" title="有如下数组："></a>有如下数组：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">var arr = [ </div><div class="line">  &#123; </div><div class="line">    id: 1,</div><div class="line">    name: &quot;a&quot;,</div><div class="line">    time: &quot;2017-11-22T06:28:13.615Z&quot;</div><div class="line">  &#125;,</div><div class="line">  &#123; </div><div class="line">    id: 2,</div><div class="line">    name: &quot;b&quot;,</div><div class="line">    time: &quot;2017-11-22T06:30:13.615Z&quot;</div><div class="line">  &#125;,</div><div class="line">  &#123; </div><div class="line">    id: 3,</div><div class="line">    name: &quot;c&quot;,</div><div class="line">    time: &quot;2017-11-22T06:32:13.615Z&quot;</div><div class="line">  &#125;</div><div class="line">]</div></pre></td></tr></table></figure><h3 id="根据数组中每个对象的id进行排序"><a href="#根据数组中每个对象的id进行排序" class="headerlink" title="根据数组中每个对象的id进行排序"></a>根据数组中每个对象的id进行排序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arr.sort((a, b) =&gt; b.id - a.id);</div></pre></td></tr></table></figure><p>等价于:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">arr.sort(function(a,b)&#123;</div><div class="line">  return b.id - a.id;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p><h3 id="根据数组中每个对象的time进行排序"><a href="#根据数组中每个对象的time进行排序" class="headerlink" title="根据数组中每个对象的time进行排序"></a>根据数组中每个对象的time进行排序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arr.sort((a, b) =&gt; new Date(b.time) - new Date(a.time));</div></pre></td></tr></table></figure><p>等价于:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">arr.sort(function(a,b)&#123;</div><div class="line">  return new Date(b.time) - new Date(a.time);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="效果："><a href="#效果：" class="headerlink" title="效果："></a>效果：</h2><p><img src="http://upload-images.jianshu.io/upload_images/2381669-92c3801f2003728d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><h2 id="实现："><a href="#实现：" class="headerlink" title="实现："></a>实现：</h2><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;main&quot;&gt;</div><div class="line">  &lt;div class=&quot;content&quot;&gt;</div><div class="line">    &lt;div class=&quot;box&quot;&gt;第1个&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;box&quot;&gt;第2个&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;box&quot;&gt;第3个&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;box&quot;&gt;第4个&lt;/div&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.box&#123;</div><div class="line">  float:left;</div><div class="line">  padding:5px;</div><div class="line">  border-left:1px solid #000;  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p>这里给每个元素都添加了左边框线，可以看到第一个元素有两条边界（一条是自己的，一条是右边元素的），现在要将第一个的左边界线去掉：</p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-8f5f54ef7dbab406.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>取掉第一个元素的左边界线，修改CSS：<br>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">  overflow:hidden;</div><div class="line">&#125;</div><div class="line">.content&#123;</div><div class="line">  margin-left:-1px;</div><div class="line">&#125;</div><div class="line">.box&#123;</div><div class="line">  float:left;</div><div class="line">  padding:5px;</div><div class="line">  border-left:1px solid #000;  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p><blockquote><p>原理：将四个元素整体向左移动一个像素，然后将外容器设置<code>overflow:hidden</code>就可以刚好将第一个元素的1px的左边界遮住</p></blockquote>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;有如下数组：&quot;&gt;&lt;a href=&quot;#有如下数组：&quot; class=&quot;headerlink&quot; title=&quot;有如下数组：&quot;&gt;&lt;/a&gt;有如下数组：&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gut
+        &lt;h2 id=&quot;效果：&quot;&gt;&lt;a href=&quot;#效果：&quot; class=&quot;headerlink&quot; title=&quot;效果：&quot;&gt;&lt;/a&gt;效果：&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2381669-92
       
     
     </summary>
@@ -240,28 +175,28 @@
       <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
     
-      <category term="数组" scheme="http://yoursite.com/tags/%E6%95%B0%E7%BB%84/"/>
-    
-      <category term="排序" scheme="http://yoursite.com/tags/%E6%8E%92%E5%BA%8F/"/>
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
     
   </entry>
   
   <entry>
-    <title>javascript-svg转canvas和image</title>
-    <link href="http://yoursite.com/2017/12/10/javascript-svg%E8%BD%ACcanvas%E5%92%8Cimage/"/>
-    <id>http://yoursite.com/2017/12/10/javascript-svg转canvas和image/</id>
-    <published>2017-12-10T09:58:46.700Z</published>
-    <updated>2017-12-10T09:51:20.235Z</updated>
+    <title>Electron-安装及实例运行</title>
+    <link href="http://yoursite.com/2018/01/04/Electron-%E5%AE%89%E8%A3%85%E5%8F%8A%E5%AE%9E%E4%BE%8B%E8%BF%90%E8%A1%8C/"/>
+    <id>http://yoursite.com/2018/01/04/Electron-安装及实例运行/</id>
+    <published>2018-01-04T09:51:21.460Z</published>
+    <updated>2018-01-04T09:49:30.814Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="代码（内含注释）"><a href="#代码（内含注释）" class="headerlink" title="代码（内含注释）"></a>代码（内含注释）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line"></div><div class="line">&lt;head&gt;</div><div class="line">    &lt;title&gt;&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">&lt;body&gt;</div><div class="line">    &lt;div id=&quot;svg-wrap&quot;&gt;</div><div class="line">        &lt;svg width=&quot;200&quot; height=&quot;200&quot; xmlns=&apos;http://www.w3.org/2000/svg&apos;&gt;</div><div class="line">            &lt;rect width=&quot;200&quot; height=&quot;200&quot; style=&quot;fill:#ddd&quot;&gt;&lt;/rect&gt;</div><div class="line">        &lt;/svg&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;canvas id=&quot;canvas&quot;&gt;&lt;/canvas&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">    window.onload = function()&#123;</div><div class="line">        //获取svg内容</div><div class="line">        var svg = document.getElementById(&apos;svg-wrap&apos;).innerHTML;</div><div class="line"></div><div class="line">        var canvas = document.getElementById(&apos;canvas&apos;);</div><div class="line">        var c = canvas.getContext(&apos;2d&apos;);</div><div class="line"></div><div class="line">        //新建Image对象</div><div class="line">        var img = new Image();</div><div class="line"></div><div class="line">        //svg内容</div><div class="line">        img.src = &apos;data:image/svg+xml,&apos; + unescape(encodeURIComponent(svg));//svg内容中可以有中文字符</div><div class="line">        img.src = &apos;data:image/svg+xml,&apos; + svg;//svg内容中不能有中文字符</div><div class="line"></div><div class="line">        //svg编码成base64</div><div class="line">        img.src = &apos;data:image/svg+xml;base64,&apos; + window.btoa(unescape(encodeURIComponent(svg)));//svg内容中可以有中文字符</div><div class="line">        img.src = &apos;data:image/svg+xml;base64,&apos; + window.btoa(svg);//svg内容中不能有中文字符</div><div class="line"></div><div class="line">        //图片初始化完成后调用</div><div class="line">        img.onload = function() &#123;</div><div class="line">            //将canvas的宽高设置为图像的宽高</div><div class="line">            canvas.width = img.width;</div><div class="line">            canvas.height = img.height;</div><div class="line">            </div><div class="line">            //canvas画图片</div><div class="line">            c.drawImage(img, 0, 0);</div><div class="line"></div><div class="line">            //将图片添加到body中</div><div class="line">            document.body.appendChild(img)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line"></div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure><h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="http://upload-images.jianshu.io/upload_images/2381669-5e1fe4184f2468fc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><blockquote><p>svg标签一定要加属性<code>xmlns=&#39;http://www.w3.org/2000/svg&#39;</code><br>svg标签一定要加属性<code>xmlns=&#39;http://www.w3.org/2000/svg&#39;</code><br>svg标签一定要加属性<code>xmlns=&#39;http://www.w3.org/2000/svg&#39;</code><br>不然svg内容和base64添加到<code>img.src</code>会出错，canvas和image都不会在页面显示出来</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<ol><li>创建目录 demo</li><li>进入目录 demo，运行命令<figure class="highlight plain"><figcaption><span>init```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">3. 运行命令```npm install electron --save-dev```或者```cnpm install electron --save-dev```（淘宝镜像）</div><div class="line">4. 创建文件index.js，写入代码：</div></pre></td></tr></table></figure></li></ol><p>const {app,BrowserWindow} = require(‘electron’);</p><p>var mainWindow;<br>app.on(‘ready’,function(){<br>    mainWindow = new BrowserWindow({<br>        width:700,<br>        height:630,<br>        backgroundColor:’#ddd’<br>    });</p><pre><code>//加载网页// mainWindow.loadURL(&quot;http://hlz.space/blog&quot;);//加载当前目录文件mainWindow.loadURL(`file://${__dirname}/index.html`);</code></pre><p>});<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">5. 修改package.json中的&quot;script&quot;</div></pre></td></tr></table></figure></p><p>“scripts”: {<br>  “start”: “electron .”<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">6. 运行命令```npm start</div></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;代码（内含注释）&quot;&gt;&lt;a href=&quot;#代码（内含注释）&quot; class=&quot;headerlink&quot; title=&quot;代码（内含注释）&quot;&gt;&lt;/a&gt;代码（内含注释）&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td cl
+        &lt;ol&gt;
+&lt;li&gt;创建目录 demo&lt;/li&gt;
+&lt;li&gt;进入目录 demo，运行命令&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;init```&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=
       
     
     </summary>
@@ -269,30 +204,245 @@
       <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+      <category term="electron" scheme="http://yoursite.com/tags/electron/"/>
     
-      <category term="image" scheme="http://yoursite.com/tags/image/"/>
+  </entry>
+  
+  <entry>
+    <title>Electron-打包</title>
+    <link href="http://yoursite.com/2018/01/04/Electron-%E6%89%93%E5%8C%85/"/>
+    <id>http://yoursite.com/2018/01/04/Electron-打包/</id>
+    <published>2018-01-04T09:51:21.460Z</published>
+    <updated>2018-01-04T09:49:34.207Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>在项目目录中执行命令<figure class="highlight plain"><figcaption><span>install electron-packager --save-dev```或```cnpm install electron-packager --save-dev```（淘宝镜像）</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">2. 修改package.json中的&quot;script&quot;</div></pre></td></tr></table></figure></li></ol><p>“scripts”: {<br>  //正常打包<br>  “packager”: “electron-packager .”, </p><p>  //压缩打包<br>  “packager-asar”: “electron-packager . –asar”, </p><p>  //所有平台打包<br>  “packager-all”: “electron-packager . –all”,<br>}<br>```</p><ol><li>在当前目录下执行命令（根据需要执行）</li></ol><ul><li><code>npm run-script packager</code>：正常打包</li><li><code>npm run-script packager</code>：压缩打包</li><li><code>npm run-script packager</code>：所有平台打包</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;在项目目录中执行命令&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;install electron-packager --save-dev```或```cnpm install electron-packag
+      
+    
+    </summary>
+    
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+    
+    
+      <category term="electron" scheme="http://yoursite.com/tags/electron/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS实现多列均匀布局</title>
+    <link href="http://yoursite.com/2018/01/04/CSS%E5%AE%9E%E7%8E%B0%E5%A4%9A%E5%88%97%E5%9D%87%E5%8C%80%E5%B8%83%E5%B1%80/"/>
+    <id>http://yoursite.com/2018/01/04/CSS实现多列均匀布局/</id>
+    <published>2018-01-04T09:51:21.450Z</published>
+    <updated>2018-01-04T09:49:14.724Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="效果："><a href="#效果：" class="headerlink" title="效果："></a>效果：</h2><p><img src="http://upload-images.jianshu.io/upload_images/2381669-a4f8b6e96abe46c4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><h2 id="实现："><a href="#实现：" class="headerlink" title="实现："></a>实现：</h2><ul><li><strong>方法一</strong>：</li></ul><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;main&quot;&gt;</div><div class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;  </div><div class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;  </div><div class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;  </div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">  text-align:justify;</div><div class="line">  text-align-last:justify;</div><div class="line">&#125;</div><div class="line">.box&#123;</div><div class="line">  width:50px;</div><div class="line">  height:50px;</div><div class="line">  background:tomato;</div><div class="line">  border-radius:50%;</div><div class="line">  display:inline-block;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><ul><li><strong>方法二（兼容性好）</strong>：</li></ul><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;main&quot;&gt;</div><div class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;  </div><div class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;  </div><div class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;  </div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">  text-align:justify;</div><div class="line">&#125;</div><div class="line">.main::after&#123;</div><div class="line">  content:&apos;&apos;;</div><div class="line">  display:inline-block;</div><div class="line">  width:100%;</div><div class="line">&#125;</div><div class="line">.box&#123;</div><div class="line">  width:50px;</div><div class="line">  height:50px;</div><div class="line">  background:tomato;</div><div class="line">  border-radius:50%;</div><div class="line">  display:inline-block;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;效果：&quot;&gt;&lt;a href=&quot;#效果：&quot; class=&quot;headerlink&quot; title=&quot;效果：&quot;&gt;&lt;/a&gt;效果：&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2381669-a4
+      
+    
+    </summary>
+    
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+    
+    
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS实现checkbox计数</title>
+    <link href="http://yoursite.com/2018/01/04/CSS%E5%AE%9E%E7%8E%B0checkbox%E8%AE%A1%E6%95%B0/"/>
+    <id>http://yoursite.com/2018/01/04/CSS实现checkbox计数/</id>
+    <published>2018-01-04T09:51:21.450Z</published>
+    <updated>2018-01-04T09:49:12.094Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="效果："><a href="#效果：" class="headerlink" title="效果："></a>效果：</h2><p>计数前：</p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-35d6a4000c151097.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>计数后：</p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-581544e81d6d6d9d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;choose&quot;&gt;</div><div class="line">  &lt;label&gt;&lt;input type=&quot;checkbox&quot; /&gt;重庆&lt;/label&gt;</div><div class="line">  &lt;label&gt;&lt;input type=&quot;checkbox&quot; /&gt;北京&lt;/label&gt;</div><div class="line">  &lt;label&gt;&lt;input type=&quot;checkbox&quot; /&gt;广州&lt;/label&gt;</div><div class="line">  &lt;label&gt;&lt;input type=&quot;checkbox&quot; /&gt;成都&lt;/label&gt;</div><div class="line">  &lt;label&gt;&lt;input type=&quot;checkbox&quot; /&gt;云南&lt;/label&gt;</div><div class="line">  &lt;label&gt;&lt;input type=&quot;checkbox&quot; /&gt;上海&lt;/label&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div&gt;你选择了&lt;span class=&quot;count&quot;&gt;&lt;/span&gt;个城市&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">.choose&#123;</div><div class="line">  counter-reset:city;</div><div class="line">&#125;</div><div class="line">.choose input:checked&#123;</div><div class="line">  counter-increment:city;</div><div class="line">&#125;</div><div class="line">.count::before&#123;</div><div class="line">  content:counter(city);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;效果：&quot;&gt;&lt;a href=&quot;#效果：&quot; class=&quot;headerlink&quot; title=&quot;效果：&quot;&gt;&lt;/a&gt;效果：&lt;/h2&gt;&lt;p&gt;计数前：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_image
+      
+    
+    </summary>
+    
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+    
+    
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS-单标签实现左边竖条的6种方法</title>
+    <link href="http://yoursite.com/2018/01/04/CSS-%E5%8D%95%E6%A0%87%E7%AD%BE%E5%AE%9E%E7%8E%B0%E5%B7%A6%E8%BE%B9%E7%AB%96%E6%9D%A1%E7%9A%846%E7%A7%8D%E6%96%B9%E6%B3%95/"/>
+    <id>http://yoursite.com/2018/01/04/CSS-单标签实现左边竖条的6种方法/</id>
+    <published>2018-01-04T09:51:21.450Z</published>
+    <updated>2018-01-04T09:48:58.905Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="效果："><a href="#效果：" class="headerlink" title="效果："></a>效果：</h2><p><img src="http://upload-images.jianshu.io/upload_images/2381669-900a32684f376971.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><hr><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;main&quot;&gt;&lt;/div&gt;</div></pre></td></tr></table></figure></p><h2 id="实现："><a href="#实现：" class="headerlink" title="实现："></a>实现：</h2><ol><li><p>方法一：border</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">  ...</div><div class="line">  border-left:5px solid tomato;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li><li><p>方法二：伪元素（before或after）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">  ...</div><div class="line">  position:relative;</div><div class="line">&#125;</div><div class="line">.main::after&#123;</div><div class="line">  content:&apos;&apos;;</div><div class="line">  width:5px;</div><div class="line">  height:100%;</div><div class="line">  position:absolute;</div><div class="line">  top:0;</div><div class="line">  left:0;</div><div class="line">  background:tomato;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li><li><p>方法三：外部box-shadow</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">  ...</div><div class="line">  box-shadow:-5px 0px 0 0 tomato;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li><li><p>方法四：内部box-shadow</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">  ...</div><div class="line">  box-shadow:inset 5px 0px 0 0 tomato;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li><li><p>方法五：drop-shadow</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">  ...</div><div class="line">  filter:drop-shadow(-5px 0 0 tomato);</div><div class="line">&#125;</div></pre></td></tr></table></figure></li><li><p>方法六：linear-gradient</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">  ...</div><div class="line">  background-image:linear-gradient(90deg, deeppink 0px, deeppink 5px, transparent 0px);</div><div class="line">&#125;</div></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;效果：&quot;&gt;&lt;a href=&quot;#效果：&quot; class=&quot;headerlink&quot; title=&quot;效果：&quot;&gt;&lt;/a&gt;效果：&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2381669-90
+      
+    
+    </summary>
+    
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+    
+    
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS-利用table实现五种常用布局</title>
+    <link href="http://yoursite.com/2018/01/04/CSS-%E5%88%A9%E7%94%A8table%E5%AE%9E%E7%8E%B0%E4%BA%94%E7%A7%8D%E5%B8%B8%E7%94%A8%E5%B8%83%E5%B1%80/"/>
+    <id>http://yoursite.com/2018/01/04/CSS-利用table实现五种常用布局/</id>
+    <published>2018-01-04T09:51:21.450Z</published>
+    <updated>2018-01-04T09:49:06.792Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="布局一："><a href="#布局一：" class="headerlink" title="布局一："></a>布局一：</h2><ul><li>效果：</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-ba836f0ce27fff6f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><ul><li>代码：</li></ul><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;header&quot;&gt;header&lt;/div&gt;</div><div class="line">&lt;div class=&quot;main&quot;&gt;main&lt;/div&gt;</div><div class="line">&lt;div class=&quot;footer&quot;&gt;footer&lt;/div&gt;</div></pre></td></tr></table></figure></p><blockquote><p>注意：div中要有内容，不然显示不出来</p></blockquote><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">  margin:0;</div><div class="line">  padding:0;</div><div class="line">  width:100%;</div><div class="line">  min-height:100vh;</div><div class="line">  display:table;</div><div class="line">  text-align:center;</div><div class="line">&#125;</div><div class="line">.header,.main,.footer&#123;</div><div class="line">  display:table-row;</div><div class="line">&#125;</div><div class="line">.header&#123;</div><div class="line">  height:50px;</div><div class="line">  background:tomato;</div><div class="line">&#125;</div><div class="line">.main&#123;</div><div class="line">  background:skyblue;</div><div class="line">&#125;</div><div class="line">.footer&#123;</div><div class="line">  height:50px;</div><div class="line">  background:#9d70ff;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><hr><h2 id="布局二："><a href="#布局二：" class="headerlink" title="布局二："></a>布局二：</h2><ul><li>效果：</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-4edf6a20d6765f71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><ul><li>代码：</li></ul><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;header&quot;&gt;header&lt;/div&gt;</div><div class="line">&lt;div class=&quot;main&quot;&gt;</div><div class="line">  &lt;div class=&quot;left&quot;&gt;left&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;right&quot;&gt;right&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=&quot;footer&quot;&gt;footer&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">  margin:0;</div><div class="line">  padding:0;</div><div class="line">  width:100%;</div><div class="line">  min-height:100vh;</div><div class="line">  display:table;</div><div class="line">  text-align:center;</div><div class="line">&#125;</div><div class="line">.header,.main,.footer&#123;</div><div class="line">  display:table-row;</div><div class="line">&#125;</div><div class="line">.header&#123;</div><div class="line">  height:50px;</div><div class="line">  background:tomato;</div><div class="line">&#125;</div><div class="line">.main&#123;</div><div class="line">  width:100%;</div><div class="line">  display:table;</div><div class="line">  height:calc(100vh - 100px);</div><div class="line">&#125;</div><div class="line">.main .left&#123;</div><div class="line">  width:300px;</div><div class="line">  display:table-cell;</div><div class="line">  background:#fcea96;</div><div class="line">&#125;</div><div class="line">.main .right&#123;</div><div class="line">  display:table-cell;</div><div class="line">  background:skyblue;</div><div class="line">&#125;</div><div class="line">.footer&#123;</div><div class="line">  height:50px;</div><div class="line">  background:#9d70ff;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><h2 id="gt-注意：-main的height属性中的100px是header和footer的高度之和"><a href="#gt-注意：-main的height属性中的100px是header和footer的高度之和" class="headerlink" title="&gt;注意：.main的height属性中的100px是header和footer的高度之和"></a>&gt;注意：.main的height属性中的100px是header和footer的高度之和</h2><h2 id="布局三："><a href="#布局三：" class="headerlink" title="布局三："></a>布局三：</h2><ul><li>效果：</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-030da976a77916bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><ul><li>代码：</li></ul><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;left&quot;&gt;left&lt;/div&gt;</div><div class="line">&lt;div class=&quot;right&quot;&gt;</div><div class="line">  &lt;div class=&quot;header&quot;&gt;header&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;main&quot;&gt;main&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;footer&quot;&gt;footer&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">  margin:0;</div><div class="line">  padding:0;</div><div class="line">  min-height:100vh;</div><div class="line">  display:table;</div><div class="line">  text-align:center;</div><div class="line">&#125;</div><div class="line">.left&#123;</div><div class="line">  display:table-cell;</div><div class="line">  width:200px;</div><div class="line">  background:tomato;</div><div class="line">&#125;</div><div class="line">.right&#123;</div><div class="line">  display:table;</div><div class="line">  width:calc(100vw - 200px);</div><div class="line">  height:100vh;</div><div class="line">&#125;</div><div class="line">.header,.main,.footer&#123;</div><div class="line">  display:table-row;</div><div class="line">&#125;</div><div class="line">.header&#123;</div><div class="line">  height:50px;</div><div class="line">  background:skyblue;</div><div class="line">&#125;</div><div class="line">.main&#123;</div><div class="line">  background:#fcea96;</div><div class="line">&#125;</div><div class="line">.footer&#123;</div><div class="line">  height:50px;</div><div class="line">  background:#9d70ff;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><hr><h2 id="布局四（双栏布局，例子为左边固定，右边自适应）："><a href="#布局四（双栏布局，例子为左边固定，右边自适应）：" class="headerlink" title="布局四（双栏布局，例子为左边固定，右边自适应）："></a>布局四（双栏布局，例子为左边固定，右边自适应）：</h2><ul><li>效果：</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-7fe1865c8a2c89ee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><ul><li>代码：</li></ul><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;left&quot;&gt;left&lt;/div&gt;</div><div class="line">&lt;div class=&quot;right&quot;&gt;right&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">  margin:0;</div><div class="line">  padding:0;</div><div class="line">  width:100%;</div><div class="line">  height:100vh;</div><div class="line">  display:table;</div><div class="line">  text-align:center;</div><div class="line">&#125;</div><div class="line">.left,.right&#123;</div><div class="line">  display:table-cell;</div><div class="line">&#125;</div><div class="line">.left&#123;</div><div class="line">  width:300px;</div><div class="line">  background:tomato;</div><div class="line">&#125;</div><div class="line">.right&#123;</div><div class="line">  background:skyblue;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><hr><h2 id="布局五（三栏布局，例子为左边固定，右边固定，中间自适应）："><a href="#布局五（三栏布局，例子为左边固定，右边固定，中间自适应）：" class="headerlink" title="布局五（三栏布局，例子为左边固定，右边固定，中间自适应）："></a>布局五（三栏布局，例子为左边固定，右边固定，中间自适应）：</h2><ul><li>效果：</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-984a426a750175f4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><ul><li>代码：</li></ul><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;left&quot;&gt;left&lt;/div&gt;</div><div class="line">&lt;div class=&quot;middle&quot;&gt;middle&lt;/div&gt;</div><div class="line">&lt;div class=&quot;right&quot;&gt;right&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">  margin:0;</div><div class="line">  padding:0;</div><div class="line">  width:100%;</div><div class="line">  height:100vh;</div><div class="line">  display:table;</div><div class="line">  text-align:center;</div><div class="line">&#125;</div><div class="line">.left,.middle,.right&#123;</div><div class="line">  display:table-cell;</div><div class="line">&#125;</div><div class="line">.left&#123;</div><div class="line">  width:300px;</div><div class="line">  background:tomato;</div><div class="line">&#125;</div><div class="line">.middle&#123;</div><div class="line">  background:#ffe69e;</div><div class="line">&#125;</div><div class="line">.right&#123;</div><div class="line">  width:200px;</div><div class="line">  background:skyblue;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;布局一：&quot;&gt;&lt;a href=&quot;#布局一：&quot; class=&quot;headerlink&quot; title=&quot;布局一：&quot;&gt;&lt;/a&gt;布局一：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;效果：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu
+      
+    
+    </summary>
+    
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+    
+    
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS清除浮动的四种方法</title>
+    <link href="http://yoursite.com/2018/01/04/CSS%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E7%9A%84%E5%9B%9B%E7%A7%8D%E6%96%B9%E6%B3%95/"/>
+    <id>http://yoursite.com/2018/01/04/CSS清除浮动的四种方法/</id>
+    <published>2018-01-04T09:51:21.450Z</published>
+    <updated>2018-01-04T09:49:09.584Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-after"><a href="#1-after" class="headerlink" title="1. ::after"></a>1. ::after</h3><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;clearfix&quot;&gt;</div><div class="line">  &lt;div class=&quot;title&quot;&gt;title&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=&quot;content&quot;&gt;content&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.title&#123;</div><div class="line">  float:left;</div><div class="line">&#125;</div><div class="line">.clearfix::after&#123;</div><div class="line">  content:&apos;&apos;;</div><div class="line">  display:block;</div><div class="line">  clear:both;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><h3 id="2-overflow-hidden"><a href="#2-overflow-hidden" class="headerlink" title="2. overflow:hidden"></a>2. overflow:hidden</h3><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;clearfix&quot;&gt;</div><div class="line">  &lt;div class=&quot;title&quot;&gt;title&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=&quot;content&quot;&gt;content&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.title&#123;</div><div class="line">  float:left;</div><div class="line">&#125;</div><div class="line">.clearfix::after&#123;</div><div class="line">  overflow:hidden;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><h3 id="3-clear-both（一）"><a href="#3-clear-both（一）" class="headerlink" title="3. clear:both（一）"></a>3. clear:both（一）</h3><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div&gt;</div><div class="line">  &lt;div class=&quot;title&quot;&gt;title&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=&quot;content&quot;&gt;content&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.title&#123;</div><div class="line">  float:left;</div><div class="line">&#125;</div><div class="line">.clearfix&#123;</div><div class="line">  clear:both;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><h3 id="4-clear-both（二）"><a href="#4-clear-both（二）" class="headerlink" title="4. clear:both（二）"></a>4. clear:both（二）</h3><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;div&gt;</div><div class="line">  &lt;div class=&quot;title&quot;&gt;title&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=&quot;content&quot;&gt;content&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.title&#123;</div><div class="line">  float:left;</div><div class="line">&#125;</div><div class="line">.content&#123;</div><div class="line">  clear:both;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1-after&quot;&gt;&lt;a href=&quot;#1-after&quot; class=&quot;headerlink&quot; title=&quot;1. ::after&quot;&gt;&lt;/a&gt;1. ::after&lt;/h3&gt;&lt;p&gt;html：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;ta
+      
+    
+    </summary>
+    
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+    
+    
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>canvas绘画封装记录</title>
+    <link href="http://yoursite.com/2018/01/04/canvas%E7%BB%98%E7%94%BB%E5%B0%81%E8%A3%85%E8%AE%B0%E5%BD%95/"/>
+    <id>http://yoursite.com/2018/01/04/canvas绘画封装记录/</id>
+    <published>2018-01-04T09:51:21.440Z</published>
+    <updated>2018-01-04T09:48:52.494Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;canvas id=&quot;canvas&quot; width=&quot;500&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;</div></pre></td></tr></table></figure></p><p>javascript：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var canv = document.getElementById(&apos;canvas&apos;);</div><div class="line">var ctx = canv.getContext(&apos;2d&apos;);</div></pre></td></tr></table></figure></p><hr><ol><li><p>画直线</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">/*</div><div class="line">* x1：起始横坐标</div><div class="line">* y1：起始纵坐标</div><div class="line">* x2：结束横坐标</div><div class="line">* y2：结束纵坐标</div><div class="line">* color：颜色</div><div class="line">*/</div><div class="line">function drawLine(x1,y1,x2,y2,color)&#123;</div><div class="line">  ctx.beginPath();</div><div class="line">  ctx.strokeStyle = color;</div><div class="line">  ctx.moveTo(x1,y1);</div><div class="line">  ctx.lineTo(x2,y2);</div><div class="line">  ctx.stroke();</div><div class="line">&#125;</div></pre></td></tr></table></figure></li><li><p>画弧线（实心或空心）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">/*</div><div class="line">* x：弧心横坐标</div><div class="line">* y：弧心纵坐标</div><div class="line">* r：弧半径</div><div class="line">* startAngle：起始角度</div><div class="line">* endAngle：结束角度</div><div class="line">* dir：方向（默认：false（顺时针），true（逆时针））</div><div class="line">* color：颜色</div><div class="line">* type：类型（0（空心），1（实心））</div><div class="line">*/</div><div class="line">function drawArc(x,y,r,sa,ea,dir,color,type)&#123;</div><div class="line">  ctx.beginPath();</div><div class="line">  type == 0 ? ctx.strokeStyle=color : ctx.fillStyle=color;</div><div class="line">  ctx.arc(x,y,r,(Math.PI/180)*sa,(Math.PI/180)*ea,dir);</div><div class="line">  type == 0 ? ctx.stroke() : ctx.fill();</div><div class="line">&#125;</div></pre></td></tr></table></figure></li><li><p>画多边形（实心或空心）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">/*</div><div class="line">* arr：多边形顶角坐标</div><div class="line">* color：颜色</div><div class="line">* type：类型（0（空心），1（实心））</div><div class="line">*/</div><div class="line">function drawShape(arr,color,type)&#123;</div><div class="line">  ctx.beginPath();</div><div class="line">  type == 0 ? ctx.strokeStyle=color : ctx.fillStyle=color;</div><div class="line">  ctx.moveTo(arr[0][0],arr[0][1]);</div><div class="line">  for(var i=1;i&lt;arr.length;i++)&#123;</div><div class="line">    ctx.lineTo(arr[i][0],arr[i][1]);</div><div class="line">  &#125;</div><div class="line">  type == 0 ? ctx.stroke() : ctx.fill();</div><div class="line">&#125;</div></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;初始化&quot;&gt;&lt;a href=&quot;#初始化&quot; class=&quot;headerlink&quot; title=&quot;初始化&quot;&gt;&lt;/a&gt;初始化&lt;/h3&gt;&lt;p&gt;html：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gut
+      
+    
+    </summary>
+    
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+    
+    
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
     
       <category term="canvas" scheme="http://yoursite.com/tags/canvas/"/>
     
-      <category term="svg" scheme="http://yoursite.com/tags/svg/"/>
-    
   </entry>
   
   <entry>
-    <title>javascript-split单个或连续空格</title>
-    <link href="http://yoursite.com/2017/12/10/javascript-split%E5%8D%95%E4%B8%AA%E6%88%96%E8%BF%9E%E7%BB%AD%E7%A9%BA%E6%A0%BC/"/>
-    <id>http://yoursite.com/2017/12/10/javascript-split单个或连续空格/</id>
-    <published>2017-12-10T09:58:46.699Z</published>
-    <updated>2017-12-10T09:51:04.263Z</updated>
+    <title>SCSS学习记录</title>
+    <link href="http://yoursite.com/2018/01/04/SCSS%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+    <id>http://yoursite.com/2018/01/04/SCSS学习记录/</id>
+    <published>2018-01-04T09:51:21.440Z</published>
+    <updated>2018-01-04T09:50:35.613Z</updated>
     
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">str.split(/[ ]+/);</div></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="1-选择器嵌套"><a href="#1-选择器嵌套" class="headerlink" title="1. 选择器嵌套"></a>1. 选择器嵌套</h2><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;parent&quot;&gt;</div><div class="line">  &lt;div class=&quot;child&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">  width:200px;</div><div class="line">  height:200px;</div><div class="line">  background:tomato;</div><div class="line">  .content&#123;</div><div class="line">    width:100px;</div><div class="line">    height:100px;</div><div class="line">    background:skyblue;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><h2 id="2-父选择器-amp"><a href="#2-父选择器-amp" class="headerlink" title="2. 父选择器 &amp;"></a>2. 父选择器 &amp;</h2><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;a href=&quot;#&quot;&gt;goto&lt;/a&gt;</div><div class="line"></div><div class="line">&lt;div class=&quot;main-one&quot;&gt;one&lt;/div&gt;</div><div class="line">&lt;div class=&quot;main-two&quot;&gt;two&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">a&#123;</div><div class="line">  text-decoration:none;</div><div class="line">  &amp;:hover&#123;</div><div class="line">    text-decoration:underline;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.main&#123;</div><div class="line">  &amp;-one&#123;</div><div class="line">    color:red;</div><div class="line">  &#125;</div><div class="line">  &amp;-two&#123;</div><div class="line">    color:green;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><h2 id="3-属性嵌套"><a href="#3-属性嵌套" class="headerlink" title="3. 属性嵌套"></a>3. 属性嵌套</h2><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;main&quot;&gt;&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">.content&#123;</div><div class="line">  width:100px;</div><div class="line">  height:100px;</div><div class="line">  background:skyblue;</div><div class="line"></div><div class="line">  /* 属性嵌套 */</div><div class="line">  margin:&#123;</div><div class="line">    left:10px;</div><div class="line">    top:10px;</div><div class="line">    right:10px;</div><div class="line">    bottom:10px;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><h2 id="4-注释"><a href="#4-注释" class="headerlink" title="4. 注释 "></a>4. 注释 <figure class="highlight plain"><figcaption><span>*/``` 与 ```//```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">```/* */```：在编译时**会**写进CSS文件</div><div class="line">```//```：在编译时**不会**写进CSS文件</div><div class="line"></div><div class="line">## 5. 插值语句</div><div class="line">编译前：</div></pre></td></tr></table></figure></h2><p>$name:”hester”;<br>/<em> hello,my name id #{$name} </em>/<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">编译后：</div></pre></td></tr></table></figure></p><p>/<em> hello,my name id hester </em>/<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">## 6. 变量</div><div class="line">- 全局变量：</div></pre></td></tr></table></figure></p><p>$w:200px;<br>$h:200px;<br>.main{<br>  width:$w;<br>  height:$h;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- 局部变量：</div></pre></td></tr></table></figure></p><p>.main{<br>  $w:200px;<br>  $h:200px;<br>  width:$w;<br>  height:$h;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- 局部变量转换为全局变量（添加 ```!global```）：</div></pre></td></tr></table></figure></p><p>.main{<br>  $w:200px !global;<br>  $h:200px !global;<br>  width:$w;<br>  height:$h;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">## 7. @mixin 和 @include</div><div class="line">html：</div></pre></td></tr></table></figure></p><p><div class="main"><br>  <a href="#">goto</a><br></div><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">css：</div></pre></td></tr></table></figure></p><p>@mixin mainstyle($word){</p><p>  #{$word}{<br>    text-decoration:none;<br>  }</p><p>  #{$word}:hover{<br>    text-decoration:underline;<br>  }<br>}<br>@include mainstyle(“.main a”);<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">## 8. 变量定义 !default：</div><div class="line">&gt;如果变量已经被赋值，不会再被重新赋值，但是如果变量还没有被赋值，则会被赋予新的值。</div><div class="line"></div><div class="line">编译前：</div></pre></td></tr></table></figure></p><p>$content: “First”;<br>$content: “Second” !default;<br>$new_content: “New” !default;</p><p>#main {<br>  content: $content;<br>  new-content: $new_content;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">编译后：</div></pre></td></tr></table></figure></p><p>#main {<br>  content: “First”;<br>  new-content: “New”;<br>}<br>```</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;lin
+        &lt;h2 id=&quot;1-选择器嵌套&quot;&gt;&lt;a href=&quot;#1-选择器嵌套&quot; class=&quot;headerlink&quot; title=&quot;1. 选择器嵌套&quot;&gt;&lt;/a&gt;1. 选择器嵌套&lt;/h2&gt;&lt;p&gt;html：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;
+      
+    
+    </summary>
+    
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+    
+    
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+      <category term="scss" scheme="http://yoursite.com/tags/scss/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>setInterval中3种执行函数写法的作用</title>
+    <link href="http://yoursite.com/2018/01/04/setInterval%E4%B8%AD3%E7%A7%8D%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0%E5%86%99%E6%B3%95%E7%9A%84%E4%BD%9C%E7%94%A8/"/>
+    <id>http://yoursite.com/2018/01/04/setInterval中3种执行函数写法的作用/</id>
+    <published>2018-01-04T09:51:21.440Z</published>
+    <updated>2018-01-04T09:50:47.254Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-setInterval-update-1000"><a href="#1-setInterval-update-1000" class="headerlink" title="1. setInterval(update,1000);"></a>1. setInterval(update,1000);</h3><p>一秒后执行update函数</p><h3 id="2-setInterval-update-1000"><a href="#2-setInterval-update-1000" class="headerlink" title="2. setInterval(update(),1000);"></a>2. setInterval(update(),1000);</h3><p>立即执行update函数</p><h3 id="3-setInterval-“update-”-1000"><a href="#3-setInterval-“update-”-1000" class="headerlink" title="3. setInterval(“update()”,1000);"></a>3. setInterval(“update()”,1000);</h3><p>一秒后执行update函数</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1-setInterval-update-1000&quot;&gt;&lt;a href=&quot;#1-setInterval-update-1000&quot; class=&quot;headerlink&quot; title=&quot;1. setInterval(update,1000);&quot;&gt;&lt;/a&gt;1. setIn
       
     
     </summary>
@@ -302,24 +452,24 @@
     
       <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
     
-      <category term="split" scheme="http://yoursite.com/tags/split/"/>
+      <category term="setInterval" scheme="http://yoursite.com/tags/setInterval/"/>
     
   </entry>
   
   <entry>
-    <title>javascript-canvas与image互转</title>
-    <link href="http://yoursite.com/2017/12/10/javascript-canvas%E4%B8%8Eimage%E4%BA%92%E8%BD%AC/"/>
-    <id>http://yoursite.com/2017/12/10/javascript-canvas与image互转/</id>
-    <published>2017-12-10T09:58:46.697Z</published>
-    <updated>2017-12-10T09:50:38.798Z</updated>
+    <title>子div设置margin-top使父div也跟着向下移动</title>
+    <link href="http://yoursite.com/2018/01/04/%E5%AD%90div%E8%AE%BE%E7%BD%AEmargin-top%E4%BD%BF%E7%88%B6div%E4%B9%9F%E8%B7%9F%E7%9D%80%E5%90%91%E4%B8%8B%E7%A7%BB%E5%8A%A8/"/>
+    <id>http://yoursite.com/2018/01/04/子div设置margin-top使父div也跟着向下移动/</id>
+    <published>2018-01-04T09:51:21.440Z</published>
+    <updated>2018-01-04T09:50:59.019Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="代码（内含注释）"><a href="#代码（内含注释）" class="headerlink" title="代码（内含注释）"></a>代码（内含注释）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line"></div><div class="line">&lt;head&gt;</div><div class="line">    &lt;title&gt;&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">&lt;body&gt;</div><div class="line">    &lt;canvas id=&quot;canvas&quot;&gt;&lt;/canvas&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">    window.onload = function() &#123;</div><div class="line">        var canvas = document.getElementById(&apos;canvas&apos;);</div><div class="line">        var c = canvas.getContext(&apos;2d&apos;);</div><div class="line">        // canvas2image();//canvas转图片</div><div class="line">        // image2canvas();//图片转canvas</div><div class="line"></div><div class="line">        //canvas转图片</div><div class="line">        function canvas2image() &#123;</div><div class="line">            //canvas画一个正方形</div><div class="line">            c.fillStyle = &quot;#ddd&quot;;</div><div class="line">            c.fillRect(0, 0, 100, 100);</div><div class="line"></div><div class="line">            //新建Image对象，将canvas转换为base64添加到image的src属性上</div><div class="line">            var img = new Image();</div><div class="line">            img.src = canvas.toDataURL(&apos;image/jpg&apos;);</div><div class="line"></div><div class="line">            //添加到body中</div><div class="line">            document.body.appendChild(img);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        //图片转canvas</div><div class="line">        function image2canvas() &#123;</div><div class="line">            //新建Image对象，引入当前目录下的图片</div><div class="line">            var img = new Image();</div><div class="line">            img.src = &quot;1.jpg&quot;;</div><div class="line"></div><div class="line">            //图片初始化完成后调用</div><div class="line">            img.onload = function() &#123;</div><div class="line">                //将canvas的宽高设置为图像的宽高</div><div class="line">                canvas.width = img.width;</div><div class="line">                canvas.height = img.height;</div><div class="line"></div><div class="line">                //canvas画图片</div><div class="line">                c.drawImage(img, 0, 0, img.width, img.height);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line"></div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;main&quot;&gt;</div><div class="line">  &lt;div class=&quot;content&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">  margin:0;</div><div class="line">  padding:0;</div><div class="line">&#125;</div><div class="line">.main&#123;</div><div class="line">  width:200px;</div><div class="line">  height:200px;</div><div class="line">  background:tomato;</div><div class="line">&#125;</div><div class="line">.content&#123;</div><div class="line">  width:100px;</div><div class="line">  height:100px;</div><div class="line">  background:skyblue;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p>效果：</p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-238af38eb7b13bfb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><blockquote><p>原理：一个盒子如果没有上补白(padding-top)和上边框(border-top)，那么这个盒子的上边距会和其内部文档流中的第一个子元素的上边距重叠。</p></blockquote><h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p><strong>1. 父div设置padding-top</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">  ...</div><div class="line">  padding-top:1px;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p><strong>2. 父div设置border-top</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">  ...</div><div class="line">  border-top:1px solid #fff;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p><strong>3. 父div设置overflow（推荐使用）</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">  ...</div><div class="line">  overflow:hidden;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;代码（内含注释）&quot;&gt;&lt;a href=&quot;#代码（内含注释）&quot; class=&quot;headerlink&quot; title=&quot;代码（内含注释）&quot;&gt;&lt;/a&gt;代码（内含注释）&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td cl
+        &lt;h2 id=&quot;代码：&quot;&gt;&lt;a href=&quot;#代码：&quot; class=&quot;headerlink&quot; title=&quot;代码：&quot;&gt;&lt;/a&gt;代码：&lt;/h2&gt;&lt;p&gt;html：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gut
       
     
     </summary>
@@ -327,22 +477,47 @@
       <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
-    
-      <category term="image" scheme="http://yoursite.com/tags/image/"/>
-    
-      <category term="canvas" scheme="http://yoursite.com/tags/canvas/"/>
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
     
   </entry>
   
   <entry>
-    <title>input选择图片再显示</title>
-    <link href="http://yoursite.com/2017/12/10/input%E9%80%89%E6%8B%A9%E5%9B%BE%E7%89%87%E5%86%8D%E6%98%BE%E7%A4%BA/"/>
-    <id>http://yoursite.com/2017/12/10/input选择图片再显示/</id>
-    <published>2017-12-10T09:58:46.695Z</published>
-    <updated>2017-12-10T09:50:42.517Z</updated>
+    <title>纯CSS实现Tab导航栏切换</title>
+    <link href="http://yoursite.com/2018/01/04/%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0Tab%E5%AF%BC%E8%88%AA%E6%A0%8F%E5%88%87%E6%8D%A2/"/>
+    <id>http://yoursite.com/2018/01/04/纯CSS实现Tab导航栏切换/</id>
+    <published>2018-01-04T09:51:21.440Z</published>
+    <updated>2018-01-04T09:50:54.085Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line"></div><div class="line">&lt;head&gt;</div><div class="line">    &lt;title&gt;&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">&lt;body&gt;</div><div class="line">    &lt;div&gt;</div><div class="line">        &lt;label&gt;请选择图片&lt;/label&gt;</div><div class="line">        &lt;input id=&quot;img&quot; type=&quot;file&quot; accept=&quot;image/*&quot; name=&quot;img&quot;&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;div id=&quot;box&quot;&gt;&lt;/div&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">    var img = document.getElementById(&apos;img&apos;);</div><div class="line">    var box = document.getElementById(&apos;box&apos;);</div><div class="line">    img.addEventListener(&apos;change&apos;, function() &#123;</div><div class="line">        var file = this.files[0];</div><div class="line">        var reader = new FileReader();</div><div class="line">        reader.readAsDataURL(file);</div><div class="line">        reader.onload = function() &#123;</div><div class="line">            var imgbox = new Image();</div><div class="line">            imgbox.width = 300;</div><div class="line">            imgbox.height = 300;</div><div class="line">            imgbox.src = this.result;</div><div class="line">            box.appendChild(imgbox);</div><div class="line">        &#125;</div><div class="line">    &#125;, false);</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line"></div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure><h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p><img src="http://upload-images.jianshu.io/upload_images/2381669-1b0564c1d145f027.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-2a22db5254289133.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="效果："><a href="#效果：" class="headerlink" title="效果："></a>效果：</h2><p><img src="http://upload-images.jianshu.io/upload_images/2381669-195d96d535ddd109.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-836018c5bfdc22ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;main&quot;&gt;</div><div class="line">&lt;div id=&quot;content1&quot;&gt;列表一内容&lt;/div&gt;</div><div class="line">&lt;div id=&quot;content2&quot;&gt;列表二内容&lt;/div&gt;</div><div class="line">    &lt;ul class=&quot;tab&quot;&gt;</div><div class="line">        &lt;li&gt;&lt;a href=&quot;#content1&quot;&gt;列表一&lt;/a&gt;&lt;/li&gt;</div><div class="line">        &lt;li&gt;&lt;a href=&quot;#content2&quot;&gt;列表二&lt;/a&gt;&lt;/li&gt;</div><div class="line">    &lt;/ul&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">position: absolute;</div><div class="line">left: 50%;</div><div class="line">top:30%;</div><div class="line">transform: translate(-50%,-50%);</div><div class="line">&#125;</div><div class="line">.tab &#123;</div><div class="line">    margin: 0;</div><div class="line">    padding: 0;</div><div class="line">    overflow: hidden;</div><div class="line">    list-style-type: none;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.tab li &#123;</div><div class="line">    float: left;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.tab li a &#123;</div><div class="line">    text-decoration: none;</div><div class="line">    color: #000;</div><div class="line">    background: #ddd;</div><div class="line">    display: inline-block;</div><div class="line">    width: 120px;</div><div class="line">    height: 40px;</div><div class="line">    text-align: center;</div><div class="line">    line-height: 40px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">#content1,</div><div class="line">#content2 &#123;</div><div class="line">    display: none;</div><div class="line">    width:240px;</div><div class="line">    height:100px;</div><div class="line">    border:1px solid #ddd;</div><div class="line">    position: absolute;</div><div class="line">    top:40px;</div><div class="line">    padding:10px;</div><div class="line">    box-sizing: border-box;</div><div class="line">&#125;</div><div class="line"></div><div class="line">#content1:target,</div><div class="line">#content2:target &#123;</div><div class="line">    display: block;</div><div class="line">&#125;</div><div class="line">#content1:target ~ .tab li:nth-child(1) a&#123;</div><div class="line">background:skyblue;</div><div class="line">color:#fff;</div><div class="line">&#125;</div><div class="line">#content2:target ~ .tab li:nth-child(2) a&#123;</div><div class="line">background:skyblue;</div><div class="line">color:#fff;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p>css关键部分：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">#content1,</div><div class="line">#content2 &#123;</div><div class="line">    display: none;</div><div class="line">&#125;</div><div class="line">#content1:target,</div><div class="line">#content2:target &#123;</div><div class="line">    display: block;</div><div class="line">&#125;</div><div class="line">#content1:target ~ .tab li:nth-child(1) a&#123;</div><div class="line">background:skyblue;</div><div class="line">color:#fff;</div><div class="line">&#125;</div><div class="line">#content2:target ~ .tab li:nth-child(2) a&#123;</div><div class="line">background:skyblue;</div><div class="line">color:#fff;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;效果：&quot;&gt;&lt;a href=&quot;#效果：&quot; class=&quot;headerlink&quot; title=&quot;效果：&quot;&gt;&lt;/a&gt;效果：&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2381669-19
+      
+    
+    </summary>
+    
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+    
+    
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+      <category term="tab" scheme="http://yoursite.com/tags/tab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>javascript-原生实现返回顶部</title>
+    <link href="http://yoursite.com/2018/01/04/javascript-%E5%8E%9F%E7%94%9F%E5%AE%9E%E7%8E%B0%E8%BF%94%E5%9B%9E%E9%A1%B6%E9%83%A8/"/>
+    <id>http://yoursite.com/2018/01/04/javascript-原生实现返回顶部/</id>
+    <published>2018-01-04T09:51:21.430Z</published>
+    <updated>2018-01-04T09:50:23.263Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var scrollTop = function()&#123;</div><div class="line">  var c = document.documentElement.scrollTop || document.body.scrollTop;</div><div class="line">  if(c &gt; 0) &#123;</div><div class="line">    window.requestAnimationFrame(scrollTop);</div><div class="line">    window.scrollTo(0,c - c/5);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">scrollTop();</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -358,252 +533,34 @@
     
       <category term="html" scheme="http://yoursite.com/tags/html/"/>
     
-      <category term="image" scheme="http://yoursite.com/tags/image/"/>
-    
-      <category term="input" scheme="http://yoursite.com/tags/input/"/>
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
     
   </entry>
   
   <entry>
-    <title>html-img在div中，下方有空隙的解决方案</title>
-    <link href="http://yoursite.com/2017/12/10/html--img%E5%9C%A8div%E4%B8%AD%EF%BC%8C%E4%B8%8B%E6%96%B9%E6%9C%89%E7%A9%BA%E9%9A%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    <id>http://yoursite.com/2017/12/10/html--img在div中，下方有空隙的解决方案/</id>
-    <published>2017-12-10T09:58:46.693Z</published>
-    <updated>2017-12-10T09:50:47.139Z</updated>
+    <title>javascript-限制文本框输入</title>
+    <link href="http://yoursite.com/2018/01/04/javascript-%E9%99%90%E5%88%B6%E6%96%87%E6%9C%AC%E6%A1%86%E8%BE%93%E5%85%A5/"/>
+    <id>http://yoursite.com/2018/01/04/javascript-限制文本框输入/</id>
+    <published>2018-01-04T09:51:21.430Z</published>
+    <updated>2018-01-04T09:50:19.222Z</updated>
     
-    <content type="html"><![CDATA[<p>如果img在div中，会发现图片并没有完全填充div，而是在下方出现了一点空隙<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;title&gt;&lt;/title&gt;</div><div class="line">    &lt;style type=&quot;text/css&quot;&gt;</div><div class="line">        .wrap&#123;</div><div class="line">            background:lightblue;</div><div class="line">        &#125;</div><div class="line">        .img&#123;</div><div class="line">            height: 400px;</div><div class="line">        &#125;</div><div class="line">    &lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;div class=&quot;wrap&quot;&gt;</div><div class="line">    &lt;img class=&quot;img&quot; src=&quot;1.jpg&quot;&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-231bcba447ba0d75.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ol><li><p>img设置display:block;</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.img&#123;</div><div class="line">    height: 400px;</div><div class="line">    display: block;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li><li><p>div设置font-size:0;</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.wrap&#123;</div><div class="line">    background:lightblue;</div><div class="line">    font-size: 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li></ol><h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p><img src="http://upload-images.jianshu.io/upload_images/2381669-85c6358b2b7d6ee2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="1-只能输入数字-不能输入小数点"><a href="#1-只能输入数字-不能输入小数点" class="headerlink" title="1.只能输入数字(不能输入小数点)"></a>1.只能输入数字(不能输入小数点)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input onkeyup=&quot;this.value=this.value.replace(/\D/g,&apos;&apos;)&quot; onafterpaste=&quot;this.value=this.value.replace(/\D/g,&apos;&apos;)&quot;&gt;</div></pre></td></tr></table></figure><h2 id="2-只能输入数字（能输入小数点）"><a href="#2-只能输入数字（能输入小数点）" class="headerlink" title="2.只能输入数字（能输入小数点）"></a>2.只能输入数字（能输入小数点）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;input onkeyup=&quot;if(isNaN(value))execCommand(&apos;undo&apos;)&quot; onafterpaste=&quot;if(isNaN(value))execCommand(&apos;undo&apos;)&quot;&gt;</div><div class="line">&lt;input name=txt1 onchange=&quot;if(/\D/.test(this.value))&#123;alert(&apos;只能输入数字&apos;);this.value=&apos;&apos;;&#125;&quot;&gt;</div></pre></td></tr></table></figure><h2 id="3-只能输入英文字母和数字，不能输入中文"><a href="#3-只能输入英文字母和数字，不能输入中文" class="headerlink" title="3.只能输入英文字母和数字，不能输入中文"></a>3.只能输入英文字母和数字，不能输入中文</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input onkeyup=&quot;value=value.replace(/[^\w\.\/]/ig,&apos;&apos;)&quot;&gt;</div></pre></td></tr></table></figure><h2 id="4-只能输入数字和英文"><a href="#4-只能输入数字和英文" class="headerlink" title="4.只能输入数字和英文"></a>4.只能输入数字和英文</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input onKeyUp=&quot;value=value.replace(/[^\d|chun]/g,&apos;&apos;)&quot;&gt;</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;如果img在div中，会发现图片并没有完全填充div，而是在下方出现了一点空隙&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;d
+        &lt;h2 id=&quot;1-只能输入数字-不能输入小数点&quot;&gt;&lt;a href=&quot;#1-只能输入数字-不能输入小数点&quot; class=&quot;headerlink&quot; title=&quot;1.只能输入数字(不能输入小数点)&quot;&gt;&lt;/a&gt;1.只能输入数字(不能输入小数点)&lt;/h2&gt;&lt;figure class=&quot;
       
     
     </summary>
     
       <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
-    
-      <category term="div" scheme="http://yoursite.com/tags/div/"/>
     
       <category term="html" scheme="http://yoursite.com/tags/html/"/>
     
-      <category term="image" scheme="http://yoursite.com/tags/image/"/>
-    
-      <category term="空隙" scheme="http://yoursite.com/tags/%E7%A9%BA%E9%9A%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>html5拖放（Drag-&amp;-Drop）基本使用</title>
-    <link href="http://yoursite.com/2017/12/10/html5-%E6%8B%96%E6%94%BE%EF%BC%88Drag-&amp;-Drop%EF%BC%89%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
-    <id>http://yoursite.com/2017/12/10/html5-拖放（Drag-&amp;-Drop）基本使用/</id>
-    <published>2017-12-10T09:58:46.692Z</published>
-    <updated>2017-12-10T09:49:52.127Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line"></div><div class="line">&lt;head&gt;</div><div class="line">    &lt;title&gt;&lt;/title&gt;</div><div class="line">    &lt;style&gt;</div><div class="line">        div&#123;</div><div class="line">            width: 100px;</div><div class="line">            height: 100px;</div><div class="line">            background: #ddd;</div><div class="line">            margin-bottom: 10px;</div><div class="line">        &#125;</div><div class="line">    &lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">&lt;body&gt;</div><div class="line">    &lt;div id=&quot;a&quot; draggable=&quot;true&quot;&gt;a&lt;/div&gt;</div><div class="line">    &lt;div id=&quot;b&quot; draggable=&quot;true&quot;&gt;b&lt;/div&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">    var a = document.getElementById(&apos;a&apos;);</div><div class="line">    var b = document.getElementById(&apos;b&apos;);</div><div class="line">    a.ondragstart = function(e) &#123;</div><div class="line">        e.dataTransfer.setData(&quot;id&quot;, e.target.id);</div><div class="line">    &#125;</div><div class="line">    b.ondragover = function(e) &#123;</div><div class="line">        e.preventDefault();</div><div class="line">    &#125;</div><div class="line">    b.ondrop = function(e) &#123;</div><div class="line">        var id = e.dataTransfer.getData(&quot;id&quot;);</div><div class="line">        console.log(id);</div><div class="line">    &#125;</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line"></div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure><hr><h2 id="设置元素可拖放："><a href="#设置元素可拖放：" class="headerlink" title="设置元素可拖放："></a>设置元素可拖放：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">draggable=&quot;true&quot;</div></pre></td></tr></table></figure><p>##触发事件：</p><p><strong>1.拖动目标时触发事件：</strong></p><ul><li>ondragstart：开始拖动元素时触发</li><li>ondrag：元素正在拖动时触发</li><li>ondragend：完成元素拖动后触发</li></ul><p><strong>2.释放目标时触发事件：</strong></p><ul><li>ondragenter：当被拖动的对象进入容器范围内时触发</li><li>ondragover：当被拖动的对象在另一对象容器范围内拖动时触发</li><li>ondragleave：当被拖动的对象离开容器范围内时触发</li><li>ondrop：在一个拖动过程中，释放鼠标键时触发此事件</li></ul><h2 id="数据操作："><a href="#数据操作：" class="headerlink" title="数据操作："></a>数据操作：</h2><ul><li><strong>设置</strong>数据：<figure class="highlight plain"><figcaption><span>value);``` （在ondragstart中操作）</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">- **获取**数据：```e.dataTransfer.getData(key);``` （在```ondragover```中阻止对元素的默认处理方式，通过调用```ondragover```事件的 ```e.preventDefault()```方法，然后在ondrop中操作）</div><div class="line">- **清除**数据：清除全部数据```e.dataTransfer.clearData()```或清除指定数据```e.dataTransfer.clearData([&quot;id&quot;])</div></pre></td></tr></table></figure></li></ul><p><strong>实例：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">b.ondragover = function(e) &#123;</div><div class="line">    e.preventDefault();</div><div class="line">&#125;</div><div class="line">b.ondrop = function(e) &#123;</div><div class="line">    var id = e.dataTransfer.getData(&quot;id&quot;);</div><div class="line">    console.log(id);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><h2 id="设置拖放操作的自定义图标："><a href="#设置拖放操作的自定义图标：" class="headerlink" title="设置拖放操作的自定义图标："></a>设置拖放操作的自定义图标：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">**实例：**</div><div class="line">```e.dataTransfer.setDragImage(document.getElementById(&apos;img&apos;),0,0);</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div c
-      
-    
-    </summary>
-    
-      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
-    
-    
-      <category term="html5" scheme="http://yoursite.com/tags/html5/"/>
-    
-      <category term="拖放" scheme="http://yoursite.com/tags/%E6%8B%96%E6%94%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo-利用Git发布到Github</title>
-    <link href="http://yoursite.com/2017/12/10/hexo-%E5%88%A9%E7%94%A8Git%E5%8F%91%E5%B8%83%E5%88%B0Github/"/>
-    <id>http://yoursite.com/2017/12/10/hexo-利用Git发布到Github/</id>
-    <published>2017-12-10T09:58:46.690Z</published>
-    <updated>2017-12-10T09:49:23.863Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li><p>在hexo根目录下执行命令，安装hexo-deployer-git（一般默认都有，可以打开根目录下的package.json查看）：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></li><li><p>找到github项目对应的git地址：</p></li></ol><p><img src="http://upload-images.jianshu.io/upload_images/2381669-7f34c9ac7070bce5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><ol><li><p>在根目录下的_config.yml文件末尾添加配置：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository: https://github.com/garuhester/garuhester.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></li><li><p>在hexo根目录依次执行命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo clean //清除缓存</div><div class="line">$ hexo g //生成静态网页文件</div><div class="line">$ hexo d //发布到github</div></pre></td></tr></table></figure></li></ol><hr><blockquote><p>为了方便使用，可以做成bat文件：<br>开启服务：<figure class="highlight plain"><figcaption><span>clean & hexo g & hexo s```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Git上传：```hexo clean &amp; hexo g &amp; hexo d</div></pre></td></tr></table></figure></p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;在hexo根目录下执行命令，安装hexo-deployer-git（一般默认都有，可以打开根目录下的package.json查看）：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gut
-      
-    
-    </summary>
-    
-      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
-    
-    
-      <category term="git" scheme="http://yoursite.com/tags/git/"/>
-    
-      <category term="github" scheme="http://yoursite.com/tags/github/"/>
-    
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo博客搭建步骤</title>
-    <link href="http://yoursite.com/2017/12/10/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%AD%A5%E9%AA%A4/"/>
-    <id>http://yoursite.com/2017/12/10/Hexo博客搭建步骤/</id>
-    <published>2017-12-10T09:58:46.688Z</published>
-    <updated>2017-12-10T09:49:17.669Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li>npm install hexo-cli -g</li><li>hexo init blog</li><li>cd blog</li><li>npm install</li><li>hexo server</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;npm install hexo-cli -g&lt;/li&gt;
-&lt;li&gt;hexo init blog&lt;/li&gt;
-&lt;li&gt;cd blog&lt;/li&gt;
-&lt;li&gt;npm install&lt;/li&gt;
-&lt;li&gt;hexo server&lt;/li&gt;
-&lt;/ol&gt;
-
-      
-    
-    </summary>
-    
-      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
-    
-    
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
-    
-      <category term="博客搭建" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo-Next主题文件结构</title>
-    <link href="http://yoursite.com/2017/12/10/Hexo-Next%E4%B8%BB%E9%A2%98%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/"/>
-    <id>http://yoursite.com/2017/12/10/Hexo-Next主题文件结构/</id>
-    <published>2017-12-10T09:58:46.686Z</published>
-    <updated>2017-12-10T09:49:04.763Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">├── .github            #git信息</div><div class="line">├── languages          #多语言</div><div class="line">|   ├── default.yml    #默认语言</div><div class="line">|   └── zh-Hans.yml      #简体中文</div><div class="line">|   └── zh-tw.yml      #繁体中文</div><div class="line">├── layout             #布局，根目录下的*.ejs文件是对主页，分页，存档等的控制</div><div class="line">|   ├── _custom        #可以自己修改的模板，覆盖原有模板</div><div class="line">|   |   ├── _header.swig    #头部样式</div><div class="line">|   |   ├── _sidebar.swig   #侧边栏样式</div><div class="line">|   ├── _macro        #可以自己修改的模板，覆盖原有模板</div><div class="line">|   |   ├── post.swig    #文章模板</div><div class="line">|   |   ├── reward.swig    #打赏模板</div><div class="line">|   |   ├── sidebar.swig   #侧边栏模板</div><div class="line">|   ├── _partial       #局部的布局</div><div class="line">|   |   ├── head       #头部模板</div><div class="line">|   |   ├── search     #搜索模板</div><div class="line">|   |   ├── share      #分享模板</div><div class="line">|   ├── _script        #局部的布局</div><div class="line">|   ├── _third-party   #第三方模板</div><div class="line">|   ├── _layout.swig   #主页面模板</div><div class="line">|   ├── index.swig     #主页面模板</div><div class="line">|   ├── page           #页面模板</div><div class="line">|   └── tag.swig       #tag模板</div><div class="line">├── scripts            #script源码</div><div class="line">|   ├── tags           #tags的script源码</div><div class="line">|   ├── marge.js       #页面模板</div><div class="line">├── source             #源码</div><div class="line">|   ├── css            #css源码</div><div class="line">|   |   ├── _common    #*.styl基础css</div><div class="line">|   |   ├── _custom    #*.styl局部css</div><div class="line">|   |   └── _mixins    #mixins的css</div><div class="line">|   ├── fonts          #字体</div><div class="line">|   ├── images         #图片</div><div class="line">|   ├── uploads        #添加的文件</div><div class="line">|   └── js             #javascript源代码</div><div class="line">├── _config.yml        #主题配置文件</div><div class="line">└── README.md          #说明文档</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/di
-      
-    
-    </summary>
-    
-      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
-    
-    
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
-    
-      <category term="next主题" scheme="http://yoursite.com/tags/next%E4%B8%BB%E9%A2%98/"/>
-    
-      <category term="文件结构" scheme="http://yoursite.com/tags/%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo-Next主题统计功能</title>
-    <link href="http://yoursite.com/2017/12/10/Hexo-Next%E4%B8%BB%E9%A2%98%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/"/>
-    <id>http://yoursite.com/2017/12/10/Hexo-Next主题统计功能/</id>
-    <published>2017-12-10T09:58:46.684Z</published>
-    <updated>2017-12-10T09:48:56.658Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li><p>在hexo的根目录下执行命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-wordcount --save</div></pre></td></tr></table></figure></li><li><p>在根目录下的/theme/next/_config.yml文件中搜索<code>Post wordcount</code>，并配置以下参数：<br><code>wordcount</code>：字数统计<br><code>min2read</code>：阅读时长预计<br><code>totalcount</code>：总字数统计</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">post_wordcount:</div><div class="line">    item_text: true</div><div class="line">    wordcount: true</div><div class="line">    min2read: false</div><div class="line">    totalcount: false</div><div class="line">    separated_meta: true</div></pre></td></tr></table></figure></li><li><p>运行效果：</p></li></ol><p><img src="http://upload-images.jianshu.io/upload_images/2381669-894f711aebad1122.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;在hexo的根目录下执行命令：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td c
-      
-    
-    </summary>
-    
-      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
-    
-    
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
-    
-      <category term="next主题" scheme="http://yoursite.com/tags/next%E4%B8%BB%E9%A2%98/"/>
-    
-      <category term="统计" scheme="http://yoursite.com/tags/%E7%BB%9F%E8%AE%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo-Next主题添加友情链接</title>
-    <link href="http://yoursite.com/2017/12/10/Hexo-Next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/"/>
-    <id>http://yoursite.com/2017/12/10/Hexo-Next主题添加友情链接/</id>
-    <published>2017-12-10T09:58:46.682Z</published>
-    <updated>2017-12-10T09:48:51.618Z</updated>
-    
-    <content type="html"><![CDATA[<p>在根目录下的/theme/next/_config.yml文件中搜索<code>Blog rolls</code>，在下面配置相应的网站名和网站链接即可：<br><img src="http://upload-images.jianshu.io/upload_images/2381669-1e379a41bb5cc984.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-0657b97d9704c40f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;在根目录下的/theme/next/_config.yml文件中搜索&lt;code&gt;Blog rolls&lt;/code&gt;，在下面配置相应的网站名和网站链接即可：&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/
-      
-    
-    </summary>
-    
-      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
-    
-    
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
-    
-      <category term="next主题" scheme="http://yoursite.com/tags/next%E4%B8%BB%E9%A2%98/"/>
-    
-      <category term="友情链接" scheme="http://yoursite.com/tags/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo-Next主题添加搜索功能</title>
-    <link href="http://yoursite.com/2017/12/10/Hexo-Next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/"/>
-    <id>http://yoursite.com/2017/12/10/Hexo-Next主题添加搜索功能/</id>
-    <published>2017-12-10T09:58:46.681Z</published>
-    <updated>2017-12-10T09:48:42.363Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li><p>在hexo的根目录下执行命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-searchdb --save</div></pre></td></tr></table></figure></li><li><p>在根目录下的/theme/next/_config.yml文件中添加配置：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">search:</div><div class="line">  path: search.xml</div><div class="line">  field: post</div><div class="line">  format: html</div><div class="line">  limit: 10000</div></pre></td></tr></table></figure></li><li><p>在根目录下的/theme/next/_config.yml文件中搜索<code>local_search</code>，将<code>enable</code>改为<code>true</code>：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">local_search:</div><div class="line">  enable: true</div></pre></td></tr></table></figure></li></ol><p>运行效果：<br><img src="http://upload-images.jianshu.io/upload_images/2381669-1266010024fc13b1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-8814b3bd571b6302.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;在hexo的根目录下执行命令：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td c
-      
-    
-    </summary>
-    
-      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
-    
-    
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
-    
-      <category term="next主题" scheme="http://yoursite.com/tags/next%E4%B8%BB%E9%A2%98/"/>
-    
-      <category term="搜索" scheme="http://yoursite.com/tags/%E6%90%9C%E7%B4%A2/"/>
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
     
   </entry>
   
