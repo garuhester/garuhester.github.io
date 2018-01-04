@@ -86,25 +86,28 @@
 
 
 
-<meta name="description" content="123456789101112![](http://upload-images.jianshu.io/upload_images/2381669-ad5a4b65d1847869.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)![](http://upload-images.jianshu.io/upload_images/2381">
+<meta name="description" content="encodeURI()     decodeURI()： 解码一个由 encodeURI 编码过的 URI。    encodeURIComponent()     decodeURIComponent()：解码一个由 encodeURIComponent 编码过的字符串。    window.btoa()：将一个只有 ASCII 字符的字符串或二进制数据转换成一个 base64 编码过的字符串">
 <meta name="keywords" content="javascript,编码,解码">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Javascript中的编码解码函数">
 <meta property="og:url" content="http://yoursite.com/2017/12/10/Javascript中的编码解码函数/index.html">
 <meta property="og:site_name" content="Hester的博客">
-<meta property="og:description" content="123456789101112![](http://upload-images.jianshu.io/upload_images/2381669-ad5a4b65d1847869.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)![](http://upload-images.jianshu.io/upload_images/2381">
+<meta property="og:description" content="encodeURI()     decodeURI()： 解码一个由 encodeURI 编码过的 URI。    encodeURIComponent()     decodeURIComponent()：解码一个由 encodeURIComponent 编码过的字符串。    window.btoa()：将一个只有 ASCII 字符的字符串或二进制数据转换成一个 base64 编码过的字符串">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2381669-ad5a4b65d1847869.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2381669-b1f60a0ec906c540.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2381669-5bae1e56d9d01d19.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2381669-aa016db5030cacc1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2381669-de3d56c8e656eef5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2381669-a858e460a87b88a8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2381669-b6975a2c7dd53c1f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2381669-b181a5eb5e60ba97.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2381669-1edc12cfc9ba739b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-12-10T09:52:41.534Z">
+<meta property="og:updated_time" content="2018-01-04T13:38:00.064Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript中的编码解码函数">
-<meta name="twitter:description" content="123456789101112![](http://upload-images.jianshu.io/upload_images/2381669-ad5a4b65d1847869.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)![](http://upload-images.jianshu.io/upload_images/2381">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2381669-aa016db5030cacc1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:description" content="encodeURI()     decodeURI()： 解码一个由 encodeURI 编码过的 URI。    encodeURIComponent()     decodeURIComponent()：解码一个由 encodeURIComponent 编码过的字符串。    window.btoa()：将一个只有 ASCII 字符的字符串或二进制数据转换成一个 base64 编码过的字符串">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2381669-ad5a4b65d1847869.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -394,7 +397,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  177
+                  126
                 </span>
               
 
@@ -420,10 +423,17 @@
 
       
         <ul>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">![](http://upload-images.jianshu.io/upload_images/2381669-ad5a4b65d1847869.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</div><div class="line"></div><div class="line">![](http://upload-images.jianshu.io/upload_images/2381669-b1f60a0ec906c540.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</div><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line">- ```decodeURI()```： 解码一个由 encodeURI 编码过的 URI。</div><div class="line">![](http://upload-images.jianshu.io/upload_images/2381669-5bae1e56d9d01d19.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</div><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line">- ```encodeURIComponent()</div></pre></td></tr></table></figure>
-</li>
+<li><code>encodeURI()</code><br><img src="http://upload-images.jianshu.io/upload_images/2381669-ad5a4b65d1847869.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
 </ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/2381669-aa016db5030cacc1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2381669-b1f60a0ec906c540.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<hr>
+<ul>
+<li><code>decodeURI()</code>： 解码一个由 encodeURI 编码过的 URI。<br><img src="http://upload-images.jianshu.io/upload_images/2381669-5bae1e56d9d01d19.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+</ul>
+<hr>
+<ul>
+<li><code>encodeURIComponent()</code><br><img src="http://upload-images.jianshu.io/upload_images/2381669-aa016db5030cacc1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+</ul>
 <p><img src="http://upload-images.jianshu.io/upload_images/2381669-de3d56c8e656eef5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <hr>
 <ul>

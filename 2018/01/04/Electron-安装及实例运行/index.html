@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="创建目录 demo 进入目录 demo，运行命令init```123. 运行命令```npm install electron --save-dev```或者```cnpm install electron --save-dev```（淘宝镜像）4. 创建文件index.js，写入代码：  const {app,BrowserWindow} = require(‘electron’); var">
+<meta name="description" content="创建目录 demo 进入目录 demo，运行命令 1npm init  运行命令 1npm install electron --save-dev  或者 1cnpm install electron --save-dev （淘宝镜像）  创建文件index.js，写入代码： 12345678910111213141516const &amp;#123;app,BrowserWindow&amp;#125; =">
 <meta name="keywords" content="electron">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Electron-安装及实例运行">
 <meta property="og:url" content="http://yoursite.com/2018/01/04/Electron-安装及实例运行/index.html">
 <meta property="og:site_name" content="Hester的博客">
-<meta property="og:description" content="创建目录 demo 进入目录 demo，运行命令init```123. 运行命令```npm install electron --save-dev```或者```cnpm install electron --save-dev```（淘宝镜像）4. 创建文件index.js，写入代码：  const {app,BrowserWindow} = require(‘electron’); var">
+<meta property="og:description" content="创建目录 demo 进入目录 demo，运行命令 1npm init  运行命令 1npm install electron --save-dev  或者 1cnpm install electron --save-dev （淘宝镜像）  创建文件index.js，写入代码： 12345678910111213141516const &amp;#123;app,BrowserWindow&amp;#125; =">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-04T09:49:30.814Z">
+<meta property="og:updated_time" content="2018-01-04T13:29:57.598Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Electron-安装及实例运行">
-<meta name="twitter:description" content="创建目录 demo 进入目录 demo，运行命令init```123. 运行命令```npm install electron --save-dev```或者```cnpm install electron --save-dev```（淘宝镜像）4. 创建文件index.js，写入代码：  const {app,BrowserWindow} = require(‘electron’); var">
+<meta name="twitter:description" content="创建目录 demo 进入目录 demo，运行命令 1npm init  运行命令 1npm install electron --save-dev  或者 1cnpm install electron --save-dev （淘宝镜像）  创建文件index.js，写入代码： 12345678910111213141516const &amp;#123;app,BrowserWindow&amp;#125; =">
 
 
 
@@ -387,7 +387,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  114
+                  118
                 </span>
               
 
@@ -414,17 +414,24 @@
       
         <ol>
 <li>创建目录 demo</li>
-<li>进入目录 demo，运行命令<figure class="highlight plain"><figcaption><span>init```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">3. 运行命令```npm install electron --save-dev```或者```cnpm install electron --save-dev```（淘宝镜像）</div><div class="line">4. 创建文件index.js，写入代码：</div></pre></td></tr></table></figure></li>
+<li><p>进入目录 demo，运行命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm init</div></pre></td></tr></table></figure>
+</li>
+<li><p>运行命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install electron --save-dev</div></pre></td></tr></table></figure>
+<p> 或者</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cnpm install electron --save-dev （淘宝镜像）</div></pre></td></tr></table></figure>
+</li>
+<li><p>创建文件index.js，写入代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">const &#123;app,BrowserWindow&#125; = require(&apos;electron&apos;);</div><div class="line"></div><div class="line">var mainWindow;</div><div class="line">app.on(&apos;ready&apos;,function()&#123;</div><div class="line">	mainWindow = new BrowserWindow(&#123;</div><div class="line">		width:700,</div><div class="line">		height:630,</div><div class="line">		backgroundColor:&apos;#ddd&apos;</div><div class="line">	&#125;);</div><div class="line"></div><div class="line">	//加载网页</div><div class="line">	// mainWindow.loadURL(&quot;http://hlz.space/blog&quot;);</div><div class="line"></div><div class="line">	//加载当前目录文件</div><div class="line">	mainWindow.loadURL(`file://$&#123;__dirname&#125;/index.html`);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改package.json中的”script”</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&quot;scripts&quot;: &#123;</div><div class="line">  &quot;start&quot;: &quot;electron .&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>运行命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm start</div></pre></td></tr></table></figure>
+</li>
 </ol>
-<p>const {app,BrowserWindow} = require(‘electron’);</p>
-<p>var mainWindow;<br>app.on(‘ready’,function(){<br>    mainWindow = new BrowserWindow({<br>        width:700,<br>        height:630,<br>        backgroundColor:’#ddd’<br>    });</p>
-<pre><code>//加载网页
-// mainWindow.loadURL(&quot;http://hlz.space/blog&quot;);
-
-//加载当前目录文件
-mainWindow.loadURL(`file://${__dirname}/index.html`);
-</code></pre><p>});<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">5. 修改package.json中的&quot;script&quot;</div></pre></td></tr></table></figure></p>
-<p>“scripts”: {<br>  “start”: “electron .”<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">6. 运行命令```npm start</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -455,8 +462,8 @@ mainWindow.loadURL(`file://${__dirname}/index.html`);
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/04/CSS实现最右元素边界线消失/" rel="next" title="CSS实现最右元素边界线消失">
-                <i class="fa fa-chevron-left"></i> CSS实现最右元素边界线消失
+              <a href="/2018/01/04/Electron-打包/" rel="next" title="Electron-打包">
+                <i class="fa fa-chevron-left"></i> Electron-打包
               </a>
             
           </div>
@@ -465,8 +472,8 @@ mainWindow.loadURL(`file://${__dirname}/index.html`);
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/04/CSS实现发光链接按钮/" rel="prev" title="CSS实现发光链接按钮">
-                CSS实现发光链接按钮 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/01/04/CSS实现含文字的分割线/" rel="prev" title="CSS实现含文字的分割线">
+                CSS实现含文字的分割线 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="Hester的博客">
 <meta property="og:description" content="代码1234567891011121314151617181920212223242526272829303132333435&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;    &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;    &amp;lt;style&amp;gt;        div&amp;#123;            width: 100px;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-10T09:49:52.127Z">
+<meta property="og:updated_time" content="2018-01-04T13:43:36.976Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="html5拖放（Drag-&amp;-Drop）基本使用">
 <meta name="twitter:description" content="代码1234567891011121314151617181920212223242526272829303132333435&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;    &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;    &amp;lt;style&amp;gt;        div&amp;#123;            width: 100px;">
@@ -387,7 +387,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  350
+                  359
                 </span>
               
 
@@ -415,8 +415,7 @@
         <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line"></div><div class="line">&lt;head&gt;</div><div class="line">    &lt;title&gt;&lt;/title&gt;</div><div class="line">    &lt;style&gt;</div><div class="line">        div&#123;</div><div class="line">            width: 100px;</div><div class="line">            height: 100px;</div><div class="line">            background: #ddd;</div><div class="line">            margin-bottom: 10px;</div><div class="line">        &#125;</div><div class="line">    &lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">&lt;body&gt;</div><div class="line">    &lt;div id=&quot;a&quot; draggable=&quot;true&quot;&gt;a&lt;/div&gt;</div><div class="line">    &lt;div id=&quot;b&quot; draggable=&quot;true&quot;&gt;b&lt;/div&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">    var a = document.getElementById(&apos;a&apos;);</div><div class="line">    var b = document.getElementById(&apos;b&apos;);</div><div class="line">    a.ondragstart = function(e) &#123;</div><div class="line">        e.dataTransfer.setData(&quot;id&quot;, e.target.id);</div><div class="line">    &#125;</div><div class="line">    b.ondragover = function(e) &#123;</div><div class="line">        e.preventDefault();</div><div class="line">    &#125;</div><div class="line">    b.ondrop = function(e) &#123;</div><div class="line">        var id = e.dataTransfer.getData(&quot;id&quot;);</div><div class="line">        console.log(id);</div><div class="line">    &#125;</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line"></div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
 <hr>
 <h2 id="设置元素可拖放："><a href="#设置元素可拖放：" class="headerlink" title="设置元素可拖放："></a>设置元素可拖放：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">draggable=&quot;true&quot;</div></pre></td></tr></table></figure>
-<p>##触发事件：</p>
-<p><strong>1.拖动目标时触发事件：</strong></p>
+<h2 id="触发事件："><a href="#触发事件：" class="headerlink" title="触发事件："></a>触发事件：</h2><p><strong>1.拖动目标时触发事件：</strong></p>
 <ul>
 <li>ondragstart：开始拖动元素时触发</li>
 <li>ondrag：元素正在拖动时触发</li>
@@ -430,10 +429,13 @@
 <li>ondrop：在一个拖动过程中，释放鼠标键时触发此事件</li>
 </ul>
 <h2 id="数据操作："><a href="#数据操作：" class="headerlink" title="数据操作："></a>数据操作：</h2><ul>
-<li><strong>设置</strong>数据：<figure class="highlight plain"><figcaption><span>value);``` （在ondragstart中操作）</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">- **获取**数据：```e.dataTransfer.getData(key);``` （在```ondragover```中阻止对元素的默认处理方式，通过调用```ondragover```事件的 ```e.preventDefault()```方法，然后在ondrop中操作）</div><div class="line">- **清除**数据：清除全部数据```e.dataTransfer.clearData()```或清除指定数据```e.dataTransfer.clearData([&quot;id&quot;])</div></pre></td></tr></table></figure></li>
+<li><strong>设置</strong>数据：<code>e.dataTransfer.setData(key, value);</code>（在<code>ondragstart</code>中操作）</li>
+<li><strong>获取</strong>数据：<code>e.dataTransfer.getData(key);</code>（在<code>ondragover</code>中阻止对元素的默认处理方式，通过调用<code>ondragover</code>事件的<code>e.preventDefault()</code>方法，然后在<code>ondrop</code>中操作）</li>
+<li><strong>清除</strong>数据：清除全部数据<code>e.dataTransfer.clearData()</code>或清除指定数据<code>e.dataTransfer.clearData([&quot;id&quot;])</code></li>
 </ul>
 <p><strong>实例：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">b.ondragover = function(e) &#123;</div><div class="line">    e.preventDefault();</div><div class="line">&#125;</div><div class="line">b.ondrop = function(e) &#123;</div><div class="line">    var id = e.dataTransfer.getData(&quot;id&quot;);</div><div class="line">    console.log(id);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="设置拖放操作的自定义图标："><a href="#设置拖放操作的自定义图标：" class="headerlink" title="设置拖放操作的自定义图标："></a>设置拖放操作的自定义图标：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">**实例：**</div><div class="line">```e.dataTransfer.setDragImage(document.getElementById(&apos;img&apos;),0,0);</div></pre></td></tr></table></figure>
+<h2 id="设置拖放操作的自定义图标："><a href="#设置拖放操作的自定义图标：" class="headerlink" title="设置拖放操作的自定义图标："></a>设置拖放操作的自定义图标：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">e.dataTransfer.setDragImage(img,x,y);</div></pre></td></tr></table></figure>
+<p><strong>实例：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">e.dataTransfer.setDragImage(document.getElementById(&apos;img&apos;),0,0);</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -662,7 +664,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">1.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置元素可拖放："><span class="nav-number">2.</span> <span class="nav-text">设置元素可拖放：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据操作："><span class="nav-number">3.</span> <span class="nav-text">数据操作：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置拖放操作的自定义图标："><span class="nav-number">4.</span> <span class="nav-text">设置拖放操作的自定义图标：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">1.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置元素可拖放："><span class="nav-number">2.</span> <span class="nav-text">设置元素可拖放：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#触发事件："><span class="nav-number">3.</span> <span class="nav-text">触发事件：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据操作："><span class="nav-number">4.</span> <span class="nav-text">数据操作：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置拖放操作的自定义图标："><span class="nav-number">5.</span> <span class="nav-text">设置拖放操作的自定义图标：</span></a></li></ol></div>
             
 
           </div>

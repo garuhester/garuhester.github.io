@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="Hester的博客">
 <meta property="og:description" content="1. 选择器嵌套html：123&amp;lt;div class=&amp;quot;parent&amp;quot;&amp;gt;  &amp;lt;div class=&amp;quot;child&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt; css：12345678910.main&amp;#123;  width:200px;  height:200px;  background:tomato;  .content&amp;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-04T09:50:35.613Z">
+<meta property="og:updated_time" content="2018-01-04T13:36:43.883Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SCSS学习记录">
 <meta name="twitter:description" content="1. 选择器嵌套html：123&amp;lt;div class=&amp;quot;parent&amp;quot;&amp;gt;  &amp;lt;div class=&amp;quot;child&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt; css：12345678910.main&amp;#123;  width:200px;  height:200px;  background:tomato;  .content&amp;">
@@ -387,7 +387,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  307
+                  314
                 </span>
               
 
@@ -418,18 +418,26 @@
 <p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">a&#123;</div><div class="line">  text-decoration:none;</div><div class="line">  &amp;:hover&#123;</div><div class="line">    text-decoration:underline;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.main&#123;</div><div class="line">  &amp;-one&#123;</div><div class="line">    color:red;</div><div class="line">  &#125;</div><div class="line">  &amp;-two&#123;</div><div class="line">    color:green;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h2 id="3-属性嵌套"><a href="#3-属性嵌套" class="headerlink" title="3. 属性嵌套"></a>3. 属性嵌套</h2><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;main&quot;&gt;&lt;/div&gt;</div></pre></td></tr></table></figure></p>
 <p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">.content&#123;</div><div class="line">  width:100px;</div><div class="line">  height:100px;</div><div class="line">  background:skyblue;</div><div class="line"></div><div class="line">  /* 属性嵌套 */</div><div class="line">  margin:&#123;</div><div class="line">    left:10px;</div><div class="line">    top:10px;</div><div class="line">    right:10px;</div><div class="line">    bottom:10px;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="4-注释"><a href="#4-注释" class="headerlink" title="4. 注释 "></a>4. 注释 <figure class="highlight plain"><figcaption><span>*/``` 与 ```//```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">```/* */```：在编译时**会**写进CSS文件</div><div class="line">```//```：在编译时**不会**写进CSS文件</div><div class="line"></div><div class="line">## 5. 插值语句</div><div class="line">编译前：</div></pre></td></tr></table></figure></h2><p>$name:”hester”;<br>/<em> hello,my name id #{$name} </em>/<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">编译后：</div></pre></td></tr></table></figure></p>
-<p>/<em> hello,my name id hester </em>/<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">## 6. 变量</div><div class="line">- 全局变量：</div></pre></td></tr></table></figure></p>
-<p>$w:200px;<br>$h:200px;<br>.main{<br>  width:$w;<br>  height:$h;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- 局部变量：</div></pre></td></tr></table></figure></p>
-<p>.main{<br>  $w:200px;<br>  $h:200px;<br>  width:$w;<br>  height:$h;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- 局部变量转换为全局变量（添加 ```!global```）：</div></pre></td></tr></table></figure></p>
-<p>.main{<br>  $w:200px !global;<br>  $h:200px !global;<br>  width:$w;<br>  height:$h;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">## 7. @mixin 和 @include</div><div class="line">html：</div></pre></td></tr></table></figure></p>
-<p><div class="main"><br>  <a href="#">goto</a><br></div><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">css：</div></pre></td></tr></table></figure></p>
-<p>@mixin mainstyle($word){</p>
-<p>  #{$word}{<br>    text-decoration:none;<br>  }</p>
-<p>  #{$word}:hover{<br>    text-decoration:underline;<br>  }<br>}<br>@include mainstyle(“.main a”);<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">## 8. 变量定义 !default：</div><div class="line">&gt;如果变量已经被赋值，不会再被重新赋值，但是如果变量还没有被赋值，则会被赋予新的值。</div><div class="line"></div><div class="line">编译前：</div></pre></td></tr></table></figure></p>
-<p>$content: “First”;<br>$content: “Second” !default;<br>$new_content: “New” !default;</p>
-<p>#main {<br>  content: $content;<br>  new-content: $new_content;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">编译后：</div></pre></td></tr></table></figure></p>
-<p>#main {<br>  content: “First”;<br>  new-content: “New”;<br>}<br>```</p>
+<h2 id="4-注释-与"><a href="#4-注释-与" class="headerlink" title="4. 注释 /* */ 与 //"></a>4. 注释 <code>/* */</code> 与 <code>//</code></h2><p><code>/* */</code>：在编译时<strong>会</strong>写进CSS文件<br><code>//</code>：在编译时<strong>不会</strong>写进CSS文件</p>
+<h2 id="5-插值语句"><a href="#5-插值语句" class="headerlink" title="5. 插值语句"></a>5. 插值语句</h2><p>编译前：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$name:&quot;hester&quot;;</div><div class="line">/* hello,my name id #&#123;$name&#125; */</div></pre></td></tr></table></figure></p>
+<p>编译后：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/* hello,my name id hester */</div></pre></td></tr></table></figure></p>
+<h2 id="6-变量"><a href="#6-变量" class="headerlink" title="6. 变量"></a>6. 变量</h2><ul>
+<li><p>全局变量：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$w:200px;</div><div class="line">$h:200px;</div><div class="line">.main&#123;</div><div class="line">  width:$w;</div><div class="line">  height:$h;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>局部变量：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">  $w:200px;</div><div class="line">  $h:200px;</div><div class="line">  width:$w;</div><div class="line">  height:$h;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>局部变量转换为全局变量（添加 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">```</div><div class="line">.main&#123;</div><div class="line">  $w:200px !global;</div><div class="line">  $h:200px !global;</div><div class="line">  width:$w;</div><div class="line">  height:$h;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+</li>
+</ul>
+<h2 id="7-mixin-和-include"><a href="#7-mixin-和-include" class="headerlink" title="7. @mixin 和 @include"></a>7. @mixin 和 @include</h2><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;main&quot;&gt;</div><div class="line">  &lt;a href=&quot;#&quot;&gt;goto&lt;/a&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">@mixin mainstyle($word)&#123;</div><div class="line">  #&#123;$word&#125;&#123;</div><div class="line">    text-decoration:none;</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  #&#123;$word&#125;:hover&#123;</div><div class="line">    text-decoration:underline;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">@include mainstyle(&quot;.main a&quot;);</div></pre></td></tr></table></figure></p>
+<h2 id="8-变量定义-default"><a href="#8-变量定义-default" class="headerlink" title="8. 变量定义 !default"></a>8. 变量定义 !default</h2><blockquote>
+<p>如果变量已经被赋值，不会再被重新赋值，但是如果变量还没有被赋值，则会被赋予新的值。</p>
+</blockquote>
+<p>编译前：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$content: &quot;First&quot;;</div><div class="line">$content: &quot;Second&quot; !default;</div><div class="line">$new_content: &quot;New&quot; !default;</div><div class="line"></div><div class="line">#main &#123;</div><div class="line">  content: $content;</div><div class="line">  new-content: $new_content;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>编译后：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#main &#123;</div><div class="line">  content: &quot;First&quot;;</div><div class="line">  new-content: &quot;New&quot;; </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -464,8 +472,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/04/javascript-限制文本框输入/" rel="next" title="javascript-限制文本框输入">
-                <i class="fa fa-chevron-left"></i> javascript-限制文本框输入
+              <a href="/2018/01/04/setInterval中3种执行函数写法的作用/" rel="next" title="setInterval中3种执行函数写法的作用">
+                <i class="fa fa-chevron-left"></i> setInterval中3种执行函数写法的作用
               </a>
             
           </div>
@@ -474,8 +482,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/04/子div设置margin-top使父div也跟着向下移动/" rel="prev" title="子div设置margin-top使父div也跟着向下移动">
-                子div设置margin-top使父div也跟着向下移动 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/01/04/canvas绘画封装记录/" rel="prev" title="canvas绘画封装记录">
+                canvas绘画封装记录 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -660,7 +668,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-选择器嵌套"><span class="nav-number">1.</span> <span class="nav-text">1. 选择器嵌套</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-父选择器-amp"><span class="nav-number">2.</span> <span class="nav-text">2. 父选择器 &</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-属性嵌套"><span class="nav-number">3.</span> <span class="nav-text">3. 属性嵌套</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-注释"><span class="nav-number">4.</span> <span class="nav-text">4. 注释 */``` 与 ```//```12345```/* */```：在编译时**会**写进CSS文件```//```：在编译时**不会**写进CSS文件## 5. 插值语句编译前：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-选择器嵌套"><span class="nav-number">1.</span> <span class="nav-text">1. 选择器嵌套</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-父选择器-amp"><span class="nav-number">2.</span> <span class="nav-text">2. 父选择器 &</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-属性嵌套"><span class="nav-number">3.</span> <span class="nav-text">3. 属性嵌套</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-注释-与"><span class="nav-number">4.</span> <span class="nav-text">4. 注释 /* */ 与 //</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-插值语句"><span class="nav-number">5.</span> <span class="nav-text">5. 插值语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-变量"><span class="nav-number">6.</span> <span class="nav-text">6. 变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-mixin-和-include"><span class="nav-number">7.</span> <span class="nav-text">7. @mixin 和 @include</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-变量定义-default"><span class="nav-number">8.</span> <span class="nav-text">8. 变量定义 !default</span></a></li></ol></div>
             
 
           </div>

@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="代码参数：123456```currentPage```：当前的页数```skipNum```：跳过的数量```arr```：数组返回值：```newArr```分页后的数组 var pagination = function(pageSize, currentPage, arr) {    var skipNum = (currentPage - 1) * pageSize;    var ne">
+<meta name="description" content="代码参数：pageSize：一页的总数currentPage：当前的页数skipNum：跳过的数量arr：数组 返回值：newArr分页后的数组12345var pagination = function(pageSize, currentPage, arr) &amp;#123;    var skipNum = (currentPage - 1) * pageSize;    var newArr =">
 <meta name="keywords" content="javascript,数组,分页">
 <meta property="og:type" content="article">
 <meta property="og:title" content="javascript-利用数组制作分页效果">
 <meta property="og:url" content="http://yoursite.com/2017/12/10/javascript-利用数组制作分页效果/index.html">
 <meta property="og:site_name" content="Hester的博客">
-<meta property="og:description" content="代码参数：123456```currentPage```：当前的页数```skipNum```：跳过的数量```arr```：数组返回值：```newArr```分页后的数组 var pagination = function(pageSize, currentPage, arr) {    var skipNum = (currentPage - 1) * pageSize;    var ne">
+<meta property="og:description" content="代码参数：pageSize：一页的总数currentPage：当前的页数skipNum：跳过的数量arr：数组 返回值：newArr分页后的数组12345var pagination = function(pageSize, currentPage, arr) &amp;#123;    var skipNum = (currentPage - 1) * pageSize;    var newArr =">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-10T09:51:44.441Z">
+<meta property="og:updated_time" content="2018-01-04T13:40:41.657Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javascript-利用数组制作分页效果">
-<meta name="twitter:description" content="代码参数：123456```currentPage```：当前的页数```skipNum```：跳过的数量```arr```：数组返回值：```newArr```分页后的数组 var pagination = function(pageSize, currentPage, arr) {    var skipNum = (currentPage - 1) * pageSize;    var ne">
+<meta name="twitter:description" content="代码参数：pageSize：一页的总数currentPage：当前的页数skipNum：跳过的数量arr：数组 返回值：newArr分页后的数组12345var pagination = function(pageSize, currentPage, arr) &amp;#123;    var skipNum = (currentPage - 1) * pageSize;    var newArr =">
 
 
 
@@ -387,7 +387,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  59
+                  65
                 </span>
               
 
@@ -412,8 +412,8 @@
       
 
       
-        <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>参数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">```currentPage```：当前的页数</div><div class="line">```skipNum```：跳过的数量</div><div class="line">```arr```：数组</div><div class="line"></div><div class="line">返回值：</div><div class="line">```newArr```分页后的数组</div></pre></td></tr></table></figure></p>
-<p>var pagination = function(pageSize, currentPage, arr) {<br>    var skipNum = (currentPage - 1) * pageSize;<br>    var newArr = (skipNum + pageSize &gt;= arr.length) ? arr.slice(skipNum, arr.length) : arr.slice(skipNum, skipNum + pageSize);<br>    return newArr;<br>}<br>```</p>
+        <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>参数：<br><code>pageSize</code>：一页的总数<br><code>currentPage</code>：当前的页数<br><code>skipNum</code>：跳过的数量<br><code>arr</code>：数组</p>
+<p>返回值：<br><code>newArr</code>分页后的数组<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var pagination = function(pageSize, currentPage, arr) &#123;</div><div class="line">    var skipNum = (currentPage - 1) * pageSize;</div><div class="line">    var newArr = (skipNum + pageSize &gt;= arr.length) ? arr.slice(skipNum, arr.length) : arr.slice(skipNum, skipNum + pageSize);</div><div class="line">    return newArr;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>

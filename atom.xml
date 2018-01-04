@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-01-04T09:50:08.932Z</updated>
+  <updated>2018-01-04T13:21:22.075Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Electron-引用第三方库</title>
+    <link href="http://yoursite.com/2018/01/04/Electron-%E5%BC%95%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/"/>
+    <id>http://yoursite.com/2018/01/04/Electron-引用第三方库/</id>
+    <published>2018-01-04T09:51:21.470Z</published>
+    <updated>2018-01-04T13:21:22.075Z</updated>
+    
+    <content type="html"><![CDATA[<p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">&lt;title&gt;Electron&lt;/title&gt;</div><div class="line">&lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;button id=&quot;btn&quot;&gt;open&lt;/button&gt;</div><div class="line">&lt;script&gt;</div><div class="line">$(&apos;#btn&apos;).click(function()&#123;</div><div class="line">console.log(&quot;hello world&quot;);</div><div class="line">&#125;);</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p><p>可以看到html文件引用了<code>jquery.min.js</code><br>如果直接执行命令<code>npm start</code>运行electron程序后，点击按钮会出现错误，原因是jquery没有被成功的引用</p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-a0c2c04600552e00.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><hr><h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p>将<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure></p><p>改为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;window.$ = window.JQuery = require(&apos;./jquery.min.js&apos;);&lt;/script&gt;</div></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;html：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=
+      
+    
+    </summary>
+    
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+    
+    
+      <category term="electron" scheme="http://yoursite.com/tags/electron/"/>
+    
+  </entry>
   
   <entry>
     <title>javascript-Math的ceil、floor、round方法区别</title>
@@ -51,95 +76,19 @@
   </entry>
   
   <entry>
-    <title>Electron-引用第三方库</title>
-    <link href="http://yoursite.com/2018/01/04/Electron-%E5%BC%95%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/"/>
-    <id>http://yoursite.com/2018/01/04/Electron-引用第三方库/</id>
-    <published>2018-01-04T09:51:21.470Z</published>
-    <updated>2018-01-04T09:55:19.281Z</updated>
-    
-    <content type="html"><![CDATA[<p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">&lt;title&gt;Electron&lt;/title&gt;</div><div class="line">&lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;button id=&quot;btn&quot;&gt;open&lt;/button&gt;</div><div class="line">&lt;script&gt;</div><div class="line">$(&apos;#btn&apos;).click(function()&#123;</div><div class="line">console.log(&quot;hello world&quot;);</div><div class="line">&#125;);</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p><p>可以看到html文件引用了jquery.min.js<br>如果直接执行命令npm start运行electron程序后，点击按钮会出现错误，原因是jquery没有被成功的引用</p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-a0c2c04600552e00.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><hr><h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p>将<code>&lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;</code>改为<code>&lt;script&gt;window.$ = window.JQuery = require(&#39;./jquery.min.js&#39;);&lt;/script&gt;</code></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;html：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=
-      
-    
-    </summary>
-    
-      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
-    
-    
-      <category term="electron" scheme="http://yoursite.com/tags/electron/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Electron-打包</title>
-    <link href="http://yoursite.com/2018/01/04/Electron-%E6%89%93%E5%8C%85/"/>
-    <id>http://yoursite.com/2018/01/04/Electron-打包/</id>
+    <title>CSS实现最右元素边界线消失</title>
+    <link href="http://yoursite.com/2018/01/04/CSS%E5%AE%9E%E7%8E%B0%E6%9C%80%E5%8F%B3%E5%85%83%E7%B4%A0%E8%BE%B9%E7%95%8C%E7%BA%BF%E6%B6%88%E5%A4%B1/"/>
+    <id>http://yoursite.com/2018/01/04/CSS实现最右元素边界线消失/</id>
     <published>2018-01-04T09:51:21.460Z</published>
-    <updated>2018-01-04T09:49:34.207Z</updated>
+    <updated>2018-01-04T13:30:31.218Z</updated>
     
-    <content type="html"><![CDATA[<ol><li>在项目目录中执行命令<figure class="highlight plain"><figcaption><span>install electron-packager --save-dev```或```cnpm install electron-packager --save-dev```（淘宝镜像）</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">2. 修改package.json中的&quot;script&quot;</div></pre></td></tr></table></figure></li></ol><p>“scripts”: {<br>  //正常打包<br>  “packager”: “electron-packager .”, </p><p>  //压缩打包<br>  “packager-asar”: “electron-packager . –asar”, </p><p>  //所有平台打包<br>  “packager-all”: “electron-packager . –all”,<br>}<br>```</p><ol><li>在当前目录下执行命令（根据需要执行）</li></ol><ul><li><code>npm run-script packager</code>：正常打包</li><li><code>npm run-script packager</code>：压缩打包</li><li><code>npm run-script packager</code>：所有平台打包</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;在项目目录中执行命令&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;install electron-packager --save-dev```或```cnpm install electron-packag
-      
-    
-    </summary>
-    
-      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
-    
-    
-      <category term="electron" scheme="http://yoursite.com/tags/electron/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>div实现文字超出两行显示省略符号</title>
-    <link href="http://yoursite.com/2018/01/04/div%E5%AE%9E%E7%8E%B0%E6%96%87%E5%AD%97%E8%B6%85%E5%87%BA%E4%B8%A4%E8%A1%8C%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E7%AC%A6%E5%8F%B7/"/>
-    <id>http://yoursite.com/2018/01/04/div实现文字超出两行显示省略符号/</id>
-    <published>2018-01-04T09:51:21.460Z</published>
-    <updated>2018-01-04T09:49:25.944Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">overflow:hidden;</div><div class="line">display: -webkit-box;</div><div class="line">-webkit-line-clamp: 2;</div><div class="line">-webkit-box-orient: vertical;</div></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="效果："><a href="#效果：" class="headerlink" title="效果："></a>效果：</h2><p><img src="http://upload-images.jianshu.io/upload_images/2381669-92c3801f2003728d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><h2 id="实现："><a href="#实现：" class="headerlink" title="实现："></a>实现：</h2><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;main&quot;&gt;</div><div class="line">  &lt;div class=&quot;content&quot;&gt;</div><div class="line">    &lt;div class=&quot;box&quot;&gt;第1个&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;box&quot;&gt;第2个&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;box&quot;&gt;第3个&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;box&quot;&gt;第4个&lt;/div&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.box&#123;</div><div class="line">  float:left;</div><div class="line">  padding:5px;</div><div class="line">  border-left:1px solid #000;  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p>这里给每个元素都添加了左边框线，可以看到第一个元素有两条边界（一条是自己的，一条是右边元素的），现在要将第一个的左边界线去掉：</p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-8f5f54ef7dbab406.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>取掉第一个元素的左边界线，修改CSS：<br>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">  overflow:hidden;</div><div class="line">&#125;</div><div class="line">.content&#123;</div><div class="line">  margin-left:-1px;</div><div class="line">&#125;</div><div class="line">.box&#123;</div><div class="line">  float:left;</div><div class="line">  padding:5px;</div><div class="line">  border-left:1px solid #000;  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p><blockquote><p>原理：将四个元素整体向左移动一个像素，然后将外容器设置<code>overflow:hidden</code>就可以刚好将第一个元素的1px的左边界遮住</p></blockquote>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;代码：&quot;&gt;&lt;a href=&quot;#代码：&quot; class=&quot;headerlink&quot; title=&quot;代码：&quot;&gt;&lt;/a&gt;代码：&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;d
-      
-    
-    </summary>
-    
-      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
-    
-    
-      <category term="html" scheme="http://yoursite.com/tags/html/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS实现含文字的分割线</title>
-    <link href="http://yoursite.com/2018/01/04/CSS%E5%AE%9E%E7%8E%B0%E5%90%AB%E6%96%87%E5%AD%97%E7%9A%84%E5%88%86%E5%89%B2%E7%BA%BF/"/>
-    <id>http://yoursite.com/2018/01/04/CSS实现含文字的分割线/</id>
-    <published>2018-01-04T09:51:21.460Z</published>
-    <updated>2018-01-04T09:49:19.193Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="效果："><a href="#效果：" class="headerlink" title="效果："></a>效果：</h2><p><img src="http://upload-images.jianshu.io/upload_images/2381669-579346183178bcf3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;p&gt;OR&lt;/p&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">p&#123;</div><div class="line">  text-align:center;</div><div class="line">  position:relative;  </div><div class="line">&#125;</div><div class="line">p::before&#123;</div><div class="line">  content:&apos;&apos;;</div><div class="line">  width:45%;</div><div class="line">  height:1px;</div><div class="line">  background:#000;</div><div class="line">  position:absolute;</div><div class="line">  left:10px;</div><div class="line">  top:50%;</div><div class="line">&#125;</div><div class="line">p::after&#123;</div><div class="line">  content:&apos;&apos;;</div><div class="line">  width:45%;</div><div class="line">  height:1px;</div><div class="line">  background:#000;</div><div class="line">  position:absolute;</div><div class="line">  right:10px;</div><div class="line">  top:50%;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;效果：&quot;&gt;&lt;a href=&quot;#效果：&quot; class=&quot;headerlink&quot; title=&quot;效果：&quot;&gt;&lt;/a&gt;效果：&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2381669-57
+        &lt;h2 id=&quot;效果：&quot;&gt;&lt;a href=&quot;#效果：&quot; class=&quot;headerlink&quot; title=&quot;效果：&quot;&gt;&lt;/a&gt;效果：&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2381669-92
       
     
     </summary>
@@ -181,13 +130,40 @@
   </entry>
   
   <entry>
+    <title>CSS实现含文字的分割线</title>
+    <link href="http://yoursite.com/2018/01/04/CSS%E5%AE%9E%E7%8E%B0%E5%90%AB%E6%96%87%E5%AD%97%E7%9A%84%E5%88%86%E5%89%B2%E7%BA%BF/"/>
+    <id>http://yoursite.com/2018/01/04/CSS实现含文字的分割线/</id>
+    <published>2018-01-04T09:51:21.460Z</published>
+    <updated>2018-01-04T09:49:19.193Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="效果："><a href="#效果：" class="headerlink" title="效果："></a>效果：</h2><p><img src="http://upload-images.jianshu.io/upload_images/2381669-579346183178bcf3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;p&gt;OR&lt;/p&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">p&#123;</div><div class="line">  text-align:center;</div><div class="line">  position:relative;  </div><div class="line">&#125;</div><div class="line">p::before&#123;</div><div class="line">  content:&apos;&apos;;</div><div class="line">  width:45%;</div><div class="line">  height:1px;</div><div class="line">  background:#000;</div><div class="line">  position:absolute;</div><div class="line">  left:10px;</div><div class="line">  top:50%;</div><div class="line">&#125;</div><div class="line">p::after&#123;</div><div class="line">  content:&apos;&apos;;</div><div class="line">  width:45%;</div><div class="line">  height:1px;</div><div class="line">  background:#000;</div><div class="line">  position:absolute;</div><div class="line">  right:10px;</div><div class="line">  top:50%;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;效果：&quot;&gt;&lt;a href=&quot;#效果：&quot; class=&quot;headerlink&quot; title=&quot;效果：&quot;&gt;&lt;/a&gt;效果：&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2381669-57
+      
+    
+    </summary>
+    
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+    
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Electron-安装及实例运行</title>
     <link href="http://yoursite.com/2018/01/04/Electron-%E5%AE%89%E8%A3%85%E5%8F%8A%E5%AE%9E%E4%BE%8B%E8%BF%90%E8%A1%8C/"/>
     <id>http://yoursite.com/2018/01/04/Electron-安装及实例运行/</id>
     <published>2018-01-04T09:51:21.460Z</published>
-    <updated>2018-01-04T09:49:30.814Z</updated>
+    <updated>2018-01-04T13:29:57.598Z</updated>
     
-    <content type="html"><![CDATA[<ol><li>创建目录 demo</li><li>进入目录 demo，运行命令<figure class="highlight plain"><figcaption><span>init```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">3. 运行命令```npm install electron --save-dev```或者```cnpm install electron --save-dev```（淘宝镜像）</div><div class="line">4. 创建文件index.js，写入代码：</div></pre></td></tr></table></figure></li></ol><p>const {app,BrowserWindow} = require(‘electron’);</p><p>var mainWindow;<br>app.on(‘ready’,function(){<br>    mainWindow = new BrowserWindow({<br>        width:700,<br>        height:630,<br>        backgroundColor:’#ddd’<br>    });</p><pre><code>//加载网页// mainWindow.loadURL(&quot;http://hlz.space/blog&quot;);//加载当前目录文件mainWindow.loadURL(`file://${__dirname}/index.html`);</code></pre><p>});<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">5. 修改package.json中的&quot;script&quot;</div></pre></td></tr></table></figure></p><p>“scripts”: {<br>  “start”: “electron .”<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">6. 运行命令```npm start</div></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<ol><li>创建目录 demo</li><li><p>进入目录 demo，运行命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm init</div></pre></td></tr></table></figure></li><li><p>运行命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install electron --save-dev</div></pre></td></tr></table></figure><p> 或者</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cnpm install electron --save-dev （淘宝镜像）</div></pre></td></tr></table></figure></li><li><p>创建文件index.js，写入代码：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">const &#123;app,BrowserWindow&#125; = require(&apos;electron&apos;);</div><div class="line"></div><div class="line">var mainWindow;</div><div class="line">app.on(&apos;ready&apos;,function()&#123;</div><div class="line">mainWindow = new BrowserWindow(&#123;</div><div class="line">width:700,</div><div class="line">height:630,</div><div class="line">backgroundColor:&apos;#ddd&apos;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">//加载网页</div><div class="line">// mainWindow.loadURL(&quot;http://hlz.space/blog&quot;);</div><div class="line"></div><div class="line">//加载当前目录文件</div><div class="line">mainWindow.loadURL(`file://$&#123;__dirname&#125;/index.html`);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></li><li><p>修改package.json中的”script”</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&quot;scripts&quot;: &#123;</div><div class="line">  &quot;start&quot;: &quot;electron .&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li><li><p>运行命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm start</div></pre></td></tr></table></figure></li></ol>]]></content>
     
     <summary type="html">
     
@@ -195,7 +171,8 @@
       
         &lt;ol&gt;
 &lt;li&gt;创建目录 demo&lt;/li&gt;
-&lt;li&gt;进入目录 demo，运行命令&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;init```&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=
+&lt;li&gt;&lt;p&gt;进入目录 demo，运行命令&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/di
       
     
     </summary>
@@ -208,19 +185,21 @@
   </entry>
   
   <entry>
-    <title>CSS实现最右元素边界线消失</title>
-    <link href="http://yoursite.com/2018/01/04/CSS%E5%AE%9E%E7%8E%B0%E6%9C%80%E5%8F%B3%E5%85%83%E7%B4%A0%E8%BE%B9%E7%95%8C%E7%BA%BF%E6%B6%88%E5%A4%B1/"/>
-    <id>http://yoursite.com/2018/01/04/CSS实现最右元素边界线消失/</id>
+    <title>Electron-打包</title>
+    <link href="http://yoursite.com/2018/01/04/Electron-%E6%89%93%E5%8C%85/"/>
+    <id>http://yoursite.com/2018/01/04/Electron-打包/</id>
     <published>2018-01-04T09:51:21.460Z</published>
-    <updated>2018-01-04T09:49:21.474Z</updated>
+    <updated>2018-01-04T13:28:08.411Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="效果："><a href="#效果：" class="headerlink" title="效果："></a>效果：</h2><p><img src="http://upload-images.jianshu.io/upload_images/2381669-92c3801f2003728d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><h2 id="实现："><a href="#实现：" class="headerlink" title="实现："></a>实现：</h2><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;main&quot;&gt;</div><div class="line">  &lt;div class=&quot;content&quot;&gt;</div><div class="line">    &lt;div class=&quot;box&quot;&gt;第1个&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;box&quot;&gt;第2个&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;box&quot;&gt;第3个&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;box&quot;&gt;第4个&lt;/div&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.box&#123;</div><div class="line">  float:left;</div><div class="line">  padding:5px;</div><div class="line">  border-left:1px solid #000;  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p>这里给每个元素都添加了左边框线，可以看到第一个元素有两条边界（一条是自己的，一条是右边元素的），现在要将第一个的左边界线去掉：</p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-8f5f54ef7dbab406.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>取掉第一个元素的左边界线，修改CSS：<br>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">  overflow:hidden;</div><div class="line">&#125;</div><div class="line">.content&#123;</div><div class="line">  margin-left:-1px;</div><div class="line">&#125;</div><div class="line">.box&#123;</div><div class="line">  float:left;</div><div class="line">  padding:5px;</div><div class="line">  border-left:1px solid #000;  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p><blockquote><p>原理：将四个元素整体向左移动一个像素，然后将外容器设置<code>overflow:hidden</code>就可以刚好将第一个元素的1px的左边界遮住</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<ol><li><p>在项目目录中执行命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install electron-packager --save-dev</div></pre></td></tr></table></figure><p> 或</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cnpm install electron-packager --save-dev（淘宝镜像）</div></pre></td></tr></table></figure></li><li><p>修改package.json中的”script”</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&quot;scripts&quot;: &#123;</div><div class="line">  //正常打包</div><div class="line">  &quot;packager&quot;: &quot;electron-packager .&quot;, </div><div class="line"></div><div class="line">  //压缩打包</div><div class="line">  &quot;packager-asar&quot;: &quot;electron-packager . --asar&quot;, </div><div class="line"></div><div class="line">  //所有平台打包</div><div class="line">  &quot;packager-all&quot;: &quot;electron-packager . --all&quot;, </div><div class="line">&#125;</div></pre></td></tr></table></figure></li><li><p>在当前目录下执行命令（根据需要执行）</p></li></ol><ul><li><code>npm run-script packager</code>：正常打包</li><li><code>npm run-script packager-asar</code>：压缩打包</li><li><code>npm run-script packager-all</code>：所有平台打包</li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;效果：&quot;&gt;&lt;a href=&quot;#效果：&quot; class=&quot;headerlink&quot; title=&quot;效果：&quot;&gt;&lt;/a&gt;效果：&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2381669-92
+        &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;在项目目录中执行命令&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=
       
     
     </summary>
@@ -228,7 +207,30 @@
       <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+      <category term="electron" scheme="http://yoursite.com/tags/electron/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>div实现文字超出两行显示省略符号</title>
+    <link href="http://yoursite.com/2018/01/04/div%E5%AE%9E%E7%8E%B0%E6%96%87%E5%AD%97%E8%B6%85%E5%87%BA%E4%B8%A4%E8%A1%8C%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E7%AC%A6%E5%8F%B7/"/>
+    <id>http://yoursite.com/2018/01/04/div实现文字超出两行显示省略符号/</id>
+    <published>2018-01-04T09:51:21.460Z</published>
+    <updated>2018-01-04T09:49:25.944Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">overflow:hidden;</div><div class="line">display: -webkit-box;</div><div class="line">-webkit-line-clamp: 2;</div><div class="line">-webkit-box-orient: vertical;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;代码：&quot;&gt;&lt;a href=&quot;#代码：&quot; class=&quot;headerlink&quot; title=&quot;代码：&quot;&gt;&lt;/a&gt;代码：&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;d
+      
+    
+    </summary>
+    
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+    
     
       <category term="html" scheme="http://yoursite.com/tags/html/"/>
     
@@ -289,6 +291,36 @@
   </entry>
   
   <entry>
+    <title>CSS-利用table实现五种常用布局</title>
+    <link href="http://yoursite.com/2018/01/04/CSS-%E5%88%A9%E7%94%A8table%E5%AE%9E%E7%8E%B0%E4%BA%94%E7%A7%8D%E5%B8%B8%E7%94%A8%E5%B8%83%E5%B1%80/"/>
+    <id>http://yoursite.com/2018/01/04/CSS-利用table实现五种常用布局/</id>
+    <published>2018-01-04T09:51:21.450Z</published>
+    <updated>2018-01-04T13:34:25.192Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="布局一："><a href="#布局一：" class="headerlink" title="布局一："></a>布局一：</h2><ul><li>效果：</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-ba836f0ce27fff6f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><ul><li>代码：</li></ul><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;header&quot;&gt;header&lt;/div&gt;</div><div class="line">&lt;div class=&quot;main&quot;&gt;main&lt;/div&gt;</div><div class="line">&lt;div class=&quot;footer&quot;&gt;footer&lt;/div&gt;</div></pre></td></tr></table></figure></p><blockquote><p>注意：div中要有内容，不然显示不出来</p></blockquote><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">  margin:0;</div><div class="line">  padding:0;</div><div class="line">  width:100%;</div><div class="line">  min-height:100vh;</div><div class="line">  display:table;</div><div class="line">  text-align:center;</div><div class="line">&#125;</div><div class="line">.header,.main,.footer&#123;</div><div class="line">  display:table-row;</div><div class="line">&#125;</div><div class="line">.header&#123;</div><div class="line">  height:50px;</div><div class="line">  background:tomato;</div><div class="line">&#125;</div><div class="line">.main&#123;</div><div class="line">  background:skyblue;</div><div class="line">&#125;</div><div class="line">.footer&#123;</div><div class="line">  height:50px;</div><div class="line">  background:#9d70ff;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><hr><h2 id="布局二："><a href="#布局二：" class="headerlink" title="布局二："></a>布局二：</h2><ul><li>效果：</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-4edf6a20d6765f71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><ul><li>代码：</li></ul><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;header&quot;&gt;header&lt;/div&gt;</div><div class="line">&lt;div class=&quot;main&quot;&gt;</div><div class="line">  &lt;div class=&quot;left&quot;&gt;left&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;right&quot;&gt;right&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=&quot;footer&quot;&gt;footer&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">  margin:0;</div><div class="line">  padding:0;</div><div class="line">  width:100%;</div><div class="line">  min-height:100vh;</div><div class="line">  display:table;</div><div class="line">  text-align:center;</div><div class="line">&#125;</div><div class="line">.header,.main,.footer&#123;</div><div class="line">  display:table-row;</div><div class="line">&#125;</div><div class="line">.header&#123;</div><div class="line">  height:50px;</div><div class="line">  background:tomato;</div><div class="line">&#125;</div><div class="line">.main&#123;</div><div class="line">  width:100%;</div><div class="line">  display:table;</div><div class="line">  height:calc(100vh - 100px);</div><div class="line">&#125;</div><div class="line">.main .left&#123;</div><div class="line">  width:300px;</div><div class="line">  display:table-cell;</div><div class="line">  background:#fcea96;</div><div class="line">&#125;</div><div class="line">.main .right&#123;</div><div class="line">  display:table-cell;</div><div class="line">  background:skyblue;</div><div class="line">&#125;</div><div class="line">.footer&#123;</div><div class="line">  height:50px;</div><div class="line">  background:#9d70ff;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><blockquote><p>注意：.main的height属性中的100px是header和footer的高度之和</p></blockquote><hr><h2 id="布局三："><a href="#布局三：" class="headerlink" title="布局三："></a>布局三：</h2><ul><li>效果：</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-030da976a77916bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><ul><li>代码：</li></ul><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;left&quot;&gt;left&lt;/div&gt;</div><div class="line">&lt;div class=&quot;right&quot;&gt;</div><div class="line">  &lt;div class=&quot;header&quot;&gt;header&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;main&quot;&gt;main&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;footer&quot;&gt;footer&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">  margin:0;</div><div class="line">  padding:0;</div><div class="line">  min-height:100vh;</div><div class="line">  display:table;</div><div class="line">  text-align:center;</div><div class="line">&#125;</div><div class="line">.left&#123;</div><div class="line">  display:table-cell;</div><div class="line">  width:200px;</div><div class="line">  background:tomato;</div><div class="line">&#125;</div><div class="line">.right&#123;</div><div class="line">  display:table;</div><div class="line">  width:calc(100vw - 200px);</div><div class="line">  height:100vh;</div><div class="line">&#125;</div><div class="line">.header,.main,.footer&#123;</div><div class="line">  display:table-row;</div><div class="line">&#125;</div><div class="line">.header&#123;</div><div class="line">  height:50px;</div><div class="line">  background:skyblue;</div><div class="line">&#125;</div><div class="line">.main&#123;</div><div class="line">  background:#fcea96;</div><div class="line">&#125;</div><div class="line">.footer&#123;</div><div class="line">  height:50px;</div><div class="line">  background:#9d70ff;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><hr><h2 id="布局四（双栏布局，例子为左边固定，右边自适应）："><a href="#布局四（双栏布局，例子为左边固定，右边自适应）：" class="headerlink" title="布局四（双栏布局，例子为左边固定，右边自适应）："></a>布局四（双栏布局，例子为左边固定，右边自适应）：</h2><ul><li>效果：</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-7fe1865c8a2c89ee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><ul><li>代码：</li></ul><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;left&quot;&gt;left&lt;/div&gt;</div><div class="line">&lt;div class=&quot;right&quot;&gt;right&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">  margin:0;</div><div class="line">  padding:0;</div><div class="line">  width:100%;</div><div class="line">  height:100vh;</div><div class="line">  display:table;</div><div class="line">  text-align:center;</div><div class="line">&#125;</div><div class="line">.left,.right&#123;</div><div class="line">  display:table-cell;</div><div class="line">&#125;</div><div class="line">.left&#123;</div><div class="line">  width:300px;</div><div class="line">  background:tomato;</div><div class="line">&#125;</div><div class="line">.right&#123;</div><div class="line">  background:skyblue;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><hr><h2 id="布局五（三栏布局，例子为左边固定，右边固定，中间自适应）："><a href="#布局五（三栏布局，例子为左边固定，右边固定，中间自适应）：" class="headerlink" title="布局五（三栏布局，例子为左边固定，右边固定，中间自适应）："></a>布局五（三栏布局，例子为左边固定，右边固定，中间自适应）：</h2><ul><li>效果：</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-984a426a750175f4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><ul><li>代码：</li></ul><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;left&quot;&gt;left&lt;/div&gt;</div><div class="line">&lt;div class=&quot;middle&quot;&gt;middle&lt;/div&gt;</div><div class="line">&lt;div class=&quot;right&quot;&gt;right&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">  margin:0;</div><div class="line">  padding:0;</div><div class="line">  width:100%;</div><div class="line">  height:100vh;</div><div class="line">  display:table;</div><div class="line">  text-align:center;</div><div class="line">&#125;</div><div class="line">.left,.middle,.right&#123;</div><div class="line">  display:table-cell;</div><div class="line">&#125;</div><div class="line">.left&#123;</div><div class="line">  width:300px;</div><div class="line">  background:tomato;</div><div class="line">&#125;</div><div class="line">.middle&#123;</div><div class="line">  background:#ffe69e;</div><div class="line">&#125;</div><div class="line">.right&#123;</div><div class="line">  width:200px;</div><div class="line">  background:skyblue;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;布局一：&quot;&gt;&lt;a href=&quot;#布局一：&quot; class=&quot;headerlink&quot; title=&quot;布局一：&quot;&gt;&lt;/a&gt;布局一：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;效果：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu
+      
+    
+    </summary>
+    
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+    
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CSS实现checkbox计数</title>
     <link href="http://yoursite.com/2018/01/04/CSS%E5%AE%9E%E7%8E%B0checkbox%E8%AE%A1%E6%95%B0/"/>
     <id>http://yoursite.com/2018/01/04/CSS实现checkbox计数/</id>
@@ -317,41 +349,11 @@
   </entry>
   
   <entry>
-    <title>CSS-利用table实现五种常用布局</title>
-    <link href="http://yoursite.com/2018/01/04/CSS-%E5%88%A9%E7%94%A8table%E5%AE%9E%E7%8E%B0%E4%BA%94%E7%A7%8D%E5%B8%B8%E7%94%A8%E5%B8%83%E5%B1%80/"/>
-    <id>http://yoursite.com/2018/01/04/CSS-利用table实现五种常用布局/</id>
-    <published>2018-01-04T09:51:21.450Z</published>
-    <updated>2018-01-04T09:49:06.792Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="布局一："><a href="#布局一：" class="headerlink" title="布局一："></a>布局一：</h2><ul><li>效果：</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-ba836f0ce27fff6f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><ul><li>代码：</li></ul><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;header&quot;&gt;header&lt;/div&gt;</div><div class="line">&lt;div class=&quot;main&quot;&gt;main&lt;/div&gt;</div><div class="line">&lt;div class=&quot;footer&quot;&gt;footer&lt;/div&gt;</div></pre></td></tr></table></figure></p><blockquote><p>注意：div中要有内容，不然显示不出来</p></blockquote><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">  margin:0;</div><div class="line">  padding:0;</div><div class="line">  width:100%;</div><div class="line">  min-height:100vh;</div><div class="line">  display:table;</div><div class="line">  text-align:center;</div><div class="line">&#125;</div><div class="line">.header,.main,.footer&#123;</div><div class="line">  display:table-row;</div><div class="line">&#125;</div><div class="line">.header&#123;</div><div class="line">  height:50px;</div><div class="line">  background:tomato;</div><div class="line">&#125;</div><div class="line">.main&#123;</div><div class="line">  background:skyblue;</div><div class="line">&#125;</div><div class="line">.footer&#123;</div><div class="line">  height:50px;</div><div class="line">  background:#9d70ff;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><hr><h2 id="布局二："><a href="#布局二：" class="headerlink" title="布局二："></a>布局二：</h2><ul><li>效果：</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-4edf6a20d6765f71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><ul><li>代码：</li></ul><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;header&quot;&gt;header&lt;/div&gt;</div><div class="line">&lt;div class=&quot;main&quot;&gt;</div><div class="line">  &lt;div class=&quot;left&quot;&gt;left&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;right&quot;&gt;right&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=&quot;footer&quot;&gt;footer&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">  margin:0;</div><div class="line">  padding:0;</div><div class="line">  width:100%;</div><div class="line">  min-height:100vh;</div><div class="line">  display:table;</div><div class="line">  text-align:center;</div><div class="line">&#125;</div><div class="line">.header,.main,.footer&#123;</div><div class="line">  display:table-row;</div><div class="line">&#125;</div><div class="line">.header&#123;</div><div class="line">  height:50px;</div><div class="line">  background:tomato;</div><div class="line">&#125;</div><div class="line">.main&#123;</div><div class="line">  width:100%;</div><div class="line">  display:table;</div><div class="line">  height:calc(100vh - 100px);</div><div class="line">&#125;</div><div class="line">.main .left&#123;</div><div class="line">  width:300px;</div><div class="line">  display:table-cell;</div><div class="line">  background:#fcea96;</div><div class="line">&#125;</div><div class="line">.main .right&#123;</div><div class="line">  display:table-cell;</div><div class="line">  background:skyblue;</div><div class="line">&#125;</div><div class="line">.footer&#123;</div><div class="line">  height:50px;</div><div class="line">  background:#9d70ff;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><h2 id="gt-注意：-main的height属性中的100px是header和footer的高度之和"><a href="#gt-注意：-main的height属性中的100px是header和footer的高度之和" class="headerlink" title="&gt;注意：.main的height属性中的100px是header和footer的高度之和"></a>&gt;注意：.main的height属性中的100px是header和footer的高度之和</h2><h2 id="布局三："><a href="#布局三：" class="headerlink" title="布局三："></a>布局三：</h2><ul><li>效果：</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-030da976a77916bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><ul><li>代码：</li></ul><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;left&quot;&gt;left&lt;/div&gt;</div><div class="line">&lt;div class=&quot;right&quot;&gt;</div><div class="line">  &lt;div class=&quot;header&quot;&gt;header&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;main&quot;&gt;main&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;footer&quot;&gt;footer&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">  margin:0;</div><div class="line">  padding:0;</div><div class="line">  min-height:100vh;</div><div class="line">  display:table;</div><div class="line">  text-align:center;</div><div class="line">&#125;</div><div class="line">.left&#123;</div><div class="line">  display:table-cell;</div><div class="line">  width:200px;</div><div class="line">  background:tomato;</div><div class="line">&#125;</div><div class="line">.right&#123;</div><div class="line">  display:table;</div><div class="line">  width:calc(100vw - 200px);</div><div class="line">  height:100vh;</div><div class="line">&#125;</div><div class="line">.header,.main,.footer&#123;</div><div class="line">  display:table-row;</div><div class="line">&#125;</div><div class="line">.header&#123;</div><div class="line">  height:50px;</div><div class="line">  background:skyblue;</div><div class="line">&#125;</div><div class="line">.main&#123;</div><div class="line">  background:#fcea96;</div><div class="line">&#125;</div><div class="line">.footer&#123;</div><div class="line">  height:50px;</div><div class="line">  background:#9d70ff;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><hr><h2 id="布局四（双栏布局，例子为左边固定，右边自适应）："><a href="#布局四（双栏布局，例子为左边固定，右边自适应）：" class="headerlink" title="布局四（双栏布局，例子为左边固定，右边自适应）："></a>布局四（双栏布局，例子为左边固定，右边自适应）：</h2><ul><li>效果：</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-7fe1865c8a2c89ee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><ul><li>代码：</li></ul><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;left&quot;&gt;left&lt;/div&gt;</div><div class="line">&lt;div class=&quot;right&quot;&gt;right&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">  margin:0;</div><div class="line">  padding:0;</div><div class="line">  width:100%;</div><div class="line">  height:100vh;</div><div class="line">  display:table;</div><div class="line">  text-align:center;</div><div class="line">&#125;</div><div class="line">.left,.right&#123;</div><div class="line">  display:table-cell;</div><div class="line">&#125;</div><div class="line">.left&#123;</div><div class="line">  width:300px;</div><div class="line">  background:tomato;</div><div class="line">&#125;</div><div class="line">.right&#123;</div><div class="line">  background:skyblue;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><hr><h2 id="布局五（三栏布局，例子为左边固定，右边固定，中间自适应）："><a href="#布局五（三栏布局，例子为左边固定，右边固定，中间自适应）：" class="headerlink" title="布局五（三栏布局，例子为左边固定，右边固定，中间自适应）："></a>布局五（三栏布局，例子为左边固定，右边固定，中间自适应）：</h2><ul><li>效果：</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/2381669-984a426a750175f4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><ul><li>代码：</li></ul><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;left&quot;&gt;left&lt;/div&gt;</div><div class="line">&lt;div class=&quot;middle&quot;&gt;middle&lt;/div&gt;</div><div class="line">&lt;div class=&quot;right&quot;&gt;right&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">  margin:0;</div><div class="line">  padding:0;</div><div class="line">  width:100%;</div><div class="line">  height:100vh;</div><div class="line">  display:table;</div><div class="line">  text-align:center;</div><div class="line">&#125;</div><div class="line">.left,.middle,.right&#123;</div><div class="line">  display:table-cell;</div><div class="line">&#125;</div><div class="line">.left&#123;</div><div class="line">  width:300px;</div><div class="line">  background:tomato;</div><div class="line">&#125;</div><div class="line">.middle&#123;</div><div class="line">  background:#ffe69e;</div><div class="line">&#125;</div><div class="line">.right&#123;</div><div class="line">  width:200px;</div><div class="line">  background:skyblue;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;布局一：&quot;&gt;&lt;a href=&quot;#布局一：&quot; class=&quot;headerlink&quot; title=&quot;布局一：&quot;&gt;&lt;/a&gt;布局一：&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;效果：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu
-      
-    
-    </summary>
-    
-      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
-    
-    
-      <category term="css" scheme="http://yoursite.com/tags/css/"/>
-    
-      <category term="html" scheme="http://yoursite.com/tags/html/"/>
-    
-  </entry>
-  
-  <entry>
     <title>CSS实现多列均匀布局</title>
     <link href="http://yoursite.com/2018/01/04/CSS%E5%AE%9E%E7%8E%B0%E5%A4%9A%E5%88%97%E5%9D%87%E5%8C%80%E5%B8%83%E5%B1%80/"/>
     <id>http://yoursite.com/2018/01/04/CSS实现多列均匀布局/</id>
     <published>2018-01-04T09:51:21.450Z</published>
-    <updated>2018-01-04T09:49:14.724Z</updated>
+    <updated>2018-01-04T13:32:32.516Z</updated>
     
     <content type="html"><![CDATA[<h2 id="效果："><a href="#效果：" class="headerlink" title="效果："></a>效果：</h2><p><img src="http://upload-images.jianshu.io/upload_images/2381669-a4f8b6e96abe46c4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><h2 id="实现："><a href="#实现：" class="headerlink" title="实现："></a>实现：</h2><ul><li><strong>方法一</strong>：</li></ul><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;main&quot;&gt;</div><div class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;  </div><div class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;  </div><div class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;  </div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">  text-align:justify;</div><div class="line">  text-align-last:justify;</div><div class="line">&#125;</div><div class="line">.box&#123;</div><div class="line">  width:50px;</div><div class="line">  height:50px;</div><div class="line">  background:tomato;</div><div class="line">  border-radius:50%;</div><div class="line">  display:inline-block;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><ul><li><strong>方法二（兼容性好）</strong>：</li></ul><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;main&quot;&gt;</div><div class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;  </div><div class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;  </div><div class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;  </div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">  text-align:justify;</div><div class="line">&#125;</div><div class="line">.main::after&#123;</div><div class="line">  content:&apos;&apos;;</div><div class="line">  display:inline-block;</div><div class="line">  width:100%;</div><div class="line">&#125;</div><div class="line">.box&#123;</div><div class="line">  width:50px;</div><div class="line">  height:50px;</div><div class="line">  background:tomato;</div><div class="line">  border-radius:50%;</div><div class="line">  display:inline-block;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>]]></content>
     
@@ -370,33 +372,6 @@
       <category term="css" scheme="http://yoursite.com/tags/css/"/>
     
       <category term="html" scheme="http://yoursite.com/tags/html/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>setInterval中3种执行函数写法的作用</title>
-    <link href="http://yoursite.com/2018/01/04/setInterval%E4%B8%AD3%E7%A7%8D%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0%E5%86%99%E6%B3%95%E7%9A%84%E4%BD%9C%E7%94%A8/"/>
-    <id>http://yoursite.com/2018/01/04/setInterval中3种执行函数写法的作用/</id>
-    <published>2018-01-04T09:51:21.440Z</published>
-    <updated>2018-01-04T09:50:47.254Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="1-setInterval-update-1000"><a href="#1-setInterval-update-1000" class="headerlink" title="1. setInterval(update,1000);"></a>1. setInterval(update,1000);</h3><p>一秒后执行update函数</p><h3 id="2-setInterval-update-1000"><a href="#2-setInterval-update-1000" class="headerlink" title="2. setInterval(update(),1000);"></a>2. setInterval(update(),1000);</h3><p>立即执行update函数</p><h3 id="3-setInterval-“update-”-1000"><a href="#3-setInterval-“update-”-1000" class="headerlink" title="3. setInterval(“update()”,1000);"></a>3. setInterval(“update()”,1000);</h3><p>一秒后执行update函数</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;1-setInterval-update-1000&quot;&gt;&lt;a href=&quot;#1-setInterval-update-1000&quot; class=&quot;headerlink&quot; title=&quot;1. setInterval(update,1000);&quot;&gt;&lt;/a&gt;1. setIn
-      
-    
-    </summary>
-    
-      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
-    
-    
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
-    
-      <category term="setInterval" scheme="http://yoursite.com/tags/setInterval/"/>
     
   </entry>
   
@@ -430,6 +405,31 @@
   </entry>
   
   <entry>
+    <title>子div设置margin-top使父div也跟着向下移动</title>
+    <link href="http://yoursite.com/2018/01/04/%E5%AD%90div%E8%AE%BE%E7%BD%AEmargin-top%E4%BD%BF%E7%88%B6div%E4%B9%9F%E8%B7%9F%E7%9D%80%E5%90%91%E4%B8%8B%E7%A7%BB%E5%8A%A8/"/>
+    <id>http://yoursite.com/2018/01/04/子div设置margin-top使父div也跟着向下移动/</id>
+    <published>2018-01-04T09:51:21.440Z</published>
+    <updated>2018-01-04T09:50:59.019Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;main&quot;&gt;</div><div class="line">  &lt;div class=&quot;content&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">  margin:0;</div><div class="line">  padding:0;</div><div class="line">&#125;</div><div class="line">.main&#123;</div><div class="line">  width:200px;</div><div class="line">  height:200px;</div><div class="line">  background:tomato;</div><div class="line">&#125;</div><div class="line">.content&#123;</div><div class="line">  width:100px;</div><div class="line">  height:100px;</div><div class="line">  background:skyblue;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p>效果：</p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-238af38eb7b13bfb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><blockquote><p>原理：一个盒子如果没有上补白(padding-top)和上边框(border-top)，那么这个盒子的上边距会和其内部文档流中的第一个子元素的上边距重叠。</p></blockquote><h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p><strong>1. 父div设置padding-top</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">  ...</div><div class="line">  padding-top:1px;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p><strong>2. 父div设置border-top</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">  ...</div><div class="line">  border-top:1px solid #fff;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p><strong>3. 父div设置overflow（推荐使用）</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">  ...</div><div class="line">  overflow:hidden;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;代码：&quot;&gt;&lt;a href=&quot;#代码：&quot; class=&quot;headerlink&quot; title=&quot;代码：&quot;&gt;&lt;/a&gt;代码：&lt;/h2&gt;&lt;p&gt;html：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gut
+      
+    
+    </summary>
+    
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+    
+    
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
+    
+  </entry>
+  
+  <entry>
     <title>canvas绘画封装记录</title>
     <link href="http://yoursite.com/2018/01/04/canvas%E7%BB%98%E7%94%BB%E5%B0%81%E8%A3%85%E8%AE%B0%E5%BD%95/"/>
     <id>http://yoursite.com/2018/01/04/canvas绘画封装记录/</id>
@@ -457,38 +457,13 @@
   </entry>
   
   <entry>
-    <title>子div设置margin-top使父div也跟着向下移动</title>
-    <link href="http://yoursite.com/2018/01/04/%E5%AD%90div%E8%AE%BE%E7%BD%AEmargin-top%E4%BD%BF%E7%88%B6div%E4%B9%9F%E8%B7%9F%E7%9D%80%E5%90%91%E4%B8%8B%E7%A7%BB%E5%8A%A8/"/>
-    <id>http://yoursite.com/2018/01/04/子div设置margin-top使父div也跟着向下移动/</id>
-    <published>2018-01-04T09:51:21.440Z</published>
-    <updated>2018-01-04T09:50:59.019Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;main&quot;&gt;</div><div class="line">  &lt;div class=&quot;content&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">  margin:0;</div><div class="line">  padding:0;</div><div class="line">&#125;</div><div class="line">.main&#123;</div><div class="line">  width:200px;</div><div class="line">  height:200px;</div><div class="line">  background:tomato;</div><div class="line">&#125;</div><div class="line">.content&#123;</div><div class="line">  width:100px;</div><div class="line">  height:100px;</div><div class="line">  background:skyblue;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p>效果：</p><p><img src="http://upload-images.jianshu.io/upload_images/2381669-238af38eb7b13bfb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><blockquote><p>原理：一个盒子如果没有上补白(padding-top)和上边框(border-top)，那么这个盒子的上边距会和其内部文档流中的第一个子元素的上边距重叠。</p></blockquote><h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p><strong>1. 父div设置padding-top</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">  ...</div><div class="line">  padding-top:1px;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p><strong>2. 父div设置border-top</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">  ...</div><div class="line">  border-top:1px solid #fff;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p><strong>3. 父div设置overflow（推荐使用）</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">  ...</div><div class="line">  overflow:hidden;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;代码：&quot;&gt;&lt;a href=&quot;#代码：&quot; class=&quot;headerlink&quot; title=&quot;代码：&quot;&gt;&lt;/a&gt;代码：&lt;/h2&gt;&lt;p&gt;html：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gut
-      
-    
-    </summary>
-    
-      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
-    
-    
-      <category term="html" scheme="http://yoursite.com/tags/html/"/>
-    
-  </entry>
-  
-  <entry>
     <title>SCSS学习记录</title>
     <link href="http://yoursite.com/2018/01/04/SCSS%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
     <id>http://yoursite.com/2018/01/04/SCSS学习记录/</id>
     <published>2018-01-04T09:51:21.440Z</published>
-    <updated>2018-01-04T09:50:35.613Z</updated>
+    <updated>2018-01-04T13:36:43.883Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="1-选择器嵌套"><a href="#1-选择器嵌套" class="headerlink" title="1. 选择器嵌套"></a>1. 选择器嵌套</h2><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;parent&quot;&gt;</div><div class="line">  &lt;div class=&quot;child&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">  width:200px;</div><div class="line">  height:200px;</div><div class="line">  background:tomato;</div><div class="line">  .content&#123;</div><div class="line">    width:100px;</div><div class="line">    height:100px;</div><div class="line">    background:skyblue;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><h2 id="2-父选择器-amp"><a href="#2-父选择器-amp" class="headerlink" title="2. 父选择器 &amp;"></a>2. 父选择器 &amp;</h2><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;a href=&quot;#&quot;&gt;goto&lt;/a&gt;</div><div class="line"></div><div class="line">&lt;div class=&quot;main-one&quot;&gt;one&lt;/div&gt;</div><div class="line">&lt;div class=&quot;main-two&quot;&gt;two&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">a&#123;</div><div class="line">  text-decoration:none;</div><div class="line">  &amp;:hover&#123;</div><div class="line">    text-decoration:underline;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.main&#123;</div><div class="line">  &amp;-one&#123;</div><div class="line">    color:red;</div><div class="line">  &#125;</div><div class="line">  &amp;-two&#123;</div><div class="line">    color:green;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><h2 id="3-属性嵌套"><a href="#3-属性嵌套" class="headerlink" title="3. 属性嵌套"></a>3. 属性嵌套</h2><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;main&quot;&gt;&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">.content&#123;</div><div class="line">  width:100px;</div><div class="line">  height:100px;</div><div class="line">  background:skyblue;</div><div class="line"></div><div class="line">  /* 属性嵌套 */</div><div class="line">  margin:&#123;</div><div class="line">    left:10px;</div><div class="line">    top:10px;</div><div class="line">    right:10px;</div><div class="line">    bottom:10px;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><h2 id="4-注释"><a href="#4-注释" class="headerlink" title="4. 注释 "></a>4. 注释 <figure class="highlight plain"><figcaption><span>*/``` 与 ```//```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">```/* */```：在编译时**会**写进CSS文件</div><div class="line">```//```：在编译时**不会**写进CSS文件</div><div class="line"></div><div class="line">## 5. 插值语句</div><div class="line">编译前：</div></pre></td></tr></table></figure></h2><p>$name:”hester”;<br>/<em> hello,my name id #{$name} </em>/<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">编译后：</div></pre></td></tr></table></figure></p><p>/<em> hello,my name id hester </em>/<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">## 6. 变量</div><div class="line">- 全局变量：</div></pre></td></tr></table></figure></p><p>$w:200px;<br>$h:200px;<br>.main{<br>  width:$w;<br>  height:$h;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- 局部变量：</div></pre></td></tr></table></figure></p><p>.main{<br>  $w:200px;<br>  $h:200px;<br>  width:$w;<br>  height:$h;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- 局部变量转换为全局变量（添加 ```!global```）：</div></pre></td></tr></table></figure></p><p>.main{<br>  $w:200px !global;<br>  $h:200px !global;<br>  width:$w;<br>  height:$h;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">## 7. @mixin 和 @include</div><div class="line">html：</div></pre></td></tr></table></figure></p><p><div class="main"><br>  <a href="#">goto</a><br></div><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">css：</div></pre></td></tr></table></figure></p><p>@mixin mainstyle($word){</p><p>  #{$word}{<br>    text-decoration:none;<br>  }</p><p>  #{$word}:hover{<br>    text-decoration:underline;<br>  }<br>}<br>@include mainstyle(“.main a”);<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">## 8. 变量定义 !default：</div><div class="line">&gt;如果变量已经被赋值，不会再被重新赋值，但是如果变量还没有被赋值，则会被赋予新的值。</div><div class="line"></div><div class="line">编译前：</div></pre></td></tr></table></figure></p><p>$content: “First”;<br>$content: “Second” !default;<br>$new_content: “New” !default;</p><p>#main {<br>  content: $content;<br>  new-content: $new_content;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">编译后：</div></pre></td></tr></table></figure></p><p>#main {<br>  content: “First”;<br>  new-content: “New”;<br>}<br>```</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="1-选择器嵌套"><a href="#1-选择器嵌套" class="headerlink" title="1. 选择器嵌套"></a>1. 选择器嵌套</h2><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;parent&quot;&gt;</div><div class="line">  &lt;div class=&quot;child&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">  width:200px;</div><div class="line">  height:200px;</div><div class="line">  background:tomato;</div><div class="line">  .content&#123;</div><div class="line">    width:100px;</div><div class="line">    height:100px;</div><div class="line">    background:skyblue;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><h2 id="2-父选择器-amp"><a href="#2-父选择器-amp" class="headerlink" title="2. 父选择器 &amp;"></a>2. 父选择器 &amp;</h2><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;a href=&quot;#&quot;&gt;goto&lt;/a&gt;</div><div class="line"></div><div class="line">&lt;div class=&quot;main-one&quot;&gt;one&lt;/div&gt;</div><div class="line">&lt;div class=&quot;main-two&quot;&gt;two&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">a&#123;</div><div class="line">  text-decoration:none;</div><div class="line">  &amp;:hover&#123;</div><div class="line">    text-decoration:underline;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.main&#123;</div><div class="line">  &amp;-one&#123;</div><div class="line">    color:red;</div><div class="line">  &#125;</div><div class="line">  &amp;-two&#123;</div><div class="line">    color:green;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><h2 id="3-属性嵌套"><a href="#3-属性嵌套" class="headerlink" title="3. 属性嵌套"></a>3. 属性嵌套</h2><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;main&quot;&gt;&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">.content&#123;</div><div class="line">  width:100px;</div><div class="line">  height:100px;</div><div class="line">  background:skyblue;</div><div class="line"></div><div class="line">  /* 属性嵌套 */</div><div class="line">  margin:&#123;</div><div class="line">    left:10px;</div><div class="line">    top:10px;</div><div class="line">    right:10px;</div><div class="line">    bottom:10px;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><h2 id="4-注释-与"><a href="#4-注释-与" class="headerlink" title="4. 注释 /* */ 与 //"></a>4. 注释 <code>/* */</code> 与 <code>//</code></h2><p><code>/* */</code>：在编译时<strong>会</strong>写进CSS文件<br><code>//</code>：在编译时<strong>不会</strong>写进CSS文件</p><h2 id="5-插值语句"><a href="#5-插值语句" class="headerlink" title="5. 插值语句"></a>5. 插值语句</h2><p>编译前：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$name:&quot;hester&quot;;</div><div class="line">/* hello,my name id #&#123;$name&#125; */</div></pre></td></tr></table></figure></p><p>编译后：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/* hello,my name id hester */</div></pre></td></tr></table></figure></p><h2 id="6-变量"><a href="#6-变量" class="headerlink" title="6. 变量"></a>6. 变量</h2><ul><li><p>全局变量：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$w:200px;</div><div class="line">$h:200px;</div><div class="line">.main&#123;</div><div class="line">  width:$w;</div><div class="line">  height:$h;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li><li><p>局部变量：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.main&#123;</div><div class="line">  $w:200px;</div><div class="line">  $h:200px;</div><div class="line">  width:$w;</div><div class="line">  height:$h;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li><li><p>局部变量转换为全局变量（添加 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">```</div><div class="line">.main&#123;</div><div class="line">  $w:200px !global;</div><div class="line">  $h:200px !global;</div><div class="line">  width:$w;</div><div class="line">  height:$h;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p></li></ul><h2 id="7-mixin-和-include"><a href="#7-mixin-和-include" class="headerlink" title="7. @mixin 和 @include"></a>7. @mixin 和 @include</h2><p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;main&quot;&gt;</div><div class="line">  &lt;a href=&quot;#&quot;&gt;goto&lt;/a&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">@mixin mainstyle($word)&#123;</div><div class="line">  #&#123;$word&#125;&#123;</div><div class="line">    text-decoration:none;</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  #&#123;$word&#125;:hover&#123;</div><div class="line">    text-decoration:underline;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">@include mainstyle(&quot;.main a&quot;);</div></pre></td></tr></table></figure></p><h2 id="8-变量定义-default"><a href="#8-变量定义-default" class="headerlink" title="8. 变量定义 !default"></a>8. 变量定义 !default</h2><blockquote><p>如果变量已经被赋值，不会再被重新赋值，但是如果变量还没有被赋值，则会被赋予新的值。</p></blockquote><p>编译前：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$content: &quot;First&quot;;</div><div class="line">$content: &quot;Second&quot; !default;</div><div class="line">$new_content: &quot;New&quot; !default;</div><div class="line"></div><div class="line">#main &#123;</div><div class="line">  content: $content;</div><div class="line">  new-content: $new_content;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p>编译后：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#main &#123;</div><div class="line">  content: &quot;First&quot;;</div><div class="line">  new-content: &quot;New&quot;; </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
@@ -507,6 +482,33 @@
       <category term="html" scheme="http://yoursite.com/tags/html/"/>
     
       <category term="scss" scheme="http://yoursite.com/tags/scss/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>setInterval中3种执行函数写法的作用</title>
+    <link href="http://yoursite.com/2018/01/04/setInterval%E4%B8%AD3%E7%A7%8D%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0%E5%86%99%E6%B3%95%E7%9A%84%E4%BD%9C%E7%94%A8/"/>
+    <id>http://yoursite.com/2018/01/04/setInterval中3种执行函数写法的作用/</id>
+    <published>2018-01-04T09:51:21.440Z</published>
+    <updated>2018-01-04T09:50:47.254Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-setInterval-update-1000"><a href="#1-setInterval-update-1000" class="headerlink" title="1. setInterval(update,1000);"></a>1. setInterval(update,1000);</h3><p>一秒后执行update函数</p><h3 id="2-setInterval-update-1000"><a href="#2-setInterval-update-1000" class="headerlink" title="2. setInterval(update(),1000);"></a>2. setInterval(update(),1000);</h3><p>立即执行update函数</p><h3 id="3-setInterval-“update-”-1000"><a href="#3-setInterval-“update-”-1000" class="headerlink" title="3. setInterval(“update()”,1000);"></a>3. setInterval(“update()”,1000);</h3><p>一秒后执行update函数</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1-setInterval-update-1000&quot;&gt;&lt;a href=&quot;#1-setInterval-update-1000&quot; class=&quot;headerlink&quot; title=&quot;1. setInterval(update,1000);&quot;&gt;&lt;/a&gt;1. setIn
+      
+    
+    </summary>
+    
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="setInterval" scheme="http://yoursite.com/tags/setInterval/"/>
     
   </entry>
   

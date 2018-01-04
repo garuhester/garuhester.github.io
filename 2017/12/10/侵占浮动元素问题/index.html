@@ -96,7 +96,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2381669-aaf0597b4a0cbe08.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2381669-862d74a07ff78859.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-12-10T09:57:24.706Z">
+<meta property="og:updated_time" content="2018-01-04T13:53:05.352Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="侵占浮动元素问题">
 <meta name="twitter:description" content="代码html：12&amp;lt;div class=&amp;quot;box1&amp;quot;&amp;gt;box1&amp;lt;/div&amp;gt;&amp;lt;div class=&amp;quot;box2&amp;quot;&amp;gt;box2&amp;lt;/div&amp;gt; css：1234567891011.box1&amp;#123;  width:100px;  height:100px;  background:skyblue;  float:left">
@@ -390,7 +390,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  61
+                  63
                 </span>
               
 
@@ -420,7 +420,7 @@
 <p>侵占效果：</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/2381669-aaf0597b4a0cbe08.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <hr>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>修改box2样式（添加<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">```</div><div class="line">.box2&#123;</div><div class="line">  width:200px;</div><div class="line">  height:200px;</div><div class="line">  background:tomato;</div><div class="line">  overflow:hidden;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>修改box2样式（添加<code>overflow:hidden;</code>）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.box2&#123;</div><div class="line">  width:200px;</div><div class="line">  height:200px;</div><div class="line">  background:tomato;</div><div class="line">  overflow:hidden;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>修正效果：</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/2381669-862d74a07ff78859.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 

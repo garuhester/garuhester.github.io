@@ -99,7 +99,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2381669-030da976a77916bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2381669-7fe1865c8a2c89ee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2381669-984a426a750175f4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-01-04T09:49:06.792Z">
+<meta property="og:updated_time" content="2018-01-04T13:34:25.192Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS-利用table实现五种常用布局">
 <meta name="twitter:description" content="布局一： 效果：    代码：  html：123&amp;lt;div class=&amp;quot;header&amp;quot;&amp;gt;header&amp;lt;/div&amp;gt;&amp;lt;div class=&amp;quot;main&amp;quot;&amp;gt;main&amp;lt;/div&amp;gt;&amp;lt;div class=&amp;quot;footer&amp;quot;&amp;gt;footer&amp;lt;/div&amp;gt;  注意：div中要有内容，不然显">
@@ -440,7 +440,11 @@
 </ul>
 <p>html：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;header&quot;&gt;header&lt;/div&gt;</div><div class="line">&lt;div class=&quot;main&quot;&gt;</div><div class="line">  &lt;div class=&quot;left&quot;&gt;left&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;right&quot;&gt;right&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=&quot;footer&quot;&gt;footer&lt;/div&gt;</div></pre></td></tr></table></figure></p>
 <p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">  margin:0;</div><div class="line">  padding:0;</div><div class="line">  width:100%;</div><div class="line">  min-height:100vh;</div><div class="line">  display:table;</div><div class="line">  text-align:center;</div><div class="line">&#125;</div><div class="line">.header,.main,.footer&#123;</div><div class="line">  display:table-row;</div><div class="line">&#125;</div><div class="line">.header&#123;</div><div class="line">  height:50px;</div><div class="line">  background:tomato;</div><div class="line">&#125;</div><div class="line">.main&#123;</div><div class="line">  width:100%;</div><div class="line">  display:table;</div><div class="line">  height:calc(100vh - 100px);</div><div class="line">&#125;</div><div class="line">.main .left&#123;</div><div class="line">  width:300px;</div><div class="line">  display:table-cell;</div><div class="line">  background:#fcea96;</div><div class="line">&#125;</div><div class="line">.main .right&#123;</div><div class="line">  display:table-cell;</div><div class="line">  background:skyblue;</div><div class="line">&#125;</div><div class="line">.footer&#123;</div><div class="line">  height:50px;</div><div class="line">  background:#9d70ff;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="gt-注意：-main的height属性中的100px是header和footer的高度之和"><a href="#gt-注意：-main的height属性中的100px是header和footer的高度之和" class="headerlink" title="&gt;注意：.main的height属性中的100px是header和footer的高度之和"></a>&gt;注意：.main的height属性中的100px是header和footer的高度之和</h2><h2 id="布局三："><a href="#布局三：" class="headerlink" title="布局三："></a>布局三：</h2><ul>
+<blockquote>
+<p>注意：.main的height属性中的100px是header和footer的高度之和</p>
+</blockquote>
+<hr>
+<h2 id="布局三："><a href="#布局三：" class="headerlink" title="布局三："></a>布局三：</h2><ul>
 <li>效果：</li>
 </ul>
 <p><img src="http://upload-images.jianshu.io/upload_images/2381669-030da976a77916bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
@@ -501,8 +505,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/04/CSS实现多列均匀布局/" rel="next" title="CSS实现多列均匀布局">
-                <i class="fa fa-chevron-left"></i> CSS实现多列均匀布局
+              <a href="/2018/01/04/CSS实现checkbox计数/" rel="next" title="CSS实现checkbox计数">
+                <i class="fa fa-chevron-left"></i> CSS实现checkbox计数
               </a>
             
           </div>
@@ -511,8 +515,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/04/CSS实现checkbox计数/" rel="prev" title="CSS实现checkbox计数">
-                CSS实现checkbox计数 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/01/04/CSS-单标签实现左边竖条的6种方法/" rel="prev" title="CSS-单标签实现左边竖条的6种方法">
+                CSS-单标签实现左边竖条的6种方法 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -697,7 +701,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#布局一："><span class="nav-number">1.</span> <span class="nav-text">布局一：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布局二："><span class="nav-number">2.</span> <span class="nav-text">布局二：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gt-注意：-main的height属性中的100px是header和footer的高度之和"><span class="nav-number">3.</span> <span class="nav-text">>注意：.main的height属性中的100px是header和footer的高度之和</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布局三："><span class="nav-number">4.</span> <span class="nav-text">布局三：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布局四（双栏布局，例子为左边固定，右边自适应）："><span class="nav-number">5.</span> <span class="nav-text">布局四（双栏布局，例子为左边固定，右边自适应）：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布局五（三栏布局，例子为左边固定，右边固定，中间自适应）："><span class="nav-number">6.</span> <span class="nav-text">布局五（三栏布局，例子为左边固定，右边固定，中间自适应）：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#布局一："><span class="nav-number">1.</span> <span class="nav-text">布局一：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布局二："><span class="nav-number">2.</span> <span class="nav-text">布局二：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布局三："><span class="nav-number">3.</span> <span class="nav-text">布局三：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布局四（双栏布局，例子为左边固定，右边自适应）："><span class="nav-number">4.</span> <span class="nav-text">布局四（双栏布局，例子为左边固定，右边自适应）：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布局五（三栏布局，例子为左边固定，右边固定，中间自适应）："><span class="nav-number">5.</span> <span class="nav-text">布局五（三栏布局，例子为左边固定，右边固定，中间自适应）：</span></a></li></ol></div>
             
 
           </div>

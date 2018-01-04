@@ -95,7 +95,7 @@
 <meta property="og:description" content="div蒙层跟随底部页面滚动代码：html：12&amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div class=&amp;quot;mask&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; css：12345678910111213#content &amp;#123;    height: 2000px;    background: skyblue;&amp;#">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2381669-e99ad46c543e70a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-12-10T09:57:03.435Z">
+<meta property="og:updated_time" content="2018-01-04T13:54:02.414Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="禁止div蒙层跟随底部页面滚动">
 <meta name="twitter:description" content="div蒙层跟随底部页面滚动代码：html：12&amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div class=&amp;quot;mask&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; css：12345678910111213#content &amp;#123;    height: 2000px;    background: skyblue;&amp;#">
@@ -420,17 +420,19 @@
 <p><img src="http://upload-images.jianshu.io/upload_images/2381669-e99ad46c543e70a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <hr>
 <h1 id="禁止div蒙层跟随底部页面滚动"><a href="#禁止div蒙层跟随底部页面滚动" class="headerlink" title="禁止div蒙层跟随底部页面滚动"></a>禁止div蒙层跟随底部页面滚动</h1><ul>
-<li><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><blockquote>
-<p>打开蒙层时，给body添加属性</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">  overflow:hidden;</div><div class="line">  height:100%;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><blockquote>
-<p>将蒙层的position属性改为fixed</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#mask &#123;</div><div class="line">    position: fixed;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</blockquote>
-</li>
+<li><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3></li>
 </ul>
+<blockquote>
+<p>打开蒙层时，给body添加属性</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">  overflow:hidden;</div><div class="line">  height:100%;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3></li>
+</ul>
+<blockquote>
+<p>将蒙层的position属性改为fixed</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#mask &#123;</div><div class="line">    position: fixed;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>

@@ -86,23 +86,23 @@
 
 
 
-<meta name="description" content="新建一个文件夹（这里名为：npmmodule）    进入文件夹后，命令输入npm init，生成package.json文件 创建文件index.js，则当前文件结构为：    输入简单的测试内容   index.js    package.json name为要创建的npm包名，要先确认名字是否存在 version为npm包的版本      命令输入npm login，填写登录信息（提前在n">
+<meta name="description" content="新建一个文件夹（这里名为：npmmodule）  进入文件夹后，命令输入npm init，生成package.json文件  创建文件index.js，则当前文件结构为： 输入简单的测试内容   index.js  package.json  name为要创建的npm包名，要先确认名字是否存在 version为npm包的版本     命令输入npm login，填写登录信息（提前在npm官网进行">
 <meta name="keywords" content="node,npm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="创建自己的npm包">
 <meta property="og:url" content="http://yoursite.com/2017/12/10/创建自己的npm包/index.html">
 <meta property="og:site_name" content="Hester的博客">
-<meta property="og:description" content="新建一个文件夹（这里名为：npmmodule）    进入文件夹后，命令输入npm init，生成package.json文件 创建文件index.js，则当前文件结构为：    输入简单的测试内容   index.js    package.json name为要创建的npm包名，要先确认名字是否存在 version为npm包的版本      命令输入npm login，填写登录信息（提前在n">
+<meta property="og:description" content="新建一个文件夹（这里名为：npmmodule）  进入文件夹后，命令输入npm init，生成package.json文件  创建文件index.js，则当前文件结构为： 输入简单的测试内容   index.js  package.json  name为要创建的npm包名，要先确认名字是否存在 version为npm包的版本     命令输入npm login，填写登录信息（提前在npm官网进行">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2381669-069ae582918079b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2381669-556d09708654c40b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2381669-352372616748f6b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2381669-0b1baa4c213512ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2381669-18e8af9421fa3352.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-12-10T09:56:47.937Z">
+<meta property="og:updated_time" content="2018-01-04T13:55:52.722Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="创建自己的npm包">
-<meta name="twitter:description" content="新建一个文件夹（这里名为：npmmodule）    进入文件夹后，命令输入npm init，生成package.json文件 创建文件index.js，则当前文件结构为：    输入简单的测试内容   index.js    package.json name为要创建的npm包名，要先确认名字是否存在 version为npm包的版本      命令输入npm login，填写登录信息（提前在n">
+<meta name="twitter:description" content="新建一个文件夹（这里名为：npmmodule）  进入文件夹后，命令输入npm init，生成package.json文件  创建文件index.js，则当前文件结构为： 输入简单的测试内容   index.js  package.json  name为要创建的npm包名，要先确认名字是否存在 version为npm包的版本     命令输入npm login，填写登录信息（提前在npm官网进行">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2381669-069ae582918079b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
@@ -419,35 +419,28 @@
 
       
         <ol>
-<li>新建一个文件夹（这里名为：npmmodule）</li>
-</ol>
-<p><img src="http://upload-images.jianshu.io/upload_images/2381669-069ae582918079b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<ol>
-<li>进入文件夹后，命令输入<code>npm init</code>，生成<code>package.json</code>文件</li>
-<li>创建文件<code>index.js</code>，则当前文件结构为：</li>
-</ol>
-<p><img src="http://upload-images.jianshu.io/upload_images/2381669-556d09708654c40b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<ol>
+<li><p>新建一个文件夹（这里名为：npmmodule）<br><img src="http://upload-images.jianshu.io/upload_images/2381669-069ae582918079b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+</li>
+<li><p>进入文件夹后，命令输入<code>npm init</code>，生成<code>package.json</code>文件</p>
+</li>
+<li>创建文件<code>index.js</code>，则当前文件结构为：<br><img src="http://upload-images.jianshu.io/upload_images/2381669-556d09708654c40b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
 <li>输入简单的测试内容</li>
 </ol>
 <ul>
-<li>index.js</li>
-</ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/2381669-352372616748f6b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<li><p>index.js<br><img src="http://upload-images.jianshu.io/upload_images/2381669-352372616748f6b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+</li>
+<li><p>package.json</p>
 <ul>
-<li>package.json<ul>
 <li>name为要创建的npm包名，要先确认名字是否存在</li>
-<li>version为npm包的版本</li>
+<li>version为npm包的版本<br><img src="http://upload-images.jianshu.io/upload_images/2381669-0b1baa4c213512ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
 </ul>
 </li>
 </ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/2381669-0b1baa4c213512ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <ol>
-<li>命令输入<code>npm login</code>，填写登录信息（提前在npm官网进行注册：<a href="https://www.npmjs.com/）" target="_blank" rel="external">https://www.npmjs.com/）</a></li>
-</ol>
-<p><img src="http://upload-images.jianshu.io/upload_images/2381669-18e8af9421fa3352.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<ol>
-<li>命令输入<code>npm publish</code>，即可完成npm包的创建，现在就可以用<code>npm install name</code>（name为之前创建的npm包名）进行模块安装了</li>
+<li><p>命令输入<code>npm login</code>，填写登录信息（提前在npm官网进行注册：<a href="https://www.npmjs.com/）" target="_blank" rel="external">https://www.npmjs.com/）</a><br><img src="http://upload-images.jianshu.io/upload_images/2381669-18e8af9421fa3352.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+</li>
+<li><p>命令输入<code>npm publish</code>，即可完成npm包的创建，现在就可以用<code>npm install name</code>（name为之前创建的npm包名）进行模块安装了</p>
+</li>
 </ol>
 
       
