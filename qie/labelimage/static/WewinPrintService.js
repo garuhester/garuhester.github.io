@@ -367,7 +367,7 @@ var WewinPrintService = function () {
         } else if (type == 'POST') {
             xhr.open('POST', url, true);
             // 如果需要像 html 表单那样 POST 数据，请使用 setRequestHeader() 来添加 http 头。
-            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded;charset=utf-8");
             xhr.send(data);
         }
 
