@@ -166,7 +166,7 @@ var WewinPrintService = function () {
         }
         var sendData = "";
         sendData = this.resolveData(rawData);
-        this.Ajax('post', 'http://127.0.0.1:18188', sendData, function (data) {
+        this.Ajax('post', 'https://127.0.0.1:18189', sendData, function (data) {
             var printers = [];
             var jsonData = JSON.parse(data);
             printers = jsonData.content;
