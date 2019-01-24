@@ -234,8 +234,6 @@ function DoLabelPrint(data) {
         "labels": lablesArr
     }
 
-    console.log(JSON.stringify(data));
-
     wps.Print(data);
 
 }
@@ -296,7 +294,6 @@ function print_tag123(lablesArr, Texts) {
         //---------------------------------------------------------
                                                     
     }
-                                        
     var obj = {
         "labelWidth": labelWidth,
         "labelHeight": labelHeight,

@@ -166,7 +166,8 @@ var WewinPrintService = function () {
         }
         var sendData = "";
         sendData = this.resolveData(rawData);
-        this.Ajax('post', 'http://127.0.0.1:18188', sendData, function (data) {
+        var url = this.getTrueUrl();
+        this.Ajax('post', url, sendData, function (data) {
             var printers = [];
             var jsonData = JSON.parse(data);
             printers = jsonData.content;
@@ -174,9 +175,23 @@ var WewinPrintService = function () {
             if (pelement != null) {
                 pelement.innerHTML = "";
             }
+
+            var temp = true;
             for (var i = 0; i < printers.length; i++) {
                 var pname = printers[i];
-                pelement.options.add(new Option(pname.printer, pname.printer + "&&" + pname.dots + "&&" + pname.hasDrive));
+                if (pname.printer.indexOf("wewin") != -1) {
+                    temp = false;
+                }
+            }
+            if (temp) {
+                pelement.options.add(new Option("当前无WEWIN打印机，请接入", "-1"));
+            }
+
+            for (var i = 0; i < printers.length; i++) {
+                var pname = printers[i];
+                if (pname.printer.indexOf("wewin") != -1) {
+                    pelement.options.add(new Option(pname.printer, pname.printer + "&&" + pname.dots + "&&" + pname.hasDrive));
+                }
             }
         }, function (error) {
             console.log('error' + error);
@@ -227,8 +242,8 @@ var WewinPrintService = function () {
      */
     WewinPrintService.prototype.GetPrinter = function () {
         this.printername = document.getElementById("printername").value;
-        if (this.printername == "") {
-            alert("请安装wewin打印服务插件！");
+        if (this.printername == "-1") {
+            alert("当前无WEWIN打印机，请接入");
             return;
         }
     }
@@ -293,20 +308,27 @@ var WewinPrintService = function () {
      * @param {Object} rawData 
      */
     WewinPrintService.prototype.Print = function (rawData) {
-        var parr = this.printername.split("&&");
-        var pname = parr[0];
-        var dots = parr[1];
-        var hasDrive = parr[2];
-        rawData.printer = pname;
-        rawData.hasDrive = hasDrive;
-        var sendData = "";
-        sendData = this.resolveData(rawData);
-        this.Ajax('post', 'http://127.0.0.1:18188', sendData, function (data) {
-            console.log('success' + data);
-        }, function (error) {
-            console.log('error' + error);
-        });
-        return sendData;
+        if (this.printername != -1) {
+            var parr = this.printername.split("&&");
+            var pname = parr[0];
+            var dots = parr[1];
+            var hasDrive = parr[2];
+            rawData.printer = pname;
+            rawData.hasDrive = hasDrive;
+            var sendData = "";
+            sendData = this.resolveData(rawData);
+            console.log("打印前的数据(json)：", JSON.parse(sendData));
+            console.log("打印前的数据(string)：", sendData);
+            var url = this.getTrueUrl();
+            this.Ajax('post', url, sendData, function (data) {
+                console.log('success' + data);
+            }, function (error) {
+                console.log('error' + error);
+            });
+            return sendData;
+        } else {
+            return "-1";
+        }
     }
 
     /**
@@ -448,6 +470,25 @@ var WewinPrintService = function () {
         } else {
             return false;
         }
+    }
+
+    /**
+     * 获取当前协议对应的请求服务地址
+     */
+    WewinPrintService.prototype.getTrueUrl = function () {
+        var url = "http://127.0.0.1:18188";
+        var protocol = window.location.protocol.replace(":", "");
+        var webType = this.isIE();
+
+        if (webType) {
+            if (protocol == "https") {
+                url = "https://127.0.0.1:18189";
+            }
+        }
+
+        console.log("请求服务地址：" + url);
+
+        return url;
     }
 
     //-------------------------------打印方法------------------------------
