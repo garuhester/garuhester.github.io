@@ -216,7 +216,8 @@ function scanArticles(rootDir, config) {
         words,
         readingTime: readingTime(words),
         date,
-        codeBlocks: (html.match(/class="code-block"/g) || []).length,
+        // 注意：无语言标注的代码块渲染成 class="code-block is-plain"，所以这里不能带结尾引号
+        codeBlocks: (html.match(/class="code-block/g) || []).length,
         images: (html.match(/<img /g) || []).length,
         draft: frontMatter.draft === true || frontMatter.draft === 'true',
       };
