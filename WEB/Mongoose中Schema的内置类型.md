@@ -1,8 +1,0 @@
-- String
-- Number
-- Boolean | Bool
-- Array
-- Buffer
-- Date
-- ObjectId | Oid
-- Mixed

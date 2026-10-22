@@ -1,3 +1,0 @@
-```
-git rebase --abort
-```

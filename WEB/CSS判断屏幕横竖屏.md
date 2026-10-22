@@ -1,9 +1,0 @@
-## 代码：
-```
-@media screen and (orientation: portrait) {
-  /*竖屏 css*/
-} 
-@media screen and (orientation: landscape) {
-  /*横屏 css*/
-}
-```

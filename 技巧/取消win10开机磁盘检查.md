@@ -1,1 +1,0 @@
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control找到Session Manager下的BootExecute删掉autocheck autochk *
