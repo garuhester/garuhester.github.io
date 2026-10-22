@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>插件模板 makeid-template · 小胡笔记</title>
+<meta name="description" content="插件id：makeid-template">
+<meta name="author" content="小胡">
+<link rel="canonical" href="../../posts/2022-09-09/index.html">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('blog-theme'); } catch (e) {}
+    // 没有手动设置过就跟随系统，并在首屏前定好主题，避免闪一下浅色/两个图标同时出现
+    if (!t) {
+      t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">
+      <span class="brand-mark" aria-hidden="true">胡</span>
+      <span class="brand-text"><strong>小胡笔记</strong><em>381 篇 · 10 类</em></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a class="nav-link" href="../../index.html">首页</a>
+      <a class="nav-link" href="../../categories/index.html">分类</a>
+      <a class="nav-link" href="../../tags/index.html">标签</a>
+      <a class="nav-link" href="../../archive/index.html">归档</a>
+      <a class="nav-link" href="../../about/index.html">关于</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="icon-btn search-btn" type="button" data-search-open aria-label="搜索文章" title="搜索（按 / 或 ⌘K）">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <span class="search-btn-text">搜索</span>
+      </button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深色模式" title="切换深色模式">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-label="打开菜单" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+    <a class="nav-link" href="../../index.html">首页</a>
+    <a class="nav-link" href="../../categories/index.html">分类</a>
+    <a class="nav-link" href="../../tags/index.html">标签</a>
+    <a class="nav-link" href="../../archive/index.html">归档</a>
+    <a class="nav-link" href="../../about/index.html">关于</a>
+  </nav>
+</header>
+<main id="main">
+
+<div class="reading-progress" data-progress></div>
+<article class="post" style="--cat:#4f6bed">
+  <nav class="crumbs">
+    <a href="../../index.html">首页</a><span>/</span>
+    <a href="../../categories/web/index.html">Web 前端</a>
+    <span>/</span><span>随手记</span>
+  </nav>
+  <header class="post-head">
+    <h1>插件模板 makeid-template</h1>
+    <div class="post-meta">
+      <span class="meta-chip cat-chip">🌐 Web 前端</span>
+      <span class="meta-chip">随手记</span>
+      <span class="meta-chip">287 字</span>
+      <span class="meta-chip">约 1 分钟</span>
+      <span class="meta-chip">2022-09-09</span>
+    </div>
+    <div class="post-tags"><a class="chip chip-tag" href="../../tags/index.html?tag=%E8%AE%BE%E8%AE%A1" data-tag="设计">#设计</a><a class="chip chip-tag" href="../../tags/index.html?tag=Vue" data-tag="Vue">#Vue</a></div>
+  </header>
+  <div class="post-layout">
+    <div class="post-body" data-post-body>
+      <h2 id="sec-1">一、插件属性</h2>
+<ul>
+<li>插件id：makeid-template</li>
+<li>插件分类：单元插件 (unit)</li>
+<li>插件版本：v1.0.0</li>
+</ul>
+<h2 id="sec-2">二、插件依赖</h2>
+<ul>
+<li>基础框架核心工具 makeid-core-util</li>
+</ul>
+<h2 id="sec-3">三、插件使用</h2>
+<h3 id="component">1. 组件 component</h3>
+<p><code>&lt;makeid-template&gt;&lt;/makeid-template&gt;</code></p>
+<table>
+<thead>
+<tr>
+<th>属性 Attributes</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>名称</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>插槽 Slots</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>top</td>
+<td>顶部插槽</td>
+</tr>
+<tr>
+<td>bottom</td>
+<td>底部插槽</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>事件 Events</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>myEvent</td>
+<td>触发事件</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><code>&lt;makeid-template-2&gt;&lt;/makeid-template-2&gt;</code></p>
+<table>
+<thead>
+<tr>
+<th>属性 Attributes</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>名称</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>插槽 Slots</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>top</td>
+<td>顶部插槽</td>
+</tr>
+<tr>
+<td>bottom</td>
+<td>底部插槽</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>事件 Events</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>myEvent</td>
+<td>触发事件</td>
+</tr>
+</tbody>
+</table>
+<h3 id="store">2. 状态 store</h3>
+<table>
+<thead>
+<tr>
+<th>getter</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>makeidTemplateName2</td>
+<td>名称</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>dispatch</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>makeidTemplateIndex/setName2</td>
+<td>设置名称</td>
+</tr>
+</tbody>
+</table>
+<h3 id="directive">3. 指令 directive</h3>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v-makeidTemplateDirective</td>
+<td>输出directive</td>
+</tr>
+</tbody>
+</table>
+<h3 id="filter">4. 过滤器 filter</h3>
+<table>
+<thead>
+<tr>
+<th>过滤器</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>makeidTemplateFilter</td>
+<td>过滤值 * 40</td>
+</tr>
+</tbody>
+</table>
+<h3 id="config">5. 配置 config</h3>
+<ul>
+<li>工具：Vue.prototype.makeidLoginTool</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+<th>参数</th>
+<th>调用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>changeLoginTemplate</td>
+<td>切换模板</td>
+<td>loginTemplateType: 模板序号</td>
+<td><code>Vue.prototype.makeidLoginTool.changeLoginTemplate(1)</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>回调注入：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+<th>参数</th>
+<th>调用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vue.prototype.makeidSystemUserLogoutCallback</td>
+<td>用户退出登录回调注入</td>
+<td>callback: 回调函数</td>
+<td><code>Vue.prototype.makeidSystemUserLogoutCallback.push(()=&gt;{})</code></td>
+</tr>
+<tr>
+<td>Vue.prototype.makeidCoreUtilRequest401Callback</td>
+<td>请求401回调</td>
+<td>callback: 回调函数</td>
+<td><code>Vue.prototype.makeidCoreUtilRequest401Callback.push(()=&gt;{})</code></td>
+</tr>
+<tr>
+<td>Vue.prototype.makeidCoreUtilRouteCallback</td>
+<td>非登录页路由回调</td>
+<td>callback: 回调函数</td>
+<td><code>Vue.prototype.makeidCoreUtilRouteCallback.push(()=&gt;{})</code></td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+    <aside class="post-aside">
+      <nav class="toc" aria-label="文章目录">
+    <p class="toc-title">目录</p>
+    <ul><li class="toc-l2"><a href="#sec-1" data-toc-link>一、插件属性</a></li><li class="toc-l2"><a href="#sec-2" data-toc-link>二、插件依赖</a></li><li class="toc-l2"><a href="#sec-3" data-toc-link>三、插件使用</a></li><li class="toc-l3"><a href="#component" data-toc-link>组件 component</a></li><li class="toc-l3"><a href="#store" data-toc-link>状态 store</a></li><li class="toc-l3"><a href="#directive" data-toc-link>指令 directive</a></li><li class="toc-l3"><a href="#filter" data-toc-link>过滤器 filter</a></li><li class="toc-l3"><a href="#config" data-toc-link>配置 config</a></li></ul>
+  </nav>
+    </aside>
+  </div>
+  <details class="toc-mobile">
+    <summary>文章目录（8 节）</summary>
+    <ul><li class="toc-l2"><a href="#sec-1" data-toc-link>一、插件属性</a></li><li class="toc-l2"><a href="#sec-2" data-toc-link>二、插件依赖</a></li><li class="toc-l2"><a href="#sec-3" data-toc-link>三、插件使用</a></li><li class="toc-l3"><a href="#component" data-toc-link>组件 component</a></li><li class="toc-l3"><a href="#store" data-toc-link>状态 store</a></li><li class="toc-l3"><a href="#directive" data-toc-link>指令 directive</a></li><li class="toc-l3"><a href="#filter" data-toc-link>过滤器 filter</a></li><li class="toc-l3"><a href="#config" data-toc-link>配置 config</a></li></ul>
+  </details>
+  <nav class="post-nav">
+    <a class="post-nav-item prev" href="../../posts/2021-08-30/index.html"><span>上一篇</span><strong>2021-08-30</strong></a>
+    <a class="post-nav-item next" href="../../posts/2021-08-26/index.html"><span>下一篇</span><strong>前端：后台管理系统基础框架</strong></a>
+  </nav>
+  <section class="related">
+    <h2>相关文章</h2>
+    <div class="related-grid">
+      <a class="related-item" href="../../posts/2021-08-26/index.html">
+        <strong>前端：后台管理系统基础框架</strong>
+        <span>Web 前端 · 随手记 · 1209 字</span>
+      </a><a class="related-item" href="../../posts/2018-11-04/index.html">
+        <strong>2018-11-04</strong>
+        <span>Web 前端 · 随手记 · 59 字</span>
+      </a><a class="related-item" href="../../posts/2021-08-30/index.html">
+        <strong>2021-08-30</strong>
+        <span>Web 前端 · 随手记 · 81 字</span>
+      </a><a class="related-item" href="../../posts/2021-09-15/index.html">
+        <strong>项目名称（中文）</strong>
+        <span>Web 前端 · 随手记 · 309 字</span>
+      </a>
+    </div>
+  </section>
+</article>
+<button class="to-top" type="button" data-to-top aria-label="回到顶部">↑</button>
+
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-line">小胡笔记 · 共收录 381 篇文章</p>
+    <p class="footer-line dim">由简书导出的 Markdown 自动生成 · <a href="../../about/index.html">关于本站</a></p>
+  </div>
+</footer>
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索文章">
+    <div class="search-field">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input type="search" data-search-input placeholder="搜索标题、标签或正文关键词…" autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-meta" data-search-meta>输入关键词开始搜索</div>
+    <ul class="search-results" data-search-results></ul>
+  </div>
+</div>
+<script>window.__BASE__ = "../../";</script>
+<script src="../../assets/search-index.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

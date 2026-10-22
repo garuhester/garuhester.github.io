@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CSS-flex学习记录 · 小胡笔记</title>
+<meta name="description" content="## justify-content：">
+<meta name="author" content="小胡">
+<link rel="canonical" href="../../posts/css-flex/index.html">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('blog-theme'); } catch (e) {}
+    // 没有手动设置过就跟随系统，并在首屏前定好主题，避免闪一下浅色/两个图标同时出现
+    if (!t) {
+      t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">
+      <span class="brand-mark" aria-hidden="true">胡</span>
+      <span class="brand-text"><strong>小胡笔记</strong><em>381 篇 · 10 类</em></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a class="nav-link" href="../../index.html">首页</a>
+      <a class="nav-link" href="../../categories/index.html">分类</a>
+      <a class="nav-link" href="../../tags/index.html">标签</a>
+      <a class="nav-link" href="../../archive/index.html">归档</a>
+      <a class="nav-link" href="../../about/index.html">关于</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="icon-btn search-btn" type="button" data-search-open aria-label="搜索文章" title="搜索（按 / 或 ⌘K）">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <span class="search-btn-text">搜索</span>
+      </button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深色模式" title="切换深色模式">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-label="打开菜单" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+    <a class="nav-link" href="../../index.html">首页</a>
+    <a class="nav-link" href="../../categories/index.html">分类</a>
+    <a class="nav-link" href="../../tags/index.html">标签</a>
+    <a class="nav-link" href="../../archive/index.html">归档</a>
+    <a class="nav-link" href="../../about/index.html">关于</a>
+  </nav>
+</header>
+<main id="main">
+
+<div class="reading-progress" data-progress></div>
+<article class="post" style="--cat:#4f6bed">
+  <nav class="crumbs">
+    <a href="../../index.html">首页</a><span>/</span>
+    <a href="../../categories/web/index.html">Web 前端</a>
+    <span>/</span><span>CSS 与布局</span>
+  </nav>
+  <header class="post-head">
+    <h1>CSS-flex学习记录</h1>
+    <div class="post-meta">
+      <span class="meta-chip cat-chip">🌐 Web 前端</span>
+      <span class="meta-chip">CSS 与布局</span>
+      <span class="meta-chip">420 字</span>
+      <span class="meta-chip">约 1 分钟</span>
+      
+    </div>
+    <div class="post-tags"><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=CSS" data-tag="CSS">#CSS</a></div>
+  </header>
+  <div class="post-layout">
+    <div class="post-body" data-post-body>
+      <blockquote>
+<p>推荐学习网站：<a href="http://flexboxfroggy.com" target="_blank" rel="noopener noreferrer">http://flexboxfroggy.com</a></p>
+</blockquote>
+<ul>
+<li>间距设置</li>
+</ul>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>.parent {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    .child {
+        width: 20%;
+    }
+}
+</code></pre></div><div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>.aaa {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: -10px 0 0 -10px;
+    .bbb {
+        width: 20%;
+        margin: 10px 0 0 10px;
+    }
+}
+</code></pre></div><h1 id="sec-1">属性：</h1>
+<ul>
+<li>
+<h2 id="justify-content">justify-content：</h2>
+<ul>
+<li>flex-start：元素和容器的左端对齐。</li>
+<li>flex-end：元素和容器的右端对齐。</li>
+<li>center：元素在容器里居中。</li>
+<li>space-between（边距小）：元素之间保持相等的距离。</li>
+<li>space-around（边距大）：元素周围保持相等的距离。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>
+<h2 id="align-items">align-items：</h2>
+<ul>
+<li>flex-start：元素与容器的顶部对齐。</li>
+<li>flex-end：元素与容器的底部对齐。</li>
+<li>center：元素纵向居中。</li>
+<li>baseline：元素在容器的基线位置显示。</li>
+<li>stretch：元素被拉伸以填满整个容器。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>
+<h2 id="flex-direction">flex-direction：</h2>
+<ul>
+<li>row：元素摆放的方向和文字方向一致。</li>
+<li>row-reverse：元素摆放的方向和文字方向相反。</li>
+<li>column：元素从上放到下。</li>
+<li>column-reverse：元素从下放到上。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>
+<h2 id="align-self">align-self（针对单个元素）：</h2>
+<ul>
+<li>flex-start：元素与容器的顶部对齐。</li>
+<li>flex-end：元素与容器的底部对齐。</li>
+<li>center：元素纵向居中。</li>
+<li>baseline：元素在容器的基线位置显示。</li>
+<li>stretch：元素被拉伸以填满整个容器。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>
+<h2 id="flex-wrap">flex-wrap：</h2>
+<ul>
+<li>nowrap: 所有的元素都在一行。</li>
+<li>wrap: 元素自动换成多行。</li>
+<li>wrap-reverse: 元素自动换成逆序的多行。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>
+<h2 id="order">order：调整元素顺序</h2>
+</li>
+</ul>
+<hr>
+<ul>
+<li>
+<h2 id="flex-flow-flex-direction-flex-wrap">flex-flow（缩写属性）：flex-direction    flex-wrap</h2>
+</li>
+</ul>
+<hr>
+<ul>
+<li>
+<h2 id="align-content">align-content（决定行间距）：</h2>
+<ul>
+<li>flex-start: 多行都集中在顶部。</li>
+<li>flex-end: 多行都集中在底部。</li>
+<li>center: 多行居中。</li>
+<li>space-between: 行与行之间保持相等距离。</li>
+<li>space-around: 每行的周围保持相等距离。</li>
+<li>stretch: 每一行都被拉伸以填满容器。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<blockquote>
+<p>注意：
+1.当<code>flex-direction：row</code>（即默认情况下）时：
+<code>justify-content</code>控制<strong>横向</strong>
+<code>align-items</code>控制<strong>纵向</strong>
+<code>align-content</code>控制<strong>行</strong>之间的距离。
+2.当<code>flex-direction：column</code>时：
+<code>justify-content</code>控制<strong>纵向</strong>
+<code>align-items</code>控制<strong>横向</strong>
+<code>align-content</code>控制<strong>列</strong>之间的距离。</p>
+</blockquote>
+
+    </div>
+    <aside class="post-aside">
+      <nav class="toc" aria-label="文章目录">
+    <p class="toc-title">目录</p>
+    <ul><li class="toc-l2"><a href="#justify-content" data-toc-link>justify-content：</a></li><li class="toc-l2"><a href="#align-items" data-toc-link>align-items：</a></li><li class="toc-l2"><a href="#flex-direction" data-toc-link>flex-direction：</a></li><li class="toc-l2"><a href="#align-self" data-toc-link>align-self（针对单个元素）：</a></li><li class="toc-l2"><a href="#flex-wrap" data-toc-link>flex-wrap：</a></li><li class="toc-l2"><a href="#order" data-toc-link>order：调整元素顺序</a></li><li class="toc-l2"><a href="#flex-flow-flex-direction-flex-wrap" data-toc-link>flex-flow（缩写属性）：flex-direction flex-wrap</a></li><li class="toc-l2"><a href="#align-content" data-toc-link>align-content（决定行间距）：</a></li></ul>
+  </nav>
+    </aside>
+  </div>
+  <details class="toc-mobile">
+    <summary>文章目录（8 节）</summary>
+    <ul><li class="toc-l2"><a href="#justify-content" data-toc-link>justify-content：</a></li><li class="toc-l2"><a href="#align-items" data-toc-link>align-items：</a></li><li class="toc-l2"><a href="#flex-direction" data-toc-link>flex-direction：</a></li><li class="toc-l2"><a href="#align-self" data-toc-link>align-self（针对单个元素）：</a></li><li class="toc-l2"><a href="#flex-wrap" data-toc-link>flex-wrap：</a></li><li class="toc-l2"><a href="#order" data-toc-link>order：调整元素顺序</a></li><li class="toc-l2"><a href="#flex-flow-flex-direction-flex-wrap" data-toc-link>flex-flow（缩写属性）：flex-direction flex-wrap</a></li><li class="toc-l2"><a href="#align-content" data-toc-link>align-content（决定行间距）：</a></li></ul>
+  </details>
+  <nav class="post-nav">
+    <a class="post-nav-item prev" href="../../posts/css-cursor/index.html"><span>上一篇</span><strong>css-cursor鼠标光标样式</strong></a>
+    <a class="post-nav-item next" href="../../posts/css-select-option/index.html"><span>下一篇</span><strong>CSS将select-option文本居中</strong></a>
+  </nav>
+  <section class="related">
+    <h2>相关文章</h2>
+    <div class="related-grid">
+      <a class="related-item" href="../../posts/css-grid/index.html">
+        <strong>属性：</strong>
+        <span>Web 前端 · CSS 与布局 · 59 字</span>
+      </a><a class="related-item" href="../../posts/scss/index.html">
+        <strong>SCSS学习记录</strong>
+        <span>Web 前端 · CSS 与布局 · 232 字</span>
+      </a><a class="related-item" href="../../posts/css/index.html">
+        <strong>纯CSS实现导航栏下划线跟随</strong>
+        <span>Web 前端 · CSS 与布局 · 88 字</span>
+      </a><a class="related-item" href="../../posts/css-8xfecp/index.html">
+        <strong>纯CSS实现两种聊天气泡</strong>
+        <span>Web 前端 · CSS 与布局 · 178 字</span>
+      </a>
+    </div>
+  </section>
+</article>
+<button class="to-top" type="button" data-to-top aria-label="回到顶部">↑</button>
+
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-line">小胡笔记 · 共收录 381 篇文章</p>
+    <p class="footer-line dim">由简书导出的 Markdown 自动生成 · <a href="../../about/index.html">关于本站</a></p>
+  </div>
+</footer>
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索文章">
+    <div class="search-field">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input type="search" data-search-input placeholder="搜索标题、标签或正文关键词…" autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-meta" data-search-meta>输入关键词开始搜索</div>
+    <ul class="search-results" data-search-results></ul>
+  </div>
+</div>
+<script>window.__BASE__ = "../../";</script>
+<script src="../../assets/search-index.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>javascript利用数组解构快速实现值的交换（ES6） · 小胡笔记</title>
+<meta name="description" content="关键部分：[a,b] = [b,a];">
+<meta name="author" content="小胡">
+<link rel="canonical" href="../../posts/javascript-es6/index.html">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('blog-theme'); } catch (e) {}
+    // 没有手动设置过就跟随系统，并在首屏前定好主题，避免闪一下浅色/两个图标同时出现
+    if (!t) {
+      t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">
+      <span class="brand-mark" aria-hidden="true">胡</span>
+      <span class="brand-text"><strong>小胡笔记</strong><em>381 篇 · 10 类</em></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a class="nav-link" href="../../index.html">首页</a>
+      <a class="nav-link" href="../../categories/index.html">分类</a>
+      <a class="nav-link" href="../../tags/index.html">标签</a>
+      <a class="nav-link" href="../../archive/index.html">归档</a>
+      <a class="nav-link" href="../../about/index.html">关于</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="icon-btn search-btn" type="button" data-search-open aria-label="搜索文章" title="搜索（按 / 或 ⌘K）">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <span class="search-btn-text">搜索</span>
+      </button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深色模式" title="切换深色模式">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-label="打开菜单" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+    <a class="nav-link" href="../../index.html">首页</a>
+    <a class="nav-link" href="../../categories/index.html">分类</a>
+    <a class="nav-link" href="../../tags/index.html">标签</a>
+    <a class="nav-link" href="../../archive/index.html">归档</a>
+    <a class="nav-link" href="../../about/index.html">关于</a>
+  </nav>
+</header>
+<main id="main">
+
+<div class="reading-progress" data-progress></div>
+<article class="post" style="--cat:#4f6bed">
+  <nav class="crumbs">
+    <a href="../../index.html">首页</a><span>/</span>
+    <a href="../../categories/web/index.html">Web 前端</a>
+    <span>/</span><span>JavaScript</span>
+  </nav>
+  <header class="post-head">
+    <h1>javascript利用数组解构快速实现值的交换（ES6）</h1>
+    <div class="post-meta">
+      <span class="meta-chip cat-chip">🌐 Web 前端</span>
+      <span class="meta-chip">JavaScript</span>
+      <span class="meta-chip">32 字</span>
+      <span class="meta-chip">约 1 分钟</span>
+      
+    </div>
+    <div class="post-tags"><a class="chip chip-tag" href="../../tags/index.html?tag=JavaScript" data-tag="JavaScript">#JavaScript</a></div>
+  </header>
+  <div class="post-layout">
+    <div class="post-body" data-post-body>
+      <p>关键部分：[a,b] = [b,a];</p>
+<h2 id="sec-1">代码：</h2>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>var a = 3;
+var b = 5;
+console.log(a+&quot;-&quot;+b); // 3-5
+[a,b] = [b,a];
+console.log(a+&quot;-&quot;+b); // 5-3
+</code></pre></div>
+    </div>
+    <aside class="post-aside">
+      <nav class="toc" aria-label="文章目录">
+    <p class="toc-title">目录</p>
+    <ul><li class="toc-l2"><a href="#sec-1" data-toc-link>代码：</a></li></ul>
+  </nav>
+    </aside>
+  </div>
+  <details class="toc-mobile">
+    <summary>文章目录（1 节）</summary>
+    <ul><li class="toc-l2"><a href="#sec-1" data-toc-link>代码：</a></li></ul>
+  </details>
+  <nav class="post-nav">
+    <a class="post-nav-item prev" href="../../posts/javascript-b96233/index.html"><span>上一篇</span><strong>javascript框架模块化的两种写法</strong></a>
+    <a class="post-nav-item next" href="../../posts/javascript-txt/index.html"><span>下一篇</span><strong>javascript两种创建txt文件并下载的方法</strong></a>
+  </nav>
+  <section class="related">
+    <h2>相关文章</h2>
+    <div class="related-grid">
+      <a class="related-item" href="../../posts/p-3robxi/index.html">
+        <strong>宏任务和微任务都有哪些？</strong>
+        <span>Web 前端 · JavaScript · 33 字</span>
+      </a><a class="related-item" href="../../posts/p-q8ywvz/index.html">
+        <strong>利用js判断页面是否滚动到了底部</strong>
+        <span>Web 前端 · JavaScript · 46 字</span>
+      </a><a class="related-item" href="../../posts/api-logo/index.html">
+        <strong>去除高德地图api左下角logo</strong>
+        <span>Web 前端 · JavaScript · 11 字</span>
+      </a><a class="related-item" href="../../posts/p-rq6e0z/index.html">
+        <strong>实现抽屉侧边栏（主体不移动）</strong>
+        <span>Web 前端 · JavaScript · 115 字</span>
+      </a>
+    </div>
+  </section>
+</article>
+<button class="to-top" type="button" data-to-top aria-label="回到顶部">↑</button>
+
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-line">小胡笔记 · 共收录 381 篇文章</p>
+    <p class="footer-line dim">由简书导出的 Markdown 自动生成 · <a href="../../about/index.html">关于本站</a></p>
+  </div>
+</footer>
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索文章">
+    <div class="search-field">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input type="search" data-search-input placeholder="搜索标题、标签或正文关键词…" autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-meta" data-search-meta>输入关键词开始搜索</div>
+    <ul class="search-results" data-search-results></ul>
+  </div>
+</div>
+<script>window.__BASE__ = "../../";</script>
+<script src="../../assets/search-index.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

@@ -1,5 +1,7 @@
-# 生成产物（由 tools/build.js 生成，不需要进版本库）
-blog/
+# 生成产物
+# blog/ 需要提交（GitHub Pages「分支 + 根目录」模式靠它对外提供页面）；
+# 如果改用 GitHub Actions 或「分支 + /docs」模式，可以把下面这行放开、不再提交产物。
+# blog/
 docs/
 
 # 依赖与系统文件

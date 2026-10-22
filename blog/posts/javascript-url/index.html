@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>javascript 当前页面url网址信息 · 小胡笔记</title>
+<meta name="description" content="1、window.location.href(设置或获取整个 URL 为字符串)">
+<meta name="author" content="小胡">
+<link rel="canonical" href="../../posts/javascript-url/index.html">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('blog-theme'); } catch (e) {}
+    // 没有手动设置过就跟随系统，并在首屏前定好主题，避免闪一下浅色/两个图标同时出现
+    if (!t) {
+      t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">
+      <span class="brand-mark" aria-hidden="true">胡</span>
+      <span class="brand-text"><strong>小胡笔记</strong><em>381 篇 · 10 类</em></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a class="nav-link" href="../../index.html">首页</a>
+      <a class="nav-link" href="../../categories/index.html">分类</a>
+      <a class="nav-link" href="../../tags/index.html">标签</a>
+      <a class="nav-link" href="../../archive/index.html">归档</a>
+      <a class="nav-link" href="../../about/index.html">关于</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="icon-btn search-btn" type="button" data-search-open aria-label="搜索文章" title="搜索（按 / 或 ⌘K）">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <span class="search-btn-text">搜索</span>
+      </button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深色模式" title="切换深色模式">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-label="打开菜单" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+    <a class="nav-link" href="../../index.html">首页</a>
+    <a class="nav-link" href="../../categories/index.html">分类</a>
+    <a class="nav-link" href="../../tags/index.html">标签</a>
+    <a class="nav-link" href="../../archive/index.html">归档</a>
+    <a class="nav-link" href="../../about/index.html">关于</a>
+  </nav>
+</header>
+<main id="main">
+
+<div class="reading-progress" data-progress></div>
+<article class="post" style="--cat:#4f6bed">
+  <nav class="crumbs">
+    <a href="../../index.html">首页</a><span>/</span>
+    <a href="../../categories/web/index.html">Web 前端</a>
+    <span>/</span><span>JavaScript</span>
+  </nav>
+  <header class="post-head">
+    <h1>javascript 当前页面url网址信息</h1>
+    <div class="post-meta">
+      <span class="meta-chip cat-chip">🌐 Web 前端</span>
+      <span class="meta-chip">JavaScript</span>
+      <span class="meta-chip">284 字</span>
+      <span class="meta-chip">约 1 分钟</span>
+      
+    </div>
+    <div class="post-tags"><a class="chip chip-tag" href="../../tags/index.html?tag=JavaScript" data-tag="JavaScript">#JavaScript</a><a class="chip chip-tag" href="../../tags/index.html?tag=HTML" data-tag="HTML">#HTML</a></div>
+  </header>
+  <div class="post-layout">
+    <div class="post-body" data-post-body>
+      <p>URL：<code>http://127.0.0.1:8080/index.html?name=abc&amp;age=13#public/aaa</code></p>
+<h4 id="1-window-location-href-url">1、window.location.href(设置或获取整个 URL 为字符串)</h4>
+<p>var test = window.location.href;
+alert(test);
+返回：<code>http://127.0.0.1:8080/index.html?name=abc&amp;age=13#public/aaa</code></p>
+<h4 id="2-window-location-protocol-url">2、window.location.protocol(设置或获取 URL 的协议部分)</h4>
+<p>var test = window.location.protocol;
+alert(test);
+返回：<code>http:</code></p>
+<h4 id="3-window-location-host-url">3、window.location.host(设置或获取 URL 的主机部分)</h4>
+<p>var test = window.location.host;
+alert(test);
+返回：<code>127.0.0.1:8080</code></p>
+<h4 id="4-window-location-port-url">4、window.location.port(设置或获取与 URL 关联的端口号码)</h4>
+<p>var test = window.location.port;
+alert(test);
+返回：<code>8080</code>（默认是80）</p>
+<h4 id="5-window-location-pathname-url">5、window.location.pathname(设置或获取与 URL 的路径部分（就是文件地址）)</h4>
+<p>var test = window.location.pathname;
+alert(test);
+返回：<code>/index.html</code></p>
+<h4 id="6-window-location-search-href">6、window.location.search(设置或获取 href 属性中跟在问号后面的部分)</h4>
+<p>var test = window.location.search;
+alert(test);
+返回：<code>?name=abc&amp;age=13</code></p>
+<blockquote>
+<p>获得查询（参数）部分，除了给动态语言赋值以外，我们同样可以给静态页面，并使用javascript来获得相信应的参数值。</p>
+</blockquote>
+<h4 id="7-window-location-hash-href">7、window.location.hash(设置或获取 href 属性中在井号“#”后面的分段)</h4>
+<p>var test = window.location.hash;
+alert(test);
+返回：<code>#public/aaa</code></p>
+
+    </div>
+    <aside class="post-aside">
+      <nav class="toc" aria-label="文章目录">
+    <p class="toc-title">目录</p>
+    <ul><li class="toc-l4"><a href="#1-window-location-href-url" data-toc-link>1、window.location.href(设置或获取整个 URL 为字符串)</a></li><li class="toc-l4"><a href="#2-window-location-protocol-url" data-toc-link>2、window.location.protocol(设置或获取 URL 的协议部分)</a></li><li class="toc-l4"><a href="#3-window-location-host-url" data-toc-link>3、window.location.host(设置或获取 URL 的主机部分)</a></li><li class="toc-l4"><a href="#4-window-location-port-url" data-toc-link>4、window.location.port(设置或获取与 URL 关联的端口号码)</a></li><li class="toc-l4"><a href="#5-window-location-pathname-url" data-toc-link>5、window.location.pathname(设置或获取与 URL 的路径部分（就是文件地址）)</a></li><li class="toc-l4"><a href="#6-window-location-search-href" data-toc-link>6、window.location.search(设置或获取 href 属性中跟在问号后面的部分)</a></li><li class="toc-l4"><a href="#7-window-location-hash-href" data-toc-link>7、window.location.hash(设置或获取 href 属性中在井号“#”后面的分段)</a></li></ul>
+  </nav>
+    </aside>
+  </div>
+  <details class="toc-mobile">
+    <summary>文章目录（7 节）</summary>
+    <ul><li class="toc-l4"><a href="#1-window-location-href-url" data-toc-link>1、window.location.href(设置或获取整个 URL 为字符串)</a></li><li class="toc-l4"><a href="#2-window-location-protocol-url" data-toc-link>2、window.location.protocol(设置或获取 URL 的协议部分)</a></li><li class="toc-l4"><a href="#3-window-location-host-url" data-toc-link>3、window.location.host(设置或获取 URL 的主机部分)</a></li><li class="toc-l4"><a href="#4-window-location-port-url" data-toc-link>4、window.location.port(设置或获取与 URL 关联的端口号码)</a></li><li class="toc-l4"><a href="#5-window-location-pathname-url" data-toc-link>5、window.location.pathname(设置或获取与 URL 的路径部分（就是文件地址）)</a></li><li class="toc-l4"><a href="#6-window-location-search-href" data-toc-link>6、window.location.search(设置或获取 href 属性中跟在问号后面的部分)</a></li><li class="toc-l4"><a href="#7-window-location-hash-href" data-toc-link>7、window.location.hash(设置或获取 href 属性中在井号“#”后面的分段)</a></li></ul>
+  </details>
+  <nav class="post-nav">
+    <a class="post-nav-item prev" href="../../posts/javascript-cookie/index.html"><span>上一篇</span><strong>javascript 操作cookie</strong></a>
+    <a class="post-nav-item next" href="../../posts/javascript-input-placeholder/index.html"><span>下一篇</span><strong>javascript 动态设置input的placeholder值</strong></a>
+  </nav>
+  <section class="related">
+    <h2>相关文章</h2>
+    <div class="related-grid">
+      <a class="related-item" href="../../posts/javascript-f7cbdd/index.html">
+        <strong>javascript 选择器的区别</strong>
+        <span>Web 前端 · JavaScript · 124 字</span>
+      </a><a class="related-item" href="../../posts/javascript-svg-canvas-image/index.html">
+        <strong>javascript-svg转canvas和image</strong>
+        <span>Web 前端 · JavaScript · 267 字</span>
+      </a><a class="related-item" href="../../posts/javascript-preventdefault-stoppropagation/index.html">
+        <strong>javascript事件preventDefault和stopPropagation的区别</strong>
+        <span>Web 前端 · JavaScript · 612 字</span>
+      </a><a class="related-item" href="../../posts/p-3robxi/index.html">
+        <strong>宏任务和微任务都有哪些？</strong>
+        <span>Web 前端 · JavaScript · 33 字</span>
+      </a>
+    </div>
+  </section>
+</article>
+<button class="to-top" type="button" data-to-top aria-label="回到顶部">↑</button>
+
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-line">小胡笔记 · 共收录 381 篇文章</p>
+    <p class="footer-line dim">由简书导出的 Markdown 自动生成 · <a href="../../about/index.html">关于本站</a></p>
+  </div>
+</footer>
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索文章">
+    <div class="search-field">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input type="search" data-search-input placeholder="搜索标题、标签或正文关键词…" autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-meta" data-search-meta>输入关键词开始搜索</div>
+    <ul class="search-results" data-search-results></ul>
+  </div>
+</div>
+<script>window.__BASE__ = "../../";</script>
+<script src="../../assets/search-index.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

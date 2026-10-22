@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>分类 · 小胡笔记</title>
+<meta name="description" content="按主题浏览全部文章分类">
+<meta name="author" content="小胡">
+<link rel="canonical" href="../categories/index.html">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('blog-theme'); } catch (e) {}
+    // 没有手动设置过就跟随系统，并在首屏前定好主题，避免闪一下浅色/两个图标同时出现
+    if (!t) {
+      t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark" aria-hidden="true">胡</span>
+      <span class="brand-text"><strong>小胡笔记</strong><em>381 篇 · 10 类</em></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a class="nav-link" href="../index.html">首页</a>
+      <a class="nav-link is-active" href="../categories/index.html">分类</a>
+      <a class="nav-link" href="../tags/index.html">标签</a>
+      <a class="nav-link" href="../archive/index.html">归档</a>
+      <a class="nav-link" href="../about/index.html">关于</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="icon-btn search-btn" type="button" data-search-open aria-label="搜索文章" title="搜索（按 / 或 ⌘K）">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <span class="search-btn-text">搜索</span>
+      </button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深色模式" title="切换深色模式">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-label="打开菜单" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+    <a class="nav-link" href="../index.html">首页</a>
+    <a class="nav-link is-active" href="../categories/index.html">分类</a>
+    <a class="nav-link" href="../tags/index.html">标签</a>
+    <a class="nav-link" href="../archive/index.html">归档</a>
+    <a class="nav-link" href="../about/index.html">关于</a>
+  </nav>
+</header>
+<main id="main">
+
+<section class="page-head">
+  <nav class="crumbs"><a href="../index.html">首页</a><span>/</span><span>分类</span></nav>
+  <h1>全部分类</h1>
+  <p class="page-desc">10 个分类，共 381 篇文章。</p>
+</section>
+<div class="cat-list">
+  <section class="cat-block" style="--cat:#4f6bed">
+    <header class="cat-block-head">
+      <span class="cat-icon" aria-hidden="true">🌐</span>
+      <div>
+        <h2><a href="../categories/web/index.html">Web 前端</a> <em>270</em></h2>
+        <p>JavaScript、CSS、Vue、Node、小程序、Electron、Git 与各种踩坑记录</p>
+      </div>
+    </header>
+    <div class="cat-block-subs"><a class="sub-pill" href="../categories/web/index.html#sub-1">微信与小程序 16</a><a class="sub-pill" href="../categories/web/index.html#sub-2">Vue 与组件库 15</a><a class="sub-pill" href="../categories/web/index.html#sub-3">Electron 桌面端 10</a><a class="sub-pill" href="../categories/web/index.html#sub-4">Git 与协作 16</a><a class="sub-pill" href="../categories/web/index.html#sub-5">博客与建站 10</a><a class="sub-pill" href="../categories/web/index.html#sub-6">图表与可视化 7</a><a class="sub-pill" href="../categories/web/index.html#sub-7">Node 与服务端 35</a><a class="sub-pill" href="../categories/web/index.html#sub-8">构建与工程化 8</a><a class="sub-pill" href="../categories/web/index.html#sub-9">设备与兼容 18</a><a class="sub-pill" href="../categories/web/index.html#sub-10">CSS 与布局 48</a><a class="sub-pill" href="../categories/web/index.html#sub-11">JavaScript 78</a><a class="sub-pill" href="../categories/web/index.html#sub-12">编辑器与开发环境 3</a><a class="sub-pill" href="../categories/web/index.html#sub-13">随手记 5</a><a class="sub-pill" href="../categories/web/index.html#sub-14">其他 1</a></div>
+    <ul class="cat-block-list">
+      <li><a href="../posts/git/index.html">查看和修改git用户名和邮箱地址</a><span>24 字</span></li><li><a href="../posts/vscode-node/index.html">vscode 命令行提示：因为在此系统上禁止运行脚本(node命令)</a><span>19 字</span></li><li><a href="../posts/vscode-git/index.html">vscode-git提交总让输入用户名及密码</a><span>15 字</span></li><li><a href="../posts/p-fsnm40/index.html">自动计算简书文章总阅读量</a><span>97 字</span></li><li><a href="../posts/hexo-next/index.html">Hexo-Next主题嵌入网易云音乐</a><span>117 字</span></li><li><a href="../posts/hexo-next-c2ozia/index.html">Hexo-Next主题设置和取消页面动画</a><span>82 字</span></li><li><a href="../posts/hexo-next-bspdtb/index.html">Hexo-Next主题添加社交链接</a><span>34 字</span></li><li><a href="../posts/hexo-next-bips4c/index.html">Hexo-Next主题添加搜索功能</a><span>70 字</span></li>
+    </ul>
+    <p class="cat-block-more"><a href="../categories/web/index.html">还有 262 篇 →</a></p>
+  </section>
+<section class="cat-block" style="--cat:#38a1f3">
+    <header class="cat-block-head">
+      <span class="cat-icon" aria-hidden="true">🎮</span>
+      <div>
+        <h2><a href="../categories/godot/index.html">Godot 游戏开发</a> <em>57</em></h2>
+        <p>Godot 引擎教程、UI 系统、粒子特效与游戏素材</p>
+      </div>
+    </header>
+    <div class="cat-block-subs"><a class="sub-pill" href="../categories/godot/index.html#sub-1">系列教程 18</a><a class="sub-pill" href="../categories/godot/index.html#sub-2">素材资源 14</a><a class="sub-pill" href="../categories/godot/index.html#sub-3">踩坑与排错 4</a><a class="sub-pill" href="../categories/godot/index.html#sub-4">特效与渲染 10</a><a class="sub-pill" href="../categories/godot/index.html#sub-5">UI 与界面 6</a><a class="sub-pill" href="../categories/godot/index.html#sub-6">脚本与数据 3</a><a class="sub-pill" href="../categories/godot/index.html#sub-7">社区与其他 2</a></div>
+    <ul class="cat-block-list">
+      <li><a href="../posts/p-y390no/index.html">踩坑：游戏暂停后的问题</a><span>95 字</span></li><li><a href="../posts/canvaslayer/index.html">踩坑：CanvasLayer层级问题</a><span>34 字</span></li><li><a href="../posts/area3d-collisionshape3d-rigidbody3d-mouse-entered/index.html">Area3D 的CollisionShape3D会影响遮挡RigidBody3D的mouse_entered事件，怎么解决</a><span>8 字</span></li><li><a href="../posts/rigidbody3d-rigidbody3d-body-entered/index.html">RigidBody3D碰撞到了其他RigidBody3D，body_entered不生效</a><span>8 字</span></li><li><a href="../posts/godot-xz4yd1/index.html">Godot 保存和加载文件内容</a><span>40 字</span></li><li><a href="../posts/godot-x565a4/index.html">Godot 延迟执行方法</a><span>16 字</span></li><li><a href="../posts/godot-http-json/index.html">Godot-http请求数据并解析json的两种方法</a><span>62 字</span></li><li><a href="../posts/p-3w0gvl/index.html">图床</a><span>0 字</span></li>
+    </ul>
+    <p class="cat-block-more"><a href="../categories/godot/index.html">还有 49 篇 →</a></p>
+  </section>
+<section class="cat-block" style="--cat:#30b8a0">
+    <header class="cat-block-head">
+      <span class="cat-icon" aria-hidden="true">🕹️</span>
+      <div>
+        <h2><a href="../categories/godot4/index.html">Godot 4 实践</a> <em>4</em></h2>
+        <p>迁移到 Godot 4 之后的写法变化与实测经验</p>
+      </div>
+    </header>
+    
+    <ul class="cat-block-list">
+      <li><a href="../posts/p-duw41i/index.html">检测游戏窗口失去焦点</a><span>16 字</span></li><li><a href="../posts/p-2sdlss/index.html">同时运行多个实例</a><span>0 字</span></li><li><a href="../posts/godot4-animationplayer/index.html">Godot4动态修改Animationplayer帧动画</a><span>102 字</span></li><li><a href="../posts/node-added/index.html">node_added 批量节点添加</a><span>0 字</span></li>
+    </ul>
+    
+  </section>
+<section class="cat-block" style="--cat:#e8a33d">
+    <header class="cat-block-head">
+      <span class="cat-icon" aria-hidden="true">🐧</span>
+      <div>
+        <h2><a href="../categories/linux/index.html">Linux 与运维</a> <em>23</em></h2>
+        <p>服务器搭建、Linux 命令、Nginx、防火墙与科学上网</p>
+      </div>
+    </header>
+    <div class="cat-block-subs"><a class="sub-pill" href="../categories/linux/index.html#sub-1">Linux 与服务器 18</a><a class="sub-pill" href="../categories/linux/index.html#sub-2">命令行与脚本 3</a><a class="sub-pill" href="../categories/linux/index.html#sub-3">建站与网络 2</a></div>
+    <ul class="cat-block-list">
+      <li><a href="../posts/loveconvert-com/index.html">个人服务网站(loveconvert-com)上线啦！！</a><span>209 字</span></li><li><a href="../posts/loveconvert/index.html">Loveconvert服务站点新增微博视频解析</a><span>65 字</span></li><li><a href="../posts/cmd/index.html">cmd中有趣的命令二之隐藏文件（不定期更新）</a><span>387 字</span></li><li><a href="../posts/cmd-n9kmw2/index.html">cmd中有趣的命令一之合并文件（不定期更新）</a><span>171 字</span></li><li><a href="../posts/shell-eq-ne-gt-lt-ge-le/index.html">shell 中 [-eq]-[-ne]-[-gt]-[-lt]-[ge]-[le]</a><span>23 字</span></li><li><a href="../posts/snapshots/index.html">搬瓦工中的Snapshots（快照）功能</a><span>288 字</span></li><li><a href="../posts/ubuntu-ftp/index.html">搬瓦工Ubuntu系统中安装FTP服务</a><span>477 字</span></li><li><a href="../posts/ubuntu-shadowsocks/index.html">如何在搬瓦工ubuntu系统下配置shadowsocks以翻墙</a><span>647 字</span></li>
+    </ul>
+    <p class="cat-block-more"><a href="../categories/linux/index.html">还有 15 篇 →</a></p>
+  </section>
+<section class="cat-block" style="--cat:#8b5cf6">
+    <header class="cat-block-head">
+      <span class="cat-icon" aria-hidden="true">🤖</span>
+      <div>
+        <h2><a href="../categories/ai/index.html">AI 与大模型</a> <em>4</em></h2>
+        <p>本地部署、MCP 服务、Harness 插件与工具链折腾</p>
+      </div>
+    </header>
+    
+    <ul class="cat-block-list">
+      <li><a href="../posts/ai-mcp-rea/index.html">AI逆向MCP服务工具：REA</a><span>82 字</span></li><li><a href="../posts/dsh-dsh-our-free-model/index.html">dsh安装dsh-our-free-model</a><span>240 字</span></li><li><a href="../posts/dsh/index.html">dsh创造模式写插件</a><span>0 字</span></li><li><a href="../posts/ollama-deepseek/index.html">ollama部署deepseek</a><span>43 字</span></li>
+    </ul>
+    
+  </section>
+<section class="cat-block" style="--cat:#3f9142">
+    <header class="cat-block-head">
+      <span class="cat-icon" aria-hidden="true">📱</span>
+      <div>
+        <h2><a href="../categories/app/index.html">App 开发</a> <em>4</em></h2>
+        <p>Android 界面开发与 Java 后端小工具</p>
+      </div>
+    </header>
+    
+    <ul class="cat-block-list">
+      <li><a href="../posts/android/index.html">Android 实现语言切换</a><span>213 字</span></li><li><a href="../posts/android-drawerlayout-toolbar/index.html">Android-DrawerLayout+Toolbar实现</a><span>199 字</span></li><li><a href="../posts/android-fragment/index.html">Android-Fragment的切换</a><span>244 字</span></li><li><a href="../posts/java-mysql-excel/index.html">Java实现MySql数据库与Excel文件转换</a><span>855 字</span></li>
+    </ul>
+    
+  </section>
+<section class="cat-block" style="--cat:#ea7a3c">
+    <header class="cat-block-head">
+      <span class="cat-icon" aria-hidden="true">🧊</span>
+      <div>
+        <h2><a href="../categories/blender/index.html">Blender</a> <em>1</em></h2>
+        <p>三维建模、骨骼绑定等使用记录</p>
+      </div>
+    </header>
+    
+    <ul class="cat-block-list">
+      <li><a href="../posts/p-z5ir2x/index.html">骨骼对称失效</a><span>17 字</span></li>
+    </ul>
+    
+  </section>
+<section class="cat-block" style="--cat:#e05d6f">
+    <header class="cat-block-head">
+      <span class="cat-icon" aria-hidden="true">📲</span>
+      <div>
+        <h2><a href="../categories/flash/index.html">刷机与折腾</a> <em>3</em></h2>
+        <p>一加 / 联想平板刷机、降级、回锁与救砖实录</p>
+      </div>
+    </header>
+    
+    <ul class="cat-block-list">
+      <li><a href="../posts/pro-bl-9008/index.html">一加平板Pro 回锁BL 开机红字 9008救砖</a><span>93 字</span></li><li><a href="../posts/ace5pro-coloros16-coloros15/index.html">一加ace5pro-coloros16降级coloros15</a><span>60 字</span></li><li><a href="../posts/y700-coloros16/index.html">y700四代刷coloros16</a><span>108 字</span></li>
+    </ul>
+    
+  </section>
+<section class="cat-block" style="--cat:#c2681f">
+    <header class="cat-block-head">
+      <span class="cat-icon" aria-hidden="true">🎁</span>
+      <div>
+        <h2><a href="../categories/resources/index.html">资源分享</a> <em>9</em></h2>
+        <p>软件推荐、模板素材、设计灵感库与视频笔记</p>
+      </div>
+    </header>
+    
+    <ul class="cat-block-list">
+      <li><a href="../posts/bilibili-2-xiaohu/index.html">【bilibili】仅2滴就毁掉了一位科学家大脑的可怕物质！！-- 小胡xiaohu</a><span>6 字</span></li><li><a href="../posts/bilibili-xiaohu/index.html">【bilibili】你所不了解的地震 - 小胡xiaohu</a><span>6 字</span></li><li><a href="../posts/p-txp9bg/index.html">5款良心下载神器！！看了不后悔！！</a><span>263 字</span></li><li><a href="../posts/8-ppt/index.html">欢迎关注微信：小胡资源</a><span>578 字</span></li><li><a href="../posts/honor/index.html">荣耀Honor手机产品线</a><span>0 字</span></li><li><a href="../posts/p-0b0l1s/index.html">生活和设计的灵感库！</a><span>384 字</span></li><li><a href="../posts/sublime-text-3/index.html">时隔一年的Sublime-Text-3终于更新啦</a><span>1014 字</span></li><li><a href="../posts/ppt-focusky/index.html">是时候用它代替你PPT了——FocuSky</a><span>358 字</span></li>
+    </ul>
+    <p class="cat-block-more"><a href="../categories/resources/index.html">还有 1 篇 →</a></p>
+  </section>
+<section class="cat-block" style="--cat:#0ea5b7">
+    <header class="cat-block-head">
+      <span class="cat-icon" aria-hidden="true">✨</span>
+      <div>
+        <h2><a href="../categories/tips/index.html">效率技巧</a> <em>6</em></h2>
+        <p>Windows 与常用软件的顺手指南</p>
+      </div>
+    </header>
+    
+    <ul class="cat-block-list">
+      <li><a href="../posts/win10/index.html">取消win10开机磁盘检查</a><span>15 字</span></li><li><a href="../posts/p-aio7vi/index.html">去掉我的电脑中的优酷影视库</a><span>48 字</span></li><li><a href="../posts/markdown/index.html">写法一：</a><span>60 字</span></li><li><a href="../posts/ableton-live-9/index.html">Ableton live 9录音按钮失效解决方法</a><span>47 字</span></li><li><a href="../posts/obs/index.html">obs录制显示屏黑屏</a><span>21 字</span></li><li><a href="../posts/win11/index.html">win11右键菜单修改</a><span>58 字</span></li>
+    </ul>
+    
+  </section>
+</div>
+
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-line">小胡笔记 · 共收录 381 篇文章</p>
+    <p class="footer-line dim">由简书导出的 Markdown 自动生成 · <a href="../about/index.html">关于本站</a></p>
+  </div>
+</footer>
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索文章">
+    <div class="search-field">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input type="search" data-search-input placeholder="搜索标题、标签或正文关键词…" autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-meta" data-search-meta>输入关键词开始搜索</div>
+    <ul class="search-results" data-search-results></ul>
+  </div>
+</div>
+<script>window.__BASE__ = "../";</script>
+<script src="../assets/search-index.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

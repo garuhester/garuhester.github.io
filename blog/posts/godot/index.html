@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Godot 动态路标组件 使用方法 · 小胡笔记</title>
+<meta name="description" content="1.将way-point文件夹放入项目根目录中的addons里">
+<meta name="author" content="小胡">
+<link rel="canonical" href="../../posts/godot/index.html">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('blog-theme'); } catch (e) {}
+    // 没有手动设置过就跟随系统，并在首屏前定好主题，避免闪一下浅色/两个图标同时出现
+    if (!t) {
+      t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">
+      <span class="brand-mark" aria-hidden="true">胡</span>
+      <span class="brand-text"><strong>小胡笔记</strong><em>381 篇 · 10 类</em></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a class="nav-link" href="../../index.html">首页</a>
+      <a class="nav-link" href="../../categories/index.html">分类</a>
+      <a class="nav-link" href="../../tags/index.html">标签</a>
+      <a class="nav-link" href="../../archive/index.html">归档</a>
+      <a class="nav-link" href="../../about/index.html">关于</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="icon-btn search-btn" type="button" data-search-open aria-label="搜索文章" title="搜索（按 / 或 ⌘K）">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <span class="search-btn-text">搜索</span>
+      </button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深色模式" title="切换深色模式">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-label="打开菜单" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+    <a class="nav-link" href="../../index.html">首页</a>
+    <a class="nav-link" href="../../categories/index.html">分类</a>
+    <a class="nav-link" href="../../tags/index.html">标签</a>
+    <a class="nav-link" href="../../archive/index.html">归档</a>
+    <a class="nav-link" href="../../about/index.html">关于</a>
+  </nav>
+</header>
+<main id="main">
+
+<div class="reading-progress" data-progress></div>
+<article class="post" style="--cat:#4f6bed">
+  <nav class="crumbs">
+    <a href="../../index.html">首页</a><span>/</span>
+    <a href="../../categories/web/index.html">Web 前端</a>
+    <span>/</span><span>其他</span>
+  </nav>
+  <header class="post-head">
+    <h1>Godot 动态路标组件 使用方法</h1>
+    <div class="post-meta">
+      <span class="meta-chip cat-chip">🌐 Web 前端</span>
+      <span class="meta-chip">其他</span>
+      <span class="meta-chip">130 字</span>
+      <span class="meta-chip">约 1 分钟</span>
+      
+    </div>
+    <div class="post-tags"><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a><a class="chip chip-tag" href="../../tags/index.html?tag=3D" data-tag="3D">#3D</a></div>
+  </header>
+  <div class="post-layout">
+    <div class="post-body" data-post-body>
+      <h2 id="1-way-point-addons">1.将way-point文件夹放入项目根目录中的addons里</h2>
+<p><span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-e50824938620a0bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"></span></p>
+<h2 id="2-position3d-way-point-way-point-tscn-position3d-ps-position">2.在场景模型中建立子节点Position3D，并把way-point文件夹中的way-point.tscn作为Position3D的子节点 (ps: 可以不为Position3D，但该节点必须继承于Spatial)</h2>
+<p><span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-81ec0f865ad96604.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"></span></p>
+<h2 id="3-way-point">3.way-point 属性配置项</h2>
+<h3 id="sec-4">1)文本显示(默认为空)</h3>
+<p><span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-a7c9d52a0d38c527.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"></span>
+<span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-e367a330c788bce4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"></span>
+<span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-3edab5c8bbc13423.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"></span></p>
+<h3 id="sec-5">2)是否附着屏幕(默认勾选，当路标没在相机视野范围时，附着在屏幕上)</h3>
+<p><span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-77c5c4e8cb33df87.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"></span>
+<span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-f7719e8b3586bf1a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"></span></p>
+<h3 id="3-150">3)修改附着距离(默认150)</h3>
+<p><span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-db83a44528d69ca9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"></span>
+<span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-04be6740d5105c5c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"></span>
+<span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-d05015c0742a08e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"></span></p>
+<h3 id="sec-7">4)修改颜色</h3>
+<p><span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-407001b8040dfb80.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"></span>
+<span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-858e43303a847dfe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"></span></p>
+<h2 id="sec-8">4.图标更换说明</h2>
+<p><span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-d1c88428a9d1fb4a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"></span></p>
+
+    </div>
+    <aside class="post-aside">
+      <nav class="toc" aria-label="文章目录">
+    <p class="toc-title">目录</p>
+    <ul><li class="toc-l2"><a href="#1-way-point-addons" data-toc-link>1.将way-point文件夹放入项目根目录中的addons里</a></li><li class="toc-l2"><a href="#2-position3d-way-point-way-point-tscn-position3d-ps-position" data-toc-link>2.在场景模型中建立子节点Position3D，并把way-point文件夹中的way-point.tscn作为Position3D的子节点 (ps: 可以不为Position3D，但该节点必须继承于Spatial)</a></li><li class="toc-l2"><a href="#3-way-point" data-toc-link>3.way-point 属性配置项</a></li><li class="toc-l3"><a href="#sec-4" data-toc-link>1)文本显示(默认为空)</a></li><li class="toc-l3"><a href="#sec-5" data-toc-link>2)是否附着屏幕(默认勾选，当路标没在相机视野范围时，附着在屏幕上)</a></li><li class="toc-l3"><a href="#3-150" data-toc-link>3)修改附着距离(默认150)</a></li><li class="toc-l3"><a href="#sec-7" data-toc-link>4)修改颜色</a></li><li class="toc-l2"><a href="#sec-8" data-toc-link>4.图标更换说明</a></li></ul>
+  </nav>
+    </aside>
+  </div>
+  <details class="toc-mobile">
+    <summary>文章目录（8 节）</summary>
+    <ul><li class="toc-l2"><a href="#1-way-point-addons" data-toc-link>1.将way-point文件夹放入项目根目录中的addons里</a></li><li class="toc-l2"><a href="#2-position3d-way-point-way-point-tscn-position3d-ps-position" data-toc-link>2.在场景模型中建立子节点Position3D，并把way-point文件夹中的way-point.tscn作为Position3D的子节点 (ps: 可以不为Position3D，但该节点必须继承于Spatial)</a></li><li class="toc-l2"><a href="#3-way-point" data-toc-link>3.way-point 属性配置项</a></li><li class="toc-l3"><a href="#sec-4" data-toc-link>1)文本显示(默认为空)</a></li><li class="toc-l3"><a href="#sec-5" data-toc-link>2)是否附着屏幕(默认勾选，当路标没在相机视野范围时，附着在屏幕上)</a></li><li class="toc-l3"><a href="#3-150" data-toc-link>3)修改附着距离(默认150)</a></li><li class="toc-l3"><a href="#sec-7" data-toc-link>4)修改颜色</a></li><li class="toc-l2"><a href="#sec-8" data-toc-link>4.图标更换说明</a></li></ul>
+  </details>
+  <nav class="post-nav">
+    <a class="post-nav-item prev" href="../../posts/vitest/index.html"><span>上一篇</span><strong>vitest</strong></a>
+    <a class="post-nav-item next" href="../../posts/p-irvjqg/index.html"><span>下一篇</span><strong>常见设备的屏幕宽度</strong></a>
+  </nav>
+  <section class="related">
+    <h2>相关文章</h2>
+    <div class="related-grid">
+      <a class="related-item" href="../../posts/godot-2d-ui-3d/index.html">
+        <strong>【Godot】教你实现2D界面（UI）跟随3D物体素材</strong>
+        <span>Godot 游戏开发 · 素材资源 · 14 字</span>
+      </a><a class="related-item" href="../../posts/godot-3d/index.html">
+        <strong>【Godot】教你实现完美的3D模型描边</strong>
+        <span>Godot 游戏开发 · 特效与渲染 · 93 字</span>
+      </a><a class="related-item" href="../../posts/css-3d/index.html">
+        <strong>纯CSS实现一个3D按钮</strong>
+        <span>Web 前端 · CSS 与布局 · 70 字</span>
+      </a><a class="related-item" href="../../posts/css-3d-4yo8pd/index.html">
+        <strong>CSS实现卡片3D翻转效果</strong>
+        <span>Web 前端 · CSS 与布局 · 109 字</span>
+      </a>
+    </div>
+  </section>
+</article>
+<button class="to-top" type="button" data-to-top aria-label="回到顶部">↑</button>
+
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-line">小胡笔记 · 共收录 381 篇文章</p>
+    <p class="footer-line dim">由简书导出的 Markdown 自动生成 · <a href="../../about/index.html">关于本站</a></p>
+  </div>
+</footer>
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索文章">
+    <div class="search-field">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input type="search" data-search-input placeholder="搜索标题、标签或正文关键词…" autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-meta" data-search-meta>输入关键词开始搜索</div>
+    <ul class="search-results" data-search-results></ul>
+  </div>
+</div>
+<script>window.__BASE__ = "../../";</script>
+<script src="../../assets/search-index.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

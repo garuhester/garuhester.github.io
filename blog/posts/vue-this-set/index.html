@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>vue修改整个对象值方法，替代this-$set修改单个属性 · 小胡笔记</title>
+<meta name="description" content="使用Object.assign使原对象与要混合进去的对象的 property 一起创建一个新的对象">
+<meta name="author" content="小胡">
+<link rel="canonical" href="../../posts/vue-this-set/index.html">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('blog-theme'); } catch (e) {}
+    // 没有手动设置过就跟随系统，并在首屏前定好主题，避免闪一下浅色/两个图标同时出现
+    if (!t) {
+      t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">
+      <span class="brand-mark" aria-hidden="true">胡</span>
+      <span class="brand-text"><strong>小胡笔记</strong><em>381 篇 · 10 类</em></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a class="nav-link" href="../../index.html">首页</a>
+      <a class="nav-link" href="../../categories/index.html">分类</a>
+      <a class="nav-link" href="../../tags/index.html">标签</a>
+      <a class="nav-link" href="../../archive/index.html">归档</a>
+      <a class="nav-link" href="../../about/index.html">关于</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="icon-btn search-btn" type="button" data-search-open aria-label="搜索文章" title="搜索（按 / 或 ⌘K）">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <span class="search-btn-text">搜索</span>
+      </button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深色模式" title="切换深色模式">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-label="打开菜单" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+    <a class="nav-link" href="../../index.html">首页</a>
+    <a class="nav-link" href="../../categories/index.html">分类</a>
+    <a class="nav-link" href="../../tags/index.html">标签</a>
+    <a class="nav-link" href="../../archive/index.html">归档</a>
+    <a class="nav-link" href="../../about/index.html">关于</a>
+  </nav>
+</header>
+<main id="main">
+
+<div class="reading-progress" data-progress></div>
+<article class="post" style="--cat:#4f6bed">
+  <nav class="crumbs">
+    <a href="../../index.html">首页</a><span>/</span>
+    <a href="../../categories/web/index.html">Web 前端</a>
+    <span>/</span><span>Vue 与组件库</span>
+  </nav>
+  <header class="post-head">
+    <h1>vue修改整个对象值方法，替代this-$set修改单个属性</h1>
+    <div class="post-meta">
+      <span class="meta-chip cat-chip">🌐 Web 前端</span>
+      <span class="meta-chip">Vue 与组件库</span>
+      <span class="meta-chip">37 字</span>
+      <span class="meta-chip">约 1 分钟</span>
+      
+    </div>
+    <div class="post-tags"><a class="chip chip-tag" href="../../tags/index.html?tag=JavaScript" data-tag="JavaScript">#JavaScript</a><a class="chip chip-tag" href="../../tags/index.html?tag=Vue" data-tag="Vue">#Vue</a></div>
+  </header>
+  <div class="post-layout">
+    <div class="post-body" data-post-body>
+      <p>使用Object.assign使原对象与要混合进去的对象的 property 一起创建一个新的对象</p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>this.form = Object.assign({}, this.form, {newProp:&quot;123&quot;})
+</code></pre></div>
+    </div>
+    <aside class="post-aside">
+      
+    </aside>
+  </div>
+  <details class="toc-mobile">
+    <summary>文章目录（0 节）</summary>
+    <ul></ul>
+  </details>
+  <nav class="post-nav">
+    <a class="post-nav-item prev" href="../../posts/vue-vuex/index.html"><span>上一篇</span><strong>vue项目中引入vuex</strong></a>
+    <a class="post-nav-item next" href="../../posts/vue-data/index.html"><span>下一篇</span><strong>vue重置data中的初始化数据</strong></a>
+  </nav>
+  <section class="related">
+    <h2>相关文章</h2>
+    <div class="related-grid">
+      <a class="related-item" href="../../posts/vue/index.html">
+        <strong>Vue更新数组和对象</strong>
+        <span>Web 前端 · Vue 与组件库 · 143 字</span>
+      </a><a class="related-item" href="../../posts/electron-vue-elementui-table/index.html">
+        <strong>electron-vue使用elementui，有数据但table表格显示空白</strong>
+        <span>Web 前端 · Vue 与组件库 · 23 字</span>
+      </a><a class="related-item" href="../../posts/element-ui/index.html">
+        <strong>element-ui 设置值后自动递归展开父节点</strong>
+        <span>Web 前端 · Vue 与组件库 · 21 字</span>
+      </a><a class="related-item" href="../../posts/element-ui-el-tree/index.html">
+        <strong>element-ui-el-tree手动展开 折叠全部节点</strong>
+        <span>Web 前端 · Vue 与组件库 · 60 字</span>
+      </a>
+    </div>
+  </section>
+</article>
+<button class="to-top" type="button" data-to-top aria-label="回到顶部">↑</button>
+
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-line">小胡笔记 · 共收录 381 篇文章</p>
+    <p class="footer-line dim">由简书导出的 Markdown 自动生成 · <a href="../../about/index.html">关于本站</a></p>
+  </div>
+</footer>
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索文章">
+    <div class="search-field">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input type="search" data-search-input placeholder="搜索标题、标签或正文关键词…" autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-meta" data-search-meta>输入关键词开始搜索</div>
+    <ul class="search-results" data-search-results></ul>
+  </div>
+</div>
+<script>window.__BASE__ = "../../";</script>
+<script src="../../assets/search-index.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

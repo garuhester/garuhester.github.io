@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>cmd中有趣的命令一之合并文件（不定期更新） · 小胡笔记</title>
+<meta name="description" content="今天给大家介绍的是命令一之合并文件(ฅ&gt;ω 原理：">
+<meta name="author" content="小胡">
+<link rel="canonical" href="../../posts/cmd-n9kmw2/index.html">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('blog-theme'); } catch (e) {}
+    // 没有手动设置过就跟随系统，并在首屏前定好主题，避免闪一下浅色/两个图标同时出现
+    if (!t) {
+      t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">
+      <span class="brand-mark" aria-hidden="true">胡</span>
+      <span class="brand-text"><strong>小胡笔记</strong><em>381 篇 · 10 类</em></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a class="nav-link" href="../../index.html">首页</a>
+      <a class="nav-link" href="../../categories/index.html">分类</a>
+      <a class="nav-link" href="../../tags/index.html">标签</a>
+      <a class="nav-link" href="../../archive/index.html">归档</a>
+      <a class="nav-link" href="../../about/index.html">关于</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="icon-btn search-btn" type="button" data-search-open aria-label="搜索文章" title="搜索（按 / 或 ⌘K）">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <span class="search-btn-text">搜索</span>
+      </button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深色模式" title="切换深色模式">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-label="打开菜单" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+    <a class="nav-link" href="../../index.html">首页</a>
+    <a class="nav-link" href="../../categories/index.html">分类</a>
+    <a class="nav-link" href="../../tags/index.html">标签</a>
+    <a class="nav-link" href="../../archive/index.html">归档</a>
+    <a class="nav-link" href="../../about/index.html">关于</a>
+  </nav>
+</header>
+<main id="main">
+
+<div class="reading-progress" data-progress></div>
+<article class="post" style="--cat:#e8a33d">
+  <nav class="crumbs">
+    <a href="../../index.html">首页</a><span>/</span>
+    <a href="../../categories/linux/index.html">Linux 与运维</a>
+    <span>/</span><span>命令行与脚本</span>
+  </nav>
+  <header class="post-head">
+    <h1>cmd中有趣的命令一之合并文件（不定期更新）</h1>
+    <div class="post-meta">
+      <span class="meta-chip cat-chip">🐧 Linux 与运维</span>
+      <span class="meta-chip">命令行与脚本</span>
+      <span class="meta-chip">171 字</span>
+      <span class="meta-chip">约 1 分钟</span>
+      
+    </div>
+    <div class="post-tags"><a class="chip chip-tag" href="../../tags/index.html?tag=%E5%91%BD%E4%BB%A4%E8%A1%8C" data-tag="命令行">#命令行</a></div>
+  </header>
+  <div class="post-layout">
+    <div class="post-body" data-post-body>
+      <p>今天给大家介绍的是命令一之<strong>合并文件</strong>(ฅ&gt;ω&lt;*ฅ)，后面我会不定期的进行更新
+#合并文件（老司机必备）
+<strong>图片下的秘密</strong>
+如果你想要把一个文件藏在一张图片里改怎么做呢（手动滑稽）
+首先这里有两张图片（1.jpg和2.jpg）：
+<span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-56773029fa7468cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"><span class="md-img-cap">两张图片</span></span>
+那么现在我们要把<code>2.jpg</code>藏在<code>1.jpg</code>里，步骤如下：</p>
+<ol>
+<li>将<code>2.jpg</code>添加到压缩文件（这里以rar格式为例）
+<span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-92beaa051d74a93d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"><span class="md-img-cap">2.rar</span></span></li>
+<li>在当前目录下新建一个<strong>文本文件</strong>，命名为&quot;合并&quot;（名字可以随意），并将后缀名改为<code>.bat</code>，如图：
+<span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-0cd18cef6bd6673d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"><span class="md-img-cap">合并.bat</span></span></li>
+<li>然后右键<code>合并.bat</code>，点击编辑，在文本中输入<code>copy /b 1.jpg+2.rar 3.jpg</code>
+意思是将<code>1.jpg</code>与<code>2.rar</code>合并成<code>3.jpg</code>
+<span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-c1252bb729009386.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"><span class="md-img-cap">编辑</span></span></li>
+<li>然后保存退出，再双击<code>合并.bat</code>文件即可生成<code>3.jpg</code>
+<span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-ef275470f720ada4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"><span class="md-img-cap">3.jpg</span></span>
+这个时候打开<code>3.jpg</code>会发现只是一张普通的图片</li>
+<li>但是！！！！！！！！！
+如果你把<code>3.jpg</code>的后缀名改成<code>.rar</code>后
+<span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-376291489045768e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"><span class="md-img-cap">3.rar</span></span>
+再双击它，你会发现打开的是一个压缩文件，而且文件里面有一张叫2.jpg的图片，嘿嘿嘿~~~~</li>
+</ol>
+<blockquote>
+<p>原理：
+是把两个的文件的二进制代码进行合并，并且你会发现，合并过后图片的大小刚好的两个文件的大小总和</p>
+</blockquote>
+<p>当然你也可以尝试各种文件格式的组合，比如把图片放进一首歌里，或者是两个文本的组合等等，反正你能想到好玩的都可以自己试一试，方法就是
+<code>copy /b 文件1+文件2 文件3</code>
+记得（/b和文件1）（文件2和文件3）之间都有空格</p>
+<p><strong>好啦今天的教程就到这里，自己试试吧（￣︶￣）</strong></p>
+
+    </div>
+    <aside class="post-aside">
+      
+    </aside>
+  </div>
+  <details class="toc-mobile">
+    <summary>文章目录（0 节）</summary>
+    <ul></ul>
+  </details>
+  <nav class="post-nav">
+    <a class="post-nav-item prev" href="../../posts/cmd/index.html"><span>上一篇</span><strong>cmd中有趣的命令二之隐藏文件（不定期更新）</strong></a>
+    <a class="post-nav-item next" href="../../posts/shell-eq-ne-gt-lt-ge-le/index.html"><span>下一篇</span><strong>shell 中 [-eq]-[-ne]-[-gt]-[-lt]-[ge]-[le]</strong></a>
+  </nav>
+  <section class="related">
+    <h2>相关文章</h2>
+    <div class="related-grid">
+      <a class="related-item" href="../../posts/cmd/index.html">
+        <strong>cmd中有趣的命令二之隐藏文件（不定期更新）</strong>
+        <span>Linux 与运维 · 命令行与脚本 · 387 字</span>
+      </a><a class="related-item" href="../../posts/shell-eq-ne-gt-lt-ge-le/index.html">
+        <strong>shell 中 [-eq]-[-ne]-[-gt]-[-lt]-[ge]-[le]</strong>
+        <span>Linux 与运维 · 命令行与脚本 · 23 字</span>
+      </a><a class="related-item" href="../../posts/ubuntu-ftp/index.html">
+        <strong>搬瓦工Ubuntu系统中安装FTP服务</strong>
+        <span>Linux 与运维 · Linux 与服务器 · 477 字</span>
+      </a><a class="related-item" href="../../posts/ubuntu-shadowsocks/index.html">
+        <strong>如何在搬瓦工ubuntu系统下配置shadowsocks以翻墙</strong>
+        <span>Linux 与运维 · Linux 与服务器 · 647 字</span>
+      </a>
+    </div>
+  </section>
+</article>
+<button class="to-top" type="button" data-to-top aria-label="回到顶部">↑</button>
+
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-line">小胡笔记 · 共收录 381 篇文章</p>
+    <p class="footer-line dim">由简书导出的 Markdown 自动生成 · <a href="../../about/index.html">关于本站</a></p>
+  </div>
+</footer>
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索文章">
+    <div class="search-field">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input type="search" data-search-input placeholder="搜索标题、标签或正文关键词…" autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-meta" data-search-meta>输入关键词开始搜索</div>
+    <ul class="search-results" data-search-results></ul>
+  </div>
+</div>
+<script>window.__BASE__ = "../../";</script>
+<script src="../../assets/search-index.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

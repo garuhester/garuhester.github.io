@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>归档 · 小胡笔记</title>
+<meta name="description" content="按分类归档的全部文章">
+<meta name="author" content="小胡">
+<link rel="canonical" href="../archive/index.html">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('blog-theme'); } catch (e) {}
+    // 没有手动设置过就跟随系统，并在首屏前定好主题，避免闪一下浅色/两个图标同时出现
+    if (!t) {
+      t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark" aria-hidden="true">胡</span>
+      <span class="brand-text"><strong>小胡笔记</strong><em>381 篇 · 10 类</em></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a class="nav-link" href="../index.html">首页</a>
+      <a class="nav-link" href="../categories/index.html">分类</a>
+      <a class="nav-link" href="../tags/index.html">标签</a>
+      <a class="nav-link is-active" href="../archive/index.html">归档</a>
+      <a class="nav-link" href="../about/index.html">关于</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="icon-btn search-btn" type="button" data-search-open aria-label="搜索文章" title="搜索（按 / 或 ⌘K）">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <span class="search-btn-text">搜索</span>
+      </button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深色模式" title="切换深色模式">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-label="打开菜单" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+    <a class="nav-link" href="../index.html">首页</a>
+    <a class="nav-link" href="../categories/index.html">分类</a>
+    <a class="nav-link" href="../tags/index.html">标签</a>
+    <a class="nav-link is-active" href="../archive/index.html">归档</a>
+    <a class="nav-link" href="../about/index.html">关于</a>
+  </nav>
+</header>
+<main id="main">
+
+<section class="page-head">
+  <nav class="crumbs"><a href="../index.html">首页</a><span>/</span><span>归档</span></nav>
+  <h1>全部文章</h1>
+  <p class="page-desc">按分类归档，共 381 篇。</p>
+</section>
+<div class="stat-bar">
+  <div class="stat"><strong>381</strong><span>篇文章</span></div>
+  <div class="stat"><strong>10</strong><span>个分类</span></div>
+  <div class="stat"><strong>51</strong><span>个标签</span></div>
+  <div class="stat"><strong>38k</strong><span>总字数</span></div>
+  <div class="stat"><strong>0</strong><span>段代码</span></div>
+</div>
+<section class="section">
+  <div class="section-head"><h2>带日期的文章</h2></div>
+  <div class="timeline">
+    <a class="timeline-item" href="../posts/2022-09-09/index.html">
+      <time>2022-09-09</time>
+      <span>插件模板 makeid-template</span>
+    </a><a class="timeline-item" href="../posts/2021-09-15/index.html">
+      <time>2021-09-15</time>
+      <span>项目名称（中文）</span>
+    </a><a class="timeline-item" href="../posts/2021-08-30/index.html">
+      <time>2021-08-30</time>
+      <span>2021-08-30</span>
+    </a><a class="timeline-item" href="../posts/2021-08-26/index.html">
+      <time>2021-08-26</time>
+      <span>前端：后台管理系统基础框架</span>
+    </a><a class="timeline-item" href="../posts/2018-11-04/index.html">
+      <time>2018-11-04</time>
+      <span>2018-11-04</span>
+    </a>
+  </div>
+</section>
+<div class="archive">
+  <section class="archive-cat" style="--cat:#4f6bed">
+    <h2><span aria-hidden="true">🌐</span> <a href="../categories/web/index.html">Web 前端</a><em>270</em></h2>
+    <div class="archive-sub">
+      <h3>微信与小程序<em>16</em></h3>
+      <ul class="archive-list">
+        <li><a href="../posts/ios/index.html">微信内置网页 ios 弹出键盘后，点击事件位置错位</a><span class="archive-meta">28 字</span></li><li><a href="../posts/ios-cd5ebr/index.html">微信内置网页 ios 点击事件会闪现黑灰色背景</a><span class="archive-meta">12 字</span></li><li><a href="../posts/ios-css-active/index.html">微信内置网页 ios-css-active 不起作用</a><span class="archive-meta">5 字</span></li><li><a href="../posts/ios-input-textarea/index.html">微信内置网页 ios-input和textarea有内阴影</a><span class="archive-meta">18 字</span></li><li><a href="../posts/ios-new-date/index.html">微信网页 IOS-new-Date(&quot;&quot;) 格式问题</a><span class="archive-meta">54 字</span></li><li><a href="../posts/class/index.html">微信小程序 动态修改元素class</a><span class="archive-meta">57 字</span></li><li><a href="../posts/p-u4d2sv/index.html">微信小程序 复制内容到剪切板</a><span class="archive-meta">52 字</span></li><li><a href="../posts/wxml-indexof/index.html">微信小程序 解决wxml不能用indexOf</a><span class="archive-meta">16 字</span></li><li><a href="../posts/p-wsuxzj/index.html">微信小程序 页面滚动到顶部</a><span class="archive-meta">4 字</span></li><li><a href="../posts/canvas-pwjipp/index.html">微信小程序 自定义组件中的canvas无法绘制</a><span class="archive-meta">51 字</span></li><li><a href="../posts/canvas-pmjx0q/index.html">微信小程序 canvas绘制完无法马上导出图片</a><span class="archive-meta">154 字</span></li><li><a href="../posts/canvas-pckbbr/index.html">微信小程序 canvas涂鸦橡皮擦方案</a><span class="archive-meta">444 字</span></li><li><a href="../posts/navigateto/index.html">微信小程序 navigateTo跳转链接失灵</a><span class="archive-meta">37 字</span></li><li><a href="../posts/p-291eva/index.html">微信小程序获取元素的高度宽度</a><span class="archive-meta">20 字</span></li><li><a href="../posts/p-wza19m/index.html">微信小程序在刚进入页面的时，图片会被拉扯变形</a><span class="archive-meta">9 字</span></li><li><a href="../posts/p-2km8ol/index.html">js判断是否是微信浏览器</a><span class="archive-meta">48 字</span></li>
+      </ul>
+    </div><div class="archive-sub">
+      <h3>Vue 与组件库<em>15</em></h3>
+      <ul class="archive-list">
+        <li><a href="../posts/electron-vue-elementui-table/index.html">electron-vue使用elementui，有数据但table表格显示空白</a><span class="archive-meta">23 字</span></li><li><a href="../posts/element-ui/index.html">element-ui 设置值后自动递归展开父节点</a><span class="archive-meta">21 字</span></li><li><a href="../posts/element-ui-el-tree/index.html">element-ui-el-tree手动展开 折叠全部节点</a><span class="archive-meta">60 字</span></li><li><a href="../posts/elementui/index.html">elementui 时间选择器限制选择范围</a><span class="archive-meta">40 字</span></li><li><a href="../posts/vue-build-chunkloaderror-loading-chunk-failed/index.html">vue-build-ChunkLoadError--Loading-chunk-failed</a><span class="archive-meta">55 字</span></li><li><a href="../posts/vue-cli3-template-vue-warn-you-are-using-the-runtime-only/index.html">vue-cli3 支持template编译(错误信息：[Vue-warn]--You-are-using-the-runtime-only-</a><span class="archive-meta">7 字</span></li><li><a href="../posts/vue-cli3-hmr/index.html">vue-cli3 中设置热更新(HMR)忽略文件或文件夹</a><span class="archive-meta">14 字</span></li><li><a href="../posts/vue-directive/index.html">Vue-directive 指令回调</a><span class="archive-meta">152 字</span></li><li><a href="../posts/vue/index.html">Vue更新数组和对象</a><span class="archive-meta">143 字</span></li><li><a href="../posts/vue-4tpazx/index.html">Vue跨层级组件通信（依赖注入）</a><span class="archive-meta">49 字</span></li><li><a href="../posts/vue-scss/index.html">vue项目全局中引入scss</a><span class="archive-meta">54 字</span></li><li><a href="../posts/vue-sass/index.html">vue项目中引入sass</a><span class="archive-meta">44 字</span></li><li><a href="../posts/vue-vuex/index.html">vue项目中引入vuex</a><span class="archive-meta">127 字</span></li><li><a href="../posts/vue-this-set/index.html">vue修改整个对象值方法，替代this-$set修改单个属性</a><span class="archive-meta">37 字</span></li><li><a href="../posts/vue-data/index.html">vue重置data中的初始化数据</a><span class="archive-meta">7 字</span></li>
+      </ul>
+    </div><div class="archive-sub">
+      <h3>Electron 桌面端<em>10</em></h3>
+      <ul class="archive-list">
+        <li><a href="../posts/electron/index.html">Electron 安装及实例运行</a><span class="archive-meta">103 字</span></li><li><a href="../posts/electron-64pwa3/index.html">Electron 打包</a><span class="archive-meta">75 字</span></li><li><a href="../posts/electron-5ar376/index.html">Electron 打开文件管理器对应路径</a><span class="archive-meta">9 字</span></li><li><a href="../posts/electron-cmd/index.html">Electron 打开cmd运行命令</a><span class="archive-meta">15 字</span></li><li><a href="../posts/electron-exe/index.html">Electron 获取exe所在路径</a><span class="archive-meta">50 字</span></li><li><a href="../posts/electron-tj5njd/index.html">electron 通信</a><span class="archive-meta">51 字</span></li><li><a href="../posts/electron-sp6ugg/index.html">Electron 引用第三方库</a><span class="archive-meta">77 字</span></li><li><a href="../posts/electron-not-allowed-to-load-local-resource/index.html">electron问题：Not-allowed-to-load-local-resource</a><span class="archive-meta">5 字</span></li><li><a href="../posts/electron-bindings-node-is-not-a-valid-win32-application/index.html">electron运行报错：bindings-node-is-not-a-valid-Win32-application-</a><span class="archive-meta">55 字</span></li><li><a href="../posts/nw-js/index.html">NW-js运行和打包应用程序</a><span class="archive-meta">223 字</span></li>
+      </ul>
+    </div><div class="archive-sub">
+      <h3>Git 与协作<em>16</em></h3>
+      <ul class="archive-list">
+        <li><a href="../posts/fork-me-on-github/index.html">添加Fork-me-on-GitHub</a><span class="archive-meta">47 字</span></li><li><a href="../posts/github-star-watch-fork-follow/index.html">引用GitHub---Star，Watch，Fork，Follow 按钮</a><span class="archive-meta">7 字</span></li><li><a href="../posts/git-would-clobber-existing-tag/index.html">Git 报错 would-clobber-existing-tag</a><span class="archive-meta">11 字</span></li><li><a href="../posts/git-1ftnfx/index.html">Git 本地提交到服务器命令</a><span class="archive-meta">11 字</span></li><li><a href="../posts/git-15u1qy/index.html">GIT 配置命令</a><span class="archive-meta">37 字</span></li><li><a href="../posts/git-checkout/index.html">git-checkout 远程分支失败</a><span class="archive-meta">5 字</span></li><li><a href="../posts/git-error-rpc-failed-curl-56-http-2-stream-5-was-reset/index.html">git-error--RPC-failed;-curl-56-HTTP-2-stream-5-was-reset</a><span class="archive-meta">8 字</span></li><li><a href="../posts/git-tag/index.html">git-tag操作</a><span class="archive-meta">125 字</span></li><li><a href="../posts/git-01vmz2/index.html">git本地分支推送到远程分支</a><span class="archive-meta">7 字</span></li><li><a href="../posts/git-ynxmi7/index.html">Git常用命令</a><span class="archive-meta">247 字</span></li><li><a href="../posts/git-ydy0t8/index.html">git更新远程分支列表</a><span class="archive-meta">5 字</span></li><li><a href="../posts/git-rebaseing/index.html">git去除rebaseing状态</a><span class="archive-meta">3 字</span></li><li><a href="../posts/git-voany7/index.html">git无法查看远程分支</a><span class="archive-meta">3 字</span></li><li><a href="../posts/github/index.html">Github 第三方授权登录教程</a><span class="archive-meta">421 字</span></li><li><a href="../posts/github-40e6km/index.html">Github图床</a><span class="archive-meta">135 字</span></li><li><a href="../posts/hexo-git-github/index.html">hexo 利用Git发布到Github</a><span class="archive-meta">131 字</span></li>
+      </ul>
+    </div><div class="archive-sub">
+      <h3>博客与建站<em>10</em></h3>
+      <ul class="archive-list">
+        <li><a href="../posts/p-fsnm40/index.html">自动计算简书文章总阅读量</a><span class="archive-meta">97 字</span></li><li><a href="../posts/hexo-next/index.html">Hexo-Next主题嵌入网易云音乐</a><span class="archive-meta">117 字</span></li><li><a href="../posts/hexo-next-c2ozia/index.html">Hexo-Next主题设置和取消页面动画</a><span class="archive-meta">82 字</span></li><li><a href="../posts/hexo-next-bspdtb/index.html">Hexo-Next主题添加社交链接</a><span class="archive-meta">34 字</span></li><li><a href="../posts/hexo-next-bips4c/index.html">Hexo-Next主题添加搜索功能</a><span class="archive-meta">70 字</span></li><li><a href="../posts/hexo-next-b8q6fd/index.html">Hexo-Next主题添加友情链接</a><span class="archive-meta">35 字</span></li><li><a href="../posts/hexo-next-rss/index.html">Hexo-Next主题添加RSS</a><span class="archive-meta">47 字</span></li><li><a href="../posts/hexo-next-aoqz1f/index.html">Hexo-Next主题统计功能</a><span class="archive-meta">72 字</span></li><li><a href="../posts/hexo-next-aerdcg/index.html">Hexo-Next主题文件结构</a><span class="archive-meta">238 字</span></li><li><a href="../posts/hexo/index.html">Hexo博客搭建步骤</a><span class="archive-meta">13 字</span></li>
+      </ul>
+    </div><div class="archive-sub">
+      <h3>图表与可视化<em>7</em></h3>
+      <ul class="archive-list">
+        <li><a href="../posts/bpmn-js/index.html">bpmn-js 创建节点并连接</a><span class="archive-meta">104 字</span></li><li><a href="../posts/echarts/index.html">Echarts设置画布四周边距</a><span class="archive-meta">24 字</span></li><li><a href="../posts/echarts-k3aljs/index.html">Echarts设置柱状图渐变色</a><span class="archive-meta">45 字</span></li><li><a href="../posts/echarts-kda78r/index.html">Echarts设置柱状图数字在柱的顶部显示及格式化为金钱格式</a><span class="archive-meta">66 字</span></li><li><a href="../posts/echarts-kn9sxq/index.html">Echarts实现内部横向滚动条</a><span class="archive-meta">58 字</span></li><li><a href="../posts/echarts-x/index.html">Echarts替换x轴数据为图片</a><span class="archive-meta">108 字</span></li><li><a href="../posts/echarts-x-9u2p9l/index.html">Echarts修改x轴颜色及粗细</a><span class="archive-meta">14 字</span></li>
+      </ul>
+    </div><div class="archive-sub">
+      <h3>Node 与服务端<em>35</em></h3>
+      <ul class="archive-list">
+        <li><a href="../posts/node-js-windows/index.html">1. 安装node-windows</a><span class="archive-meta">201 字</span></li><li><a href="../posts/mongodb/index.html">1. 方法一</a><span class="archive-meta">143 字</span></li><li><a href="../posts/node-modules/index.html">快速删除node_modules的方法</a><span class="archive-meta">117 字</span></li><li><a href="../posts/ejs-nodejs-express/index.html">在ejs中使用函数（nodejs-express）</a><span class="archive-meta">94 字</span></li><li><a href="../posts/windows-nssm-nodejs/index.html">在windows服务器上使用nssm部署nodejs</a><span class="archive-meta">185 字</span></li><li><a href="../posts/connect-mongo/index.html">connect-mongo基本用法</a><span class="archive-meta">131 字</span></li><li><a href="../posts/docker/index.html">docker 命令汇总</a><span class="archive-meta">79 字</span></li><li><a href="../posts/docker-mongo/index.html">docker-mongo设置</a><span class="archive-meta">69 字</span></li><li><a href="../posts/ejs-could-not-find-include-include-file/index.html">ejs出错 -Could-not-find-include-include-file</a><span class="archive-meta">28 字</span></li><li><a href="../posts/forever/index.html">forever 相关命令操作</a><span class="archive-meta">141 字</span></li><li><a href="../posts/mongodb-vbqhg0/index.html">mongodb基本命令</a><span class="archive-meta">121 字</span></li><li><a href="../posts/mongodb-vlq34z/index.html">MongoDB添加管理员和用户</a><span class="archive-meta">171 字</span></li><li><a href="../posts/mongoose/index.html">mongoose 连接数据库</a><span class="archive-meta">54 字</span></li><li><a href="../posts/mongoose-api/index.html">Mongoose-API总结</a><span class="archive-meta">1980 字</span></li><li><a href="../posts/mongoose-4b3rym/index.html">mongoose时间区间操作</a><span class="archive-meta">85 字</span></li><li><a href="../posts/mongoose-connection-events/index.html">Mongoose中Connection的Events</a><span class="archive-meta">177 字</span></li><li><a href="../posts/mongoose-schema/index.html">Mongoose中Schema的内置类型</a><span class="archive-meta">10 字</span></li><li><a href="../posts/node/index.html">node 给当前路径下的所有文件头部追加内容</a><span class="archive-meta">0 字</span></li><li><a href="../posts/node-get-post/index.html">node 原生GET-POST请求</a><span class="archive-meta">153 字</span></li><li><a href="../posts/node-obs-html5/index.html">Node-+-OBS-+-HTML5 实现推流直播</a><span class="archive-meta">84 字</span></li><li><a href="../posts/node-js-html/index.html">Node-js原生加载静态文件（html或图片等）</a><span class="archive-meta">123 字</span></li><li><a href="../posts/node-js-ajax-post/index.html">Node-js原生接收前台ajax的post请求并返回数据</a><span class="archive-meta">115 字</span></li><li><a href="../posts/node-websocket-ws-express-ws-express/index.html">node-websocket(ws模块和express-ws模块 与 express的联动)</a><span class="archive-meta">202 字</span></li><li><a href="../posts/nodejs/index.html">nodejs 复制文件</a><span class="archive-meta">81 字</span></li><li><a href="../posts/nodejs-unzip/index.html">nodejs 利用unzip模块解压</a><span class="archive-meta">40 字</span></li><li><a href="../posts/nodejs-zip-local/index.html">nodejs 利用zip-local模块压缩文件夹</a><span class="archive-meta">12 字</span></li><li><a href="../posts/nodejs-rgsxlw/index.html">nodejs 下载网络文件</a><span class="archive-meta">38 字</span></li><li><a href="../posts/nodejs-window-cmd/index.html">nodejs中使用window的cmd命令</a><span class="archive-meta">54 字</span></li><li><a href="../posts/nodemailer/index.html">nodemailer基本使用</a><span class="archive-meta">131 字</span></li><li><a href="../posts/nodemon/index.html">nodemon 忽略部分文件</a><span class="archive-meta">5 字</span></li><li><a href="../posts/npm-3ltcl4/index.html">npm 换源</a><span class="archive-meta">42 字</span></li><li><a href="../posts/npm-certificate-has-expired/index.html">npm 证书过期(certificate-has-expired)</a><span class="archive-meta">5 字</span></li><li><a href="../posts/npm-install-devdependencies/index.html">npm-install 不安装devDependencies</a><span class="archive-meta">3 字</span></li><li><a href="../posts/npm-3vw3s2/index.html">npm发布包</a><span class="archive-meta">72 字</span></li><li><a href="../posts/npm-save-dev-save/index.html">npm中 --save-dev 和 --save 的区别</a><span class="archive-meta">98 字</span></li>
+      </ul>
+    </div><div class="archive-sub">
+      <h3>构建与工程化<em>8</em></h3>
+      <ul class="archive-list">
+        <li><a href="../posts/grunt/index.html">安装Grunt步骤</a><span class="archive-meta">28 字</span></li><li><a href="../posts/npm/index.html">创建自己的npm包</a><span class="archive-meta">137 字</span></li><li><a href="../posts/conventional-commits/index.html">Conventional-Commits 解释</a><span class="archive-meta">112 字</span></li><li><a href="../posts/grunt-gruntfile-js/index.html">Grunt 中 Gruntfile-js结构</a><span class="archive-meta">64 字</span></li><li><a href="../posts/grunt-contrib-concat/index.html">grunt-contrib-concat插件使用</a><span class="archive-meta">147 字</span></li><li><a href="../posts/grunt-agvvcj/index.html">Grunt常用插件</a><span class="archive-meta">55 字</span></li><li><a href="../posts/gulp/index.html">gulp基本使用</a><span class="archive-meta">115 字</span></li><li><a href="../posts/vitest/index.html">vitest</a><span class="archive-meta">155 字</span></li>
+      </ul>
+    </div><div class="archive-sub">
+      <h3>设备与兼容<em>18</em></h3>
+      <ul class="archive-list">
+        <li><a href="../posts/p-irvjqg/index.html">常见设备的屏幕宽度</a><span class="archive-meta">40 字</span></li><li><a href="../posts/chrome/index.html">关闭chrome手势前进后退</a><span class="archive-meta">12 字</span></li><li><a href="../posts/javascript-iframe/index.html">利用javascript给iframe添加内容</a><span class="archive-meta">30 字</span></li><li><a href="../posts/html5-dialog/index.html">使用HTML5-dialog元素制作自定义弹窗</a><span class="archive-meta">132 字</span></li><li><a href="../posts/video/index.html">移动端网页 video播放层级过高遮挡自定义元素</a><span class="archive-meta">23 字</span></li><li><a href="../posts/gif/index.html">GIF 方式实现埋点数据上报</a><span class="archive-meta">51 字</span></li><li><a href="../posts/ie-img-onload/index.html">IE中img-onload失效解决方法</a><span class="archive-meta">75 字</span></li><li><a href="../posts/iframe/index.html">iframe 父子互调函数</a><span class="archive-meta">80 字</span></li><li><a href="../posts/img/index.html">img</a><span class="archive-meta">4 字</span></li><li><a href="../posts/javascript-d9f3ik/index.html">javascript 移动端判断用户是上滑还是下滑页面</a><span class="archive-meta">111 字</span></li><li><a href="../posts/p-ofudyr/index.html">js 移动端网页 判断横屏和竖屏</a><span class="archive-meta">27 字</span></li><li><a href="../posts/js-android/index.html">js 移动端网页 Android端 判断软键盘是否弹出</a><span class="archive-meta">35 字</span></li><li><a href="../posts/js-iphone-x/index.html">js判断是否是iphone-x</a><span class="archive-meta">66 字</span></li><li><a href="../posts/js-pc/index.html">js判断网页是PC端还是手机端</a><span class="archive-meta">29 字</span></li><li><a href="../posts/web/index.html">web判断终端设备类型</a><span class="archive-meta">206 字</span></li><li><a href="../posts/web-sqtmke/index.html">web实现选择和拖放文件到页面并输出内容</a><span class="archive-meta">241 字</span></li><li><a href="../posts/web-snackbar/index.html">web实现Snackbar</a><span class="archive-meta">67 字</span></li><li><a href="../posts/web-r2w0ek/index.html">web页面解析过程及检测</a><span class="archive-meta">75 字</span></li>
+      </ul>
+    </div><div class="archive-sub">
+      <h3>CSS 与布局<em>48</em></h3>
+      <ul class="archive-list">
+        <li><a href="../posts/css/index.html">纯CSS实现导航栏下划线跟随</a><span class="archive-meta">88 字</span></li><li><a href="../posts/css-8xfecp/index.html">纯CSS实现两种聊天气泡</a><span class="archive-meta">178 字</span></li><li><a href="../posts/css-3d/index.html">纯CSS实现一个3D按钮</a><span class="archive-meta">70 字</span></li><li><a href="../posts/css-div-div/index.html">纯CSS实现div中的两个滑动div展示</a><span class="archive-meta">102 字</span></li><li><a href="../posts/css-tab/index.html">纯CSS实现Tab导航栏切换</a><span class="archive-meta">150 字</span></li><li><a href="../posts/div/index.html">禁止div蒙层跟随底部页面滚动</a><span class="archive-meta">88 字</span></li><li><a href="../posts/p-m8xjlv/index.html">侵占浮动元素问题</a><span class="archive-meta">51 字</span></li><li><a href="../posts/css-grid/index.html">属性：</a><span class="archive-meta">59 字</span></li><li><a href="../posts/js-input-file/index.html">无js实现触发input(file)</a><span class="archive-meta">6 字</span></li><li><a href="../posts/div-margin-top-div/index.html">子div设置margin-top使父div也跟着向下移动</a><span class="archive-meta">113 字</span></li><li><a href="../posts/css-6/index.html">CSS 单标签实现左边竖条的6种方法</a><span class="archive-meta">95 字</span></li><li><a href="../posts/css-table/index.html">CSS 利用table实现五种常用布局</a><span class="archive-meta">320 字</span></li><li><a href="../posts/css-8dy62e/index.html">css 三栏布局总结</a><span class="archive-meta">313 字</span></li><li><a href="../posts/css-7tyyog/index.html">CSS 网格实现快速响应式布局</a><span class="archive-meta">251 字</span></li><li><a href="../posts/css-input-textarea-placeholder/index.html">css 修改input，textarea的placeholder样式</a><span class="archive-meta">74 字</span></li><li><a href="../posts/css-cursor/index.html">css-cursor鼠标光标样式</a><span class="archive-meta">0 字</span></li><li><a href="../posts/css-flex/index.html">CSS-flex学习记录</a><span class="archive-meta">420 字</span></li><li><a href="../posts/css-select-option/index.html">CSS将select-option文本居中</a><span class="archive-meta">14 字</span></li><li><a href="../posts/css-97wz5b/index.html">CSS禁止选中文本</a><span class="archive-meta">23 字</span></li><li><a href="../posts/css-aluzm6/index.html">CSS判断屏幕横竖屏</a><span class="archive-meta">18 字</span></li><li><a href="../posts/css-avulb5/index.html">CSS清除浮动的四种方法</a><span class="archive-meta">55 字</span></li><li><a href="../posts/css-a/index.html">css去掉a标签点击后变色的效果</a><span class="archive-meta">14 字</span></li><li><a href="../posts/css-number-input/index.html">css去掉number类型的input右侧的加减按钮</a><span class="archive-meta">9 字</span></li><li><a href="../posts/css-aly545/index.html">CSS实现多列均匀布局</a><span class="archive-meta">56 字</span></li><li><a href="../posts/css-abyjf6/index.html">CSS实现发光链接按钮</a><span class="archive-meta">41 字</span></li><li><a href="../posts/css-8y0iyb/index.html">CSS实现浮动阴影效果</a><span class="archive-meta">60 字</span></li><li><a href="../posts/css-8o0x9c/index.html">CSS实现含文字的分割线</a><span class="archive-meta">44 字</span></li><li><a href="../posts/css-3d-4yo8pd/index.html">CSS实现卡片3D翻转效果</a><span class="archive-meta">109 字</span></li><li><a href="../posts/css-9804na/index.html">CSS实现条纹背景和让背景动起来</a><span class="archive-meta">40 字</span></li><li><a href="../posts/css-c9vr9z/index.html">CSS实现最右元素边界线消失</a><span class="archive-meta">159 字</span></li><li><a href="../posts/css-checkbox/index.html">CSS实现checkbox计数</a><span class="archive-meta">44 字</span></li><li><a href="../posts/css-footer/index.html">CSS实现footer置底</a><span class="archive-meta">223 字</span></li><li><a href="../posts/css-bzzb2z/index.html">css修改页面滚动条样式</a><span class="archive-meta">148 字</span></li><li><a href="../posts/css-input-placeholder/index.html">CSS修改input的placeholder颜色</a><span class="archive-meta">5 字</span></li><li><a href="../posts/css-cjyigx/index.html">CSS选择第奇数或偶数的元素</a><span class="archive-meta">10 字</span></li><li><a href="../posts/div-ak15yk/index.html">div顶部吸附</a><span class="archive-meta">206 字</span></li><li><a href="../posts/div-au0rnj/index.html">div多余文字用省略号代替</a><span class="archive-meta">8 字</span></li><li><a href="../posts/div-b40dci/index.html">div实现文字超出两行显示省略符号</a><span class="archive-meta">10 字</span></li><li><a href="../posts/html-img-div/index.html">html--img在div中，下方有空隙的解决方案</a><span class="archive-meta">63 字</span></li><li><a href="../posts/html5-drag-drop/index.html">html5 拖放（Drag-&amp;-Drop）基本使用</a><span class="archive-meta">295 字</span></li><li><a href="../posts/input-0ojo8u/index.html">input选择图片再显示</a><span class="archive-meta">56 字</span></li><li><a href="../posts/margin/index.html">margin 重叠问题</a><span class="archive-meta">45 字</span></li><li><a href="../posts/mdui/index.html">MDUI标准响应式布局写法</a><span class="archive-meta">51 字</span></li><li><a href="../posts/scss-calc/index.html">scss-calc中使用变量不生效</a><span class="archive-meta">12 字</span></li><li><a href="../posts/scss-calc-jd1o9f/index.html">scss的calc中使用变量方法</a><span class="archive-meta">8 字</span></li><li><a href="../posts/scss/index.html">SCSS学习记录</a><span class="archive-meta">232 字</span></li><li><a href="../posts/select/index.html">select元素设置默认值，且默认值不可选</a><span class="archive-meta">12 字</span></li><li><a href="../posts/textarea/index.html">textarea 限制输入字数</a><span class="archive-meta">30 字</span></li>
+      </ul>
+    </div><div class="archive-sub">
+      <h3>JavaScript<em>78</em></h3>
+      <ul class="archive-list">
+        <li><a href="../posts/p-3robxi/index.html">宏任务和微任务都有哪些？</a><span class="archive-meta">33 字</span></li><li><a href="../posts/p-mk7um3/index.html">教你纯前端实现自聊自嗨 聊天室</a><span class="archive-meta">101 字</span></li><li><a href="../posts/p-q8ywvz/index.html">利用js判断页面是否滚动到了底部</a><span class="archive-meta">46 字</span></li><li><a href="../posts/api-logo/index.html">去除高德地图api左下角logo</a><span class="archive-meta">11 字</span></li><li><a href="../posts/p-rq6e0z/index.html">实现抽屉侧边栏（主体不移动）</a><span class="archive-meta">115 字</span></li><li><a href="../posts/p-xpgpo2/index.html">实现抽屉侧边栏（主体移动）</a><span class="archive-meta">188 字</span></li><li><a href="../posts/input/index.html">实现浮动标签的input输入框</a><span class="archive-meta">113 字</span></li><li><a href="../posts/p-uwb824/index.html">实现拖拽预览图片切换效果</a><span class="archive-meta">215 字</span></li><li><a href="../posts/div-fdchiz/index.html">实现左右可拖动改变宽度的div内容显示区，并且控制拖动范围</a><span class="archive-meta">153 字</span></li><li><a href="../posts/canvas/index.html">实现canvas上图形的操作</a><span class="archive-meta">38 字</span></li><li><a href="../posts/canvas-n4kca0/index.html">canvas绘画封装记录</a><span class="archive-meta">241 字</span></li><li><a href="../posts/canvas-nejxyz/index.html">canvas实现元素点击并相应</a><span class="archive-meta">203 字</span></li><li><a href="../posts/javascript-cookie/index.html">javascript 操作cookie</a><span class="archive-meta">99 字</span></li><li><a href="../posts/javascript-url/index.html">javascript 当前页面url网址信息</a><span class="archive-meta">284 字</span></li><li><a href="../posts/javascript-input-placeholder/index.html">javascript 动态设置input的placeholder值</a><span class="archive-meta">52 字</span></li><li><a href="../posts/javascript/index.html">javascript 根据数组中对象的属性排序</a><span class="archive-meta">118 字</span></li><li><a href="../posts/javascript-select-option/index.html">javascript 获取select选中的option的值和文本</a><span class="archive-meta">73 字</span></li><li><a href="../posts/javascript-fhbx2c/index.html">javascript 利用数组制作分页效果</a><span class="archive-meta">37 字</span></li><li><a href="../posts/javascript-frbirb/index.html">javascript 判断两个对象是否相等</a><span class="archive-meta">42 字</span></li><li><a href="../posts/javascript-css/index.html">javascript 如何修改css伪元素的内容</a><span class="archive-meta">72 字</span></li><li><a href="../posts/javascript-uuid/index.html">javascript 生成uuid</a><span class="archive-meta">39 字</span></li><li><a href="../posts/javascript-eddiag/index.html">javascript 实现保存页面为图片</a><span class="archive-meta">134 字</span></li><li><a href="../posts/javascript-end3zf/index.html">javascript 图像二值化处理</a><span class="archive-meta">143 字</span></li><li><a href="../posts/javascript-excpoe/index.html">javascript 限制文本框输入</a><span class="archive-meta">55 字</span></li><li><a href="../posts/javascript-f7cbdd/index.html">javascript 选择器的区别</a><span class="archive-meta">124 字</span></li><li><a href="../posts/javascript-djep7j/index.html">javascript 原生实现返回顶部</a><span class="archive-meta">27 字</span></li><li><a href="../posts/javascript-div-div/index.html">javascript 在div前、中、后插入另一个div</a><span class="archive-meta">96 字</span></li><li><a href="../posts/javascript-canvas-image/index.html">javascript-canvas与image互转</a><span class="archive-meta">166 字</span></li><li><a href="../posts/javascript-jquery-input/index.html">Javascript-jQuery实时监听input输入框值变化</a><span class="archive-meta">45 字</span></li><li><a href="../posts/javascript-math-ceil-floor-round/index.html">javascript-Math的ceil、floor、round方法区别</a><span class="archive-meta">65 字</span></li><li><a href="../posts/javascript-new/index.html">javascript-new的实现</a><span class="archive-meta">39 字</span></li><li><a href="../posts/javascript-pc/index.html">javascript-PC端判断鼠标是上滑还是下滑</a><span class="archive-meta">120 字</span></li><li><a href="../posts/javascript-split/index.html">javascript-split单个或连续空格</a><span class="archive-meta">2 字</span></li><li><a href="../posts/javascript-svg-canvas-image/index.html">javascript-svg转canvas和image</a><span class="archive-meta">267 字</span></li><li><a href="../posts/javascript-eb4u7r/index.html">javascript对象属性特征</a><span class="archive-meta">248 字</span></li><li><a href="../posts/javascript-jquery/index.html">JavaScript和Jquery获取父级元素、子级元素、兄弟元素等</a><span class="archive-meta">342 字</span></li><li><a href="../posts/javascript-af7906/index.html">javascript宏任务及微任务实例</a><span class="archive-meta">385 字</span></li><li><a href="../posts/javascript-ap6up5/index.html">javascript获取当前元素的下一个元素</a><span class="archive-meta">17 字</span></li><li><a href="../posts/javascript-9v81m8/index.html">Javascript获取时间毫秒数的三种方法</a><span class="archive-meta">8 字</span></li><li><a href="../posts/javascript-a57nb7/index.html">javascript获取原型对象的三种方法</a><span class="archive-meta">38 字</span></li><li><a href="../posts/javascript-select/index.html">javascript获取select选中的内容和值</a><span class="archive-meta">34 字</span></li><li><a href="../posts/javascript-select-b2ah44/index.html">javascript获取select选中文本和值</a><span class="archive-meta">63 字</span></li><li><a href="../posts/javascript-az6ge4/index.html">javascript继承的等价模块化写法</a><span class="archive-meta">150 字</span></li><li><a href="../posts/javascript-b96233/index.html">javascript框架模块化的两种写法</a><span class="archive-meta">328 字</span></li><li><a href="../posts/javascript-es6/index.html">javascript利用数组解构快速实现值的交换（ES6）</a><span class="archive-meta">32 字</span></li><li><a href="../posts/javascript-txt/index.html">javascript两种创建txt文件并下载的方法</a><span class="archive-meta">69 字</span></li><li><a href="../posts/javascript-exuos1/index.html">javascript实现测量字符串长度</a><span class="archive-meta">40 字</span></li><li><a href="../posts/javascript-env332/index.html">Javascript实现平铺任意维度的嵌套数组</a><span class="archive-meta">44 字</span></li><li><a href="../posts/javascript-edvhe3/index.html">javascript实现千分位分隔符</a><span class="archive-meta">105 字</span></li><li><a href="../posts/javascript-txt-fr24dr/index.html">javascript实现生成并下载txt文件</a><span class="archive-meta">108 字</span></li><li><a href="../posts/javascript-g1t3jx/index.html">javascript实现稳定动画帧数的两种方法</a><span class="archive-meta">29 字</span></li><li><a href="../posts/javascript-promise/index.html">javascript实现一个简单的Promise</a><span class="archive-meta">93 字</span></li><li><a href="../posts/javascript-event/index.html">javascript事件（event）属性及返回属性</a><span class="archive-meta">9 字</span></li><li><a href="../posts/javascript-preventdefault-stoppropagation/index.html">javascript事件preventDefault和stopPropagation的区别</a><span class="archive-meta">612 字</span></li><li><a href="../posts/javascript-cpxv89/index.html">javascript数组中对象元素的去重实现</a><span class="archive-meta">218 字</span></li><li><a href="../posts/javascript-find-filter/index.html">javascript数组find和filter方法的区别</a><span class="archive-meta">32 字</span></li><li><a href="../posts/javascript-d9tx48/index.html">Javascript完美拷贝对象</a><span class="archive-meta">88 字</span></li><li><a href="../posts/javascript-djtit7/index.html">javascript原型链详细关系图及总结</a><span class="archive-meta">137 字</span></li><li><a href="../posts/javascript-dtt4i6/index.html">Javascript中的编码解码函数</a><span class="archive-meta">123 字</span></li><li><a href="../posts/javascript-async-await/index.html">javascript中的async-await基本用法</a><span class="archive-meta">33 字</span></li><li><a href="../posts/javascript-es6-class/index.html">javascript中ES6的class写法</a><span class="archive-meta">166 字</span></li><li><a href="../posts/javascript-16/index.html">javascript字符串与16进制互转</a><span class="archive-meta">107 字</span></li><li><a href="../posts/jquery-onclick/index.html">jquery 移除和添加onclick</a><span class="archive-meta">13 字</span></li><li><a href="../posts/p-roct0j/index.html">js 封装结构示例</a><span class="archive-meta">78 字</span></li><li><a href="../posts/js-input/index.html">js 获取input的光标位置、聚焦、选择内容</a><span class="archive-meta">73 字</span></li><li><a href="../posts/p-o4ixh3/index.html">js 判断鼠标滚轮</a><span class="archive-meta">87 字</span></li><li><a href="../posts/js-iframe/index.html">js 强制刷新iframe</a><span class="archive-meta">18 字</span></li><li><a href="../posts/js-form/index.html">JS 提交Form表单数据</a><span class="archive-meta">41 字</span></li><li><a href="../posts/js-base64/index.html">js 通过base64获取图片宽高</a><span class="archive-meta">27 字</span></li><li><a href="../posts/js-mutationobserver/index.html">js-MutationObserver使用方法</a><span class="archive-meta">85 字</span></li><li><a href="../posts/js-object-assgin/index.html">js-Object-assgin使用方法</a><span class="archive-meta">22 字</span></li><li><a href="../posts/js-proxy/index.html">js-Proxy使用方法</a><span class="archive-meta">61 字</span></li><li><a href="../posts/js-reflect/index.html">js-Reflect使用方法</a><span class="archive-meta">62 字</span></li><li><a href="../posts/js-worker/index.html">js-Worker使用方法</a><span class="archive-meta">114 字</span></li><li><a href="../posts/p-gucm0t/index.html">js模拟点击元素</a><span class="archive-meta">20 字</span></li><li><a href="../posts/localstorage/index.html">localStorage存储和读取数组</a><span class="archive-meta">28 字</span></li><li><a href="../posts/setinterval-3/index.html">setInterval中3种执行函数写法的作用</a><span class="archive-meta">32 字</span></li><li><a href="../posts/settimeout-setinterval/index.html">setTimeout代替setInterval</a><span class="archive-meta">176 字</span></li>
+      </ul>
+    </div><div class="archive-sub">
+      <h3>编辑器与开发环境<em>3</em></h3>
+      <ul class="archive-list">
+        <li><a href="../posts/git/index.html">查看和修改git用户名和邮箱地址</a><span class="archive-meta">24 字</span></li><li><a href="../posts/vscode-node/index.html">vscode 命令行提示：因为在此系统上禁止运行脚本(node命令)</a><span class="archive-meta">19 字</span></li><li><a href="../posts/vscode-git/index.html">vscode-git提交总让输入用户名及密码</a><span class="archive-meta">15 字</span></li>
+      </ul>
+    </div><div class="archive-sub">
+      <h3>随手记<em>5</em></h3>
+      <ul class="archive-list">
+        <li><a href="../posts/2018-11-04/index.html">2018-11-04</a><span class="archive-meta">59 字</span></li><li><a href="../posts/2021-08-30/index.html">2021-08-30</a><span class="archive-meta">81 字</span></li><li><a href="../posts/2022-09-09/index.html">插件模板 makeid-template</a><span class="archive-meta">287 字</span></li><li><a href="../posts/2021-08-26/index.html">前端：后台管理系统基础框架</a><span class="archive-meta">1209 字</span></li><li><a href="../posts/2021-09-15/index.html">项目名称（中文）</a><span class="archive-meta">309 字</span></li>
+      </ul>
+    </div><div class="archive-sub">
+      <h3>其他<em>1</em></h3>
+      <ul class="archive-list">
+        <li><a href="../posts/godot/index.html">Godot 动态路标组件 使用方法</a><span class="archive-meta">130 字</span></li>
+      </ul>
+    </div>
+  </section>
+<section class="archive-cat" style="--cat:#38a1f3">
+    <h2><span aria-hidden="true">🎮</span> <a href="../categories/godot/index.html">Godot 游戏开发</a><em>57</em></h2>
+    <div class="archive-sub">
+      <h3>系列教程<em>18</em></h3>
+      <ul class="archive-list">
+        <li><a href="../posts/godot-1mmmn3/index.html">【Godot】从零开始做推箱子游戏素材</a><span class="archive-meta">59 字</span></li><li><a href="../posts/godot-godot-rpg-part1/index.html">【Godot】教你用Godot撸一个RPG文字对话框 Part1</a><span class="archive-meta">6 字</span></li><li><a href="../posts/godot-godot-rpg-part2/index.html">【Godot】教你用Godot撸一个RPG文字对话框 Part2</a><span class="archive-meta">6 字</span></li><li><a href="../posts/godot-godot-part4/index.html">【Godot】教你用godot实现物品栏系统 - 放回物品（Part4）</a><span class="archive-meta">6 字</span></li><li><a href="../posts/godot-godot-part5/index.html">【Godot】教你用godot实现物品栏系统 - 交换物品（Part5）</a><span class="archive-meta">6 字</span></li><li><a href="../posts/godot-godot-part3/index.html">【Godot】教你用godot实现物品栏系统 - 取出物品（Part3）</a><span class="archive-meta">6 字</span></li><li><a href="../posts/godot-godot-part2/index.html">【Godot】教你用godot实现物品栏系统 - 添加物品（Part2）</a><span class="archive-meta">6 字</span></li><li><a href="../posts/godot-godot-ui-part1/index.html">【Godot】教你用godot实现物品栏系统 --UI界面（Part1）</a><span class="archive-meta">6 字</span></li><li><a href="../posts/godot-graphedit-part4/index.html">【Godot】入门强大有趣的GraphEdit-- 多组连接点（Part4）</a><span class="archive-meta">6 字</span></li><li><a href="../posts/godot-graphedit-part7/index.html">【Godot】入门强大有趣的GraphEdit-- 复制粘贴节点（Part7）</a><span class="archive-meta">6 字</span></li><li><a href="../posts/godot-graphedit-part3/index.html">【Godot】入门强大有趣的GraphEdit-- 简单交互（Part3）</a><span class="archive-meta">6 字</span></li><li><a href="../posts/godot-graphedit-part6/index.html">【Godot】入门强大有趣的GraphEdit-- 拷贝节点（Part6）</a><span class="archive-meta">6 字</span></li><li><a href="../posts/godot-graphedit-part2/index.html">【Godot】入门强大有趣的GraphEdit-- 连接节点（Part2）</a><span class="archive-meta">6 字</span></li><li><a href="../posts/godot-graphedit-part5/index.html">【Godot】入门强大有趣的GraphEdit-- 删除节点（Part5）</a><span class="archive-meta">6 字</span></li><li><a href="../posts/godot-graphedit-part1/index.html">【Godot】入门强大有趣的GraphEdit-- 添加节点（Part1）</a><span class="archive-meta">6 字</span></li><li><a href="../posts/godot-graphedit-part8/index.html">【Godot】入门强大有趣的GraphEdit-- 右键菜单（Part8）</a><span class="archive-meta">6 字</span></li><li><a href="../posts/godot-ybv78c/index.html">【Godot】实现物品栏系统素材</a><span class="archive-meta">70 字</span></li><li><a href="../posts/godot4/index.html">【Godot4】【从零开始制作土豆兄弟】教程简书合集！（持续更新）</a><span class="archive-meta">153 字</span></li>
+      </ul>
+    </div><div class="archive-sub">
+      <h3>素材资源<em>14</em></h3>
+      <ul class="archive-list">
+        <li><a href="../posts/godot-2d/index.html">【Godot】2d灯光和阴影图片素材</a><span class="archive-meta">0 字</span></li><li><a href="../posts/godot-2d-d5i597/index.html">【Godot】2D小地图素材</a><span class="archive-meta">42 字</span></li><li><a href="../posts/godot-2d-e9gk13/index.html">【Godot】教你实现2D角色奔跑烟尘效果素材</a><span class="archive-meta">28 字</span></li><li><a href="../posts/godot-2d-ui-3d/index.html">【Godot】教你实现2D界面（UI）跟随3D物体素材</a><span class="archive-meta">14 字</span></li><li><a href="../posts/godot-6buqu0/index.html">【Godot】实现场景的平滑过渡切换素材</a><span class="archive-meta">28 字</span></li><li><a href="../posts/godot-5rvjg2/index.html">【Godot】实现火焰（异火？）粒子特效素材</a><span class="archive-meta">14 字</span></li><li><a href="../posts/godot-1snkhz/index.html">【Godot】实现技能冷却效果素材</a><span class="archive-meta">42 字</span></li><li><a href="../posts/godot-1inyt0/index.html">【Godot】实现简单传送带效果素材</a><span class="archive-meta">14 字</span></li><li><a href="../posts/godot-0op5q3/index.html">【Godot】实现简单下雨粒子效果素材</a><span class="archive-meta">14 字</span></li><li><a href="../posts/godot-18od41/index.html">【Godot】实现简单烟雾粒子特效素材</a><span class="archive-meta">14 字</span></li><li><a href="../posts/godot-ylusxb/index.html">【Godot】实现三种角色血量显示方式素材</a><span class="archive-meta">48 字</span></li><li><a href="../posts/godot-zn5q0u/index.html">【Godot】实现烟囱粒子特效素材</a><span class="archive-meta">14 字</span></li><li><a href="../posts/godot-z36imw/index.html">【Godot】虚拟摇杆素材</a><span class="archive-meta">28 字</span></li><li><a href="../posts/godot-light2d-logo-99n52x/index.html">【Godot】用Light2D做logo遮罩动画素材</a><span class="archive-meta">28 字</span></li>
+      </ul>
+    </div><div class="archive-sub">
+      <h3>踩坑与排错<em>4</em></h3>
+      <ul class="archive-list">
+        <li><a href="../posts/p-y390no/index.html">踩坑：游戏暂停后的问题</a><span class="archive-meta">95 字</span></li><li><a href="../posts/canvaslayer/index.html">踩坑：CanvasLayer层级问题</a><span class="archive-meta">34 字</span></li><li><a href="../posts/area3d-collisionshape3d-rigidbody3d-mouse-entered/index.html">Area3D 的CollisionShape3D会影响遮挡RigidBody3D的mouse_entered事件，怎么解决</a><span class="archive-meta">8 字</span></li><li><a href="../posts/rigidbody3d-rigidbody3d-body-entered/index.html">RigidBody3D碰撞到了其他RigidBody3D，body_entered不生效</a><span class="archive-meta">8 字</span></li>
+      </ul>
+    </div><div class="archive-sub">
+      <h3>特效与渲染<em>10</em></h3>
+      <ul class="archive-list">
+        <li><a href="../posts/godot-1wm8c2/index.html">【Godot】教你实现简单传送带效果</a><span class="archive-meta">6 字</span></li><li><a href="../posts/godot-3d/index.html">【Godot】教你实现完美的3D模型描边</a><span class="archive-meta">93 字</span></li><li><a href="../posts/godot-2glfq0/index.html">【Godot】教你实现游戏技能冷却效果</a><span class="archive-meta">6 字</span></li><li><a href="../posts/godot-godot/index.html">【Godot】教你用Godot实现一个带有简单动画的游戏弹窗</a><span class="archive-meta">6 字</span></li><li><a href="../posts/godot-6luciz/index.html">【Godot】实现场景的平滑过渡切换</a><span class="archive-meta">6 字</span></li><li><a href="../posts/godot-61v551/index.html">【Godot】实现火焰（异火？）粒子特效</a><span class="archive-meta">6 字</span></li><li><a href="../posts/godot-2d-gr6zfm/index.html">【Godot】实现简单的2D灯光和阴影</a><span class="archive-meta">6 字</span></li><li><a href="../posts/godot-22n66y/index.html">【Godot】实现简单下雨粒子效果</a><span class="archive-meta">6 字</span></li><li><a href="../posts/godot-0epk14/index.html">【Godot】实现简单烟雾粒子特效</a><span class="archive-meta">6 字</span></li><li><a href="../posts/godot-light2d-logo/index.html">【Godot】用Light2D做logo遮罩动画</a><span class="archive-meta">6 字</span></li>
+      </ul>
+    </div><div class="archive-sub">
+      <h3>UI 与界面<em>6</em></h3>
+      <ul class="archive-list">
+        <li><a href="../posts/godot-5-godot/index.html">【Godot】5分钟教你学会用Godot制作一个圆环进度条</a><span class="archive-meta">6 字</span></li><li><a href="../posts/godot-10-godot/index.html">【Godot】10分钟用godot实现一个简易计算器</a><span class="archive-meta">6 字</span></li><li><a href="../posts/godot-0yorf2/index.html">【Godot】实现三种角色血量显示方式</a><span class="archive-meta">6 字</span></li><li><a href="../posts/godot-godot-wrgllh/index.html">【Godot】手把手教你用Godot撸一个简易记事本</a><span class="archive-meta">6 字</span></li><li><a href="../posts/godot-rpg/index.html">Godot 模拟rpg对话框并根据内容长短动态调整加载时间</a><span class="archive-meta">161 字</span></li><li><a href="../posts/godot-xf5qz3/index.html">Godot 实现圆环形进度条</a><span class="archive-meta">12 字</span></li>
+      </ul>
+    </div><div class="archive-sub">
+      <h3>脚本与数据<em>3</em></h3>
+      <ul class="archive-list">
+        <li><a href="../posts/godot-xz4yd1/index.html">Godot 保存和加载文件内容</a><span class="archive-meta">40 字</span></li><li><a href="../posts/godot-x565a4/index.html">Godot 延迟执行方法</a><span class="archive-meta">16 字</span></li><li><a href="../posts/godot-http-json/index.html">Godot-http请求数据并解析json的两种方法</a><span class="archive-meta">62 字</span></li>
+      </ul>
+    </div><div class="archive-sub">
+      <h3>社区与其他<em>2</em></h3>
+      <ul class="archive-list">
+        <li><a href="../posts/p-3w0gvl/index.html">图床</a><span class="archive-meta">0 字</span></li><li><a href="../posts/godot-wl6xw6/index.html">Godot中文社区邀请你的加入</a><span class="archive-meta">120 字</span></li>
+      </ul>
+    </div>
+  </section>
+<section class="archive-cat" style="--cat:#30b8a0">
+    <h2><span aria-hidden="true">🕹️</span> <a href="../categories/godot4/index.html">Godot 4 实践</a><em>4</em></h2>
+    <ul class="archive-list">
+      <li><a href="../posts/p-duw41i/index.html">检测游戏窗口失去焦点</a><span class="archive-meta">16 字</span></li><li><a href="../posts/p-2sdlss/index.html">同时运行多个实例</a><span class="archive-meta">0 字</span></li><li><a href="../posts/godot4-animationplayer/index.html">Godot4动态修改Animationplayer帧动画</a><span class="archive-meta">102 字</span></li><li><a href="../posts/node-added/index.html">node_added 批量节点添加</a><span class="archive-meta">0 字</span></li>
+    </ul>
+  </section>
+<section class="archive-cat" style="--cat:#e8a33d">
+    <h2><span aria-hidden="true">🐧</span> <a href="../categories/linux/index.html">Linux 与运维</a><em>23</em></h2>
+    <div class="archive-sub">
+      <h3>Linux 与服务器<em>18</em></h3>
+      <ul class="archive-list">
+        <li><a href="../posts/snapshots/index.html">搬瓦工中的Snapshots（快照）功能</a><span class="archive-meta">288 字</span></li><li><a href="../posts/ubuntu-ftp/index.html">搬瓦工Ubuntu系统中安装FTP服务</a><span class="archive-meta">477 字</span></li><li><a href="../posts/ubuntu-shadowsocks/index.html">如何在搬瓦工ubuntu系统下配置shadowsocks以翻墙</a><span class="archive-meta">647 字</span></li><li><a href="../posts/centos-php7/index.html">CentOS升级到php7</a><span class="archive-meta">99 字</span></li><li><a href="../posts/linux-nginx/index.html">Linux 安装nginx</a><span class="archive-meta">94 字</span></li><li><a href="../posts/linux/index.html">Linux 给文件或文件夹添加权限</a><span class="archive-meta">107 字</span></li><li><a href="../posts/linux-nginx-rraq81/index.html">Linux 下nginx 配置 绑定域名</a><span class="archive-meta">422 字</span></li><li><a href="../posts/linux-nginx-php/index.html">Linux 下nginx配置php</a><span class="archive-meta">42 字</span></li><li><a href="../posts/linux-ecpmmw/index.html">Linux操作系统中各种包的安装方式及步骤</a><span class="archive-meta">308 字</span></li><li><a href="../posts/linux-emp8bv/index.html">Linux查看占用端口并关闭进程方法</a><span class="archive-meta">211 字</span></li><li><a href="../posts/linux-g0n8sq/index.html">Linux添加防火墙放行端口</a><span class="archive-meta">38 字</span></li><li><a href="../posts/linux-mongodb/index.html">Linux下安装mongodb</a><span class="archive-meta">209 字</span></li><li><a href="../posts/linux-node-npm/index.html">Linux下安装node及npm</a><span class="archive-meta">109 字</span></li><li><a href="../posts/linux-iptables/index.html">Linux下iptables的使用</a><span class="archive-meta">87 字</span></li><li><a href="../posts/linux-jexus/index.html">Linux中jexus服务器的启动、停止、重启</a><span class="archive-meta">21 字</span></li><li><a href="../posts/ubuntu-sublime-text/index.html">Ubuntu系统中安装与卸载sublime-text编辑器</a><span class="archive-meta">426 字</span></li><li><a href="../posts/ubuntu-could-not-get-lock-var-lib-dpkg-lock/index.html">ubuntu中Could-not-get-lock--var-lib-dpkg-lock解决方法</a><span class="archive-meta">86 字</span></li><li><a href="../posts/ubuntu-python2-python3/index.html">ubuntu中python2升级为python3的方法</a><span class="archive-meta">60 字</span></li>
+      </ul>
+    </div><div class="archive-sub">
+      <h3>命令行与脚本<em>3</em></h3>
+      <ul class="archive-list">
+        <li><a href="../posts/cmd/index.html">cmd中有趣的命令二之隐藏文件（不定期更新）</a><span class="archive-meta">387 字</span></li><li><a href="../posts/cmd-n9kmw2/index.html">cmd中有趣的命令一之合并文件（不定期更新）</a><span class="archive-meta">171 字</span></li><li><a href="../posts/shell-eq-ne-gt-lt-ge-le/index.html">shell 中 [-eq]-[-ne]-[-gt]-[-lt]-[ge]-[le]</a><span class="archive-meta">23 字</span></li>
+      </ul>
+    </div><div class="archive-sub">
+      <h3>建站与网络<em>2</em></h3>
+      <ul class="archive-list">
+        <li><a href="../posts/loveconvert-com/index.html">个人服务网站(loveconvert-com)上线啦！！</a><span class="archive-meta">209 字</span></li><li><a href="../posts/loveconvert/index.html">Loveconvert服务站点新增微博视频解析</a><span class="archive-meta">65 字</span></li>
+      </ul>
+    </div>
+  </section>
+<section class="archive-cat" style="--cat:#8b5cf6">
+    <h2><span aria-hidden="true">🤖</span> <a href="../categories/ai/index.html">AI 与大模型</a><em>4</em></h2>
+    <ul class="archive-list">
+      <li><a href="../posts/ai-mcp-rea/index.html">AI逆向MCP服务工具：REA</a><span class="archive-meta">82 字</span></li><li><a href="../posts/dsh-dsh-our-free-model/index.html">dsh安装dsh-our-free-model</a><span class="archive-meta">240 字</span></li><li><a href="../posts/dsh/index.html">dsh创造模式写插件</a><span class="archive-meta">0 字</span></li><li><a href="../posts/ollama-deepseek/index.html">ollama部署deepseek</a><span class="archive-meta">43 字</span></li>
+    </ul>
+  </section>
+<section class="archive-cat" style="--cat:#3f9142">
+    <h2><span aria-hidden="true">📱</span> <a href="../categories/app/index.html">App 开发</a><em>4</em></h2>
+    <ul class="archive-list">
+      <li><a href="../posts/android/index.html">Android 实现语言切换</a><span class="archive-meta">213 字</span></li><li><a href="../posts/android-drawerlayout-toolbar/index.html">Android-DrawerLayout+Toolbar实现</a><span class="archive-meta">199 字</span></li><li><a href="../posts/android-fragment/index.html">Android-Fragment的切换</a><span class="archive-meta">244 字</span></li><li><a href="../posts/java-mysql-excel/index.html">Java实现MySql数据库与Excel文件转换</a><span class="archive-meta">855 字</span></li>
+    </ul>
+  </section>
+<section class="archive-cat" style="--cat:#ea7a3c">
+    <h2><span aria-hidden="true">🧊</span> <a href="../categories/blender/index.html">Blender</a><em>1</em></h2>
+    <ul class="archive-list">
+      <li><a href="../posts/p-z5ir2x/index.html">骨骼对称失效</a><span class="archive-meta">17 字</span></li>
+    </ul>
+  </section>
+<section class="archive-cat" style="--cat:#e05d6f">
+    <h2><span aria-hidden="true">📲</span> <a href="../categories/flash/index.html">刷机与折腾</a><em>3</em></h2>
+    <ul class="archive-list">
+      <li><a href="../posts/pro-bl-9008/index.html">一加平板Pro 回锁BL 开机红字 9008救砖</a><span class="archive-meta">93 字</span></li><li><a href="../posts/ace5pro-coloros16-coloros15/index.html">一加ace5pro-coloros16降级coloros15</a><span class="archive-meta">60 字</span></li><li><a href="../posts/y700-coloros16/index.html">y700四代刷coloros16</a><span class="archive-meta">108 字</span></li>
+    </ul>
+  </section>
+<section class="archive-cat" style="--cat:#c2681f">
+    <h2><span aria-hidden="true">🎁</span> <a href="../categories/resources/index.html">资源分享</a><em>9</em></h2>
+    <ul class="archive-list">
+      <li><a href="../posts/bilibili-2-xiaohu/index.html">【bilibili】仅2滴就毁掉了一位科学家大脑的可怕物质！！-- 小胡xiaohu</a><span class="archive-meta">6 字</span></li><li><a href="../posts/bilibili-xiaohu/index.html">【bilibili】你所不了解的地震 - 小胡xiaohu</a><span class="archive-meta">6 字</span></li><li><a href="../posts/p-txp9bg/index.html">5款良心下载神器！！看了不后悔！！</a><span class="archive-meta">263 字</span></li><li><a href="../posts/8-ppt/index.html">欢迎关注微信：小胡资源</a><span class="archive-meta">578 字</span></li><li><a href="../posts/honor/index.html">荣耀Honor手机产品线</a><span class="archive-meta">0 字</span></li><li><a href="../posts/p-0b0l1s/index.html">生活和设计的灵感库！</a><span class="archive-meta">384 字</span></li><li><a href="../posts/sublime-text-3/index.html">时隔一年的Sublime-Text-3终于更新啦</a><span class="archive-meta">1014 字</span></li><li><a href="../posts/ppt-focusky/index.html">是时候用它代替你PPT了——FocuSky</a><span class="archive-meta">358 字</span></li><li><a href="../posts/youtube/index.html">推荐一个YouTube油管主</a><span class="archive-meta">189 字</span></li>
+    </ul>
+  </section>
+<section class="archive-cat" style="--cat:#0ea5b7">
+    <h2><span aria-hidden="true">✨</span> <a href="../categories/tips/index.html">效率技巧</a><em>6</em></h2>
+    <ul class="archive-list">
+      <li><a href="../posts/win10/index.html">取消win10开机磁盘检查</a><span class="archive-meta">15 字</span></li><li><a href="../posts/p-aio7vi/index.html">去掉我的电脑中的优酷影视库</a><span class="archive-meta">48 字</span></li><li><a href="../posts/markdown/index.html">写法一：</a><span class="archive-meta">60 字</span></li><li><a href="../posts/ableton-live-9/index.html">Ableton live 9录音按钮失效解决方法</a><span class="archive-meta">47 字</span></li><li><a href="../posts/obs/index.html">obs录制显示屏黑屏</a><span class="archive-meta">21 字</span></li><li><a href="../posts/win11/index.html">win11右键菜单修改</a><span class="archive-meta">58 字</span></li>
+    </ul>
+  </section>
+</div>
+<p class="note">说明：简书导出的 Markdown 文件本身不含发布时间，因此除文件名自带日期的文章外，这里以「分类 + 标题」归档。</p>
+
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-line">小胡笔记 · 共收录 381 篇文章</p>
+    <p class="footer-line dim">由简书导出的 Markdown 自动生成 · <a href="../about/index.html">关于本站</a></p>
+  </div>
+</footer>
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索文章">
+    <div class="search-field">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input type="search" data-search-input placeholder="搜索标题、标签或正文关键词…" autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-meta" data-search-meta>输入关键词开始搜索</div>
+    <ul class="search-results" data-search-results></ul>
+  </div>
+</div>
+<script>window.__BASE__ = "../";</script>
+<script src="../assets/search-index.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

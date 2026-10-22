@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>javascript事件preventDefault和stopPropagation的区别 · 小胡笔记</title>
+<meta name="description" content="首先从字面意思来看：">
+<meta name="author" content="小胡">
+<link rel="canonical" href="../../posts/javascript-preventdefault-stoppropagation/index.html">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('blog-theme'); } catch (e) {}
+    // 没有手动设置过就跟随系统，并在首屏前定好主题，避免闪一下浅色/两个图标同时出现
+    if (!t) {
+      t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">
+      <span class="brand-mark" aria-hidden="true">胡</span>
+      <span class="brand-text"><strong>小胡笔记</strong><em>381 篇 · 10 类</em></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a class="nav-link" href="../../index.html">首页</a>
+      <a class="nav-link" href="../../categories/index.html">分类</a>
+      <a class="nav-link" href="../../tags/index.html">标签</a>
+      <a class="nav-link" href="../../archive/index.html">归档</a>
+      <a class="nav-link" href="../../about/index.html">关于</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="icon-btn search-btn" type="button" data-search-open aria-label="搜索文章" title="搜索（按 / 或 ⌘K）">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <span class="search-btn-text">搜索</span>
+      </button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深色模式" title="切换深色模式">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-label="打开菜单" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+    <a class="nav-link" href="../../index.html">首页</a>
+    <a class="nav-link" href="../../categories/index.html">分类</a>
+    <a class="nav-link" href="../../tags/index.html">标签</a>
+    <a class="nav-link" href="../../archive/index.html">归档</a>
+    <a class="nav-link" href="../../about/index.html">关于</a>
+  </nav>
+</header>
+<main id="main">
+
+<div class="reading-progress" data-progress></div>
+<article class="post" style="--cat:#4f6bed">
+  <nav class="crumbs">
+    <a href="../../index.html">首页</a><span>/</span>
+    <a href="../../categories/web/index.html">Web 前端</a>
+    <span>/</span><span>JavaScript</span>
+  </nav>
+  <header class="post-head">
+    <h1>javascript事件preventDefault和stopPropagation的区别</h1>
+    <div class="post-meta">
+      <span class="meta-chip cat-chip">🌐 Web 前端</span>
+      <span class="meta-chip">JavaScript</span>
+      <span class="meta-chip">612 字</span>
+      <span class="meta-chip">约 2 分钟</span>
+      
+    </div>
+    <div class="post-tags"><a class="chip chip-tag" href="../../tags/index.html?tag=JavaScript" data-tag="JavaScript">#JavaScript</a><a class="chip chip-tag" href="../../tags/index.html?tag=HTML" data-tag="HTML">#HTML</a></div>
+  </header>
+  <div class="post-layout">
+    <div class="post-body" data-post-body>
+      <p>首先从字面意思来看：
+<code>preventDefault</code>是指<strong>阻止默认事件</strong>
+<code>stopPropagation</code>是指<strong>停止传播</strong></p>
+<p>javascript中的两种“事件传播”模式：</p>
+<ul>
+<li>捕获模式(capturing)：当事件发生时，该事件首先被最外层元素接受到，然后依次向内层元素传播。（从上向下，由外往里）</li>
+<li>冒泡模式(bubbling)：当事件发生时，该事件首先被最内层元素接受到，然后依次向外层元素传播。（从下向上，由里往外）</li>
+</ul>
+<hr>
+<h1 id="preventdefault">preventDefault：</h1>
+<p>html：</p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>&lt;a href=&quot;http://www.baidu.com&quot; id=&quot;open&quot;&gt;open&lt;/a&gt;
+</code></pre></div><p>javascript：</p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>document.getElementById(&quot;open&quot;).addEventListener(&quot;click&quot;,function(e){
+  console.log(&quot;in&quot;);
+},true);
+</code></pre></div><p>直接点击open，控制台会先输出in，然后跳转到百度的页面，在这里，a标签的默认事件是跳转页面，click事件是我们自己添加的事件。</p>
+<p>如果想只执行我们添加的事件而不进行跳转，这时候需要添加<code>preventDefault</code>来阻止a标签的默认事件</p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>document.getElementById(&quot;inner&quot;).addEventListener(&quot;click&quot;,function(e){
+  e.preventDefault();
+  console.log(&quot;in&quot;);
+},true);
+</code></pre></div><p>这是点击open，只会在控制台输出in</p>
+<hr>
+<h1 id="stoppropagation">stopPropagation：</h1>
+<p>html：</p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>&lt;div class=&quot;out&quot;&gt;
+  out
+  &lt;div class=&quot;middle&quot;&gt;
+    middle
+    &lt;div class=&quot;in&quot;&gt;in&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div><p>css：</p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>.out{
+  width:300px;
+  height:300px;
+  border:1px solid #000;
+  padding:10px;
+  box-sizing:border-box;
+  background:#ddd;
+}
+.middle{
+  width:200px;
+  height:200px;
+  border:1px solid #000;
+  padding:10px;
+  box-sizing:border-box;
+  background:skyblue;
+}
+.in{
+  width:100px;
+  height:100px;
+  border:1px solid #000;
+  padding:10px;
+  box-sizing:border-box;
+  background:tomato;
+}
+</code></pre></div><p>javascript：</p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>document.querySelector(&quot;.out&quot;).addEventListener(&quot;click&quot;,function(e){
+  console.log(&quot;out&quot;);
+},false);
+
+document.querySelector(&quot;.middle&quot;).addEventListener(&quot;click&quot;,function(e){
+  console.log(&quot;middle&quot;);
+},false);
+
+document.querySelector(&quot;.in&quot;).addEventListener(&quot;click&quot;,function(e){
+  console.log(&quot;in&quot;);
+},false);
+</code></pre></div><p>效果：</p>
+<p><span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-0b95d6976ea01ec6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"></span></p>
+<blockquote>
+<p>注意现在addEventListener的最后一个参数为false，为冒泡模式，即由里往外传播</p>
+</blockquote>
+<p>这时点击红色区域（最里层in）
+控制台输出：</p>
+<p><span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-316f14dca05ae7b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"></span></p>
+<p>可以看出事件<strong>由里往外</strong>传播（in -&gt; middle -&gt; out）
+如果这时候需要只显示in，而不向外传播，就可以给in对应的标签事件使用<code>stopPropagation</code></p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>document.querySelector(&quot;.in&quot;).addEventListener(&quot;click&quot;,function(e){
+  e.stopPropagation();
+  console.log(&quot;in&quot;);
+},false);
+</code></pre></div><p>控制台输出：</p>
+<p><span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-705743c0a255842b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"></span></p>
+<h4 id="addeventlistener-true">现在我们将三个元素的addEventListener的最后一个参数改为true，这时候事件模式为捕获模式，即由外向里传播</h4>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>document.querySelector(&quot;.out&quot;).addEventListener(&quot;click&quot;,function(e){
+  console.log(&quot;out&quot;);
+},true);
+
+document.querySelector(&quot;.middle&quot;).addEventListener(&quot;click&quot;,function(e){
+  console.log(&quot;middle&quot;);
+},true);
+
+document.querySelector(&quot;.in&quot;).addEventListener(&quot;click&quot;,function(e){
+  console.log(&quot;in&quot;);
+},true);
+</code></pre></div><p>这时点击红色区域（最里层in）
+控制台输出：</p>
+<p><span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-e3af1b2ea723fb9b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"></span></p>
+<p>可以看出事件<strong>由外往里</strong>传播（out -&gt; middle -&gt; in）
+如果这时候需要只显示out，而不向外传播，就可以给out对应的标签事件使用<code>stopPropagation</code></p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>document.querySelector(&quot;.out&quot;).addEventListener(&quot;click&quot;,function(e){
+  e.stopPropagation();
+  console.log(&quot;out&quot;);
+},true);
+</code></pre></div><p>控制台输出：</p>
+<p><span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-61b9d25710d5630b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"></span></p>
+
+    </div>
+    <aside class="post-aside">
+      <nav class="toc" aria-label="文章目录">
+    <p class="toc-title">目录</p>
+    <ul><li class="toc-l4"><a href="#addeventlistener-true" data-toc-link>现在我们将三个元素的addEventListener的最后一个参数改为true，这时候事件模式为捕获模式，即由外向里传播</a></li></ul>
+  </nav>
+    </aside>
+  </div>
+  <details class="toc-mobile">
+    <summary>文章目录（1 节）</summary>
+    <ul><li class="toc-l4"><a href="#addeventlistener-true" data-toc-link>现在我们将三个元素的addEventListener的最后一个参数改为true，这时候事件模式为捕获模式，即由外向里传播</a></li></ul>
+  </details>
+  <nav class="post-nav">
+    <a class="post-nav-item prev" href="../../posts/javascript-event/index.html"><span>上一篇</span><strong>javascript事件（event）属性及返回属性</strong></a>
+    <a class="post-nav-item next" href="../../posts/javascript-cpxv89/index.html"><span>下一篇</span><strong>javascript数组中对象元素的去重实现</strong></a>
+  </nav>
+  <section class="related">
+    <h2>相关文章</h2>
+    <div class="related-grid">
+      <a class="related-item" href="../../posts/javascript-url/index.html">
+        <strong>javascript 当前页面url网址信息</strong>
+        <span>Web 前端 · JavaScript · 284 字</span>
+      </a><a class="related-item" href="../../posts/javascript-f7cbdd/index.html">
+        <strong>javascript 选择器的区别</strong>
+        <span>Web 前端 · JavaScript · 124 字</span>
+      </a><a class="related-item" href="../../posts/javascript-svg-canvas-image/index.html">
+        <strong>javascript-svg转canvas和image</strong>
+        <span>Web 前端 · JavaScript · 267 字</span>
+      </a><a class="related-item" href="../../posts/p-3robxi/index.html">
+        <strong>宏任务和微任务都有哪些？</strong>
+        <span>Web 前端 · JavaScript · 33 字</span>
+      </a>
+    </div>
+  </section>
+</article>
+<button class="to-top" type="button" data-to-top aria-label="回到顶部">↑</button>
+
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-line">小胡笔记 · 共收录 381 篇文章</p>
+    <p class="footer-line dim">由简书导出的 Markdown 自动生成 · <a href="../../about/index.html">关于本站</a></p>
+  </div>
+</footer>
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索文章">
+    <div class="search-field">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input type="search" data-search-input placeholder="搜索标题、标签或正文关键词…" autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-meta" data-search-meta>输入关键词开始搜索</div>
+    <ul class="search-results" data-search-results></ul>
+  </div>
+</div>
+<script>window.__BASE__ = "../../";</script>
+<script src="../../assets/search-index.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

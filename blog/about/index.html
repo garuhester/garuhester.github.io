@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>关于 · 小胡笔记</title>
+<meta name="description" content="关于本站与新增文章的方法">
+<meta name="author" content="小胡">
+<link rel="canonical" href="../about/index.html">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('blog-theme'); } catch (e) {}
+    // 没有手动设置过就跟随系统，并在首屏前定好主题，避免闪一下浅色/两个图标同时出现
+    if (!t) {
+      t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark" aria-hidden="true">胡</span>
+      <span class="brand-text"><strong>小胡笔记</strong><em>381 篇 · 10 类</em></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a class="nav-link" href="../index.html">首页</a>
+      <a class="nav-link" href="../categories/index.html">分类</a>
+      <a class="nav-link" href="../tags/index.html">标签</a>
+      <a class="nav-link" href="../archive/index.html">归档</a>
+      <a class="nav-link is-active" href="../about/index.html">关于</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="icon-btn search-btn" type="button" data-search-open aria-label="搜索文章" title="搜索（按 / 或 ⌘K）">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <span class="search-btn-text">搜索</span>
+      </button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深色模式" title="切换深色模式">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-label="打开菜单" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+    <a class="nav-link" href="../index.html">首页</a>
+    <a class="nav-link" href="../categories/index.html">分类</a>
+    <a class="nav-link" href="../tags/index.html">标签</a>
+    <a class="nav-link" href="../archive/index.html">归档</a>
+    <a class="nav-link is-active" href="../about/index.html">关于</a>
+  </nav>
+</header>
+<main id="main">
+
+<section class="page-head">
+  <nav class="crumbs"><a href="../index.html">首页</a><span>/</span><span>关于</span></nav>
+  <h1>关于本站</h1>
+  <p class="page-desc">这里汇总了我这些年写在简书上的文章，按主题整理成分类与标签，方便自己回查，也方便别人少踩坑。</p>
+</section>
+<section class="section prose">
+  <h2>数据概览</h2>
+  <ul>
+    <li>文章：381 篇，合计约 38,187 字</li>
+    <li>分类：10 个</li>
+    <li>标签：51 个</li>
+    <li>内容来源：简书（@小胡）导出的 Markdown 文件</li>
+  </ul>
+  <h2>分类一览</h2>
+  <ul class="about-cats">
+    <li><a href="../categories/web/index.html">🌐 Web 前端</a><span>270 篇</span></li><li><a href="../categories/godot/index.html">🎮 Godot 游戏开发</a><span>57 篇</span></li><li><a href="../categories/godot4/index.html">🕹️ Godot 4 实践</a><span>4 篇</span></li><li><a href="../categories/linux/index.html">🐧 Linux 与运维</a><span>23 篇</span></li><li><a href="../categories/ai/index.html">🤖 AI 与大模型</a><span>4 篇</span></li><li><a href="../categories/app/index.html">📱 App 开发</a><span>4 篇</span></li><li><a href="../categories/blender/index.html">🧊 Blender</a><span>1 篇</span></li><li><a href="../categories/flash/index.html">📲 刷机与折腾</a><span>3 篇</span></li><li><a href="../categories/resources/index.html">🎁 资源分享</a><span>9 篇</span></li><li><a href="../categories/tips/index.html">✨ 效率技巧</a><span>6 篇</span></li>
+  </ul>
+  <h2>如何新增文章</h2>
+  <ol>
+    <li>把新的 <code>.md</code> 文件放进对应的分类目录（如 <code>WEB/</code>、<code>Godot/</code>），或者新建一个目录作为新分类。</li>
+    <li>在项目根目录执行 <code>cd tools &amp;&amp; npm run build</code>，站点会重新生成到 <code>blog/</code>。</li>
+    <li>想自定义标题、标签或摘要，可在文件开头加 front matter：<code>title / date / tags / summary / draft</code>。</li>
+  </ol>
+  <h2>快捷键</h2>
+  <ul>
+    <li><kbd>/</kbd> 或 <kbd>⌘K</kbd> / <kbd>Ctrl K</kbd>：打开搜索</li>
+    <li><kbd>Esc</kbd>：关闭搜索</li>
+    <li>文章内点击图片可放大查看，代码块右上角可一键复制</li>
+  </ul>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-line">小胡笔记 · 共收录 381 篇文章</p>
+    <p class="footer-line dim">由简书导出的 Markdown 自动生成 · <a href="../about/index.html">关于本站</a></p>
+  </div>
+</footer>
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索文章">
+    <div class="search-field">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input type="search" data-search-input placeholder="搜索标题、标签或正文关键词…" autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-meta" data-search-meta>输入关键词开始搜索</div>
+    <ul class="search-results" data-search-results></ul>
+  </div>
+</div>
+<script>window.__BASE__ = "../";</script>
+<script src="../assets/search-index.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

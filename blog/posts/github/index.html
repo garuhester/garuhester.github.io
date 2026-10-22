@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Github 第三方授权登录教程 · 小胡笔记</title>
+<meta name="description" content="1.首先注册一个github帐号,Applications&gt;Developer applications&gt;Register a new application.">
+<meta name="author" content="小胡">
+<link rel="canonical" href="../../posts/github/index.html">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('blog-theme'); } catch (e) {}
+    // 没有手动设置过就跟随系统，并在首屏前定好主题，避免闪一下浅色/两个图标同时出现
+    if (!t) {
+      t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">
+      <span class="brand-mark" aria-hidden="true">胡</span>
+      <span class="brand-text"><strong>小胡笔记</strong><em>381 篇 · 10 类</em></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a class="nav-link" href="../../index.html">首页</a>
+      <a class="nav-link" href="../../categories/index.html">分类</a>
+      <a class="nav-link" href="../../tags/index.html">标签</a>
+      <a class="nav-link" href="../../archive/index.html">归档</a>
+      <a class="nav-link" href="../../about/index.html">关于</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="icon-btn search-btn" type="button" data-search-open aria-label="搜索文章" title="搜索（按 / 或 ⌘K）">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <span class="search-btn-text">搜索</span>
+      </button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深色模式" title="切换深色模式">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-label="打开菜单" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+    <a class="nav-link" href="../../index.html">首页</a>
+    <a class="nav-link" href="../../categories/index.html">分类</a>
+    <a class="nav-link" href="../../tags/index.html">标签</a>
+    <a class="nav-link" href="../../archive/index.html">归档</a>
+    <a class="nav-link" href="../../about/index.html">关于</a>
+  </nav>
+</header>
+<main id="main">
+
+<div class="reading-progress" data-progress></div>
+<article class="post" style="--cat:#4f6bed">
+  <nav class="crumbs">
+    <a href="../../index.html">首页</a><span>/</span>
+    <a href="../../categories/web/index.html">Web 前端</a>
+    <span>/</span><span>Git 与协作</span>
+  </nav>
+  <header class="post-head">
+    <h1>Github 第三方授权登录教程</h1>
+    <div class="post-meta">
+      <span class="meta-chip cat-chip">🌐 Web 前端</span>
+      <span class="meta-chip">Git 与协作</span>
+      <span class="meta-chip">421 字</span>
+      <span class="meta-chip">约 1 分钟</span>
+      
+    </div>
+    <div class="post-tags"><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=Git" data-tag="Git">#Git</a></div>
+  </header>
+  <div class="post-layout">
+    <div class="post-body" data-post-body>
+      <h4 id="sec-1">大致流程图</h4>
+<p><span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-b4d62aa0fed075f2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"><span class="md-img-cap">cmd-markdown-logo</span></span></p>
+<h4 id="1-github-applications-developer-applications-register-a-new-">1.首先注册一个github帐号,Applications&gt;Developer applications&gt;Register a new application.</h4>
+<p><span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-11e11a0cbe658044.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"><span class="md-img-cap">cmd-markdown-logo</span></span></p>
+<p><span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-36f539b09907a1ec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"><span class="md-img-cap">cmd-markdown-logo</span></span></p>
+<h4 id="sec-3">2.填入参数</h4>
+<ul>
+<li>
+<p><strong>Application name－－应用名称,随意填</strong></p>
+</li>
+<li>
+<p><strong>Homepage URL－－如上图可以填本地地址进行测试,127.0.0.1:port/xx/xx</strong></p>
+</li>
+<li>
+<p><strong>Application description－－应用描述,随意填</strong></p>
+</li>
+<li>
+<p><strong>Authorization callback URL－－后端回调url,最重要的一环因为github那边回调会传你一个code参数,下面会提到.提交申请</strong></p>
+</li>
+<li>
+<p><strong>注册之后会得到 github提供的client id和client secret有了这两个东东就可以换取更多的信息了,不要交给坏人0.0</strong></p>
+</li>
+</ul>
+<p><span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-8be14857c6a66274.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"><span class="md-img-cap">cmd-markdown-logo</span></span></p>
+<h4 id="3-github">3.用户点击github登录本地应用引导用户跳转到第三方授权页 跳转地址为:</h4>
+<p><a href="https://github.com/login/oauth/authorize?client_id=xxxxx&amp;state=xxx&amp;redirect_uri=xxxx" target="_blank" rel="noopener noreferrer">https://github.com/login/oauth/authorize?client_id=xxxxx&amp;state=xxx&amp;redirect_uri=xxxx</a>;</p>
+<p>(client_id 上面已经拿到了,state参数随便传多少,redirect_uri 就是你上面填的Authorization callback URL)</p>
+<h4 id="4-redirecturi-code-code-github">4.授权成功后会回调我们平台,会重定向带参数访问我们上面的redirect_uri,后台接收code这个参数,我们带着这个code再次访问github 地址:</h4>
+<p><a href="https://github.com/login/oauth/access_token?client_id=xxx&amp;client_secret=xxx&amp;code=xxx&amp;redirect_uri=http://127.0.0.1:8080/cqput-bbs/User/RegisteredByGithub.do" target="_blank" rel="noopener noreferrer">https://github.com/login/oauth/access_token?client_id=xxx&amp;client_secret=xxx&amp;code=xxx&amp;redirect_uri=http://127.0.0.1:8080/cqput-bbs/User/RegisteredByGithub.do</a></p>
+<p>（这次会得到响应的access_token）</p>
+<h4 id="5-accesstoken">5.成功获取access_token后就可以换取用户信息了地址：</h4>
+<p><a href="https://api.github.com/user?access_token=xxx" target="_blank" rel="noopener noreferrer">https://api.github.com/user?access_token=xxx</a>;</p>
+<h4 id="4-5-get-5-http-get-post-404">（注意一下,这里会有个坑,4,5步骤都尽量用get请求去访问,第5步骤后端必须是模拟http get请求才能正确访问拿到返回值,post 请求 直接报404）</h4>
+<h4 id="6-github">6.得到github授权用户的个人信息,就可以插入到我们的数据库中去了,授权登录成功,跳转主页</h4>
+<p><span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-844acbaa886d0269.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"><span class="md-img-cap">cmd-markdown-logo</span></span></p>
+
+    </div>
+    <aside class="post-aside">
+      <nav class="toc" aria-label="文章目录">
+    <p class="toc-title">目录</p>
+    <ul><li class="toc-l4"><a href="#sec-1" data-toc-link>大致流程图</a></li><li class="toc-l4"><a href="#1-github-applications-developer-applications-register-a-new-" data-toc-link>1.首先注册一个github帐号,Applications&gt;Developer applications&gt;Register a new application.</a></li><li class="toc-l4"><a href="#sec-3" data-toc-link>2.填入参数</a></li><li class="toc-l4"><a href="#3-github" data-toc-link>3.用户点击github登录本地应用引导用户跳转到第三方授权页 跳转地址为:</a></li><li class="toc-l4"><a href="#4-redirecturi-code-code-github" data-toc-link>4.授权成功后会回调我们平台,会重定向带参数访问我们上面的redirecturi,后台接收code这个参数,我们带着这个code再次访问github 地址:</a></li><li class="toc-l4"><a href="#5-accesstoken" data-toc-link>5.成功获取accesstoken后就可以换取用户信息了地址：</a></li><li class="toc-l4"><a href="#4-5-get-5-http-get-post-404" data-toc-link>（注意一下,这里会有个坑,4,5步骤都尽量用get请求去访问,第5步骤后端必须是模拟http get请求才能正确访问拿到返回值,post 请求 直接报404）</a></li><li class="toc-l4"><a href="#6-github" data-toc-link>6.得到github授权用户的个人信息,就可以插入到我们的数据库中去了,授权登录成功,跳转主页</a></li></ul>
+  </nav>
+    </aside>
+  </div>
+  <details class="toc-mobile">
+    <summary>文章目录（8 节）</summary>
+    <ul><li class="toc-l4"><a href="#sec-1" data-toc-link>大致流程图</a></li><li class="toc-l4"><a href="#1-github-applications-developer-applications-register-a-new-" data-toc-link>1.首先注册一个github帐号,Applications&gt;Developer applications&gt;Register a new application.</a></li><li class="toc-l4"><a href="#sec-3" data-toc-link>2.填入参数</a></li><li class="toc-l4"><a href="#3-github" data-toc-link>3.用户点击github登录本地应用引导用户跳转到第三方授权页 跳转地址为:</a></li><li class="toc-l4"><a href="#4-redirecturi-code-code-github" data-toc-link>4.授权成功后会回调我们平台,会重定向带参数访问我们上面的redirecturi,后台接收code这个参数,我们带着这个code再次访问github 地址:</a></li><li class="toc-l4"><a href="#5-accesstoken" data-toc-link>5.成功获取accesstoken后就可以换取用户信息了地址：</a></li><li class="toc-l4"><a href="#4-5-get-5-http-get-post-404" data-toc-link>（注意一下,这里会有个坑,4,5步骤都尽量用get请求去访问,第5步骤后端必须是模拟http get请求才能正确访问拿到返回值,post 请求 直接报404）</a></li><li class="toc-l4"><a href="#6-github" data-toc-link>6.得到github授权用户的个人信息,就可以插入到我们的数据库中去了,授权登录成功,跳转主页</a></li></ul>
+  </details>
+  <nav class="post-nav">
+    <a class="post-nav-item prev" href="../../posts/git-voany7/index.html"><span>上一篇</span><strong>git无法查看远程分支</strong></a>
+    <a class="post-nav-item next" href="../../posts/github-40e6km/index.html"><span>下一篇</span><strong>Github图床</strong></a>
+  </nav>
+  <section class="related">
+    <h2>相关文章</h2>
+    <div class="related-grid">
+      <a class="related-item" href="../../posts/fork-me-on-github/index.html">
+        <strong>添加Fork-me-on-GitHub</strong>
+        <span>Web 前端 · Git 与协作 · 47 字</span>
+      </a><a class="related-item" href="../../posts/github-star-watch-fork-follow/index.html">
+        <strong>引用GitHub---Star，Watch，Fork，Follow 按钮</strong>
+        <span>Web 前端 · Git 与协作 · 7 字</span>
+      </a><a class="related-item" href="../../posts/git-would-clobber-existing-tag/index.html">
+        <strong>Git 报错 would-clobber-existing-tag</strong>
+        <span>Web 前端 · Git 与协作 · 11 字</span>
+      </a><a class="related-item" href="../../posts/git-1ftnfx/index.html">
+        <strong>Git 本地提交到服务器命令</strong>
+        <span>Web 前端 · Git 与协作 · 11 字</span>
+      </a>
+    </div>
+  </section>
+</article>
+<button class="to-top" type="button" data-to-top aria-label="回到顶部">↑</button>
+
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-line">小胡笔记 · 共收录 381 篇文章</p>
+    <p class="footer-line dim">由简书导出的 Markdown 自动生成 · <a href="../../about/index.html">关于本站</a></p>
+  </div>
+</footer>
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索文章">
+    <div class="search-field">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input type="search" data-search-input placeholder="搜索标题、标签或正文关键词…" autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-meta" data-search-meta>输入关键词开始搜索</div>
+    <ul class="search-results" data-search-results></ul>
+  </div>
+</div>
+<script>window.__BASE__ = "../../";</script>
+<script src="../../assets/search-index.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>项目名称（中文） · 小胡笔记</title>
+<meta name="description" content="node 摄像头多路推流">
+<meta name="author" content="小胡">
+<link rel="canonical" href="../../posts/2021-09-15/index.html">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('blog-theme'); } catch (e) {}
+    // 没有手动设置过就跟随系统，并在首屏前定好主题，避免闪一下浅色/两个图标同时出现
+    if (!t) {
+      t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">
+      <span class="brand-mark" aria-hidden="true">胡</span>
+      <span class="brand-text"><strong>小胡笔记</strong><em>381 篇 · 10 类</em></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a class="nav-link" href="../../index.html">首页</a>
+      <a class="nav-link" href="../../categories/index.html">分类</a>
+      <a class="nav-link" href="../../tags/index.html">标签</a>
+      <a class="nav-link" href="../../archive/index.html">归档</a>
+      <a class="nav-link" href="../../about/index.html">关于</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="icon-btn search-btn" type="button" data-search-open aria-label="搜索文章" title="搜索（按 / 或 ⌘K）">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <span class="search-btn-text">搜索</span>
+      </button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深色模式" title="切换深色模式">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-label="打开菜单" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+    <a class="nav-link" href="../../index.html">首页</a>
+    <a class="nav-link" href="../../categories/index.html">分类</a>
+    <a class="nav-link" href="../../tags/index.html">标签</a>
+    <a class="nav-link" href="../../archive/index.html">归档</a>
+    <a class="nav-link" href="../../about/index.html">关于</a>
+  </nav>
+</header>
+<main id="main">
+
+<div class="reading-progress" data-progress></div>
+<article class="post" style="--cat:#4f6bed">
+  <nav class="crumbs">
+    <a href="../../index.html">首页</a><span>/</span>
+    <a href="../../categories/web/index.html">Web 前端</a>
+    <span>/</span><span>随手记</span>
+  </nav>
+  <header class="post-head">
+    <h1>项目名称（中文）</h1>
+    <div class="post-meta">
+      <span class="meta-chip cat-chip">🌐 Web 前端</span>
+      <span class="meta-chip">随手记</span>
+      <span class="meta-chip">309 字</span>
+      <span class="meta-chip">约 1 分钟</span>
+      <span class="meta-chip">2021-09-15</span>
+    </div>
+    <div class="post-tags"><a class="chip chip-tag" href="../../tags/index.html?tag=%E5%91%BD%E4%BB%A4%E8%A1%8C" data-tag="命令行">#命令行</a><a class="chip chip-tag" href="../../tags/index.html?tag=Node.js" data-tag="Node.js">#Node.js</a></div>
+  </header>
+  <div class="post-layout">
+    <div class="post-body" data-post-body>
+      <p>node 摄像头多路推流</p>
+<h2 id="sec-1">一、项目属性</h2>
+<ul>
+<li>
+<p>项目简介：node 摄像头多路推流</p>
+</li>
+<li>
+<p>项目类别：<code>基础框架</code></p>
+</li>
+<li>
+<p>项目地区：<code>无</code></p>
+</li>
+</ul>
+<h2 id="sec-2">二、开发环境</h2>
+<h3 id="sec-3">1. 环境配置</h3>
+<ul>
+<li>Node 版本：V14.17.x</li>
+<li>NPM 版本：6.14.x</li>
+</ul>
+<h3 id="sec-4">2. 运行方式及命令</h3>
+<ul>
+<li>步骤一</li>
+</ul>
+<p>安装依赖 <code>npm install</code></p>
+<ul>
+<li>步骤二</li>
+</ul>
+<p>把目录里面的 <code>ffmpeg.exe</code> 添加到系统的环境变量中</p>
+<p><span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-43ffc5ff4bc51fae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"></span></p>
+<ul>
+<li>步骤三</li>
+</ul>
+<p>运行根目录中的 <code>node-start.bat</code> 文件启动服务</p>
+<p><span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-5e026c8616c133b5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"></span></p>
+<ul>
+<li>步骤四</li>
+</ul>
+<p>打开根目录下 <code>test/index.html</code> 即可看效果</p>
+<p><span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-9c44edb622ae8f55.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"></span></p>
+<blockquote>
+<p>wifi请连接WEWIN，才能访问示例中的摄像头地址</p>
+</blockquote>
+<h3 id="sec-5">3. 注意事项</h3>
+<ul>
+<li>
+<p>项目路径请不要有中文</p>
+</li>
+<li>
+<p>根目录中.bat文件说明：
+forever-list.bat：查看运行的服务列表
+forever-start.bat：静默启动当前服务
+forever-stop.bat：关闭当前服务
+forever-restart.bat：重启当前服务</p>
+</li>
+</ul>
+<h2 id="sec-6">三、部署手册</h2>
+<ul>
+<li>步骤一</li>
+</ul>
+<p>全局安装forever <code>npm install -g forever</code></p>
+<ul>
+<li>步骤二</li>
+</ul>
+<p>测试：启动根目录中的 <code>forever-start.bat</code> 文件，查看页面是否显示监控画面</p>
+<ul>
+<li>步骤三</li>
+</ul>
+<p>将根目录中的 <code>forever-start.bat</code> 文件创建快捷键方式，放入开机启动项目录（可按win+R，然后执行命令<code>shell:Common Startup</code>打开目录）</p>
+<p><span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-d3c36359a2084960.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"></span></p>
+<h2 id="sec-7">四、<a href="./CHANGELOG.md">更新日志</a></h2>
+<ul>
+<li><a href="./CHANGELOG.md">V0.0.1</a></li>
+</ul>
+
+    </div>
+    <aside class="post-aside">
+      <nav class="toc" aria-label="文章目录">
+    <p class="toc-title">目录</p>
+    <ul><li class="toc-l2"><a href="#sec-1" data-toc-link>一、项目属性</a></li><li class="toc-l2"><a href="#sec-2" data-toc-link>二、开发环境</a></li><li class="toc-l3"><a href="#sec-3" data-toc-link>环境配置</a></li><li class="toc-l3"><a href="#sec-4" data-toc-link>运行方式及命令</a></li><li class="toc-l3"><a href="#sec-5" data-toc-link>注意事项</a></li><li class="toc-l2"><a href="#sec-6" data-toc-link>三、部署手册</a></li><li class="toc-l2"><a href="#sec-7" data-toc-link>四、更新日志</a></li></ul>
+  </nav>
+    </aside>
+  </div>
+  <details class="toc-mobile">
+    <summary>文章目录（7 节）</summary>
+    <ul><li class="toc-l2"><a href="#sec-1" data-toc-link>一、项目属性</a></li><li class="toc-l2"><a href="#sec-2" data-toc-link>二、开发环境</a></li><li class="toc-l3"><a href="#sec-3" data-toc-link>环境配置</a></li><li class="toc-l3"><a href="#sec-4" data-toc-link>运行方式及命令</a></li><li class="toc-l3"><a href="#sec-5" data-toc-link>注意事项</a></li><li class="toc-l2"><a href="#sec-6" data-toc-link>三、部署手册</a></li><li class="toc-l2"><a href="#sec-7" data-toc-link>四、更新日志</a></li></ul>
+  </details>
+  <nav class="post-nav">
+    <a class="post-nav-item prev" href="../../posts/2021-08-26/index.html"><span>上一篇</span><strong>前端：后台管理系统基础框架</strong></a>
+    <a class="post-nav-item next" href="../../posts/bpmn-js/index.html"><span>下一篇</span><strong>bpmn-js 创建节点并连接</strong></a>
+  </nav>
+  <section class="related">
+    <h2>相关文章</h2>
+    <div class="related-grid">
+      <a class="related-item" href="../../posts/2021-08-26/index.html">
+        <strong>前端：后台管理系统基础框架</strong>
+        <span>Web 前端 · 随手记 · 1209 字</span>
+      </a><a class="related-item" href="../../posts/npm/index.html">
+        <strong>创建自己的npm包</strong>
+        <span>Web 前端 · 构建与工程化 · 137 字</span>
+      </a><a class="related-item" href="../../posts/windows-nssm-nodejs/index.html">
+        <strong>在windows服务器上使用nssm部署nodejs</strong>
+        <span>Web 前端 · Node 与服务端 · 185 字</span>
+      </a><a class="related-item" href="../../posts/electron/index.html">
+        <strong>Electron 安装及实例运行</strong>
+        <span>Web 前端 · Electron 桌面端 · 103 字</span>
+      </a>
+    </div>
+  </section>
+</article>
+<button class="to-top" type="button" data-to-top aria-label="回到顶部">↑</button>
+
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-line">小胡笔记 · 共收录 381 篇文章</p>
+    <p class="footer-line dim">由简书导出的 Markdown 自动生成 · <a href="../../about/index.html">关于本站</a></p>
+  </div>
+</footer>
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索文章">
+    <div class="search-field">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input type="search" data-search-input placeholder="搜索标题、标签或正文关键词…" autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-meta" data-search-meta>输入关键词开始搜索</div>
+    <ul class="search-results" data-search-results></ul>
+  </div>
+</div>
+<script>window.__BASE__ = "../../";</script>
+<script src="../../assets/search-index.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

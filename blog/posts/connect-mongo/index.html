@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>connect-mongo基本用法 · 小胡笔记</title>
+<meta name="description" content="在页面创建session：">
+<meta name="author" content="小胡">
+<link rel="canonical" href="../../posts/connect-mongo/index.html">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('blog-theme'); } catch (e) {}
+    // 没有手动设置过就跟随系统，并在首屏前定好主题，避免闪一下浅色/两个图标同时出现
+    if (!t) {
+      t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">
+      <span class="brand-mark" aria-hidden="true">胡</span>
+      <span class="brand-text"><strong>小胡笔记</strong><em>381 篇 · 10 类</em></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a class="nav-link" href="../../index.html">首页</a>
+      <a class="nav-link" href="../../categories/index.html">分类</a>
+      <a class="nav-link" href="../../tags/index.html">标签</a>
+      <a class="nav-link" href="../../archive/index.html">归档</a>
+      <a class="nav-link" href="../../about/index.html">关于</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="icon-btn search-btn" type="button" data-search-open aria-label="搜索文章" title="搜索（按 / 或 ⌘K）">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <span class="search-btn-text">搜索</span>
+      </button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深色模式" title="切换深色模式">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-label="打开菜单" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+    <a class="nav-link" href="../../index.html">首页</a>
+    <a class="nav-link" href="../../categories/index.html">分类</a>
+    <a class="nav-link" href="../../tags/index.html">标签</a>
+    <a class="nav-link" href="../../archive/index.html">归档</a>
+    <a class="nav-link" href="../../about/index.html">关于</a>
+  </nav>
+</header>
+<main id="main">
+
+<div class="reading-progress" data-progress></div>
+<article class="post" style="--cat:#4f6bed">
+  <nav class="crumbs">
+    <a href="../../index.html">首页</a><span>/</span>
+    <a href="../../categories/web/index.html">Web 前端</a>
+    <span>/</span><span>Node 与服务端</span>
+  </nav>
+  <header class="post-head">
+    <h1>connect-mongo基本用法</h1>
+    <div class="post-meta">
+      <span class="meta-chip cat-chip">🌐 Web 前端</span>
+      <span class="meta-chip">Node 与服务端</span>
+      <span class="meta-chip">131 字</span>
+      <span class="meta-chip">约 1 分钟</span>
+      
+    </div>
+    <div class="post-tags"><a class="chip chip-tag" href="../../tags/index.html?tag=MongoDB" data-tag="MongoDB">#MongoDB</a></div>
+  </header>
+  <div class="post-layout">
+    <div class="post-body" data-post-body>
+      <p>代码实现：</p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>var express = require(&#39;express&#39;);
+var cookieParser = require(&#39;cookie-parser&#39;);
+var session = require(&#39;express-session&#39;);
+var MongoStore = require(&#39;connect-mongo&#39;)(session);
+var app = express();
+
+app.use(cookieParser(&#39;sessiontest&#39;));
+app.use(session({
+    secret: &#39;sessiontest&#39;,
+    resave: true,
+    saveUninitalized: true,
+    store: new MongoStore({
+        url: &#39;mongodb://localhost:27017/sessionmongo&#39;
+    })
+}));
+app.get(&#39;/login&#39;, function(req, res) {
+    var user = {
+        name: &quot;hester&quot;,
+        age: &quot;21&quot;
+    };
+    req.session.user = user;
+    res.redirect(&#39;/user&#39;);
+});
+app.listen(8080, function() {
+    console.log(&quot;http://localhost:8080&quot;);
+});
+</code></pre></div><hr>
+<p>引用模块：</p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>var session = require(&#39;express-session&#39;);
+var MongoStore = require(&#39;connect-mongo&#39;)(session);
+</code></pre></div><p>基本使用：</p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>app.use(session({
+    store: new MongoStore({
+        url: &#39;mongodb://localhost:27017/sessionmongo&#39;
+    })
+}));
+</code></pre></div><p>在页面创建session：</p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>var user = {
+  name: &quot;hester&quot;,
+  age: &quot;21&quot;
+};
+req.session.user = user;
+</code></pre></div><blockquote>
+<p>更多详细使用：<a href="https://github.com/jdesboeufs/connect-mongo" target="_blank" rel="noopener noreferrer">https://github.com/jdesboeufs/connect-mongo</a></p>
+</blockquote>
+
+    </div>
+    <aside class="post-aside">
+      
+    </aside>
+  </div>
+  <details class="toc-mobile">
+    <summary>文章目录（0 节）</summary>
+    <ul></ul>
+  </details>
+  <nav class="post-nav">
+    <a class="post-nav-item prev" href="../../posts/windows-nssm-nodejs/index.html"><span>上一篇</span><strong>在windows服务器上使用nssm部署nodejs</strong></a>
+    <a class="post-nav-item next" href="../../posts/docker/index.html"><span>下一篇</span><strong>docker 命令汇总</strong></a>
+  </nav>
+  <section class="related">
+    <h2>相关文章</h2>
+    <div class="related-grid">
+      <a class="related-item" href="../../posts/mongodb/index.html">
+        <strong>1. 方法一</strong>
+        <span>Web 前端 · Node 与服务端 · 143 字</span>
+      </a><a class="related-item" href="../../posts/docker-mongo/index.html">
+        <strong>docker-mongo设置</strong>
+        <span>Web 前端 · Node 与服务端 · 69 字</span>
+      </a><a class="related-item" href="../../posts/mongodb-vbqhg0/index.html">
+        <strong>mongodb基本命令</strong>
+        <span>Web 前端 · Node 与服务端 · 121 字</span>
+      </a><a class="related-item" href="../../posts/mongodb-vlq34z/index.html">
+        <strong>MongoDB添加管理员和用户</strong>
+        <span>Web 前端 · Node 与服务端 · 171 字</span>
+      </a>
+    </div>
+  </section>
+</article>
+<button class="to-top" type="button" data-to-top aria-label="回到顶部">↑</button>
+
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-line">小胡笔记 · 共收录 381 篇文章</p>
+    <p class="footer-line dim">由简书导出的 Markdown 自动生成 · <a href="../../about/index.html">关于本站</a></p>
+  </div>
+</footer>
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索文章">
+    <div class="search-field">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input type="search" data-search-input placeholder="搜索标题、标签或正文关键词…" autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-meta" data-search-meta>输入关键词开始搜索</div>
+    <ul class="search-results" data-search-results></ul>
+  </div>
+</div>
+<script>window.__BASE__ = "../../";</script>
+<script src="../../assets/search-index.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Godot 游戏开发 · 小胡笔记</title>
+<meta name="description" content="Godot 引擎教程、UI 系统、粒子特效与游戏素材">
+<meta name="author" content="小胡">
+<link rel="canonical" href="../../categories/godot/index.html">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('blog-theme'); } catch (e) {}
+    // 没有手动设置过就跟随系统，并在首屏前定好主题，避免闪一下浅色/两个图标同时出现
+    if (!t) {
+      t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">
+      <span class="brand-mark" aria-hidden="true">胡</span>
+      <span class="brand-text"><strong>小胡笔记</strong><em>381 篇 · 10 类</em></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a class="nav-link" href="../../index.html">首页</a>
+      <a class="nav-link is-active" href="../../categories/index.html">分类</a>
+      <a class="nav-link" href="../../tags/index.html">标签</a>
+      <a class="nav-link" href="../../archive/index.html">归档</a>
+      <a class="nav-link" href="../../about/index.html">关于</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="icon-btn search-btn" type="button" data-search-open aria-label="搜索文章" title="搜索（按 / 或 ⌘K）">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <span class="search-btn-text">搜索</span>
+      </button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深色模式" title="切换深色模式">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-label="打开菜单" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+    <a class="nav-link" href="../../index.html">首页</a>
+    <a class="nav-link is-active" href="../../categories/index.html">分类</a>
+    <a class="nav-link" href="../../tags/index.html">标签</a>
+    <a class="nav-link" href="../../archive/index.html">归档</a>
+    <a class="nav-link" href="../../about/index.html">关于</a>
+  </nav>
+</header>
+<main id="main">
+
+<section class="page-head" style="--cat:#38a1f3">
+  <nav class="crumbs"><a href="../../index.html">首页</a><span>/</span><a href="../../categories/index.html">分类</a><span>/</span><span>Godot 游戏开发</span></nav>
+  <h1><span class="cat-icon lg" aria-hidden="true">🎮</span>Godot 游戏开发</h1>
+  <p class="page-desc">Godot 引擎教程、UI 系统、粒子特效与游戏素材</p>
+  <p class="page-meta">共 57 篇 · 7 个子分类</p>
+</section>
+<div class="chip-bar" data-chip-bar>
+  <button class="chip is-active" data-filter="all" type="button">全部 <em>57</em></button>
+  <button class="chip" data-filter="sub-1" type="button">系列教程 <em>18</em></button><button class="chip" data-filter="sub-2" type="button">素材资源 <em>14</em></button><button class="chip" data-filter="sub-3" type="button">踩坑与排错 <em>4</em></button><button class="chip" data-filter="sub-4" type="button">特效与渲染 <em>10</em></button><button class="chip" data-filter="sub-5" type="button">UI 与界面 <em>6</em></button><button class="chip" data-filter="sub-6" type="button">脚本与数据 <em>3</em></button><button class="chip" data-filter="sub-7" type="button">社区与其他 <em>2</em></button>
+</div>
+<div class="post-list" data-post-list>
+  <section class="sub-group" id="sub-1" data-group="sub-1">
+    <h2 class="sub-title">系列教程<em>18</em></h2>
+    <article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-1mmmn3/index.html">【Godot】从零开始做推箱子游戏素材</a></h3>
+  <p class="post-row-excerpt">以 4 张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">系列教程</span><span class="dot">·</span><span class="meta-item">59 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91" data-tag="游戏开发">#游戏开发</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-godot-rpg-part1/index.html">【Godot】教你用Godot撸一个RPG文字对话框 Part1</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">系列教程</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91" data-tag="游戏开发">#游戏开发</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-godot-rpg-part2/index.html">【Godot】教你用Godot撸一个RPG文字对话框 Part2</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">系列教程</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91" data-tag="游戏开发">#游戏开发</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-godot-part4/index.html">【Godot】教你用godot实现物品栏系统 - 放回物品（Part4）</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">系列教程</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a><a class="chip chip-tag" href="../../tags/index.html?tag=UI%20%E7%95%8C%E9%9D%A2" data-tag="UI 界面">#UI 界面</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-godot-part5/index.html">【Godot】教你用godot实现物品栏系统 - 交换物品（Part5）</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">系列教程</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a><a class="chip chip-tag" href="../../tags/index.html?tag=UI%20%E7%95%8C%E9%9D%A2" data-tag="UI 界面">#UI 界面</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-godot-part3/index.html">【Godot】教你用godot实现物品栏系统 - 取出物品（Part3）</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">系列教程</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a><a class="chip chip-tag" href="../../tags/index.html?tag=UI%20%E7%95%8C%E9%9D%A2" data-tag="UI 界面">#UI 界面</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-godot-part2/index.html">【Godot】教你用godot实现物品栏系统 - 添加物品（Part2）</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">系列教程</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a><a class="chip chip-tag" href="../../tags/index.html?tag=UI%20%E7%95%8C%E9%9D%A2" data-tag="UI 界面">#UI 界面</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-godot-ui-part1/index.html">【Godot】教你用godot实现物品栏系统 --UI界面（Part1）</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">系列教程</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a><a class="chip chip-tag" href="../../tags/index.html?tag=UI%20%E7%95%8C%E9%9D%A2" data-tag="UI 界面">#UI 界面</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-graphedit-part4/index.html">【Godot】入门强大有趣的GraphEdit-- 多组连接点（Part4）</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">系列教程</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-graphedit-part7/index.html">【Godot】入门强大有趣的GraphEdit-- 复制粘贴节点（Part7）</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">系列教程</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-graphedit-part3/index.html">【Godot】入门强大有趣的GraphEdit-- 简单交互（Part3）</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">系列教程</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-graphedit-part6/index.html">【Godot】入门强大有趣的GraphEdit-- 拷贝节点（Part6）</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">系列教程</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-graphedit-part2/index.html">【Godot】入门强大有趣的GraphEdit-- 连接节点（Part2）</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">系列教程</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-graphedit-part5/index.html">【Godot】入门强大有趣的GraphEdit-- 删除节点（Part5）</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">系列教程</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-graphedit-part1/index.html">【Godot】入门强大有趣的GraphEdit-- 添加节点（Part1）</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">系列教程</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-graphedit-part8/index.html">【Godot】入门强大有趣的GraphEdit-- 右键菜单（Part8）</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">系列教程</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%88%E7%8E%87%E6%8A%80%E5%B7%A7" data-tag="效率技巧">#效率技巧</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-ybv78c/index.html">【Godot】实现物品栏系统素材</a></h3>
+  <p class="post-row-excerpt">点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">系列教程</span><span class="dot">·</span><span class="meta-item">70 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a><a class="chip chip-tag" href="../../tags/index.html?tag=UI%20%E7%95%8C%E9%9D%A2" data-tag="UI 界面">#UI 界面</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot4/index.html">【Godot4】【从零开始制作土豆兄弟】教程简书合集！（持续更新）</a></h3>
+  <p class="post-row-excerpt">【Godot4】从零开始制作土豆兄弟 #1 创建背景</p>
+  <div class="post-row-meta"><span class="meta-item">系列教程</span><span class="dot">·</span><span class="meta-item">153 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91" data-tag="游戏开发">#游戏开发</a></div>
+</article>
+  </section>
+<section class="sub-group" id="sub-2" data-group="sub-2">
+    <h2 class="sub-title">素材资源<em>14</em></h2>
+    <article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-2d/index.html">【Godot】2d灯光和阴影图片素材</a></h3>
+  <p class="post-row-excerpt">以 2 张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">素材资源</span><span class="dot">·</span><span class="meta-item">2 张图</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-2d-d5i597/index.html">【Godot】2D小地图素材</a></h3>
+  <p class="post-row-excerpt">以 3 张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">素材资源</span><span class="dot">·</span><span class="meta-item">42 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-2d-e9gk13/index.html">【Godot】教你实现2D角色奔跑烟尘效果素材</a></h3>
+  <p class="post-row-excerpt">点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">素材资源</span><span class="dot">·</span><span class="meta-item">28 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91" data-tag="游戏开发">#游戏开发</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-2d-ui-3d/index.html">【Godot】教你实现2D界面（UI）跟随3D物体素材</a></h3>
+  <p class="post-row-excerpt">点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">素材资源</span><span class="dot">·</span><span class="meta-item">14 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=3D" data-tag="3D">#3D</a><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-6buqu0/index.html">【Godot】实现场景的平滑过渡切换素材</a></h3>
+  <p class="post-row-excerpt">点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">素材资源</span><span class="dot">·</span><span class="meta-item">28 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-5rvjg2/index.html">【Godot】实现火焰（异火？）粒子特效素材</a></h3>
+  <p class="post-row-excerpt">点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">素材资源</span><span class="dot">·</span><span class="meta-item">14 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E7%B2%92%E5%AD%90%E7%89%B9%E6%95%88" data-tag="粒子特效">#粒子特效</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-1snkhz/index.html">【Godot】实现技能冷却效果素材</a></h3>
+  <p class="post-row-excerpt">点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">素材资源</span><span class="dot">·</span><span class="meta-item">42 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-1inyt0/index.html">【Godot】实现简单传送带效果素材</a></h3>
+  <p class="post-row-excerpt">点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">素材资源</span><span class="dot">·</span><span class="meta-item">14 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-0op5q3/index.html">【Godot】实现简单下雨粒子效果素材</a></h3>
+  <p class="post-row-excerpt">点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">素材资源</span><span class="dot">·</span><span class="meta-item">14 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E7%B2%92%E5%AD%90%E7%89%B9%E6%95%88" data-tag="粒子特效">#粒子特效</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-18od41/index.html">【Godot】实现简单烟雾粒子特效素材</a></h3>
+  <p class="post-row-excerpt">点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">素材资源</span><span class="dot">·</span><span class="meta-item">14 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E7%B2%92%E5%AD%90%E7%89%B9%E6%95%88" data-tag="粒子特效">#粒子特效</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-ylusxb/index.html">【Godot】实现三种角色血量显示方式素材</a></h3>
+  <p class="post-row-excerpt">Heartempty.png</p>
+  <div class="post-row-meta"><span class="meta-item">素材资源</span><span class="dot">·</span><span class="meta-item">48 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91" data-tag="游戏开发">#游戏开发</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-zn5q0u/index.html">【Godot】实现烟囱粒子特效素材</a></h3>
+  <p class="post-row-excerpt">点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">素材资源</span><span class="dot">·</span><span class="meta-item">14 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E7%B2%92%E5%AD%90%E7%89%B9%E6%95%88" data-tag="粒子特效">#粒子特效</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-z36imw/index.html">【Godot】虚拟摇杆素材</a></h3>
+  <p class="post-row-excerpt">以 2 张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">素材资源</span><span class="dot">·</span><span class="meta-item">28 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-light2d-logo-99n52x/index.html">【Godot】用Light2D做logo遮罩动画素材</a></h3>
+  <p class="post-row-excerpt">点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">素材资源</span><span class="dot">·</span><span class="meta-item">28 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+  </section>
+<section class="sub-group" id="sub-3" data-group="sub-3">
+    <h2 class="sub-title">踩坑与排错<em>4</em></h2>
+    <article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/p-y390no/index.html">踩坑：游戏暂停后的问题</a></h3>
+  <p class="post-row-excerpt">游戏界面按esc暂停后，会将游戏暂停，点击暂停菜单中的设置后，设置界面未弹出</p>
+  <div class="post-row-meta"><span class="meta-item">踩坑与排错</span><span class="dot">·</span><span class="meta-item">95 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95" data-tag="踩坑记录">#踩坑记录</a><a class="chip chip-tag" href="../../tags/index.html?tag=%E5%85%BC%E5%AE%B9%E6%80%A7" data-tag="兼容性">#兼容性</a><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91" data-tag="游戏开发">#游戏开发</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/canvaslayer/index.html">踩坑：CanvasLayer层级问题</a></h3>
+  <p class="post-row-excerpt">场景添加CanvasLayer后，Sprite的Area2D的inputevent事件失效</p>
+  <div class="post-row-meta"><span class="meta-item">踩坑与排错</span><span class="dot">·</span><span class="meta-item">34 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95" data-tag="踩坑记录">#踩坑记录</a><a class="chip chip-tag" href="../../tags/index.html?tag=%E5%85%BC%E5%AE%B9%E6%80%A7" data-tag="兼容性">#兼容性</a><a class="chip chip-tag" href="../../tags/index.html?tag=Canvas" data-tag="Canvas">#Canvas</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/area3d-collisionshape3d-rigidbody3d-mouse-entered/index.html">Area3D 的CollisionShape3D会影响遮挡RigidBody3D的mouse_entered事件，怎么解决</a></h3>
+  <p class="post-row-excerpt">以代码片段为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">踩坑与排错</span><span class="dot">·</span><span class="meta-item">8 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=3D" data-tag="3D">#3D</a><a class="chip chip-tag" href="../../tags/index.html?tag=%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95" data-tag="踩坑记录">#踩坑记录</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/rigidbody3d-rigidbody3d-body-entered/index.html">RigidBody3D碰撞到了其他RigidBody3D，body_entered不生效</a></h3>
+  <p class="post-row-excerpt">以代码片段为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">踩坑与排错</span><span class="dot">·</span><span class="meta-item">8 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=3D" data-tag="3D">#3D</a></div>
+</article>
+  </section>
+<section class="sub-group" id="sub-4" data-group="sub-4">
+    <h2 class="sub-title">特效与渲染<em>10</em></h2>
+    <article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-1wm8c2/index.html">【Godot】教你实现简单传送带效果</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">特效与渲染</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-3d/index.html">【Godot】教你实现完美的3D模型描边</a></h3>
+  <p class="post-row-excerpt">以代码片段为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">特效与渲染</span><span class="dot">·</span><span class="meta-item">93 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=3D" data-tag="3D">#3D</a><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-2glfq0/index.html">【Godot】教你实现游戏技能冷却效果</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">特效与渲染</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91" data-tag="游戏开发">#游戏开发</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-godot/index.html">【Godot】教你用Godot实现一个带有简单动画的游戏弹窗</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">特效与渲染</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91" data-tag="游戏开发">#游戏开发</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-6luciz/index.html">【Godot】实现场景的平滑过渡切换</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">特效与渲染</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-61v551/index.html">【Godot】实现火焰（异火？）粒子特效</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">特效与渲染</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E7%B2%92%E5%AD%90%E7%89%B9%E6%95%88" data-tag="粒子特效">#粒子特效</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-2d-gr6zfm/index.html">【Godot】实现简单的2D灯光和阴影</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">特效与渲染</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-22n66y/index.html">【Godot】实现简单下雨粒子效果</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">特效与渲染</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E7%B2%92%E5%AD%90%E7%89%B9%E6%95%88" data-tag="粒子特效">#粒子特效</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-0epk14/index.html">【Godot】实现简单烟雾粒子特效</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">特效与渲染</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E7%B2%92%E5%AD%90%E7%89%B9%E6%95%88" data-tag="粒子特效">#粒子特效</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-light2d-logo/index.html">【Godot】用Light2D做logo遮罩动画</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">特效与渲染</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+  </section>
+<section class="sub-group" id="sub-5" data-group="sub-5">
+    <h2 class="sub-title">UI 与界面<em>6</em></h2>
+    <article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-5-godot/index.html">【Godot】5分钟教你学会用Godot制作一个圆环进度条</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">UI 与界面</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a><a class="chip chip-tag" href="../../tags/index.html?tag=UI%20%E7%95%8C%E9%9D%A2" data-tag="UI 界面">#UI 界面</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-10-godot/index.html">【Godot】10分钟用godot实现一个简易计算器</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">UI 与界面</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-0yorf2/index.html">【Godot】实现三种角色血量显示方式</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">UI 与界面</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91" data-tag="游戏开发">#游戏开发</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-godot-wrgllh/index.html">【Godot】手把手教你用Godot撸一个简易记事本</a></h3>
+  <p class="post-row-excerpt">以一张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">UI 与界面</span><span class="dot">·</span><span class="meta-item">6 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-rpg/index.html">Godot 模拟rpg对话框并根据内容长短动态调整加载时间</a></h3>
+  <p class="post-row-excerpt">以 2 张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">UI 与界面</span><span class="dot">·</span><span class="meta-item">161 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91" data-tag="游戏开发">#游戏开发</a><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a><a class="chip chip-tag" href="../../tags/index.html?tag=UI%20%E7%95%8C%E9%9D%A2" data-tag="UI 界面">#UI 界面</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-xf5qz3/index.html">Godot 实现圆环形进度条</a></h3>
+  <p class="post-row-excerpt">Inspector 和 Animation:</p>
+  <div class="post-row-meta"><span class="meta-item">UI 与界面</span><span class="dot">·</span><span class="meta-item">12 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a><a class="chip chip-tag" href="../../tags/index.html?tag=UI%20%E7%95%8C%E9%9D%A2" data-tag="UI 界面">#UI 界面</a></div>
+</article>
+  </section>
+<section class="sub-group" id="sub-6" data-group="sub-6">
+    <h2 class="sub-title">脚本与数据<em>3</em></h2>
+    <article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-xz4yd1/index.html">Godot 保存和加载文件内容</a></h3>
+  <p class="post-row-excerpt">以代码片段为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">脚本与数据</span><span class="dot">·</span><span class="meta-item">40 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-x565a4/index.html">Godot 延迟执行方法</a></h3>
+  <p class="post-row-excerpt">以代码片段为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">脚本与数据</span><span class="dot">·</span><span class="meta-item">16 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-http-json/index.html">Godot-http请求数据并解析json的两种方法</a></h3>
+  <p class="post-row-excerpt">以代码片段为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">脚本与数据</span><span class="dot">·</span><span class="meta-item">62 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+  </section>
+<section class="sub-group" id="sub-7" data-group="sub-7">
+    <h2 class="sub-title">社区与其他<em>2</em></h2>
+    <article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/p-3w0gvl/index.html">图床</a></h3>
+  <p class="post-row-excerpt">以 5 张图片记录为主，点开查看完整内容。</p>
+  <div class="post-row-meta"><span class="meta-item">社区与其他</span><span class="dot">·</span><span class="meta-item">5 张图</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=%E7%A4%BE%E5%8C%BA%E4%B8%8E%E5%85%B6%E4%BB%96" data-tag="社区与其他">#社区与其他</a></div>
+</article>
+<article class="post-row">
+  <h3 class="post-row-title"><a href="../../posts/godot-wl6xw6/index.html">Godot中文社区邀请你的加入</a></h3>
+  <p class="post-row-excerpt">Godot中文社区初步框架已搭建好，目前正在整理资源及上传，内容需要逐步完善，大家可以上去玩耍，在对应的模块问问题以及上传相关资源链接（具体格式请参考置顶帖），希望godot在国内发展越来越好…</p>
+  <div class="post-row-meta"><span class="meta-item">社区与其他</span><span class="dot">·</span><span class="meta-item">120 字</span><span class="dot">·</span><span class="meta-item">约 1 分钟</span><span class="dot">·</span><a class="chip chip-tag" href="../../tags/index.html?tag=Godot" data-tag="Godot">#Godot</a></div>
+</article>
+  </section>
+</div>
+
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-line">小胡笔记 · 共收录 381 篇文章</p>
+    <p class="footer-line dim">由简书导出的 Markdown 自动生成 · <a href="../../about/index.html">关于本站</a></p>
+  </div>
+</footer>
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索文章">
+    <div class="search-field">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input type="search" data-search-input placeholder="搜索标题、标签或正文关键词…" autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-meta" data-search-meta>输入关键词开始搜索</div>
+    <ul class="search-results" data-search-results></ul>
+  </div>
+</div>
+<script>window.__BASE__ = "../../";</script>
+<script src="../../assets/search-index.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

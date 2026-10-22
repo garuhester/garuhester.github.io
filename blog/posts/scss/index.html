@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SCSS学习记录 · 小胡笔记</title>
+<meta name="description" content="：在编译时会写进CSS文件">
+<meta name="author" content="小胡">
+<link rel="canonical" href="../../posts/scss/index.html">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('blog-theme'); } catch (e) {}
+    // 没有手动设置过就跟随系统，并在首屏前定好主题，避免闪一下浅色/两个图标同时出现
+    if (!t) {
+      t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">
+      <span class="brand-mark" aria-hidden="true">胡</span>
+      <span class="brand-text"><strong>小胡笔记</strong><em>381 篇 · 10 类</em></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a class="nav-link" href="../../index.html">首页</a>
+      <a class="nav-link" href="../../categories/index.html">分类</a>
+      <a class="nav-link" href="../../tags/index.html">标签</a>
+      <a class="nav-link" href="../../archive/index.html">归档</a>
+      <a class="nav-link" href="../../about/index.html">关于</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="icon-btn search-btn" type="button" data-search-open aria-label="搜索文章" title="搜索（按 / 或 ⌘K）">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <span class="search-btn-text">搜索</span>
+      </button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深色模式" title="切换深色模式">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-label="打开菜单" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+    <a class="nav-link" href="../../index.html">首页</a>
+    <a class="nav-link" href="../../categories/index.html">分类</a>
+    <a class="nav-link" href="../../tags/index.html">标签</a>
+    <a class="nav-link" href="../../archive/index.html">归档</a>
+    <a class="nav-link" href="../../about/index.html">关于</a>
+  </nav>
+</header>
+<main id="main">
+
+<div class="reading-progress" data-progress></div>
+<article class="post" style="--cat:#4f6bed">
+  <nav class="crumbs">
+    <a href="../../index.html">首页</a><span>/</span>
+    <a href="../../categories/web/index.html">Web 前端</a>
+    <span>/</span><span>CSS 与布局</span>
+  </nav>
+  <header class="post-head">
+    <h1>SCSS学习记录</h1>
+    <div class="post-meta">
+      <span class="meta-chip cat-chip">🌐 Web 前端</span>
+      <span class="meta-chip">CSS 与布局</span>
+      <span class="meta-chip">232 字</span>
+      <span class="meta-chip">约 1 分钟</span>
+      
+    </div>
+    <div class="post-tags"><a class="chip chip-tag" href="../../tags/index.html?tag=%E6%95%99%E7%A8%8B" data-tag="教程">#教程</a><a class="chip chip-tag" href="../../tags/index.html?tag=CSS" data-tag="CSS">#CSS</a><a class="chip chip-tag" href="../../tags/index.html?tag=HTML" data-tag="HTML">#HTML</a></div>
+  </header>
+  <div class="post-layout">
+    <div class="post-body" data-post-body>
+      <h2 id="sec-1">1. 选择器嵌套</h2>
+<p>html：</p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>&lt;div class=&quot;parent&quot;&gt;
+  &lt;div class=&quot;child&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div><p>css：</p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>.parent{
+  width:200px;
+  height:200px;
+  background:tomato;
+  .child{
+    width:100px;
+    height:100px;
+    background:skyblue;
+  }
+}
+</code></pre></div><h2 id="sec-2">2. 父选择器 &amp;</h2>
+<p>html：</p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>&lt;a href=&quot;#&quot;&gt;goto&lt;/a&gt;
+
+&lt;div class=&quot;main-one&quot;&gt;one&lt;/div&gt;
+&lt;div class=&quot;main-two&quot;&gt;two&lt;/div&gt;
+</code></pre></div><p>css：</p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>a{
+  text-decoration:none;
+  &amp;:hover{
+    text-decoration:underline;
+  }
+}
+
+.main{
+  &amp;-one{
+    color:red;
+  }
+  &amp;-two{
+    color:green;
+  }
+}
+
+</code></pre></div><h2 id="sec-3">3. 属性嵌套</h2>
+<p>html：</p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>&lt;div class=&quot;main&quot;&gt;&lt;/div&gt;
+</code></pre></div><p>css：</p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>.main{
+  width:100px;
+  height:100px;
+  background:skyblue;
+
+  /* 属性嵌套 */
+  margin:{
+    left:10px;
+    top:10px;
+    right:10px;
+    bottom:10px;
+  }
+}
+</code></pre></div><h2 id="sec-4">4. 注释 <code>/* */</code> 与 <code>//</code></h2>
+<p><code>/* */</code>：在编译时<strong>会</strong>写进CSS文件
+<code>//</code>：在编译时<strong>不会</strong>写进CSS文件</p>
+<h2 id="sec-5">5. 插值语句</h2>
+<p>编译前：</p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>$name:&quot;hester&quot;;
+/* hello,my name id #{$name} */
+</code></pre></div><p>编译后：</p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>/* hello,my name id hester */
+</code></pre></div><h2 id="sec-6">6. 变量</h2>
+<ul>
+<li>全局变量：</li>
+</ul>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>$w:200px;
+$h:200px;
+.main{
+  width:$w;
+  height:$h;
+}
+</code></pre></div><ul>
+<li>局部变量：</li>
+</ul>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>.main{
+  $w:200px;
+  $h:200px;
+  width:$w;
+  height:$h;
+}
+</code></pre></div><ul>
+<li>局部变量转换为全局变量（添加 <code>!global</code>）：</li>
+</ul>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>.main{
+  $w:200px !global;
+  $h:200px !global;
+  width:$w;
+  height:$h;
+}
+</code></pre></div><h2 id="mixin-include">7. @mixin 和 @include</h2>
+<p>html：</p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>&lt;div class=&quot;main&quot;&gt;
+  &lt;a href=&quot;#&quot;&gt;goto&lt;/a&gt;
+&lt;/div&gt;
+</code></pre></div><p>css：</p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>@mixin mainstyle($word){
+  #{$word}{
+    text-decoration:none;
+  }
+  
+  #{$word}:hover{
+    text-decoration:underline;
+  }
+}
+@include mainstyle(&quot;.main a&quot;);
+</code></pre></div><h2 id="default">8. 变量定义 !default：</h2>
+<blockquote>
+<p>如果变量已经被赋值，不会再被重新赋值，但是如果变量还没有被赋值，则会被赋予新的值。</p>
+</blockquote>
+<p>编译前：</p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>$content: &quot;First&quot;;
+$content: &quot;Second&quot; !default;
+$new_content: &quot;New&quot; !default;
+
+#main {
+  content: $content;
+  new-content: $new_content;
+}
+</code></pre></div><p>编译后：</p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>#main {
+  content: &quot;First&quot;;
+  new-content: &quot;New&quot;; 
+}
+</code></pre></div>
+    </div>
+    <aside class="post-aside">
+      <nav class="toc" aria-label="文章目录">
+    <p class="toc-title">目录</p>
+    <ul><li class="toc-l2"><a href="#sec-1" data-toc-link>选择器嵌套</a></li><li class="toc-l2"><a href="#sec-2" data-toc-link>父选择器 &amp;</a></li><li class="toc-l2"><a href="#sec-3" data-toc-link>属性嵌套</a></li><li class="toc-l2"><a href="#sec-4" data-toc-link>注释 与</a></li><li class="toc-l2"><a href="#sec-5" data-toc-link>插值语句</a></li><li class="toc-l2"><a href="#sec-6" data-toc-link>变量</a></li><li class="toc-l2"><a href="#mixin-include" data-toc-link>@mixin 和 @include</a></li><li class="toc-l2"><a href="#default" data-toc-link>变量定义 !default：</a></li></ul>
+  </nav>
+    </aside>
+  </div>
+  <details class="toc-mobile">
+    <summary>文章目录（8 节）</summary>
+    <ul><li class="toc-l2"><a href="#sec-1" data-toc-link>选择器嵌套</a></li><li class="toc-l2"><a href="#sec-2" data-toc-link>父选择器 &amp;</a></li><li class="toc-l2"><a href="#sec-3" data-toc-link>属性嵌套</a></li><li class="toc-l2"><a href="#sec-4" data-toc-link>注释 与</a></li><li class="toc-l2"><a href="#sec-5" data-toc-link>插值语句</a></li><li class="toc-l2"><a href="#sec-6" data-toc-link>变量</a></li><li class="toc-l2"><a href="#mixin-include" data-toc-link>@mixin 和 @include</a></li><li class="toc-l2"><a href="#default" data-toc-link>变量定义 !default：</a></li></ul>
+  </details>
+  <nav class="post-nav">
+    <a class="post-nav-item prev" href="../../posts/scss-calc-jd1o9f/index.html"><span>上一篇</span><strong>scss的calc中使用变量方法</strong></a>
+    <a class="post-nav-item next" href="../../posts/select/index.html"><span>下一篇</span><strong>select元素设置默认值，且默认值不可选</strong></a>
+  </nav>
+  <section class="related">
+    <h2>相关文章</h2>
+    <div class="related-grid">
+      <a class="related-item" href="../../posts/css-grid/index.html">
+        <strong>属性：</strong>
+        <span>Web 前端 · CSS 与布局 · 59 字</span>
+      </a><a class="related-item" href="../../posts/css-6/index.html">
+        <strong>CSS 单标签实现左边竖条的6种方法</strong>
+        <span>Web 前端 · CSS 与布局 · 95 字</span>
+      </a><a class="related-item" href="../../posts/css-table/index.html">
+        <strong>CSS 利用table实现五种常用布局</strong>
+        <span>Web 前端 · CSS 与布局 · 320 字</span>
+      </a><a class="related-item" href="../../posts/css-flex/index.html">
+        <strong>CSS-flex学习记录</strong>
+        <span>Web 前端 · CSS 与布局 · 420 字</span>
+      </a>
+    </div>
+  </section>
+</article>
+<button class="to-top" type="button" data-to-top aria-label="回到顶部">↑</button>
+
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-line">小胡笔记 · 共收录 381 篇文章</p>
+    <p class="footer-line dim">由简书导出的 Markdown 自动生成 · <a href="../../about/index.html">关于本站</a></p>
+  </div>
+</footer>
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索文章">
+    <div class="search-field">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input type="search" data-search-input placeholder="搜索标题、标签或正文关键词…" autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-meta" data-search-meta>输入关键词开始搜索</div>
+    <ul class="search-results" data-search-results></ul>
+  </div>
+</div>
+<script>window.__BASE__ = "../../";</script>
+<script src="../../assets/search-index.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

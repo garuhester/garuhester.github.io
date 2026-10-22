@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Android-DrawerLayout+Toolbar实现 · 小胡笔记</title>
+<meta name="description" content="DrawerLayout+Toolbar实现">
+<meta name="author" content="小胡">
+<link rel="canonical" href="../../posts/android-drawerlayout-toolbar/index.html">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('blog-theme'); } catch (e) {}
+    // 没有手动设置过就跟随系统，并在首屏前定好主题，避免闪一下浅色/两个图标同时出现
+    if (!t) {
+      t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">
+      <span class="brand-mark" aria-hidden="true">胡</span>
+      <span class="brand-text"><strong>小胡笔记</strong><em>381 篇 · 10 类</em></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a class="nav-link" href="../../index.html">首页</a>
+      <a class="nav-link" href="../../categories/index.html">分类</a>
+      <a class="nav-link" href="../../tags/index.html">标签</a>
+      <a class="nav-link" href="../../archive/index.html">归档</a>
+      <a class="nav-link" href="../../about/index.html">关于</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="icon-btn search-btn" type="button" data-search-open aria-label="搜索文章" title="搜索（按 / 或 ⌘K）">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <span class="search-btn-text">搜索</span>
+      </button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深色模式" title="切换深色模式">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-label="打开菜单" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+    <a class="nav-link" href="../../index.html">首页</a>
+    <a class="nav-link" href="../../categories/index.html">分类</a>
+    <a class="nav-link" href="../../tags/index.html">标签</a>
+    <a class="nav-link" href="../../archive/index.html">归档</a>
+    <a class="nav-link" href="../../about/index.html">关于</a>
+  </nav>
+</header>
+<main id="main">
+
+<div class="reading-progress" data-progress></div>
+<article class="post" style="--cat:#3f9142">
+  <nav class="crumbs">
+    <a href="../../index.html">首页</a><span>/</span>
+    <a href="../../categories/app/index.html">App 开发</a>
+    
+  </nav>
+  <header class="post-head">
+    <h1>Android-DrawerLayout+Toolbar实现</h1>
+    <div class="post-meta">
+      <span class="meta-chip cat-chip">📱 App 开发</span>
+      
+      <span class="meta-chip">199 字</span>
+      <span class="meta-chip">约 1 分钟</span>
+      
+    </div>
+    <div class="post-tags"><a class="chip chip-tag" href="../../tags/index.html?tag=%E5%85%BC%E5%AE%B9%E6%80%A7" data-tag="兼容性">#兼容性</a><a class="chip chip-tag" href="../../tags/index.html?tag=Android" data-tag="Android">#Android</a><a class="chip chip-tag" href="../../tags/index.html?tag=CSS" data-tag="CSS">#CSS</a></div>
+  </header>
+  <div class="post-layout">
+    <div class="post-body" data-post-body>
+      <p>#DrawerLayout+Toolbar实现
+导入material design 组件</p>
+<blockquote>
+<p>'com.android.support:design:25.0.1'</p>
+</blockquote>
+<ul>
+<li>主布局：</li>
+</ul>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>&lt;android.support.v4.widget.DrawerLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:id=&quot;@+id/drawerlayout&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;
+    android:fitsSystemWindows=&quot;true&quot;
+    tools:context=&quot;com.example.hester.aaaaaa.MainActivity&quot;
+    tools:openDrawer=&quot;start&quot;&gt;
+
+    &lt;!--主界面--&gt;
+    &lt;LinearLayout
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;match_parent&quot;
+        android:fitsSystemWindows=&quot;true&quot;
+        android:orientation=&quot;vertical&quot;&gt;
+
+        &lt;android.support.design.widget.AppBarLayout
+            android:layout_width=&quot;match_parent&quot;
+            android:layout_height=&quot;wrap_content&quot;&gt;
+
+            &lt;android.support.v7.widget.Toolbar
+                android:id=&quot;@+id/toolbar&quot;
+                android:layout_width=&quot;match_parent&quot;
+                android:layout_height=&quot;wrap_content&quot;&gt;&lt;/android.support.v7.widget.Toolbar&gt;
+        &lt;/android.support.design.widget.AppBarLayout&gt;
+
+        &lt;TextView
+            android:layout_width=&quot;match_parent&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:text=&quot;hello world&quot;
+            android:textSize=&quot;30dp&quot; /&gt;
+    &lt;/LinearLayout&gt;
+
+    &lt;!--侧滑界面--&gt;
+    &lt;LinearLayout
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;match_parent&quot;
+        android:layout_gravity=&quot;start&quot;
+        android:background=&quot;#ffffff&quot;
+        android:fitsSystemWindows=&quot;true&quot;&gt;
+
+        &lt;TextView
+            android:layout_width=&quot;match_parent&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:text=&quot;新闻头条&quot;
+            android:textSize=&quot;30dp&quot; /&gt;
+    &lt;/LinearLayout&gt;
+
+&lt;/android.support.v4.widget.DrawerLayout&gt;
+</code></pre></div><ul>
+<li>主界面初始化ToolBar</li>
+</ul>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>public class MainActivity extends AppCompatActivity {
+
+    Toolbar toolbar;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+    }
+}
+</code></pre></div><ul>
+<li>添加NoActionBar主题（values/styles.xml）</li>
+</ul>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>&lt;style name=&quot;AppTheme.NoActionBar&quot;&gt;
+        &lt;item name=&quot;windowActionBar&quot;&gt;false&lt;/item&gt;
+        &lt;item name=&quot;windowNoTitle&quot;&gt;true&lt;/item&gt;
+&lt;/style&gt;
+</code></pre></div><ul>
+<li>
+<p>设置主布局的主题为NoActionBar
+<span class="md-img-wrap"><img src="https://upload-images.jianshu.io/upload_images/2381669-33deb4f3a953778a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy" decoding="async" class="md-img"><span class="md-img-cap">snipaste20170314_221750.png</span></span></p>
+</li>
+<li>
+<p>AndroidManifest.xml中将主题改为AppTheme.NoActionBar</p>
+</li>
+</ul>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>&lt;application
+        android:allowBackup=&quot;true&quot;
+        android:icon=&quot;@mipmap/ic_launcher&quot;
+        android:label=&quot;@string/app_name&quot;
+        android:supportsRtl=&quot;true&quot;
+        android:theme=&quot;@style/AppTheme.NoActionBar&quot;&gt;
+        &lt;activity android:name=&quot;.MainActivity&quot;&gt;
+            &lt;intent-filter&gt;
+                &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;
+
+                &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;
+            &lt;/intent-filter&gt;
+        &lt;/activity&gt;
+    &lt;/application&gt;
+</code></pre></div><p>注意事项：</p>
+<ol>
+<li>侧滑布局位置属性：android:layout_gravity=&quot;start&quot;</li>
+<li>DrawerLayout添加适应系统窗口：android:fitsSystemWindows=&quot;true&quot;</li>
+</ol>
+<hr>
+<p>#侧滑布局改为NavigationView
+侧滑布局</p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>    &lt;!--侧滑布局--&gt;
+    &lt;android.support.design.widget.NavigationView
+        android:id=&quot;@+id/nav_view&quot;
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;match_parent&quot;
+        android:layout_gravity=&quot;start&quot;
+        android:fitsSystemWindows=&quot;true&quot;
+        app:headerLayout=&quot;@layout/nav_header&quot;
+        app:menu=&quot;@menu/nav_menu&quot; /&gt;
+
+    提示：
+    * app:headerLayout=&quot;@layout/header&quot;（添加布局头部）
+    * app:menu=&quot;@menu/nav_menu&quot;（添加布局菜单）
+</code></pre></div><p>@menu/nav_menu：</p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>&lt;menu xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
+    &lt;group android:checkableBehavior=&quot;single&quot;&gt;
+        &lt;item
+            android:id=&quot;@+id/news&quot;
+            android:title=&quot;@string/zh_news&quot; /&gt;
+        &lt;item
+            android:id=&quot;@+id/wechat&quot;
+            android:title=&quot;@string/zh_wechat&quot; /&gt;
+    &lt;/group&gt;
+    &lt;item android:title=&quot;Communicate&quot;&gt;
+        &lt;menu&gt;
+            &lt;item
+                android:id=&quot;@+id/nav_share&quot;
+                android:icon=&quot;@drawable/ic_menu_share&quot;
+                android:title=&quot;Share&quot; /&gt;
+            &lt;item
+                android:id=&quot;@+id/nav_send&quot;
+                android:icon=&quot;@drawable/ic_menu_send&quot;
+                android:title=&quot;Send&quot; /&gt;
+        &lt;/menu&gt;
+    &lt;/item&gt;
+&lt;/menu&gt;
+</code></pre></div><p>初始化NavigationView：</p>
+<div class="code-block is-plain"><button class="code-copy" type="button" data-copy>复制</button><pre class="code-pre"><code>//navigationView  icon显示原始颜色
+navigationView.setItemIconTintList(null);
+//navigationView添加item选择监听事件
+navigationView.setNavigationItemSelectedListener(this);
+
+@Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        getSupportActionBar().setTitle(item.getTitle());
+        switch (item.getItemId()) {
+            case R.id.news:
+                break;
+        }
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
+    }
+</code></pre></div>
+    </div>
+    <aside class="post-aside">
+      
+    </aside>
+  </div>
+  <details class="toc-mobile">
+    <summary>文章目录（0 节）</summary>
+    <ul></ul>
+  </details>
+  <nav class="post-nav">
+    <a class="post-nav-item prev" href="../../posts/android/index.html"><span>上一篇</span><strong>Android 实现语言切换</strong></a>
+    <a class="post-nav-item next" href="../../posts/android-fragment/index.html"><span>下一篇</span><strong>Android-Fragment的切换</strong></a>
+  </nav>
+  <section class="related">
+    <h2>相关文章</h2>
+    <div class="related-grid">
+      <a class="related-item" href="../../posts/android/index.html">
+        <strong>Android 实现语言切换</strong>
+        <span>App 开发 · 213 字</span>
+      </a><a class="related-item" href="../../posts/android-fragment/index.html">
+        <strong>Android-Fragment的切换</strong>
+        <span>App 开发 · 244 字</span>
+      </a><a class="related-item" href="../../posts/ios-css-active/index.html">
+        <strong>微信内置网页 ios-css-active 不起作用</strong>
+        <span>Web 前端 · 微信与小程序 · 5 字</span>
+      </a><a class="related-item" href="../../posts/js-android/index.html">
+        <strong>js 移动端网页 Android端 判断软键盘是否弹出</strong>
+        <span>Web 前端 · 设备与兼容 · 35 字</span>
+      </a>
+    </div>
+  </section>
+</article>
+<button class="to-top" type="button" data-to-top aria-label="回到顶部">↑</button>
+
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-line">小胡笔记 · 共收录 381 篇文章</p>
+    <p class="footer-line dim">由简书导出的 Markdown 自动生成 · <a href="../../about/index.html">关于本站</a></p>
+  </div>
+</footer>
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索文章">
+    <div class="search-field">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input type="search" data-search-input placeholder="搜索标题、标签或正文关键词…" autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-meta" data-search-meta>输入关键词开始搜索</div>
+    <ul class="search-results" data-search-results></ul>
+  </div>
+</div>
+<script>window.__BASE__ = "../../";</script>
+<script src="../../assets/search-index.js"></script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>
