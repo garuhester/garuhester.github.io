@@ -1,0 +1,9 @@
+- grunt-contrib-jshint（js语法检查）
+- grunt-contrib-concat（js合并）
+- grunt-contrib-uglify（JS压缩）
+- grunt-contrib-cssmin（CSS压缩合并）
+- grunt-contrib-htmlmin（HTML压缩）
+- grunt-htmlhint（html语法验查）
+- grunt-contrib-clean（清空文件和文件夹）
+- grunt-contrib-copy（复制文件和文件夹）
+- grunt-contrib-concat（连接、合并文件）

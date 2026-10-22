@@ -1,0 +1,8 @@
+# 生成产物（由 tools/build.js 生成，不需要进版本库）
+blog/
+docs/
+
+# 依赖与系统文件
+tools/node_modules/
+.DS_Store
+*.log
