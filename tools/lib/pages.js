@@ -77,7 +77,7 @@ function footer({ site, u, articleCount }) {
   return `<footer class="footer">
   <div class="footer-inner">
     <p class="footer-line">${escapeHtml(site.title)} · 共收录 ${articleCount} 篇文章</p>
-    <p class="footer-line dim">由简书导出的 Markdown 自动生成 · <a href="${u('about/')}">关于本站</a></p>
+    <p class="footer-line dim"><a href="${u('about/')}">关于本站</a></p>
   </div>
 </footer>`;
 }
